@@ -46,9 +46,14 @@
       <div class="card__num">01</div>
       <div class="card__body">
         <h2>Problema asignado y contexto</h2>
-        <p class="hint">
-          Explica el problema de residuos electrónicos (e-waste) y consumo tecnológico asignado al
-          equipo: qué lo origina, a quién afecta y por qué es relevante analizarlo con datos.
+        <p>
+          El consumo tecnológico en los hogares colombianos crece de forma sostenida (más
+          computadores, tablets, conexión a internet). A nivel mundial, la generación de residuos
+          electrónicos (RAEE) también viene en aumento, mientras que la tasa de reciclaje formal se
+          mantiene baja frente al volumen generado. En Colombia existe un registro nacional de
+          empresas autorizadas para gestionar estos residuos, pero la disponibilidad de cifras
+          agregadas de generación es limitada, y a nivel local (Norte de Santander) persisten vacíos
+          de conocimiento ciudadano sobre cómo y dónde disponer correctamente estos residuos.
         </p>
       </div>
     </section>
@@ -57,16 +62,18 @@
       <div class="card__num">02</div>
       <div class="card__body">
         <h2>Pregunta principal y preguntas secundarias</h2>
-        <p class="hint">Formula la pregunta central que guía el proyecto y las preguntas secundarias que se desprenden de ella.</p>
-        <div class="placeholder-block">
-          <p><strong>Pregunta principal:</strong> <span class="fill">— por definir —</span></p>
-          <p><strong>Preguntas secundarias:</strong></p>
-          <ul class="fill-list">
-            <li>—</li>
-            <li>—</li>
-            <li>—</li>
-          </ul>
-        </div>
+        <blockquote class="main-question">
+          ¿Cómo se relaciona el crecimiento del consumo tecnológico en los hogares colombianos con
+          la capacidad de gestión formal de los residuos electrónicos, a nivel global, nacional y
+          regional?
+        </blockquote>
+        <p class="hint">Preguntas secundarias:</p>
+        <ol class="question-list">
+          <li>¿Cómo ha evolucionado la tasa de reciclaje formal de RAEE a nivel mundial, y qué posición ocupa Colombia/Latinoamérica frente a otras regiones?</li>
+          <li>¿Cómo ha cambiado la tenencia de computador, tablet y conexión a internet en los hogares colombianos en los últimos años, y qué tan preparada está la red de gestores autorizados de RAEE frente a ese crecimiento?</li>
+          <li>¿Cuántas empresas gestoras de RESPEL/RAEE están autorizadas a nivel nacional y cómo se distribuyen geográficamente por departamento?</li>
+          <li>¿Qué tanto conocen los ciudadanos y entidades de Norte de Santander sobre la disposición correcta de RAEE, y qué canales utilizan actualmente para entregarlos?</li>
+        </ol>
       </div>
     </section>
 
@@ -74,7 +81,13 @@
       <div class="card__num">03</div>
       <div class="card__body">
         <h2>Necesidades de información</h2>
-        <p class="hint">Lista qué datos, variables o indicadores se necesitan para responder las preguntas planteadas.</p>
+        <p class="hint">Qué se necesita para responder cada pregunta secundaria:</p>
+        <ul class="question-list">
+          <li>Tasa de reciclaje formal de RAEE por país y año, para comparar a Colombia/Latinoamérica con otras regiones.</li>
+          <li>Tenencia de computador, tablet y conexión a internet por hogar, departamento y año, en los hogares colombianos.</li>
+          <li>Número y ubicación geográfica (departamento/municipio) de empresas gestoras de RESPEL/RAEE autorizadas a nivel nacional.</li>
+          <li>Nivel de conocimiento y canales de disposición de RAEE usados por ciudadanos y entidades de Norte de Santander.</li>
+        </ul>
       </div>
     </section>
 
@@ -82,7 +95,44 @@
       <div class="card__num">04</div>
       <div class="card__body">
         <h2>Fuentes y tipo de recolección</h2>
-        <p class="hint">Identifica las fuentes de datos (abiertas, institucionales, encuestas propias, etc.) y el método de recolección usado.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nivel</th>
+                <th>Fuente</th>
+                <th>Tipo</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Global</td>
+                <td>Our World in Data — Electronic waste recycling rate</td>
+                <td>Secundaria</td>
+                <td><a href="https://ourworldindata.org/grapher/electronic-waste-recycling-rate" target="_blank" rel="noopener">Ver fuente</a></td>
+              </tr>
+              <tr>
+                <td>Nacional (consumo)</td>
+                <td>DANE — Encuesta ENTIC Hogares</td>
+                <td>Secundaria</td>
+                <td><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/tecnologia-e-innovacion/tecnologias-de-la-informacion-y-las-comunicaciones-tic/encuesta-de-tecnologias-de-la-informacion-y-las-comunicaciones-en-hogares-entic-hogares" target="_blank" rel="noopener">Ver fuente</a></td>
+              </tr>
+              <tr>
+                <td>Nacional (gestión)</td>
+                <td>IDEAM — Gestores RESPEL y RAEE</td>
+                <td>Secundaria</td>
+                <td><a href="https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Gestores-RESPEL-y-RAEE/cxrv-qad2/about_data" target="_blank" rel="noopener">Ver fuente</a></td>
+              </tr>
+              <tr>
+                <td>Regional</td>
+                <td>Estudio de percepción ciudadana sobre RAEE — Norte de Santander</td>
+                <td>Primaria (estudio original)</td>
+                <td><a href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/Estudio-de-percepci-n-ciudadana-sobre-el-conocimie/rfqz-psdm/about_data" target="_blank" rel="noopener">Ver fuente</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -90,11 +140,48 @@
       <div class="card__num">05</div>
       <div class="card__body">
         <h2>Descripción del dataset</h2>
-        <p class="hint">Resume el dataset final: origen, cobertura temporal/geográfica, número de registros y variables.</p>
         <div class="stat-row">
-          <div class="stat"><span class="stat__value">—</span><span class="stat__label">registros</span></div>
-          <div class="stat"><span class="stat__value">—</span><span class="stat__label">variables</span></div>
-          <div class="stat"><span class="stat__value">—</span><span class="stat__label">periodo</span></div>
+          <div class="stat"><span class="stat__value">4</span><span class="stat__label">fuentes de datos</span></div>
+          <div class="stat"><span class="stat__value">—</span><span class="stat__label">registros (pendiente)</span></div>
+          <div class="stat"><span class="stat__value">—</span><span class="stat__label">variables (pendiente)</span></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Fuente</th>
+                <th>Unidad de análisis</th>
+                <th>Variables clave</th>
+                <th>Cobertura</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OWID</td>
+                <td>país-año</td>
+                <td>tasa de reciclaje RAEE</td>
+                <td>Mundial</td>
+              </tr>
+              <tr>
+                <td>DANE ENTIC Hogares</td>
+                <td>departamento-año</td>
+                <td>tenencia de computador, tablet, internet, total hogares</td>
+                <td>Nacional, por departamento y área</td>
+              </tr>
+              <tr>
+                <td>IDEAM Gestores RESPEL y RAEE</td>
+                <td>empresa/instalación</td>
+                <td>empresa, departamento, municipio, autoridad ambiental, actividad autorizada</td>
+                <td>Nacional</td>
+              </tr>
+              <tr>
+                <td>Norte de Santander (percepción)</td>
+                <td>encuestado/entidad</td>
+                <td>municipio, tipo de empresa, entidad, conocimiento de RAEE, dónde entrega, participación en jornadas</td>
+                <td>Departamental</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -103,19 +190,25 @@
       <div class="card__num">06</div>
       <div class="card__body">
         <h2>Diccionario de datos</h2>
-        <p class="hint">Describe cada variable del dataset: nombre, tipo, unidad y significado.</p>
+        <p class="hint">
+          <span class="pending-badge">Pendiente</span>
+          Se define al descargar y confirmar los archivos completos de cada fuente, con campo,
+          tipo de dato, dominio, fuente y ejemplo.
+        </p>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Variable</th>
-                <th>Tipo</th>
-                <th>Unidad</th>
-                <th>Descripción</th>
+                <th>Campo</th>
+                <th>Tipo de dato</th>
+                <th>Dominio</th>
+                <th>Fuente</th>
+                <th>Ejemplo</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td>—</td>
                 <td>—</td>
                 <td>—</td>
                 <td>—</td>
@@ -131,7 +224,12 @@
       <div class="card__num">07</div>
       <div class="card__body">
         <h2>Diagnóstico inicial de calidad</h2>
-        <p class="hint">Reporta hallazgos preliminares: valores faltantes, duplicados, inconsistencias o atípicos detectados.</p>
+        <ul class="question-list">
+          <li><strong>Completitud:</strong> el DANE no publicó ENTIC Hogares en 2022 ni 2023 — hay un vacío en la serie nacional de consumo.</li>
+          <li><strong>Unicidad:</strong> por confirmar duplicados una vez descargado el archivo completo de IDEAM.</li>
+          <li><strong>Consistencia:</strong> el cuadro de tenencia TIC del DANE cambió de estructura entre 2021 y 2024 (se eliminó "teléfono fijo" y se dividió "internet" en fijo/móvil/ambos) — es un cambio metodológico a documentar, no un error.</li>
+          <li><strong>Validez:</strong> por confirmar fechas exactas de aplicación en el dataset de Norte de Santander al revisar el archivo completo.</li>
+        </ul>
       </div>
     </section>
 
@@ -139,7 +237,11 @@
       <div class="card__num">08</div>
       <div class="card__body">
         <h2>Limitaciones encontradas</h2>
-        <p class="hint">Documenta las restricciones del proyecto: disponibilidad de datos, sesgos, alcance temporal o técnico.</p>
+        <ul class="question-list">
+          <li>No existe una cifra nacional única y consolidada de toneladas de RAEE generadas en Colombia; se documentó la búsqueda y el descarte justificado de fuentes no viables (microdatos DANE de acceso restringido, dataset sintético de Kaggle).</li>
+          <li>El caso regional corresponde a Norte de Santander y no a Bogotá, por disponibilidad real de datos con variables de comportamiento ciudadano.</li>
+          <li>Los niveles global, nacional y regional no son directamente comparables entre sí sin normalizar, al tener distinta unidad de análisis y granularidad temporal.</li>
+        </ul>
       </div>
     </section>
 
