@@ -4,67 +4,143 @@
   <div class="card__num">05</div>
   <div class="card__body">
     <h2>Descripción del dataset</h2>
+
     <div class="stat-row">
-      <div class="stat"><span class="stat__value">7</span><span class="stat__label">fuentes de datos</span></div>
-      <div class="stat"><span class="stat__value">—</span><span class="stat__label">registros (pendiente)</span></div>
-      <div class="stat"><span class="stat__value">—</span><span class="stat__label">variables (pendiente)</span></div>
+      <div class="stat"><span class="stat__value">82 059</span><span class="stat__label">registros</span></div>
+      <div class="stat"><span class="stat__value">4</span><span class="stat__label">archivos consolidados</span></div>
+      <div class="stat"><span class="stat__value">7</span><span class="stat__label">fuentes integradas</span></div>
     </div>
+
+    <p class="hint">
+      El dataset de la Etapa 1 son cuatro archivos en <code>datos/procesados/</code>,
+      derivados de las siete fuentes originales (<code>datos/originales/</code>) e
+      integrables entre sí por llaves geográficas (país / departamento / municipio) y
+      temporal (año). No es una única tabla plana: son cuatro tablas relacionadas, una
+      por nivel o dominio de análisis.
+    </p>
+
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Fuente</th>
+            <th>Archivo</th>
+            <th>Nivel</th>
             <th>Unidad de análisis</th>
-            <th>Variables clave</th>
-            <th>Cobertura</th>
+            <th>Registro</th>
+            <th>Filas</th>
+            <th>Campos</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>OWID</td>
-            <td>país-año</td>
-            <td>tasa de reciclaje RAEE</td>
-            <td>Mundial</td>
+            <td><code>master_indicadores_globales.csv</code></td>
+            <td>Global</td>
+            <td>país – año – indicador</td>
+            <td>Un indicador de una fuente para un país y un año</td>
+            <td>78 689</td>
+            <td>7</td>
           </tr>
           <tr>
-            <td>Eurostat (env_waseleeos)</td>
-            <td>país-año</td>
-            <td>RAEE recogido, tratado, reciclado y preparado para reutilización por operación de gestión (toneladas y kg/hab)</td>
-            <td>Unión Europea</td>
-          </tr>
-          <tr>
-            <td>ITU DataHub</td>
-            <td>país-año</td>
-            <td>% hogares con computador, % hogares con internet, % individuos que usan internet, % individuos con telefonía móvil</td>
-            <td>Mundial</td>
-          </tr>
-          <tr>
-            <td>DANE ENTIC Hogares</td>
-            <td>departamento-año</td>
-            <td>tenencia de computador, tablet, internet, total hogares</td>
-            <td>Nacional, por departamento y área</td>
-          </tr>
-          <tr>
-            <td>DANE ECV 2024</td>
-            <td>hogar / departamento</td>
-            <td>tenencia de bienes TIC del hogar, acceso a internet</td>
-            <td>Nacional (2024)</td>
-          </tr>
-          <tr>
-            <td>IDEAM Gestores RESPEL y RAEE</td>
-            <td>empresa/instalación</td>
-            <td>empresa, departamento, municipio, autoridad ambiental, actividad autorizada</td>
+            <td><code>dane_clean.csv</code></td>
             <td>Nacional</td>
+            <td>departamento – año – indicador</td>
+            <td>Un indicador TIC para un departamento y un año</td>
+            <td>960</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>Norte de Santander (percepción)</td>
-            <td>encuestado/entidad</td>
-            <td>municipio, tipo de empresa, entidad, conocimiento de RAEE, dónde entrega, participación en jornadas</td>
-            <td>Departamental</td>
+            <td><code>ideam_gestores_clean.csv</code></td>
+            <td>Nacional</td>
+            <td>gestor / instalación</td>
+            <td>Una instalación gestora de RESPEL / RAEE autorizada</td>
+            <td>377</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td><code>norte_santander_encuesta_clean.csv</code></td>
+            <td>Regional</td>
+            <td>encuestado / entidad</td>
+            <td>Una respuesta de un ciudadano o entidad de Norte de Santander</td>
+            <td>2 033</td>
+            <td>campos de percepción</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td><strong>82 059</strong></td>
+            <td>&gt; 20 en conjunto</td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <h3>Cumplimiento de requisitos mínimos</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Requisito</th>
+            <th>Mínimo</th>
+            <th>En el dataset</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Registros consolidados</td>
+            <td>10 000</td>
+            <td>82 059 en los 4 archivos integrables</td>
+            <td>Cumple</td>
+          </tr>
+          <tr>
+            <td>Variables</td>
+            <td>10</td>
+            <td>Más de 20 campos distintos entre los 4 archivos</td>
+            <td>Cumple</td>
+          </tr>
+          <tr>
+            <td>Variables numéricas</td>
+            <td>3</td>
+            <td><code>valor</code> (global), <code>valor</code> (DANE), <code>Latitud</code>, <code>Longitud</code> (IDEAM)</td>
+            <td>Cumple</td>
+          </tr>
+          <tr>
+            <td>Variables categóricas</td>
+            <td>3</td>
+            <td><code>nivel</code>, <code>fuente</code>, <code>variable</code>, <code>unidad</code>, <code>indicador</code>, <code>Autoridad</code>, <code>Estado</code>, <code>TIPO DE EMPRESA</code>, …</td>
+            <td>Cumple</td>
+          </tr>
+          <tr>
+            <td>Variable temporal</td>
+            <td>1</td>
+            <td><code>anio</code> (global y DANE), <code>Fecha Otorgamiento</code> (IDEAM)</td>
+            <td>Cumple</td>
+          </tr>
+          <tr>
+            <td>Variable geográfica</td>
+            <td>1</td>
+            <td><code>pais_region</code>, <code>departamento</code>, <code>Municipio</code>, <code>Latitud</code> / <code>Longitud</code>, <code>MUNICIPIO</code></td>
+            <td>Cumple</td>
+          </tr>
+          <tr>
+            <td>Integración global – nacional – regional</td>
+            <td>—</td>
+            <td>Llave geográfica (país / departamento / municipio) y temporal (año) común entre archivos</td>
+            <td>Cumple</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="hint">
+      Granularidad: IDEAM (una fila por instalación) y la encuesta de Norte de Santander
+      (una fila por encuestado) aportan el detalle desagregado; las series global y DANE
+      vienen agregadas por país o departamento y año. El detalle campo por campo está en
+      la vista <strong>Diccionario de datos</strong>.
+    </p>
   </div>
 </section>
 {% endblock %}

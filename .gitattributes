@@ -1,0 +1,4 @@
+# Los datos se guardan byte a byte, sin conversión de fin de línea (trazabilidad).
+datos/** -text
+*.xlsx binary
+*.gz binary

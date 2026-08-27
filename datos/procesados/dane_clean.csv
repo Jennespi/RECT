@@ -1,0 +1,961 @@
+departamento,anio,indicador,valor,nivel,fuente,unidad
+TOTAL NACIONAL,2020,pct_hogares_computador_tablet,39.30685562393709,nacional,DANE_ENTIC_Hogares,%
+TOTAL NACIONAL,2020,pct_hogares_internet,56.526239890461774,nacional,DANE_ENTIC_Hogares,%
+AMAZONAS,2020,pct_hogares_computador_tablet,10.872063076984032,nacional,DANE_ENTIC_Hogares,%
+AMAZONAS,2020,pct_hogares_internet,15.594912635207416,nacional,DANE_ENTIC_Hogares,%
+ANTIOQUIA,2020,pct_hogares_computador_tablet,42.08527261591538,nacional,DANE_ENTIC_Hogares,%
+ANTIOQUIA,2020,pct_hogares_internet,57.96647726881725,nacional,DANE_ENTIC_Hogares,%
+ARAUCA,2020,pct_hogares_computador_tablet,16.45332616533966,nacional,DANE_ENTIC_Hogares,%
+ARAUCA,2020,pct_hogares_internet,36.01267993363427,nacional,DANE_ENTIC_Hogares,%
+ATLÁNTICO,2020,pct_hogares_computador_tablet,42.94198962190098,nacional,DANE_ENTIC_Hogares,%
+ATLÁNTICO,2020,pct_hogares_internet,58.62806254645484,nacional,DANE_ENTIC_Hogares,%
+BOGOTÁ D.C.,2020,pct_hogares_computador_tablet,63.750708173201055,nacional,DANE_ENTIC_Hogares,%
+BOGOTÁ D.C.,2020,pct_hogares_internet,77.98717208097972,nacional,DANE_ENTIC_Hogares,%
+BOLÍVAR,2020,pct_hogares_computador_tablet,23.990836595090904,nacional,DANE_ENTIC_Hogares,%
+BOLÍVAR,2020,pct_hogares_internet,30.670123520015608,nacional,DANE_ENTIC_Hogares,%
+BOYACÁ,2020,pct_hogares_computador_tablet,33.20429304977538,nacional,DANE_ENTIC_Hogares,%
+BOYACÁ,2020,pct_hogares_internet,59.543391074726834,nacional,DANE_ENTIC_Hogares,%
+CALDAS,2020,pct_hogares_computador_tablet,41.09863005475961,nacional,DANE_ENTIC_Hogares,%
+CALDAS,2020,pct_hogares_internet,57.57589813129756,nacional,DANE_ENTIC_Hogares,%
+CAQUETÁ,2020,pct_hogares_computador_tablet,24.430567718844003,nacional,DANE_ENTIC_Hogares,%
+CAQUETÁ,2020,pct_hogares_internet,42.465064920229985,nacional,DANE_ENTIC_Hogares,%
+CASANARE,2020,pct_hogares_computador_tablet,34.59215113921998,nacional,DANE_ENTIC_Hogares,%
+CASANARE,2020,pct_hogares_internet,54.83121165436904,nacional,DANE_ENTIC_Hogares,%
+CAUCA,2020,pct_hogares_computador_tablet,22.42681450646799,nacional,DANE_ENTIC_Hogares,%
+CAUCA,2020,pct_hogares_internet,33.75585181851706,nacional,DANE_ENTIC_Hogares,%
+CESAR,2020,pct_hogares_computador_tablet,25.003727171077152,nacional,DANE_ENTIC_Hogares,%
+CESAR,2020,pct_hogares_internet,46.45759011767211,nacional,DANE_ENTIC_Hogares,%
+CHOCÓ,2020,pct_hogares_computador_tablet,12.942286178077083,nacional,DANE_ENTIC_Hogares,%
+CHOCÓ,2020,pct_hogares_internet,13.224713185776645,nacional,DANE_ENTIC_Hogares,%
+CÓRDOBA,2020,pct_hogares_computador_tablet,17.34543029688278,nacional,DANE_ENTIC_Hogares,%
+CÓRDOBA,2020,pct_hogares_internet,30.24748058193157,nacional,DANE_ENTIC_Hogares,%
+CUNDINAMARCA,2020,pct_hogares_computador_tablet,40.159286483832695,nacional,DANE_ENTIC_Hogares,%
+CUNDINAMARCA,2020,pct_hogares_internet,57.12011491901573,nacional,DANE_ENTIC_Hogares,%
+GUAINÍA,2020,pct_hogares_computador_tablet,13.829923273657288,nacional,DANE_ENTIC_Hogares,%
+GUAINÍA,2020,pct_hogares_internet,18.938618925831204,nacional,DANE_ENTIC_Hogares,%
+GUAVIARE,2020,pct_hogares_computador_tablet,24.44326792627643,nacional,DANE_ENTIC_Hogares,%
+GUAVIARE,2020,pct_hogares_internet,30.194235796300582,nacional,DANE_ENTIC_Hogares,%
+HUILA,2020,pct_hogares_computador_tablet,30.518543809483162,nacional,DANE_ENTIC_Hogares,%
+HUILA,2020,pct_hogares_internet,44.24025151864339,nacional,DANE_ENTIC_Hogares,%
+LA GUAJIRA,2020,pct_hogares_computador_tablet,11.015338924419096,nacional,DANE_ENTIC_Hogares,%
+LA GUAJIRA,2020,pct_hogares_internet,21.455594741904456,nacional,DANE_ENTIC_Hogares,%
+MAGDALENA,2020,pct_hogares_computador_tablet,24.07794273989101,nacional,DANE_ENTIC_Hogares,%
+MAGDALENA,2020,pct_hogares_internet,38.30202192170537,nacional,DANE_ENTIC_Hogares,%
+META,2020,pct_hogares_computador_tablet,35.93630121353283,nacional,DANE_ENTIC_Hogares,%
+META,2020,pct_hogares_internet,55.52112064105772,nacional,DANE_ENTIC_Hogares,%
+NARIÑO,2020,pct_hogares_computador_tablet,26.298007502532993,nacional,DANE_ENTIC_Hogares,%
+NARIÑO,2020,pct_hogares_internet,40.615934361264,nacional,DANE_ENTIC_Hogares,%
+NORTE DE SANTANDER,2020,pct_hogares_computador_tablet,32.11018211333423,nacional,DANE_ENTIC_Hogares,%
+NORTE DE SANTANDER,2020,pct_hogares_internet,57.31546347882962,nacional,DANE_ENTIC_Hogares,%
+PUTUMAYO,2020,pct_hogares_computador_tablet,20.18995515838955,nacional,DANE_ENTIC_Hogares,%
+PUTUMAYO,2020,pct_hogares_internet,30.62304971081573,nacional,DANE_ENTIC_Hogares,%
+QUINDÍO,2020,pct_hogares_computador_tablet,39.758180587725064,nacional,DANE_ENTIC_Hogares,%
+QUINDÍO,2020,pct_hogares_internet,57.43997407375635,nacional,DANE_ENTIC_Hogares,%
+RISARALDA,2020,pct_hogares_computador_tablet,45.14422085214641,nacional,DANE_ENTIC_Hogares,%
+RISARALDA,2020,pct_hogares_internet,63.49355962503724,nacional,DANE_ENTIC_Hogares,%
+SAN ANDRÉS,2020,pct_hogares_computador_tablet,36.91330061658488,nacional,DANE_ENTIC_Hogares,%
+SAN ANDRÉS,2020,pct_hogares_internet,32.47137284509878,nacional,DANE_ENTIC_Hogares,%
+SANTANDER,2020,pct_hogares_computador_tablet,39.95774161219986,nacional,DANE_ENTIC_Hogares,%
+SANTANDER,2020,pct_hogares_internet,62.9316359371049,nacional,DANE_ENTIC_Hogares,%
+SUCRE,2020,pct_hogares_computador_tablet,19.657860403243784,nacional,DANE_ENTIC_Hogares,%
+SUCRE,2020,pct_hogares_internet,26.119847531895147,nacional,DANE_ENTIC_Hogares,%
+TOLIMA,2020,pct_hogares_computador_tablet,32.645757390138485,nacional,DANE_ENTIC_Hogares,%
+TOLIMA,2020,pct_hogares_internet,62.13649000012851,nacional,DANE_ENTIC_Hogares,%
+VALLE DEL CAUCA,2020,pct_hogares_computador_tablet,47.33976258162023,nacional,DANE_ENTIC_Hogares,%
+VALLE DEL CAUCA,2020,pct_hogares_internet,76.09310008878526,nacional,DANE_ENTIC_Hogares,%
+VAUPÉS,2020,pct_hogares_computador_tablet,11.852054295344812,nacional,DANE_ENTIC_Hogares,%
+VAUPÉS,2020,pct_hogares_internet,3.1247153138380246,nacional,DANE_ENTIC_Hogares,%
+VICHADA,2020,pct_hogares_computador_tablet,6.701754385964913,nacional,DANE_ENTIC_Hogares,%
+VICHADA,2020,pct_hogares_internet,7.020242914979757,nacional,DANE_ENTIC_Hogares,%
+TOTAL NACIONAL,2021,pct_hogares_computador_tablet,"37,9",nacional,DANE_ENTIC_Hogares,%
+TOTAL NACIONAL,2021,pct_hogares_internet,"60,5",nacional,DANE_ENTIC_Hogares,%
+AMAZONAS,2021,pct_hogares_computador_tablet,"13,3",nacional,DANE_ENTIC_Hogares,%
+AMAZONAS,2021,pct_hogares_internet,"16,7",nacional,DANE_ENTIC_Hogares,%
+ANTIOQUIA,2021,pct_hogares_computador_tablet,"39,7",nacional,DANE_ENTIC_Hogares,%
+ANTIOQUIA,2021,pct_hogares_internet,"60,8",nacional,DANE_ENTIC_Hogares,%
+ARAUCA,2021,pct_hogares_computador_tablet,"16,0",nacional,DANE_ENTIC_Hogares,%
+ARAUCA,2021,pct_hogares_internet,"43,2",nacional,DANE_ENTIC_Hogares,%
+ATLÁNTICO,2021,pct_hogares_computador_tablet,"39,1",nacional,DANE_ENTIC_Hogares,%
+ATLÁNTICO,2021,pct_hogares_internet,"60,7",nacional,DANE_ENTIC_Hogares,%
+BOGOTÁ D.C.,2021,pct_hogares_computador_tablet,"66,1",nacional,DANE_ENTIC_Hogares,%
+BOGOTÁ D.C.,2021,pct_hogares_internet,"81,5",nacional,DANE_ENTIC_Hogares,%
+BOLÍVAR,2021,pct_hogares_computador_tablet,"23,1",nacional,DANE_ENTIC_Hogares,%
+BOLÍVAR,2021,pct_hogares_internet,"46,1",nacional,DANE_ENTIC_Hogares,%
+BOYACÁ,2021,pct_hogares_computador_tablet,"34,1",nacional,DANE_ENTIC_Hogares,%
+BOYACÁ,2021,pct_hogares_internet,"64,3",nacional,DANE_ENTIC_Hogares,%
+CALDAS,2021,pct_hogares_computador_tablet,"40,6",nacional,DANE_ENTIC_Hogares,%
+CALDAS,2021,pct_hogares_internet,"66,8",nacional,DANE_ENTIC_Hogares,%
+CAQUETÁ,2021,pct_hogares_computador_tablet,"20,2",nacional,DANE_ENTIC_Hogares,%
+CAQUETÁ,2021,pct_hogares_internet,"60,5",nacional,DANE_ENTIC_Hogares,%
+CASANARE,2021,pct_hogares_computador_tablet,"29,7",nacional,DANE_ENTIC_Hogares,%
+CASANARE,2021,pct_hogares_internet,"53,1",nacional,DANE_ENTIC_Hogares,%
+CAUCA,2021,pct_hogares_computador_tablet,"18,7",nacional,DANE_ENTIC_Hogares,%
+CAUCA,2021,pct_hogares_internet,"31,7",nacional,DANE_ENTIC_Hogares,%
+CESAR,2021,pct_hogares_computador_tablet,"24,2",nacional,DANE_ENTIC_Hogares,%
+CESAR,2021,pct_hogares_internet,"44,8",nacional,DANE_ENTIC_Hogares,%
+CHOCÓ,2021,pct_hogares_computador_tablet,"13,5",nacional,DANE_ENTIC_Hogares,%
+CHOCÓ,2021,pct_hogares_internet,"14,6",nacional,DANE_ENTIC_Hogares,%
+CÓRDOBA,2021,pct_hogares_computador_tablet,"17,8",nacional,DANE_ENTIC_Hogares,%
+CÓRDOBA,2021,pct_hogares_internet,"30,3",nacional,DANE_ENTIC_Hogares,%
+CUNDINAMARCA,2021,pct_hogares_computador_tablet,"40,8",nacional,DANE_ENTIC_Hogares,%
+CUNDINAMARCA,2021,pct_hogares_internet,"60,8",nacional,DANE_ENTIC_Hogares,%
+GUAINÍA,2021,pct_hogares_computador_tablet,"11,9",nacional,DANE_ENTIC_Hogares,%
+GUAINÍA,2021,pct_hogares_internet,"24,1",nacional,DANE_ENTIC_Hogares,%
+GUAVIARE,2021,pct_hogares_computador_tablet,"18,2",nacional,DANE_ENTIC_Hogares,%
+GUAVIARE,2021,pct_hogares_internet,"35,7",nacional,DANE_ENTIC_Hogares,%
+HUILA,2021,pct_hogares_computador_tablet,"30,5",nacional,DANE_ENTIC_Hogares,%
+HUILA,2021,pct_hogares_internet,"51,5",nacional,DANE_ENTIC_Hogares,%
+LA GUAJIRA,2021,pct_hogares_computador_tablet,"11,6",nacional,DANE_ENTIC_Hogares,%
+LA GUAJIRA,2021,pct_hogares_internet,"28,6",nacional,DANE_ENTIC_Hogares,%
+MAGDALENA,2021,pct_hogares_computador_tablet,"18,9",nacional,DANE_ENTIC_Hogares,%
+MAGDALENA,2021,pct_hogares_internet,"48,8",nacional,DANE_ENTIC_Hogares,%
+META,2021,pct_hogares_computador_tablet,"30,9",nacional,DANE_ENTIC_Hogares,%
+META,2021,pct_hogares_internet,"63,2",nacional,DANE_ENTIC_Hogares,%
+NARIÑO,2021,pct_hogares_computador_tablet,"22,8",nacional,DANE_ENTIC_Hogares,%
+NARIÑO,2021,pct_hogares_internet,"41,9",nacional,DANE_ENTIC_Hogares,%
+NORTE DE SANTANDER,2021,pct_hogares_computador_tablet,"28,8",nacional,DANE_ENTIC_Hogares,%
+NORTE DE SANTANDER,2021,pct_hogares_internet,"63,4",nacional,DANE_ENTIC_Hogares,%
+PUTUMAYO,2021,pct_hogares_computador_tablet,"17,4",nacional,DANE_ENTIC_Hogares,%
+PUTUMAYO,2021,pct_hogares_internet,"29,1",nacional,DANE_ENTIC_Hogares,%
+QUINDÍO,2021,pct_hogares_computador_tablet,"42,7",nacional,DANE_ENTIC_Hogares,%
+QUINDÍO,2021,pct_hogares_internet,"63,0",nacional,DANE_ENTIC_Hogares,%
+RISARALDA,2021,pct_hogares_computador_tablet,"42,3",nacional,DANE_ENTIC_Hogares,%
+RISARALDA,2021,pct_hogares_internet,"72,8",nacional,DANE_ENTIC_Hogares,%
+SAN ANDRÉS,2021,pct_hogares_computador_tablet,"37,9",nacional,DANE_ENTIC_Hogares,%
+SAN ANDRÉS,2021,pct_hogares_internet,"41,3",nacional,DANE_ENTIC_Hogares,%
+SANTANDER,2021,pct_hogares_computador_tablet,"35,7",nacional,DANE_ENTIC_Hogares,%
+SANTANDER,2021,pct_hogares_internet,"64,1",nacional,DANE_ENTIC_Hogares,%
+SUCRE,2021,pct_hogares_computador_tablet,"17,7",nacional,DANE_ENTIC_Hogares,%
+SUCRE,2021,pct_hogares_internet,"37,5",nacional,DANE_ENTIC_Hogares,%
+TOLIMA,2021,pct_hogares_computador_tablet,"34,1",nacional,DANE_ENTIC_Hogares,%
+TOLIMA,2021,pct_hogares_internet,"67,0",nacional,DANE_ENTIC_Hogares,%
+VALLE DEL CAUCA,2021,pct_hogares_computador_tablet,"41,7",nacional,DANE_ENTIC_Hogares,%
+VALLE DEL CAUCA,2021,pct_hogares_internet,"79,0",nacional,DANE_ENTIC_Hogares,%
+VAUPÉS,2021,pct_hogares_computador_tablet,"9,9",nacional,DANE_ENTIC_Hogares,%
+VAUPÉS,2021,pct_hogares_internet,"10,6",nacional,DANE_ENTIC_Hogares,%
+VICHADA,2021,pct_hogares_computador_tablet,"5,0",nacional,DANE_ENTIC_Hogares,%
+VICHADA,2021,pct_hogares_internet,"4,6",nacional,DANE_ENTIC_Hogares,%
+TOTAL NACIONAL,2024,pct_hogares_computador_tablet,35.7,nacional,DANE_ENTIC_Hogares,%
+TOTAL NACIONAL,2024,pct_hogares_internet,65.6,nacional,DANE_ENTIC_Hogares,%
+AMAZONAS,2024,pct_hogares_computador_tablet,18.4,nacional,DANE_ENTIC_Hogares,%
+AMAZONAS,2024,pct_hogares_internet,41.3,nacional,DANE_ENTIC_Hogares,%
+ANTIOQUIA,2024,pct_hogares_computador_tablet,40.3,nacional,DANE_ENTIC_Hogares,%
+ANTIOQUIA,2024,pct_hogares_internet,66.9,nacional,DANE_ENTIC_Hogares,%
+ARAUCA,2024,pct_hogares_computador_tablet,12.9,nacional,DANE_ENTIC_Hogares,%
+ARAUCA,2024,pct_hogares_internet,34.3,nacional,DANE_ENTIC_Hogares,%
+ATLÁNTICO,2024,pct_hogares_computador_tablet,36.9,nacional,DANE_ENTIC_Hogares,%
+ATLÁNTICO,2024,pct_hogares_internet,58.9,nacional,DANE_ENTIC_Hogares,%
+BOGOTÁ D.C.,2024,pct_hogares_computador_tablet,60.9,nacional,DANE_ENTIC_Hogares,%
+BOGOTÁ D.C.,2024,pct_hogares_internet,82.7,nacional,DANE_ENTIC_Hogares,%
+BOLÍVAR,2024,pct_hogares_computador_tablet,19.8,nacional,DANE_ENTIC_Hogares,%
+BOLÍVAR,2024,pct_hogares_internet,60.2,nacional,DANE_ENTIC_Hogares,%
+BOYACÁ,2024,pct_hogares_computador_tablet,31.6,nacional,DANE_ENTIC_Hogares,%
+BOYACÁ,2024,pct_hogares_internet,60.6,nacional,DANE_ENTIC_Hogares,%
+CALDAS,2024,pct_hogares_computador_tablet,40.5,nacional,DANE_ENTIC_Hogares,%
+CALDAS,2024,pct_hogares_internet,66.9,nacional,DANE_ENTIC_Hogares,%
+CAQUETÁ,2024,pct_hogares_computador_tablet,20.4,nacional,DANE_ENTIC_Hogares,%
+CAQUETÁ,2024,pct_hogares_internet,62.0,nacional,DANE_ENTIC_Hogares,%
+CASANARE,2024,pct_hogares_computador_tablet,23.7,nacional,DANE_ENTIC_Hogares,%
+CASANARE,2024,pct_hogares_internet,71.0,nacional,DANE_ENTIC_Hogares,%
+CAUCA,2024,pct_hogares_computador_tablet,22.7,nacional,DANE_ENTIC_Hogares,%
+CAUCA,2024,pct_hogares_internet,49.0,nacional,DANE_ENTIC_Hogares,%
+CESAR,2024,pct_hogares_computador_tablet,22.1,nacional,DANE_ENTIC_Hogares,%
+CESAR,2024,pct_hogares_internet,64.5,nacional,DANE_ENTIC_Hogares,%
+CHOCÓ,2024,pct_hogares_computador_tablet,13.5,nacional,DANE_ENTIC_Hogares,%
+CHOCÓ,2024,pct_hogares_internet,28.7,nacional,DANE_ENTIC_Hogares,%
+CÓRDOBA,2024,pct_hogares_computador_tablet,17.0,nacional,DANE_ENTIC_Hogares,%
+CÓRDOBA,2024,pct_hogares_internet,47.2,nacional,DANE_ENTIC_Hogares,%
+CUNDINAMARCA,2024,pct_hogares_computador_tablet,38.7,nacional,DANE_ENTIC_Hogares,%
+CUNDINAMARCA,2024,pct_hogares_internet,66.9,nacional,DANE_ENTIC_Hogares,%
+GUAINÍA,2024,pct_hogares_computador_tablet,11.7,nacional,DANE_ENTIC_Hogares,%
+GUAINÍA,2024,pct_hogares_internet,31.5,nacional,DANE_ENTIC_Hogares,%
+GUAVIARE,2024,pct_hogares_computador_tablet,24.5,nacional,DANE_ENTIC_Hogares,%
+GUAVIARE,2024,pct_hogares_internet,57.6,nacional,DANE_ENTIC_Hogares,%
+HUILA,2024,pct_hogares_computador_tablet,25.4,nacional,DANE_ENTIC_Hogares,%
+HUILA,2024,pct_hogares_internet,70.8,nacional,DANE_ENTIC_Hogares,%
+LA GUAJIRA,2024,pct_hogares_computador_tablet,11.5,nacional,DANE_ENTIC_Hogares,%
+LA GUAJIRA,2024,pct_hogares_internet,30.1,nacional,DANE_ENTIC_Hogares,%
+MAGDALENA,2024,pct_hogares_computador_tablet,15.8,nacional,DANE_ENTIC_Hogares,%
+MAGDALENA,2024,pct_hogares_internet,55.1,nacional,DANE_ENTIC_Hogares,%
+META,2024,pct_hogares_computador_tablet,34.2,nacional,DANE_ENTIC_Hogares,%
+META,2024,pct_hogares_internet,77.0,nacional,DANE_ENTIC_Hogares,%
+NARIÑO,2024,pct_hogares_computador_tablet,19.3,nacional,DANE_ENTIC_Hogares,%
+NARIÑO,2024,pct_hogares_internet,54.6,nacional,DANE_ENTIC_Hogares,%
+NORTE DE SANTANDER,2024,pct_hogares_computador_tablet,30.0,nacional,DANE_ENTIC_Hogares,%
+NORTE DE SANTANDER,2024,pct_hogares_internet,60.5,nacional,DANE_ENTIC_Hogares,%
+PUTUMAYO,2024,pct_hogares_computador_tablet,16.8,nacional,DANE_ENTIC_Hogares,%
+PUTUMAYO,2024,pct_hogares_internet,38.6,nacional,DANE_ENTIC_Hogares,%
+QUINDÍO,2024,pct_hogares_computador_tablet,36.8,nacional,DANE_ENTIC_Hogares,%
+QUINDÍO,2024,pct_hogares_internet,63.4,nacional,DANE_ENTIC_Hogares,%
+RISARALDA,2024,pct_hogares_computador_tablet,32.6,nacional,DANE_ENTIC_Hogares,%
+RISARALDA,2024,pct_hogares_internet,73.0,nacional,DANE_ENTIC_Hogares,%
+SAN ANDRÉS,2024,pct_hogares_computador_tablet,37.5,nacional,DANE_ENTIC_Hogares,%
+SAN ANDRÉS,2024,pct_hogares_internet,57.6,nacional,DANE_ENTIC_Hogares,%
+SANTANDER,2024,pct_hogares_computador_tablet,37.3,nacional,DANE_ENTIC_Hogares,%
+SANTANDER,2024,pct_hogares_internet,65.2,nacional,DANE_ENTIC_Hogares,%
+SUCRE,2024,pct_hogares_computador_tablet,15.1,nacional,DANE_ENTIC_Hogares,%
+SUCRE,2024,pct_hogares_internet,46.4,nacional,DANE_ENTIC_Hogares,%
+TOLIMA,2024,pct_hogares_computador_tablet,30.2,nacional,DANE_ENTIC_Hogares,%
+TOLIMA,2024,pct_hogares_internet,76.5,nacional,DANE_ENTIC_Hogares,%
+VALLE DEL CAUCA,2024,pct_hogares_computador_tablet,36.7,nacional,DANE_ENTIC_Hogares,%
+VALLE DEL CAUCA,2024,pct_hogares_internet,73.4,nacional,DANE_ENTIC_Hogares,%
+VAUPÉS,2024,pct_hogares_computador_tablet,10.7,nacional,DANE_ENTIC_Hogares,%
+VAUPÉS,2024,pct_hogares_internet,26.5,nacional,DANE_ENTIC_Hogares,%
+VICHADA,2024,pct_hogares_computador_tablet,4.6,nacional,DANE_ENTIC_Hogares,%
+VICHADA,2024,pct_hogares_internet,15.4,nacional,DANE_ENTIC_Hogares,%
+Total nacional,2018,pct_personas_usan_computador,44.61658122,nacional,DANE_ECV,%
+Cabecera,2018,pct_personas_usan_computador,50.95849774,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2018,pct_personas_usan_computador,24.54547865,nacional,DANE_ECV,%
+Amazonas,2018,pct_personas_usan_computador,20.42342632,nacional,DANE_ECV,%
+Antioquia,2018,pct_personas_usan_computador,43.36796202,nacional,DANE_ECV,%
+Arauca,2018,pct_personas_usan_computador,30.20843426,nacional,DANE_ECV,%
+Atlántico,2018,pct_personas_usan_computador,42.5998395,nacional,DANE_ECV,%
+Bogotá D.C.,2018,pct_personas_usan_computador,64.42998122,nacional,DANE_ECV,%
+Bolívar,2018,pct_personas_usan_computador,41.84476538,nacional,DANE_ECV,%
+Boyacá,2018,pct_personas_usan_computador,41.98657697,nacional,DANE_ECV,%
+Caldas,2018,pct_personas_usan_computador,38.2208849,nacional,DANE_ECV,%
+Caquetá,2018,pct_personas_usan_computador,28.67849634,nacional,DANE_ECV,%
+Casanare,2018,pct_personas_usan_computador,41.60887784,nacional,DANE_ECV,%
+Cauca,2018,pct_personas_usan_computador,37.34074488,nacional,DANE_ECV,%
+Cesar,2018,pct_personas_usan_computador,37.43831563,nacional,DANE_ECV,%
+Córdoba,2018,pct_personas_usan_computador,35.91273715,nacional,DANE_ECV,%
+Cundinamarca,2018,pct_personas_usan_computador,41.82230862,nacional,DANE_ECV,%
+Chocó,2018,pct_personas_usan_computador,32.74533351,nacional,DANE_ECV,%
+Guainía,2018,pct_personas_usan_computador,24.93533552,nacional,DANE_ECV,%
+Guaviare,2018,pct_personas_usan_computador,29.73829189,nacional,DANE_ECV,%
+Huila,2018,pct_personas_usan_computador,43.03652385,nacional,DANE_ECV,%
+La Guajira,2018,pct_personas_usan_computador,23.93302388,nacional,DANE_ECV,%
+Magdalena,2018,pct_personas_usan_computador,40.48113109,nacional,DANE_ECV,%
+Meta,2018,pct_personas_usan_computador,38.46840439,nacional,DANE_ECV,%
+Nariño,2018,pct_personas_usan_computador,35.81935518,nacional,DANE_ECV,%
+Norte de Santander,2018,pct_personas_usan_computador,38.62189678,nacional,DANE_ECV,%
+Putumayo,2018,pct_personas_usan_computador,34.66196659,nacional,DANE_ECV,%
+Quindío,2018,pct_personas_usan_computador,42.3961006,nacional,DANE_ECV,%
+Risaralda,2018,pct_personas_usan_computador,44.86903562,nacional,DANE_ECV,%
+San Andrés,2018,pct_personas_usan_computador,50.15966207,nacional,DANE_ECV,%
+Santander,2018,pct_personas_usan_computador,45.03275789,nacional,DANE_ECV,%
+Sucre,2018,pct_personas_usan_computador,35.49961059,nacional,DANE_ECV,%
+Tolima,2018,pct_personas_usan_computador,41.8809098,nacional,DANE_ECV,%
+Valle,2018,pct_personas_usan_computador,48.23677599,nacional,DANE_ECV,%
+Vaupés,2018,pct_personas_usan_computador,17.56718217,nacional,DANE_ECV,%
+Vichada,2018,pct_personas_usan_computador,19.05223034,nacional,DANE_ECV,%
+Total nacional,2020,pct_personas_usan_computador,33.9928741,nacional,DANE_ECV,%
+Cabecera,2020,pct_personas_usan_computador,40.753544,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2020,pct_personas_usan_computador,11.9243265,nacional,DANE_ECV,%
+Amazonas,2020,pct_personas_usan_computador,16.4264514,nacional,DANE_ECV,%
+Antioquia,2020,pct_personas_usan_computador,32.8757314,nacional,DANE_ECV,%
+Arauca,2020,pct_personas_usan_computador,17.3202524,nacional,DANE_ECV,%
+Atlántico,2020,pct_personas_usan_computador,36.0594024,nacional,DANE_ECV,%
+Bogotá D.C.,2020,pct_personas_usan_computador,54.9730148,nacional,DANE_ECV,%
+Bolívar,2020,pct_personas_usan_computador,27.0897884,nacional,DANE_ECV,%
+Boyacá,2020,pct_personas_usan_computador,27.211925,nacional,DANE_ECV,%
+Caldas,2020,pct_personas_usan_computador,33.8333724,nacional,DANE_ECV,%
+Caquetá,2020,pct_personas_usan_computador,26.986021,nacional,DANE_ECV,%
+Casanare,2020,pct_personas_usan_computador,29.8379073,nacional,DANE_ECV,%
+Cauca,2020,pct_personas_usan_computador,20.2581797,nacional,DANE_ECV,%
+Cesar,2020,pct_personas_usan_computador,22.9640917,nacional,DANE_ECV,%
+Córdoba,2020,pct_personas_usan_computador,18.3558553,nacional,DANE_ECV,%
+Cundinamarca,2020,pct_personas_usan_computador,36.3062743,nacional,DANE_ECV,%
+Chocó,2020,pct_personas_usan_computador,13.1951481,nacional,DANE_ECV,%
+Guainía,2020,pct_personas_usan_computador,17.3112066,nacional,DANE_ECV,%
+Guaviare,2020,pct_personas_usan_computador,24.0542386,nacional,DANE_ECV,%
+Huila,2020,pct_personas_usan_computador,28.0130916,nacional,DANE_ECV,%
+La Guajira,2020,pct_personas_usan_computador,16.8934417,nacional,DANE_ECV,%
+Magdalena,2020,pct_personas_usan_computador,22.9204983,nacional,DANE_ECV,%
+Meta,2020,pct_personas_usan_computador,32.0494082,nacional,DANE_ECV,%
+Nariño,2020,pct_personas_usan_computador,27.8247616,nacional,DANE_ECV,%
+Norte de Santander,2020,pct_personas_usan_computador,25.3411962,nacional,DANE_ECV,%
+Putumayo,2020,pct_personas_usan_computador,20.7442367,nacional,DANE_ECV,%
+Quindío,2020,pct_personas_usan_computador,33.1779768,nacional,DANE_ECV,%
+Risaralda,2020,pct_personas_usan_computador,36.3759509,nacional,DANE_ECV,%
+San Andrés,2020,pct_personas_usan_computador,48.9095076,nacional,DANE_ECV,%
+Santander,2020,pct_personas_usan_computador,35.1365988,nacional,DANE_ECV,%
+Sucre,2020,pct_personas_usan_computador,19.5041497,nacional,DANE_ECV,%
+Tolima,2020,pct_personas_usan_computador,29.899181,nacional,DANE_ECV,%
+Valle,2020,pct_personas_usan_computador,39.5323089,nacional,DANE_ECV,%
+Vaupés,2020,pct_personas_usan_computador,16.5539979,nacional,DANE_ECV,%
+Vichada,2020,pct_personas_usan_computador,8.26379716,nacional,DANE_ECV,%
+Total nacional,2024,pct_personas_usan_computador,35.04850958,nacional,DANE_ECV,%
+Cabecera,2024,pct_personas_usan_computador,40.55832256,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2024,pct_personas_usan_computador,16.50573883,nacional,DANE_ECV,%
+Amazonas,2024,pct_personas_usan_computador,33.43320665,nacional,DANE_ECV,%
+Antioquia,2024,pct_personas_usan_computador,34.56474521,nacional,DANE_ECV,%
+Arauca,2024,pct_personas_usan_computador,23.57420219,nacional,DANE_ECV,%
+Atlántico,2024,pct_personas_usan_computador,34.50797059,nacional,DANE_ECV,%
+Bogotá D.C.,2024,pct_personas_usan_computador,56.66703336,nacional,DANE_ECV,%
+Bolívar,2024,pct_personas_usan_computador,24.79746999,nacional,DANE_ECV,%
+Boyacá,2024,pct_personas_usan_computador,32.51620161,nacional,DANE_ECV,%
+Caldas,2024,pct_personas_usan_computador,35.00268274,nacional,DANE_ECV,%
+Caquetá,2024,pct_personas_usan_computador,26.27443166,nacional,DANE_ECV,%
+Casanare,2024,pct_personas_usan_computador,31.80687529,nacional,DANE_ECV,%
+Cauca,2024,pct_personas_usan_computador,26.47772461,nacional,DANE_ECV,%
+Cesar,2024,pct_personas_usan_computador,28.35427433,nacional,DANE_ECV,%
+Córdoba,2024,pct_personas_usan_computador,25.20054942,nacional,DANE_ECV,%
+Cundinamarca,2024,pct_personas_usan_computador,40.05676722,nacional,DANE_ECV,%
+Chocó,2024,pct_personas_usan_computador,17.72656907,nacional,DANE_ECV,%
+Guainía,2024,pct_personas_usan_computador,22.33772274,nacional,DANE_ECV,%
+Guaviare,2024,pct_personas_usan_computador,28.71490983,nacional,DANE_ECV,%
+Huila,2024,pct_personas_usan_computador,21.9389064,nacional,DANE_ECV,%
+La Guajira,2024,pct_personas_usan_computador,20.18677748,nacional,DANE_ECV,%
+Magdalena,2024,pct_personas_usan_computador,20.46165005,nacional,DANE_ECV,%
+Meta,2024,pct_personas_usan_computador,30.41621391,nacional,DANE_ECV,%
+Nariño,2024,pct_personas_usan_computador,23.07480172,nacional,DANE_ECV,%
+Norte de Santander,2024,pct_personas_usan_computador,25.81017381,nacional,DANE_ECV,%
+Putumayo,2024,pct_personas_usan_computador,26.11099056,nacional,DANE_ECV,%
+Quindío,2024,pct_personas_usan_computador,30.96575074,nacional,DANE_ECV,%
+Risaralda,2024,pct_personas_usan_computador,28.99989692,nacional,DANE_ECV,%
+San Andrés,2024,pct_personas_usan_computador,39.97285335,nacional,DANE_ECV,%
+Santander,2024,pct_personas_usan_computador,36.51648122,nacional,DANE_ECV,%
+Sucre,2024,pct_personas_usan_computador,22.86135011,nacional,DANE_ECV,%
+Tolima,2024,pct_personas_usan_computador,30.36920792,nacional,DANE_ECV,%
+Valle,2024,pct_personas_usan_computador,38.76562365,nacional,DANE_ECV,%
+Vaupés,2024,pct_personas_usan_computador,27.32740271,nacional,DANE_ECV,%
+Vichada,2024,pct_personas_usan_computador,8.13291533,nacional,DANE_ECV,%
+Total nacional,2023,pct_personas_usan_computador,34.0993692033,nacional,DANE_ECV,%
+Cabecera,2023,pct_personas_usan_computador,39.3444020921,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2023,pct_personas_usan_computador,16.4843033158,nacional,DANE_ECV,%
+Amazonas,2023,pct_personas_usan_computador,27.2315929114,nacional,DANE_ECV,%
+Antioquia,2023,pct_personas_usan_computador,33.738342781,nacional,DANE_ECV,%
+Arauca,2023,pct_personas_usan_computador,21.6690260639,nacional,DANE_ECV,%
+Atlántico,2023,pct_personas_usan_computador,34.3748416321,nacional,DANE_ECV,%
+Bogotá D.C.,2023,pct_personas_usan_computador,53.4496303346,nacional,DANE_ECV,%
+Bolívar,2023,pct_personas_usan_computador,25.0576463086,nacional,DANE_ECV,%
+Boyacá,2023,pct_personas_usan_computador,34.4634367817,nacional,DANE_ECV,%
+Caldas,2023,pct_personas_usan_computador,35.5030145984,nacional,DANE_ECV,%
+Caquetá,2023,pct_personas_usan_computador,21.2103550608,nacional,DANE_ECV,%
+Casanare,2023,pct_personas_usan_computador,30.4493391767,nacional,DANE_ECV,%
+Cauca,2023,pct_personas_usan_computador,25.2397795443,nacional,DANE_ECV,%
+Cesar,2023,pct_personas_usan_computador,27.3856559259,nacional,DANE_ECV,%
+Córdoba,2023,pct_personas_usan_computador,22.7494058151,nacional,DANE_ECV,%
+Cundinamarca,2023,pct_personas_usan_computador,38.1271556707,nacional,DANE_ECV,%
+Chocó,2023,pct_personas_usan_computador,14.1422503058,nacional,DANE_ECV,%
+Guainía,2023,pct_personas_usan_computador,25.7512579887,nacional,DANE_ECV,%
+Guaviare,2023,pct_personas_usan_computador,25.0489503291,nacional,DANE_ECV,%
+Huila,2023,pct_personas_usan_computador,25.3249918841,nacional,DANE_ECV,%
+La Guajira,2023,pct_personas_usan_computador,22.7892743092,nacional,DANE_ECV,%
+Magdalena,2023,pct_personas_usan_computador,21.7307423217,nacional,DANE_ECV,%
+Meta,2023,pct_personas_usan_computador,33.1823770715,nacional,DANE_ECV,%
+Nariño,2023,pct_personas_usan_computador,25.4498154123,nacional,DANE_ECV,%
+Norte de Santander,2023,pct_personas_usan_computador,24.8478948059,nacional,DANE_ECV,%
+Putumayo,2023,pct_personas_usan_computador,25.78743495,nacional,DANE_ECV,%
+Quindío,2023,pct_personas_usan_computador,33.294441636,nacional,DANE_ECV,%
+Risaralda,2023,pct_personas_usan_computador,33.7633473364,nacional,DANE_ECV,%
+San Andrés,2023,pct_personas_usan_computador,33.0657669556,nacional,DANE_ECV,%
+Santander,2023,pct_personas_usan_computador,35.2276718086,nacional,DANE_ECV,%
+Sucre,2023,pct_personas_usan_computador,21.828627863,nacional,DANE_ECV,%
+Tolima,2023,pct_personas_usan_computador,29.6012899682,nacional,DANE_ECV,%
+Valle,2023,pct_personas_usan_computador,35.6376446926,nacional,DANE_ECV,%
+Vaupés,2023,pct_personas_usan_computador,24.4569582429,nacional,DANE_ECV,%
+Vichada,2023,pct_personas_usan_computador,5.8337048262,nacional,DANE_ECV,%
+Total nacional,2019,pct_personas_usan_computador,39.60753472,nacional,DANE_ECV,%
+Cabecera,2019,pct_personas_usan_computador,45.4035764,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2019,pct_personas_usan_computador,20.97982082,nacional,DANE_ECV,%
+Amazonas,2019,pct_personas_usan_computador,15.53633593,nacional,DANE_ECV,%
+Antioquia,2019,pct_personas_usan_computador,38.70389581,nacional,DANE_ECV,%
+Arauca,2019,pct_personas_usan_computador,23.58663315,nacional,DANE_ECV,%
+Atlántico,2019,pct_personas_usan_computador,41.25430231,nacional,DANE_ECV,%
+Bogotá D.C.,2019,pct_personas_usan_computador,54.80315806,nacional,DANE_ECV,%
+Bolívar,2019,pct_personas_usan_computador,38.51473691,nacional,DANE_ECV,%
+Boyacá,2019,pct_personas_usan_computador,35.18524612,nacional,DANE_ECV,%
+Caldas,2019,pct_personas_usan_computador,33.90952433,nacional,DANE_ECV,%
+Caquetá,2019,pct_personas_usan_computador,24.93780205,nacional,DANE_ECV,%
+Casanare,2019,pct_personas_usan_computador,35.98521556,nacional,DANE_ECV,%
+Cauca,2019,pct_personas_usan_computador,32.24853568,nacional,DANE_ECV,%
+Cesar,2019,pct_personas_usan_computador,32.40214181,nacional,DANE_ECV,%
+Córdoba,2019,pct_personas_usan_computador,31.61239009,nacional,DANE_ECV,%
+Cundinamarca,2019,pct_personas_usan_computador,41.53747849,nacional,DANE_ECV,%
+Chocó,2019,pct_personas_usan_computador,22.65638218,nacional,DANE_ECV,%
+Guainía,2019,pct_personas_usan_computador,25.41661111,nacional,DANE_ECV,%
+Guaviare,2019,pct_personas_usan_computador,30.90216438,nacional,DANE_ECV,%
+Huila,2019,pct_personas_usan_computador,33.27518969,nacional,DANE_ECV,%
+La Guajira,2019,pct_personas_usan_computador,25.62577782,nacional,DANE_ECV,%
+Magdalena,2019,pct_personas_usan_computador,35.65898324,nacional,DANE_ECV,%
+Meta,2019,pct_personas_usan_computador,37.31125744,nacional,DANE_ECV,%
+Nariño,2019,pct_personas_usan_computador,34.97130282,nacional,DANE_ECV,%
+Norte de Santander,2019,pct_personas_usan_computador,36.14794228,nacional,DANE_ECV,%
+Putumayo,2019,pct_personas_usan_computador,28.06407467,nacional,DANE_ECV,%
+Quindío,2019,pct_personas_usan_computador,36.77247018,nacional,DANE_ECV,%
+Risaralda,2019,pct_personas_usan_computador,39.51921814,nacional,DANE_ECV,%
+San Andrés,2019,pct_personas_usan_computador,43.22776898,nacional,DANE_ECV,%
+Santander,2019,pct_personas_usan_computador,39.93213072,nacional,DANE_ECV,%
+Sucre,2019,pct_personas_usan_computador,30.0150058,nacional,DANE_ECV,%
+Tolima,2019,pct_personas_usan_computador,38.4755097,nacional,DANE_ECV,%
+Valle,2019,pct_personas_usan_computador,41.51083896,nacional,DANE_ECV,%
+Vaupés,2019,pct_personas_usan_computador,18.24702779,nacional,DANE_ECV,%
+Vichada,2019,pct_personas_usan_computador,10.81997185,nacional,DANE_ECV,%
+Total nacional,2022,pct_personas_usan_computador,33.9346402,nacional,DANE_ECV,%
+Cabecera,2022,pct_personas_usan_computador,39.5090013,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2022,pct_personas_usan_computador,15.3524424,nacional,DANE_ECV,%
+Amazonas,2022,pct_personas_usan_computador,30.2159195,nacional,DANE_ECV,%
+Antioquia,2022,pct_personas_usan_computador,32.776678,nacional,DANE_ECV,%
+Arauca,2022,pct_personas_usan_computador,19.0988864,nacional,DANE_ECV,%
+Atlántico,2022,pct_personas_usan_computador,34.8631186,nacional,DANE_ECV,%
+Bogotá D.C.,2022,pct_personas_usan_computador,52.5033423,nacional,DANE_ECV,%
+Bolívar,2022,pct_personas_usan_computador,29.9349278,nacional,DANE_ECV,%
+Boyacá,2022,pct_personas_usan_computador,31.4938524,nacional,DANE_ECV,%
+Caldas,2022,pct_personas_usan_computador,35.1849811,nacional,DANE_ECV,%
+Caquetá,2022,pct_personas_usan_computador,23.5223489,nacional,DANE_ECV,%
+Casanare,2022,pct_personas_usan_computador,32.0391866,nacional,DANE_ECV,%
+Cauca,2022,pct_personas_usan_computador,23.9935225,nacional,DANE_ECV,%
+Cesar,2022,pct_personas_usan_computador,25.144141,nacional,DANE_ECV,%
+Córdoba,2022,pct_personas_usan_computador,23.9664465,nacional,DANE_ECV,%
+Cundinamarca,2022,pct_personas_usan_computador,37.558199,nacional,DANE_ECV,%
+Chocó,2022,pct_personas_usan_computador,19.6544411,nacional,DANE_ECV,%
+Guainía,2022,pct_personas_usan_computador,21.1792554,nacional,DANE_ECV,%
+Guaviare,2022,pct_personas_usan_computador,21.4342925,nacional,DANE_ECV,%
+Huila,2022,pct_personas_usan_computador,27.2140848,nacional,DANE_ECV,%
+La Guajira,2022,pct_personas_usan_computador,22.2993836,nacional,DANE_ECV,%
+Magdalena,2022,pct_personas_usan_computador,22.5967582,nacional,DANE_ECV,%
+Meta,2022,pct_personas_usan_computador,30.0323928,nacional,DANE_ECV,%
+Nariño,2022,pct_personas_usan_computador,26.5050268,nacional,DANE_ECV,%
+Norte de Santander,2022,pct_personas_usan_computador,27.1528924,nacional,DANE_ECV,%
+Putumayo,2022,pct_personas_usan_computador,20.9140103,nacional,DANE_ECV,%
+Quindío,2022,pct_personas_usan_computador,33.0862056,nacional,DANE_ECV,%
+Risaralda,2022,pct_personas_usan_computador,31.8473481,nacional,DANE_ECV,%
+San Andrés,2022,pct_personas_usan_computador,33.6895143,nacional,DANE_ECV,%
+Santander,2022,pct_personas_usan_computador,31.8420648,nacional,DANE_ECV,%
+Sucre,2022,pct_personas_usan_computador,23.2626857,nacional,DANE_ECV,%
+Tolima,2022,pct_personas_usan_computador,31.2194585,nacional,DANE_ECV,%
+Valle,2022,pct_personas_usan_computador,36.2284648,nacional,DANE_ECV,%
+Vaupés,2022,pct_personas_usan_computador,15.673453,nacional,DANE_ECV,%
+Vichada,2022,pct_personas_usan_computador,5.00968239,nacional,DANE_ECV,%
+Total nacional,2021,pct_personas_usan_computador,31.7908982,nacional,DANE_ECV,%
+Cabecera,2021,pct_personas_usan_computador,37.9181078,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2021,pct_personas_usan_computador,11.5266926,nacional,DANE_ECV,%
+Amazonas,2021,pct_personas_usan_computador,17.4402028,nacional,DANE_ECV,%
+Antioquia,2021,pct_personas_usan_computador,32.3701432,nacional,DANE_ECV,%
+Arauca,2021,pct_personas_usan_computador,18.2759653,nacional,DANE_ECV,%
+Atlántico,2021,pct_personas_usan_computador,28.5352605,nacional,DANE_ECV,%
+Bogotá D.C.,2021,pct_personas_usan_computador,56.7768191,nacional,DANE_ECV,%
+Bolívar,2021,pct_personas_usan_computador,21.0729773,nacional,DANE_ECV,%
+Boyacá,2021,pct_personas_usan_computador,31.4459433,nacional,DANE_ECV,%
+Caldas,2021,pct_personas_usan_computador,33.2274864,nacional,DANE_ECV,%
+Caquetá,2021,pct_personas_usan_computador,18.8052099,nacional,DANE_ECV,%
+Casanare,2021,pct_personas_usan_computador,28.3277376,nacional,DANE_ECV,%
+Cauca,2021,pct_personas_usan_computador,20.5130854,nacional,DANE_ECV,%
+Cesar,2021,pct_personas_usan_computador,20.1183632,nacional,DANE_ECV,%
+Córdoba,2021,pct_personas_usan_computador,19.7381891,nacional,DANE_ECV,%
+Cundinamarca,2021,pct_personas_usan_computador,35.5140324,nacional,DANE_ECV,%
+Chocó,2021,pct_personas_usan_computador,21.3829279,nacional,DANE_ECV,%
+Guainía,2021,pct_personas_usan_computador,17.0694853,nacional,DANE_ECV,%
+Guaviare,2021,pct_personas_usan_computador,19.1858952,nacional,DANE_ECV,%
+Huila,2021,pct_personas_usan_computador,24.4111384,nacional,DANE_ECV,%
+La Guajira,2021,pct_personas_usan_computador,14.7689752,nacional,DANE_ECV,%
+Magdalena,2021,pct_personas_usan_computador,13.9463952,nacional,DANE_ECV,%
+Meta,2021,pct_personas_usan_computador,25.9683425,nacional,DANE_ECV,%
+Nariño,2021,pct_personas_usan_computador,21.388318,nacional,DANE_ECV,%
+Norte de Santander,2021,pct_personas_usan_computador,22.5951766,nacional,DANE_ECV,%
+Putumayo,2021,pct_personas_usan_computador,21.5513343,nacional,DANE_ECV,%
+Quindío,2021,pct_personas_usan_computador,32.7255491,nacional,DANE_ECV,%
+Risaralda,2021,pct_personas_usan_computador,36.6991293,nacional,DANE_ECV,%
+San Andrés,2021,pct_personas_usan_computador,49.2407568,nacional,DANE_ECV,%
+Santander,2021,pct_personas_usan_computador,27.6025671,nacional,DANE_ECV,%
+Sucre,2021,pct_personas_usan_computador,15.8275718,nacional,DANE_ECV,%
+Tolima,2021,pct_personas_usan_computador,27.558208,nacional,DANE_ECV,%
+Valle,2021,pct_personas_usan_computador,33.5216576,nacional,DANE_ECV,%
+Vaupés,2021,pct_personas_usan_computador,17.1369897,nacional,DANE_ECV,%
+Vichada,2021,pct_personas_usan_computador,7.00471488,nacional,DANE_ECV,%
+Total nacional,2018,pct_personas_usan_internet,64.01084142,nacional,DANE_ECV,%
+Cabecera,2018,pct_personas_usan_internet,72.63078541,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2018,pct_personas_usan_internet,36.73016383,nacional,DANE_ECV,%
+Amazonas,2018,pct_personas_usan_internet,22.97923947,nacional,DANE_ECV,%
+Antioquia,2018,pct_personas_usan_internet,66.37964675,nacional,DANE_ECV,%
+Arauca,2018,pct_personas_usan_internet,49.15761148,nacional,DANE_ECV,%
+Atlántico,2018,pct_personas_usan_internet,66.65356964,nacional,DANE_ECV,%
+Bogotá D.C.,2018,pct_personas_usan_internet,80.86184402,nacional,DANE_ECV,%
+Bolívar,2018,pct_personas_usan_internet,57.02216418,nacional,DANE_ECV,%
+Boyacá,2018,pct_personas_usan_internet,58.14638338,nacional,DANE_ECV,%
+Caldas,2018,pct_personas_usan_internet,60.97636308,nacional,DANE_ECV,%
+Caquetá,2018,pct_personas_usan_internet,44.1280859,nacional,DANE_ECV,%
+Casanare,2018,pct_personas_usan_internet,64.58132698,nacional,DANE_ECV,%
+Cauca,2018,pct_personas_usan_internet,49.54979764,nacional,DANE_ECV,%
+Cesar,2018,pct_personas_usan_internet,60.65606393,nacional,DANE_ECV,%
+Córdoba,2018,pct_personas_usan_internet,50.46842474,nacional,DANE_ECV,%
+Cundinamarca,2018,pct_personas_usan_internet,65.75700292,nacional,DANE_ECV,%
+Chocó,2018,pct_personas_usan_internet,40.8632145,nacional,DANE_ECV,%
+Guainía,2018,pct_personas_usan_internet,27.58257976,nacional,DANE_ECV,%
+Guaviare,2018,pct_personas_usan_internet,40.90975823,nacional,DANE_ECV,%
+Huila,2018,pct_personas_usan_internet,53.45921824,nacional,DANE_ECV,%
+La Guajira,2018,pct_personas_usan_internet,35.97511732,nacional,DANE_ECV,%
+Magdalena,2018,pct_personas_usan_internet,56.12384738,nacional,DANE_ECV,%
+Meta,2018,pct_personas_usan_internet,67.71224954,nacional,DANE_ECV,%
+Nariño,2018,pct_personas_usan_internet,47.64733224,nacional,DANE_ECV,%
+Norte de Santander,2018,pct_personas_usan_internet,55.59229462,nacional,DANE_ECV,%
+Putumayo,2018,pct_personas_usan_internet,41.85129454,nacional,DANE_ECV,%
+Quindío,2018,pct_personas_usan_internet,68.73553911,nacional,DANE_ECV,%
+Risaralda,2018,pct_personas_usan_internet,71.14116412,nacional,DANE_ECV,%
+San Andrés,2018,pct_personas_usan_internet,71.05978747,nacional,DANE_ECV,%
+Santander,2018,pct_personas_usan_internet,67.59296781,nacional,DANE_ECV,%
+Sucre,2018,pct_personas_usan_internet,48.24894507,nacional,DANE_ECV,%
+Tolima,2018,pct_personas_usan_internet,62.14827296,nacional,DANE_ECV,%
+Valle,2018,pct_personas_usan_internet,73.58854819,nacional,DANE_ECV,%
+Vaupés,2018,pct_personas_usan_internet,16.15733135,nacional,DANE_ECV,%
+Vichada,2018,pct_personas_usan_internet,22.00419509,nacional,DANE_ECV,%
+Total nacional,2021,pct_personas_usan_internet,73.0283755,nacional,DANE_ECV,%
+Cabecera,2021,pct_personas_usan_internet,79.8304108,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2021,pct_personas_usan_internet,50.532354,nacional,DANE_ECV,%
+Amazonas,2021,pct_personas_usan_internet,34.8089926,nacional,DANE_ECV,%
+Antioquia,2021,pct_personas_usan_internet,74.9863829,nacional,DANE_ECV,%
+Arauca,2021,pct_personas_usan_internet,66.2720233,nacional,DANE_ECV,%
+Atlántico,2021,pct_personas_usan_internet,76.1430024,nacional,DANE_ECV,%
+Bogotá D.C.,2021,pct_personas_usan_internet,85.8762377,nacional,DANE_ECV,%
+Bolívar,2021,pct_personas_usan_internet,65.4141162,nacional,DANE_ECV,%
+Boyacá,2021,pct_personas_usan_internet,68.3200412,nacional,DANE_ECV,%
+Caldas,2021,pct_personas_usan_internet,73.2185815,nacional,DANE_ECV,%
+Caquetá,2021,pct_personas_usan_internet,64.2493928,nacional,DANE_ECV,%
+Casanare,2021,pct_personas_usan_internet,68.7497152,nacional,DANE_ECV,%
+Cauca,2021,pct_personas_usan_internet,61.1613336,nacional,DANE_ECV,%
+Cesar,2021,pct_personas_usan_internet,64.3415339,nacional,DANE_ECV,%
+Córdoba,2021,pct_personas_usan_internet,57.697994,nacional,DANE_ECV,%
+Cundinamarca,2021,pct_personas_usan_internet,79.7694432,nacional,DANE_ECV,%
+Chocó,2021,pct_personas_usan_internet,45.1679061,nacional,DANE_ECV,%
+Guainía,2021,pct_personas_usan_internet,33.1987501,nacional,DANE_ECV,%
+Guaviare,2021,pct_personas_usan_internet,58.921851,nacional,DANE_ECV,%
+Huila,2021,pct_personas_usan_internet,71.4165745,nacional,DANE_ECV,%
+La Guajira,2021,pct_personas_usan_internet,44.0377867,nacional,DANE_ECV,%
+Magdalena,2021,pct_personas_usan_internet,62.9691927,nacional,DANE_ECV,%
+Meta,2021,pct_personas_usan_internet,79.2852261,nacional,DANE_ECV,%
+Nariño,2021,pct_personas_usan_internet,60.8128514,nacional,DANE_ECV,%
+Norte de Santander,2021,pct_personas_usan_internet,70.2180955,nacional,DANE_ECV,%
+Putumayo,2021,pct_personas_usan_internet,52.9133755,nacional,DANE_ECV,%
+Quindío,2021,pct_personas_usan_internet,75.6384045,nacional,DANE_ECV,%
+Risaralda,2021,pct_personas_usan_internet,79.7517193,nacional,DANE_ECV,%
+San Andrés,2021,pct_personas_usan_internet,86.6646508,nacional,DANE_ECV,%
+Santander,2021,pct_personas_usan_internet,74.7736594,nacional,DANE_ECV,%
+Sucre,2021,pct_personas_usan_internet,55.0869663,nacional,DANE_ECV,%
+Tolima,2021,pct_personas_usan_internet,70.2005529,nacional,DANE_ECV,%
+Valle,2021,pct_personas_usan_internet,82.8515314,nacional,DANE_ECV,%
+Vaupés,2021,pct_personas_usan_internet,21.3744151,nacional,DANE_ECV,%
+Vichada,2021,pct_personas_usan_internet,17.2612123,nacional,DANE_ECV,%
+Total nacional,2022,pct_personas_usan_internet,72.7963768,nacional,DANE_ECV,%
+Cabecera,2022,pct_personas_usan_internet,78.8644645,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2022,pct_personas_usan_internet,52.5683358,nacional,DANE_ECV,%
+Amazonas,2022,pct_personas_usan_internet,42.7149972,nacional,DANE_ECV,%
+Antioquia,2022,pct_personas_usan_internet,73.6493578,nacional,DANE_ECV,%
+Arauca,2022,pct_personas_usan_internet,62.0100212,nacional,DANE_ECV,%
+Atlántico,2022,pct_personas_usan_internet,75.1654165,nacional,DANE_ECV,%
+Bogotá D.C.,2022,pct_personas_usan_internet,84.3137489,nacional,DANE_ECV,%
+Bolívar,2022,pct_personas_usan_internet,67.7604504,nacional,DANE_ECV,%
+Boyacá,2022,pct_personas_usan_internet,66.2223564,nacional,DANE_ECV,%
+Caldas,2022,pct_personas_usan_internet,75.039188,nacional,DANE_ECV,%
+Caquetá,2022,pct_personas_usan_internet,63.4008772,nacional,DANE_ECV,%
+Casanare,2022,pct_personas_usan_internet,73.6863583,nacional,DANE_ECV,%
+Cauca,2022,pct_personas_usan_internet,61.5490721,nacional,DANE_ECV,%
+Cesar,2022,pct_personas_usan_internet,68.9189216,nacional,DANE_ECV,%
+Córdoba,2022,pct_personas_usan_internet,54.7984506,nacional,DANE_ECV,%
+Cundinamarca,2022,pct_personas_usan_internet,77.691097,nacional,DANE_ECV,%
+Chocó,2022,pct_personas_usan_internet,49.816456,nacional,DANE_ECV,%
+Guainía,2022,pct_personas_usan_internet,38.2844724,nacional,DANE_ECV,%
+Guaviare,2022,pct_personas_usan_internet,54.7085051,nacional,DANE_ECV,%
+Huila,2022,pct_personas_usan_internet,73.2328294,nacional,DANE_ECV,%
+La Guajira,2022,pct_personas_usan_internet,48.8247787,nacional,DANE_ECV,%
+Magdalena,2022,pct_personas_usan_internet,63.2874458,nacional,DANE_ECV,%
+Meta,2022,pct_personas_usan_internet,82.5559561,nacional,DANE_ECV,%
+Nariño,2022,pct_personas_usan_internet,61.7273642,nacional,DANE_ECV,%
+Norte de Santander,2022,pct_personas_usan_internet,72.5890058,nacional,DANE_ECV,%
+Putumayo,2022,pct_personas_usan_internet,51.4937312,nacional,DANE_ECV,%
+Quindío,2022,pct_personas_usan_internet,76.7704313,nacional,DANE_ECV,%
+Risaralda,2022,pct_personas_usan_internet,72.9564744,nacional,DANE_ECV,%
+San Andrés,2022,pct_personas_usan_internet,70.7280472,nacional,DANE_ECV,%
+Santander,2022,pct_personas_usan_internet,76.3456556,nacional,DANE_ECV,%
+Sucre,2022,pct_personas_usan_internet,58.6966603,nacional,DANE_ECV,%
+Tolima,2022,pct_personas_usan_internet,71.9826498,nacional,DANE_ECV,%
+Valle,2022,pct_personas_usan_internet,81.2864048,nacional,DANE_ECV,%
+Vaupés,2022,pct_personas_usan_internet,21.3714511,nacional,DANE_ECV,%
+Vichada,2022,pct_personas_usan_internet,12.7486424,nacional,DANE_ECV,%
+Total nacional,2024,pct_personas_usan_internet,79.34543299,nacional,DANE_ECV,%
+Cabecera,2024,pct_personas_usan_internet,84.58875131,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2024,pct_personas_usan_internet,61.6995256,nacional,DANE_ECV,%
+Amazonas,2024,pct_personas_usan_internet,56.95818361,nacional,DANE_ECV,%
+Antioquia,2024,pct_personas_usan_internet,81.6263591,nacional,DANE_ECV,%
+Arauca,2024,pct_personas_usan_internet,67.41975927,nacional,DANE_ECV,%
+Atlántico,2024,pct_personas_usan_internet,85.06233246,nacional,DANE_ECV,%
+Bogotá D.C.,2024,pct_personas_usan_internet,88.41843305,nacional,DANE_ECV,%
+Bolívar,2024,pct_personas_usan_internet,77.76810276,nacional,DANE_ECV,%
+Boyacá,2024,pct_personas_usan_internet,71.72319443,nacional,DANE_ECV,%
+Caldas,2024,pct_personas_usan_internet,78.35089615,nacional,DANE_ECV,%
+Caquetá,2024,pct_personas_usan_internet,78.63541827,nacional,DANE_ECV,%
+Casanare,2024,pct_personas_usan_internet,79.19402821,nacional,DANE_ECV,%
+Cauca,2024,pct_personas_usan_internet,72.22756959,nacional,DANE_ECV,%
+Cesar,2024,pct_personas_usan_internet,79.88952328,nacional,DANE_ECV,%
+Córdoba,2024,pct_personas_usan_internet,71.93271466,nacional,DANE_ECV,%
+Cundinamarca,2024,pct_personas_usan_internet,83.50675745,nacional,DANE_ECV,%
+Chocó,2024,pct_personas_usan_internet,50.39205306,nacional,DANE_ECV,%
+Guainía,2024,pct_personas_usan_internet,48.40860594,nacional,DANE_ECV,%
+Guaviare,2024,pct_personas_usan_internet,75.63506269,nacional,DANE_ECV,%
+Huila,2024,pct_personas_usan_internet,83.03456282,nacional,DANE_ECV,%
+La Guajira,2024,pct_personas_usan_internet,53.44035161,nacional,DANE_ECV,%
+Magdalena,2024,pct_personas_usan_internet,70.77288179,nacional,DANE_ECV,%
+Meta,2024,pct_personas_usan_internet,83.31414662,nacional,DANE_ECV,%
+Nariño,2024,pct_personas_usan_internet,65.90813233,nacional,DANE_ECV,%
+Norte de Santander,2024,pct_personas_usan_internet,77.83899925,nacional,DANE_ECV,%
+Putumayo,2024,pct_personas_usan_internet,62.3080865,nacional,DANE_ECV,%
+Quindío,2024,pct_personas_usan_internet,73.22259803,nacional,DANE_ECV,%
+Risaralda,2024,pct_personas_usan_internet,77.91403485,nacional,DANE_ECV,%
+San Andrés,2024,pct_personas_usan_internet,84.58475532,nacional,DANE_ECV,%
+Santander,2024,pct_personas_usan_internet,80.09426407,nacional,DANE_ECV,%
+Sucre,2024,pct_personas_usan_internet,65.23410975,nacional,DANE_ECV,%
+Tolima,2024,pct_personas_usan_internet,78.4872058,nacional,DANE_ECV,%
+Valle,2024,pct_personas_usan_internet,85.11789608,nacional,DANE_ECV,%
+Vaupés,2024,pct_personas_usan_internet,42.34427652,nacional,DANE_ECV,%
+Vichada,2024,pct_personas_usan_internet,18.8064793,nacional,DANE_ECV,%
+Total nacional,2019,pct_personas_usan_internet,65.01836011,nacional,DANE_ECV,%
+Cabecera,2019,pct_personas_usan_internet,73.4992063,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2019,pct_personas_usan_internet,37.76203843,nacional,DANE_ECV,%
+Amazonas,2019,pct_personas_usan_internet,23.38460217,nacional,DANE_ECV,%
+Antioquia,2019,pct_personas_usan_internet,68.705689,nacional,DANE_ECV,%
+Arauca,2019,pct_personas_usan_internet,48.58324205,nacional,DANE_ECV,%
+Atlántico,2019,pct_personas_usan_internet,67.99955406,nacional,DANE_ECV,%
+Bogotá D.C.,2019,pct_personas_usan_internet,83.31642969,nacional,DANE_ECV,%
+Bolívar,2019,pct_personas_usan_internet,59.2518891,nacional,DANE_ECV,%
+Boyacá,2019,pct_personas_usan_internet,50.31063279,nacional,DANE_ECV,%
+Caldas,2019,pct_personas_usan_internet,62.22866287,nacional,DANE_ECV,%
+Caquetá,2019,pct_personas_usan_internet,45.8472538,nacional,DANE_ECV,%
+Casanare,2019,pct_personas_usan_internet,59.66117568,nacional,DANE_ECV,%
+Cauca,2019,pct_personas_usan_internet,51.22201174,nacional,DANE_ECV,%
+Cesar,2019,pct_personas_usan_internet,54.27552002,nacional,DANE_ECV,%
+Córdoba,2019,pct_personas_usan_internet,48.2974824,nacional,DANE_ECV,%
+Cundinamarca,2019,pct_personas_usan_internet,67.9148164,nacional,DANE_ECV,%
+Chocó,2019,pct_personas_usan_internet,38.61891958,nacional,DANE_ECV,%
+Guainía,2019,pct_personas_usan_internet,28.26168657,nacional,DANE_ECV,%
+Guaviare,2019,pct_personas_usan_internet,42.49821041,nacional,DANE_ECV,%
+Huila,2019,pct_personas_usan_internet,52.29121636,nacional,DANE_ECV,%
+La Guajira,2019,pct_personas_usan_internet,41.42076028,nacional,DANE_ECV,%
+Magdalena,2019,pct_personas_usan_internet,55.30123667,nacional,DANE_ECV,%
+Meta,2019,pct_personas_usan_internet,70.40144459,nacional,DANE_ECV,%
+Nariño,2019,pct_personas_usan_internet,50.87481467,nacional,DANE_ECV,%
+Norte de Santander,2019,pct_personas_usan_internet,62.99411631,nacional,DANE_ECV,%
+Putumayo,2019,pct_personas_usan_internet,39.01579692,nacional,DANE_ECV,%
+Quindío,2019,pct_personas_usan_internet,67.6373518,nacional,DANE_ECV,%
+Risaralda,2019,pct_personas_usan_internet,71.34021493,nacional,DANE_ECV,%
+San Andrés,2019,pct_personas_usan_internet,58.09044328,nacional,DANE_ECV,%
+Santander,2019,pct_personas_usan_internet,67.24893936,nacional,DANE_ECV,%
+Sucre,2019,pct_personas_usan_internet,47.71803661,nacional,DANE_ECV,%
+Tolima,2019,pct_personas_usan_internet,62.34646311,nacional,DANE_ECV,%
+Valle,2019,pct_personas_usan_internet,73.93817881,nacional,DANE_ECV,%
+Vaupés,2019,pct_personas_usan_internet,19.51137506,nacional,DANE_ECV,%
+Vichada,2019,pct_personas_usan_internet,18.64214885,nacional,DANE_ECV,%
+Total nacional,2020,pct_personas_usan_internet,69.7950049,nacional,DANE_ECV,%
+Cabecera,2020,pct_personas_usan_internet,77.9715683,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2020,pct_personas_usan_internet,43.1046201,nacional,DANE_ECV,%
+Amazonas,2020,pct_personas_usan_internet,30.8641575,nacional,DANE_ECV,%
+Antioquia,2020,pct_personas_usan_internet,71.7213438,nacional,DANE_ECV,%
+Arauca,2020,pct_personas_usan_internet,60.8970683,nacional,DANE_ECV,%
+Atlántico,2020,pct_personas_usan_internet,76.2091188,nacional,DANE_ECV,%
+Bogotá D.C.,2020,pct_personas_usan_internet,87.1044084,nacional,DANE_ECV,%
+Bolívar,2020,pct_personas_usan_internet,57.4251338,nacional,DANE_ECV,%
+Boyacá,2020,pct_personas_usan_internet,63.0965085,nacional,DANE_ECV,%
+Caldas,2020,pct_personas_usan_internet,70.6543425,nacional,DANE_ECV,%
+Caquetá,2020,pct_personas_usan_internet,58.3711758,nacional,DANE_ECV,%
+Casanare,2020,pct_personas_usan_internet,68.2861838,nacional,DANE_ECV,%
+Cauca,2020,pct_personas_usan_internet,54.5432204,nacional,DANE_ECV,%
+Cesar,2020,pct_personas_usan_internet,65.9901077,nacional,DANE_ECV,%
+Córdoba,2020,pct_personas_usan_internet,47.8048669,nacional,DANE_ECV,%
+Cundinamarca,2020,pct_personas_usan_internet,73.1883961,nacional,DANE_ECV,%
+Chocó,2020,pct_personas_usan_internet,41.009819,nacional,DANE_ECV,%
+Guainía,2020,pct_personas_usan_internet,29.4813092,nacional,DANE_ECV,%
+Guaviare,2020,pct_personas_usan_internet,51.6470298,nacional,DANE_ECV,%
+Huila,2020,pct_personas_usan_internet,65.37008,nacional,DANE_ECV,%
+La Guajira,2020,pct_personas_usan_internet,40.6109381,nacional,DANE_ECV,%
+Magdalena,2020,pct_personas_usan_internet,56.5391735,nacional,DANE_ECV,%
+Meta,2020,pct_personas_usan_internet,76.9094654,nacional,DANE_ECV,%
+Nariño,2020,pct_personas_usan_internet,53.0052049,nacional,DANE_ECV,%
+Norte de Santander,2020,pct_personas_usan_internet,67.9367573,nacional,DANE_ECV,%
+Putumayo,2020,pct_personas_usan_internet,44.4581638,nacional,DANE_ECV,%
+Quindío,2020,pct_personas_usan_internet,73.0759575,nacional,DANE_ECV,%
+Risaralda,2020,pct_personas_usan_internet,77.8743686,nacional,DANE_ECV,%
+San Andrés,2020,pct_personas_usan_internet,77.3384541,nacional,DANE_ECV,%
+Santander,2020,pct_personas_usan_internet,73.6880933,nacional,DANE_ECV,%
+Sucre,2020,pct_personas_usan_internet,48.4243013,nacional,DANE_ECV,%
+Tolima,2020,pct_personas_usan_internet,67.9958558,nacional,DANE_ECV,%
+Valle,2020,pct_personas_usan_internet,80.0636969,nacional,DANE_ECV,%
+Vaupés,2020,pct_personas_usan_internet,19.8563412,nacional,DANE_ECV,%
+Vichada,2020,pct_personas_usan_internet,18.0192205,nacional,DANE_ECV,%
+Total nacional,2023,pct_personas_usan_internet,77.3370035908,nacional,DANE_ECV,%
+Cabecera,2023,pct_personas_usan_internet,82.6177517981,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2023,pct_personas_usan_internet,59.6019903736,nacional,DANE_ECV,%
+Amazonas,2023,pct_personas_usan_internet,39.3036513414,nacional,DANE_ECV,%
+Antioquia,2023,pct_personas_usan_internet,80.8782116594,nacional,DANE_ECV,%
+Arauca,2023,pct_personas_usan_internet,66.040881405,nacional,DANE_ECV,%
+Atlántico,2023,pct_personas_usan_internet,80.6137863572,nacional,DANE_ECV,%
+Bogotá D.C.,2023,pct_personas_usan_internet,85.8607403226,nacional,DANE_ECV,%
+Bolívar,2023,pct_personas_usan_internet,69.1872042691,nacional,DANE_ECV,%
+Boyacá,2023,pct_personas_usan_internet,67.9022639831,nacional,DANE_ECV,%
+Caldas,2023,pct_personas_usan_internet,76.6184738152,nacional,DANE_ECV,%
+Caquetá,2023,pct_personas_usan_internet,72.3047914296,nacional,DANE_ECV,%
+Casanare,2023,pct_personas_usan_internet,75.7796840487,nacional,DANE_ECV,%
+Cauca,2023,pct_personas_usan_internet,65.9206002121,nacional,DANE_ECV,%
+Cesar,2023,pct_personas_usan_internet,74.988936883,nacional,DANE_ECV,%
+Córdoba,2023,pct_personas_usan_internet,67.4921893443,nacional,DANE_ECV,%
+Cundinamarca,2023,pct_personas_usan_internet,83.5268142345,nacional,DANE_ECV,%
+Chocó,2023,pct_personas_usan_internet,43.4050074911,nacional,DANE_ECV,%
+Guainía,2023,pct_personas_usan_internet,53.6263001668,nacional,DANE_ECV,%
+Guaviare,2023,pct_personas_usan_internet,71.8124124721,nacional,DANE_ECV,%
+Huila,2023,pct_personas_usan_internet,77.5387677785,nacional,DANE_ECV,%
+La Guajira,2023,pct_personas_usan_internet,52.6130060031,nacional,DANE_ECV,%
+Magdalena,2023,pct_personas_usan_internet,72.1006144082,nacional,DANE_ECV,%
+Meta,2023,pct_personas_usan_internet,86.7130228743,nacional,DANE_ECV,%
+Nariño,2023,pct_personas_usan_internet,65.9896299631,nacional,DANE_ECV,%
+Norte de Santander,2023,pct_personas_usan_internet,74.3879857907,nacional,DANE_ECV,%
+Putumayo,2023,pct_personas_usan_internet,59.3897842401,nacional,DANE_ECV,%
+Quindío,2023,pct_personas_usan_internet,80.6245654624,nacional,DANE_ECV,%
+Risaralda,2023,pct_personas_usan_internet,78.5428726591,nacional,DANE_ECV,%
+San Andrés,2023,pct_personas_usan_internet,68.8006878451,nacional,DANE_ECV,%
+Santander,2023,pct_personas_usan_internet,80.8982110241,nacional,DANE_ECV,%
+Sucre,2023,pct_personas_usan_internet,66.7555871269,nacional,DANE_ECV,%
+Tolima,2023,pct_personas_usan_internet,76.1554632823,nacional,DANE_ECV,%
+Valle,2023,pct_personas_usan_internet,84.6739333624,nacional,DANE_ECV,%
+Vaupés,2023,pct_personas_usan_internet,34.1064296402,nacional,DANE_ECV,%
+Vichada,2023,pct_personas_usan_internet,14.4558712227,nacional,DANE_ECV,%
+Total nacional,2019,pct_hogares_internet_v2,51.9496389,nacional,DANE_ECV,%
+Cabecera,2019,pct_hogares_internet_v2,61.6216454,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2019,pct_hogares_internet_v2,20.6605055,nacional,DANE_ECV,%
+Amazonas,2019,pct_hogares_internet_v2,10.0121389,nacional,DANE_ECV,%
+Antioquia,2019,pct_hogares_internet_v2,59.0424749,nacional,DANE_ECV,%
+Arauca,2019,pct_hogares_internet_v2,25.777475,nacional,DANE_ECV,%
+Atlántico,2019,pct_hogares_internet_v2,50.1262014,nacional,DANE_ECV,%
+Bogotá D.C.,2019,pct_hogares_internet_v2,74.9199029,nacional,DANE_ECV,%
+Bolívar,2019,pct_hogares_internet_v2,30.9085163,nacional,DANE_ECV,%
+Boyacá,2019,pct_hogares_internet_v2,35.4611373,nacional,DANE_ECV,%
+Caldas,2019,pct_hogares_internet_v2,46.3196063,nacional,DANE_ECV,%
+Caquetá,2019,pct_hogares_internet_v2,38.7008668,nacional,DANE_ECV,%
+Casanare,2019,pct_hogares_internet_v2,39.3288675,nacional,DANE_ECV,%
+Cauca,2019,pct_hogares_internet_v2,30.8354636,nacional,DANE_ECV,%
+Cesar,2019,pct_hogares_internet_v2,35.6727641,nacional,DANE_ECV,%
+Córdoba,2019,pct_hogares_internet_v2,28.7404346,nacional,DANE_ECV,%
+Cundinamarca,2019,pct_hogares_internet_v2,48.6601468,nacional,DANE_ECV,%
+Chocó,2019,pct_hogares_internet_v2,16.6373707,nacional,DANE_ECV,%
+Guainía,2019,pct_hogares_internet_v2,16.0654874,nacional,DANE_ECV,%
+Guaviare,2019,pct_hogares_internet_v2,24.6452387,nacional,DANE_ECV,%
+Huila,2019,pct_hogares_internet_v2,36.1247671,nacional,DANE_ECV,%
+La Guajira,2019,pct_hogares_internet_v2,20.9471568,nacional,DANE_ECV,%
+Magdalena,2019,pct_hogares_internet_v2,36.8603021,nacional,DANE_ECV,%
+Meta,2019,pct_hogares_internet_v2,55.1631406,nacional,DANE_ECV,%
+Nariño,2019,pct_hogares_internet_v2,36.8199459,nacional,DANE_ECV,%
+Norte de Santander,2019,pct_hogares_internet_v2,45.1208166,nacional,DANE_ECV,%
+Putumayo,2019,pct_hogares_internet_v2,18.6992047,nacional,DANE_ECV,%
+Quindío,2019,pct_hogares_internet_v2,57.8814908,nacional,DANE_ECV,%
+Risaralda,2019,pct_hogares_internet_v2,66.6234349,nacional,DANE_ECV,%
+San Andrés,2019,pct_hogares_internet_v2,19.0212123,nacional,DANE_ECV,%
+Santander,2019,pct_hogares_internet_v2,59.9646147,nacional,DANE_ECV,%
+Sucre,2019,pct_hogares_internet_v2,23.0567194,nacional,DANE_ECV,%
+Tolima,2019,pct_hogares_internet_v2,51.0227341,nacional,DANE_ECV,%
+Valle,2019,pct_hogares_internet_v2,69.3966283,nacional,DANE_ECV,%
+Vaupés,2019,pct_hogares_internet_v2,1.60491299,nacional,DANE_ECV,%
+Vichada,2019,pct_hogares_internet_v2,5.16086686,nacional,DANE_ECV,%
+Total nacional,2021,pct_hogares_internet_v2,60.5472229,nacional,DANE_ECV,%
+Cabecera,2021,pct_hogares_internet_v2,69.9884172,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2021,pct_hogares_internet_v2,28.7541271,nacional,DANE_ECV,%
+Amazonas,2021,pct_hogares_internet_v2,16.6741608,nacional,DANE_ECV,%
+Antioquia,2021,pct_hogares_internet_v2,60.7619206,nacional,DANE_ECV,%
+Arauca,2021,pct_hogares_internet_v2,43.167855,nacional,DANE_ECV,%
+Atlántico,2021,pct_hogares_internet_v2,60.7064751,nacional,DANE_ECV,%
+Bogotá D.C.,2021,pct_hogares_internet_v2,81.5248913,nacional,DANE_ECV,%
+Bolívar,2021,pct_hogares_internet_v2,46.0817431,nacional,DANE_ECV,%
+Boyacá,2021,pct_hogares_internet_v2,64.2675801,nacional,DANE_ECV,%
+Caldas,2021,pct_hogares_internet_v2,66.7848955,nacional,DANE_ECV,%
+Caquetá,2021,pct_hogares_internet_v2,60.5448164,nacional,DANE_ECV,%
+Casanare,2021,pct_hogares_internet_v2,53.1043242,nacional,DANE_ECV,%
+Cauca,2021,pct_hogares_internet_v2,31.6641578,nacional,DANE_ECV,%
+Cesar,2021,pct_hogares_internet_v2,44.7815545,nacional,DANE_ECV,%
+Córdoba,2021,pct_hogares_internet_v2,30.2660297,nacional,DANE_ECV,%
+Cundinamarca,2021,pct_hogares_internet_v2,60.8370468,nacional,DANE_ECV,%
+Chocó,2021,pct_hogares_internet_v2,14.6243329,nacional,DANE_ECV,%
+Guainía,2021,pct_hogares_internet_v2,24.1364638,nacional,DANE_ECV,%
+Guaviare,2021,pct_hogares_internet_v2,35.7275708,nacional,DANE_ECV,%
+Huila,2021,pct_hogares_internet_v2,51.5197885,nacional,DANE_ECV,%
+La Guajira,2021,pct_hogares_internet_v2,28.6162482,nacional,DANE_ECV,%
+Magdalena,2021,pct_hogares_internet_v2,48.7969292,nacional,DANE_ECV,%
+Meta,2021,pct_hogares_internet_v2,63.1897836,nacional,DANE_ECV,%
+Nariño,2021,pct_hogares_internet_v2,41.8599293,nacional,DANE_ECV,%
+Norte de Santander,2021,pct_hogares_internet_v2,63.4386195,nacional,DANE_ECV,%
+Putumayo,2021,pct_hogares_internet_v2,29.1141382,nacional,DANE_ECV,%
+Quindío,2021,pct_hogares_internet_v2,63.020566,nacional,DANE_ECV,%
+Risaralda,2021,pct_hogares_internet_v2,72.7596293,nacional,DANE_ECV,%
+San Andrés,2021,pct_hogares_internet_v2,41.3276199,nacional,DANE_ECV,%
+Santander,2021,pct_hogares_internet_v2,64.0547147,nacional,DANE_ECV,%
+Sucre,2021,pct_hogares_internet_v2,37.4688884,nacional,DANE_ECV,%
+Tolima,2021,pct_hogares_internet_v2,67.0259855,nacional,DANE_ECV,%
+Valle,2021,pct_hogares_internet_v2,79.014032,nacional,DANE_ECV,%
+Vaupés,2021,pct_hogares_internet_v2,10.5971671,nacional,DANE_ECV,%
+Vichada,2021,pct_hogares_internet_v2,4.5680548,nacional,DANE_ECV,%
+Total nacional,2022,pct_hogares_internet_v2,59.4655787,nacional,DANE_ECV,%
+Cabecera,2022,pct_hogares_internet_v2,67.4502448,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2022,pct_hogares_internet_v2,32.2175427,nacional,DANE_ECV,%
+Amazonas,2022,pct_hogares_internet_v2,37.5600341,nacional,DANE_ECV,%
+Antioquia,2022,pct_hogares_internet_v2,60.6999248,nacional,DANE_ECV,%
+Arauca,2022,pct_hogares_internet_v2,41.6839673,nacional,DANE_ECV,%
+Atlántico,2022,pct_hogares_internet_v2,53.3106463,nacional,DANE_ECV,%
+Bogotá D.C.,2022,pct_hogares_internet_v2,79.4307868,nacional,DANE_ECV,%
+Bolívar,2022,pct_hogares_internet_v2,48.2566764,nacional,DANE_ECV,%
+Boyacá,2022,pct_hogares_internet_v2,54.1038322,nacional,DANE_ECV,%
+Caldas,2022,pct_hogares_internet_v2,62.558364,nacional,DANE_ECV,%
+Caquetá,2022,pct_hogares_internet_v2,50.8590467,nacional,DANE_ECV,%
+Casanare,2022,pct_hogares_internet_v2,60.1814052,nacional,DANE_ECV,%
+Cauca,2022,pct_hogares_internet_v2,32.1171243,nacional,DANE_ECV,%
+Cesar,2022,pct_hogares_internet_v2,51.8524769,nacional,DANE_ECV,%
+Córdoba,2022,pct_hogares_internet_v2,26.8649159,nacional,DANE_ECV,%
+Cundinamarca,2022,pct_hogares_internet_v2,64.3155793,nacional,DANE_ECV,%
+Chocó,2022,pct_hogares_internet_v2,19.9971966,nacional,DANE_ECV,%
+Guainía,2022,pct_hogares_internet_v2,18.8697404,nacional,DANE_ECV,%
+Guaviare,2022,pct_hogares_internet_v2,30.2278029,nacional,DANE_ECV,%
+Huila,2022,pct_hogares_internet_v2,56.0353633,nacional,DANE_ECV,%
+La Guajira,2022,pct_hogares_internet_v2,28.3040485,nacional,DANE_ECV,%
+Magdalena,2022,pct_hogares_internet_v2,49.7211823,nacional,DANE_ECV,%
+Meta,2022,pct_hogares_internet_v2,60.5168842,nacional,DANE_ECV,%
+Nariño,2022,pct_hogares_internet_v2,53.0300065,nacional,DANE_ECV,%
+Norte de Santander,2022,pct_hogares_internet_v2,56.1180823,nacional,DANE_ECV,%
+Putumayo,2022,pct_hogares_internet_v2,38.692546,nacional,DANE_ECV,%
+Quindío,2022,pct_hogares_internet_v2,69.7768368,nacional,DANE_ECV,%
+Risaralda,2022,pct_hogares_internet_v2,63.6644654,nacional,DANE_ECV,%
+San Andrés,2022,pct_hogares_internet_v2,49.046425,nacional,DANE_ECV,%
+Santander,2022,pct_hogares_internet_v2,64.610438,nacional,DANE_ECV,%
+Sucre,2022,pct_hogares_internet_v2,42.4200467,nacional,DANE_ECV,%
+Tolima,2022,pct_hogares_internet_v2,56.5170466,nacional,DANE_ECV,%
+Valle,2022,pct_hogares_internet_v2,73.0305545,nacional,DANE_ECV,%
+Vaupés,2022,pct_hogares_internet_v2,4.07135148,nacional,DANE_ECV,%
+Vichada,2022,pct_hogares_internet_v2,10.1642134,nacional,DANE_ECV,%
+Total nacional,2018,pct_hogares_internet_v2,52.2596921,nacional,DANE_ECV,%
+Cabecera,2018,pct_hogares_internet_v2,63.2042179,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2018,pct_hogares_internet_v2,17.1477603,nacional,DANE_ECV,%
+Amazonas,2018,pct_hogares_internet_v2,5.36332665,nacional,DANE_ECV,%
+Antioquia,2018,pct_hogares_internet_v2,55.4470239,nacional,DANE_ECV,%
+Arauca,2018,pct_hogares_internet_v2,20.0235455,nacional,DANE_ECV,%
+Atlántico,2018,pct_hogares_internet_v2,54.4074847,nacional,DANE_ECV,%
+Bogotá D.C.,2018,pct_hogares_internet_v2,76.2464868,nacional,DANE_ECV,%
+Bolívar,2018,pct_hogares_internet_v2,28.6082276,nacional,DANE_ECV,%
+Boyacá,2018,pct_hogares_internet_v2,47.4990354,nacional,DANE_ECV,%
+Caldas,2018,pct_hogares_internet_v2,46.6920205,nacional,DANE_ECV,%
+Caquetá,2018,pct_hogares_internet_v2,33.9492554,nacional,DANE_ECV,%
+Casanare,2018,pct_hogares_internet_v2,45.3810284,nacional,DANE_ECV,%
+Cauca,2018,pct_hogares_internet_v2,29.6636497,nacional,DANE_ECV,%
+Cesar,2018,pct_hogares_internet_v2,39.8404215,nacional,DANE_ECV,%
+Córdoba,2018,pct_hogares_internet_v2,22.5619684,nacional,DANE_ECV,%
+Cundinamarca,2018,pct_hogares_internet_v2,51.46756,nacional,DANE_ECV,%
+Chocó,2018,pct_hogares_internet_v2,14.4254757,nacional,DANE_ECV,%
+Guainía,2018,pct_hogares_internet_v2,11.8750668,nacional,DANE_ECV,%
+Guaviare,2018,pct_hogares_internet_v2,22.8499726,nacional,DANE_ECV,%
+Huila,2018,pct_hogares_internet_v2,42.1940384,nacional,DANE_ECV,%
+La Guajira,2018,pct_hogares_internet_v2,20.290828,nacional,DANE_ECV,%
+Magdalena,2018,pct_hogares_internet_v2,33.8106898,nacional,DANE_ECV,%
+Meta,2018,pct_hogares_internet_v2,54.0056959,nacional,DANE_ECV,%
+Nariño,2018,pct_hogares_internet_v2,36.5932591,nacional,DANE_ECV,%
+Norte de Santander,2018,pct_hogares_internet_v2,43.3953339,nacional,DANE_ECV,%
+Putumayo,2018,pct_hogares_internet_v2,16.6234882,nacional,DANE_ECV,%
+Quindío,2018,pct_hogares_internet_v2,63.9234473,nacional,DANE_ECV,%
+Risaralda,2018,pct_hogares_internet_v2,61.0557581,nacional,DANE_ECV,%
+San Andrés,2018,pct_hogares_internet_v2,41.0892085,nacional,DANE_ECV,%
+Santander,2018,pct_hogares_internet_v2,60.4707977,nacional,DANE_ECV,%
+Sucre,2018,pct_hogares_internet_v2,30.5658448,nacional,DANE_ECV,%
+Tolima,2018,pct_hogares_internet_v2,52.9959746,nacional,DANE_ECV,%
+Valle,2018,pct_hogares_internet_v2,67.7178474,nacional,DANE_ECV,%
+Vaupés,2018,pct_hogares_internet_v2,0.9622215,nacional,DANE_ECV,%
+Vichada,2018,pct_hogares_internet_v2,4.66003209,nacional,DANE_ECV,%
+Total nacional,2020,pct_hogares_internet_v2,56.5262432,nacional,DANE_ECV,%
+Cabecera,2020,pct_hogares_internet_v2,66.5827371,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2020,pct_hogares_internet_v2,23.8688228,nacional,DANE_ECV,%
+Amazonas,2020,pct_hogares_internet_v2,15.5945334,nacional,DANE_ECV,%
+Antioquia,2020,pct_hogares_internet_v2,57.9664737,nacional,DANE_ECV,%
+Arauca,2020,pct_hogares_internet_v2,36.0128503,nacional,DANE_ECV,%
+Atlántico,2020,pct_hogares_internet_v2,58.6280483,nacional,DANE_ECV,%
+Bogotá D.C.,2020,pct_hogares_internet_v2,77.987176,nacional,DANE_ECV,%
+Bolívar,2020,pct_hogares_internet_v2,30.6701272,nacional,DANE_ECV,%
+Boyacá,2020,pct_hogares_internet_v2,59.5432511,nacional,DANE_ECV,%
+Caldas,2020,pct_hogares_internet_v2,57.5759269,nacional,DANE_ECV,%
+Caquetá,2020,pct_hogares_internet_v2,42.464858,nacional,DANE_ECV,%
+Casanare,2020,pct_hogares_internet_v2,54.8311765,nacional,DANE_ECV,%
+Cauca,2020,pct_hogares_internet_v2,33.7559286,nacional,DANE_ECV,%
+Cesar,2020,pct_hogares_internet_v2,46.4576064,nacional,DANE_ECV,%
+Córdoba,2020,pct_hogares_internet_v2,30.2474429,nacional,DANE_ECV,%
+Cundinamarca,2020,pct_hogares_internet_v2,57.1200901,nacional,DANE_ECV,%
+Chocó,2020,pct_hogares_internet_v2,13.2248401,nacional,DANE_ECV,%
+Guainía,2020,pct_hogares_internet_v2,18.9403463,nacional,DANE_ECV,%
+Guaviare,2020,pct_hogares_internet_v2,30.193614,nacional,DANE_ECV,%
+Huila,2020,pct_hogares_internet_v2,44.2401448,nacional,DANE_ECV,%
+La Guajira,2020,pct_hogares_internet_v2,21.4557296,nacional,DANE_ECV,%
+Magdalena,2020,pct_hogares_internet_v2,38.3019293,nacional,DANE_ECV,%
+Meta,2020,pct_hogares_internet_v2,55.5211385,nacional,DANE_ECV,%
+Nariño,2020,pct_hogares_internet_v2,40.6159903,nacional,DANE_ECV,%
+Norte de Santander,2020,pct_hogares_internet_v2,57.3154807,nacional,DANE_ECV,%
+Putumayo,2020,pct_hogares_internet_v2,30.6232874,nacional,DANE_ECV,%
+Quindío,2020,pct_hogares_internet_v2,57.4401744,nacional,DANE_ECV,%
+Risaralda,2020,pct_hogares_internet_v2,63.4937337,nacional,DANE_ECV,%
+San Andrés,2020,pct_hogares_internet_v2,32.4681131,nacional,DANE_ECV,%
+Santander,2020,pct_hogares_internet_v2,62.9316321,nacional,DANE_ECV,%
+Sucre,2020,pct_hogares_internet_v2,26.1199729,nacional,DANE_ECV,%
+Tolima,2020,pct_hogares_internet_v2,62.1364434,nacional,DANE_ECV,%
+Valle,2020,pct_hogares_internet_v2,76.0931168,nacional,DANE_ECV,%
+Vaupés,2020,pct_hogares_internet_v2,3.12432629,nacional,DANE_ECV,%
+Vichada,2020,pct_hogares_internet_v2,7.01897573,nacional,DANE_ECV,%
+Total nacional,2023,pct_hogares_internet_v2,63.935914244,nacional,DANE_ECV,%
+Cabecera,2023,pct_hogares_internet_v2,70.4757331902,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2023,pct_hogares_internet_v2,41.445253665,nacional,DANE_ECV,%
+Amazonas,2023,pct_hogares_internet_v2,29.079445257,nacional,DANE_ECV,%
+Antioquia,2023,pct_hogares_internet_v2,70.6102561299,nacional,DANE_ECV,%
+Arauca,2023,pct_hogares_internet_v2,36.7386333713,nacional,DANE_ECV,%
+Atlántico,2023,pct_hogares_internet_v2,59.0747055507,nacional,DANE_ECV,%
+Bogotá D.C.,2023,pct_hogares_internet_v2,77.3828002527,nacional,DANE_ECV,%
+Bolívar,2023,pct_hogares_internet_v2,48.7697798847,nacional,DANE_ECV,%
+Boyacá,2023,pct_hogares_internet_v2,61.1218764278,nacional,DANE_ECV,%
+Caldas,2023,pct_hogares_internet_v2,60.279301009,nacional,DANE_ECV,%
+Caquetá,2023,pct_hogares_internet_v2,67.9298290933,nacional,DANE_ECV,%
+Casanare,2023,pct_hogares_internet_v2,48.5918709,nacional,DANE_ECV,%
+Cauca,2023,pct_hogares_internet_v2,44.9163731829,nacional,DANE_ECV,%
+Cesar,2023,pct_hogares_internet_v2,58.363057608,nacional,DANE_ECV,%
+Córdoba,2023,pct_hogares_internet_v2,44.7305699265,nacional,DANE_ECV,%
+Cundinamarca,2023,pct_hogares_internet_v2,68.0275060243,nacional,DANE_ECV,%
+Chocó,2023,pct_hogares_internet_v2,18.0122097342,nacional,DANE_ECV,%
+Guainía,2023,pct_hogares_internet_v2,46.5807597366,nacional,DANE_ECV,%
+Guaviare,2023,pct_hogares_internet_v2,44.9973620299,nacional,DANE_ECV,%
+Huila,2023,pct_hogares_internet_v2,67.747931538,nacional,DANE_ECV,%
+La Guajira,2023,pct_hogares_internet_v2,29.3570609408,nacional,DANE_ECV,%
+Magdalena,2023,pct_hogares_internet_v2,57.511121695,nacional,DANE_ECV,%
+Meta,2023,pct_hogares_internet_v2,75.2997381464,nacional,DANE_ECV,%
+Nariño,2023,pct_hogares_internet_v2,54.1974179338,nacional,DANE_ECV,%
+Norte de Santander,2023,pct_hogares_internet_v2,55.1120268938,nacional,DANE_ECV,%
+Putumayo,2023,pct_hogares_internet_v2,50.5974223429,nacional,DANE_ECV,%
+Quindío,2023,pct_hogares_internet_v2,70.9781698227,nacional,DANE_ECV,%
+Risaralda,2023,pct_hogares_internet_v2,66.4084585917,nacional,DANE_ECV,%
+San Andrés,2023,pct_hogares_internet_v2,40.6064498113,nacional,DANE_ECV,%
+Santander,2023,pct_hogares_internet_v2,66.4495104555,nacional,DANE_ECV,%
+Sucre,2023,pct_hogares_internet_v2,42.2157205698,nacional,DANE_ECV,%
+Tolima,2023,pct_hogares_internet_v2,62.7936531481,nacional,DANE_ECV,%
+Valle,2023,pct_hogares_internet_v2,77.7264504241,nacional,DANE_ECV,%
+Vaupés,2023,pct_hogares_internet_v2,10.0734900192,nacional,DANE_ECV,%
+Vichada,2023,pct_hogares_internet_v2,9.262845047,nacional,DANE_ECV,%
+Total nacional,2024,pct_hogares_internet_v2,65.6487868262,nacional,DANE_ECV,%
+Cabecera,2024,pct_hogares_internet_v2,72.503869541,nacional,DANE_ECV,%
+Centros poblados y rural disperso,2024,pct_hogares_internet_v2,41.9358099996,nacional,DANE_ECV,%
+Amazonas,2024,pct_hogares_internet_v2,41.3134555186,nacional,DANE_ECV,%
+Antioquia,2024,pct_hogares_internet_v2,66.9133307107,nacional,DANE_ECV,%
+Arauca,2024,pct_hogares_internet_v2,34.2699627905,nacional,DANE_ECV,%
+Atlántico,2024,pct_hogares_internet_v2,58.8573193776,nacional,DANE_ECV,%
+Bogotá D.C.,2024,pct_hogares_internet_v2,82.6764556865,nacional,DANE_ECV,%
+Bolívar,2024,pct_hogares_internet_v2,60.2168583692,nacional,DANE_ECV,%
+Boyacá,2024,pct_hogares_internet_v2,60.5883647143,nacional,DANE_ECV,%
+Caldas,2024,pct_hogares_internet_v2,66.9282879107,nacional,DANE_ECV,%
+Caquetá,2024,pct_hogares_internet_v2,62.046295907,nacional,DANE_ECV,%
+Casanare,2024,pct_hogares_internet_v2,70.9788412396,nacional,DANE_ECV,%
+Cauca,2024,pct_hogares_internet_v2,49.0417400524,nacional,DANE_ECV,%
+Cesar,2024,pct_hogares_internet_v2,64.4501801698,nacional,DANE_ECV,%
+Córdoba,2024,pct_hogares_internet_v2,47.2141039077,nacional,DANE_ECV,%
+Cundinamarca,2024,pct_hogares_internet_v2,66.9237362371,nacional,DANE_ECV,%
+Chocó,2024,pct_hogares_internet_v2,28.7342421581,nacional,DANE_ECV,%
+Guainía,2024,pct_hogares_internet_v2,31.4535700639,nacional,DANE_ECV,%
+Guaviare,2024,pct_hogares_internet_v2,57.6061757543,nacional,DANE_ECV,%
+Huila,2024,pct_hogares_internet_v2,70.8447329095,nacional,DANE_ECV,%
+La Guajira,2024,pct_hogares_internet_v2,30.1119587631,nacional,DANE_ECV,%
+Magdalena,2024,pct_hogares_internet_v2,55.1045641622,nacional,DANE_ECV,%
+Meta,2024,pct_hogares_internet_v2,77.0297010125,nacional,DANE_ECV,%
+Nariño,2024,pct_hogares_internet_v2,54.6421459447,nacional,DANE_ECV,%
+Norte de Santander,2024,pct_hogares_internet_v2,60.5425476673,nacional,DANE_ECV,%
+Putumayo,2024,pct_hogares_internet_v2,38.6461569002,nacional,DANE_ECV,%
+Quindío,2024,pct_hogares_internet_v2,63.4136006772,nacional,DANE_ECV,%
+Risaralda,2024,pct_hogares_internet_v2,73.0051370042,nacional,DANE_ECV,%
+San Andrés,2024,pct_hogares_internet_v2,57.597480927,nacional,DANE_ECV,%
+Santander,2024,pct_hogares_internet_v2,65.2477279831,nacional,DANE_ECV,%
+Sucre,2024,pct_hogares_internet_v2,46.4422354552,nacional,DANE_ECV,%
+Tolima,2024,pct_hogares_internet_v2,76.4671530341,nacional,DANE_ECV,%
+Valle,2024,pct_hogares_internet_v2,73.4188891855,nacional,DANE_ECV,%
+Vaupés,2024,pct_hogares_internet_v2,26.5486467974,nacional,DANE_ECV,%
+Vichada,2024,pct_hogares_internet_v2,15.4164432374,nacional,DANE_ECV,%
