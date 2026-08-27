@@ -420,6 +420,46 @@ tbody tr:last-child td {
   font-size: 0.85rem;
 }
 
+/* ---------- Descargas de datasets ---------- */
+
+.downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.download-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.download-link:hover {
+  border-color: var(--accent);
+}
+
+.download-link__name {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+.download-link__meta {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* ---------- Inicio: tarjetas de entregas ---------- */
 
 .entregas {

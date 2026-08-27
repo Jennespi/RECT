@@ -1,6 +1,10 @@
-from flask import Flask, render_template, abort
+from pathlib import Path
+
+from flask import Flask, render_template, abort, send_from_directory
 
 app = Flask(__name__)
+
+DATOS_PROCESADOS = Path(__file__).resolve().parent / "datos" / "procesados"
 
 # Entregas del proyecto. Se agregan aquí a medida que avanza (R2, R3, ...).
 ENTREGAS = [
@@ -48,6 +52,11 @@ def inject_nav():
 @app.route("/")
 def index():
     return render_template("home.html", entregas=ENTREGAS)
+
+
+@app.route("/datos/procesados/<path:nombre>")
+def descargar_dataset(nombre):
+    return send_from_directory(DATOS_PROCESADOS, nombre, as_attachment=True)
 
 
 @app.route("/etapa-1/<slug>")
