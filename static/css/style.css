@@ -315,6 +315,7 @@ th, td {
 
 td a {
   color: var(--accent);
+  overflow-wrap: anywhere;
 }
 
 thead th {
@@ -354,6 +355,71 @@ tbody tr:last-child td {
   letter-spacing: 0.02em;
 }
 
+/* ---------- Sub-nav heading (menú "Etapa 1") ---------- */
+
+.toc__heading {
+  margin: 0 0 0.5rem;
+  padding: 0 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.toc__heading span {
+  color: var(--text-faint);
+}
+
+.toc a[aria-current="page"] {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+/* ---------- Pager (anterior / siguiente) ---------- */
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.pager__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 48%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.pager__link:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.pager__link--next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.pager__dir {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.pager__label {
+  font-size: 0.85rem;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 560px) {
@@ -369,5 +435,17 @@ tbody tr:last-child td {
 
   .stat-row {
     gap: 1.25rem;
+  }
+
+  .pager {
+    flex-direction: column;
+  }
+
+  .pager__link {
+    max-width: 100%;
+  }
+
+  .pager__link--next {
+    text-align: left;
   }
 }

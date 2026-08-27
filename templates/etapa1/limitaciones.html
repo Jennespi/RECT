@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">08</div>
+  <div class="card__body">
+    <h2>Limitaciones encontradas</h2>
+    <ul class="question-list">
+      <li>No existe una cifra nacional única y consolidada de toneladas de RAEE generadas en Colombia; se documentó la búsqueda y el descarte justificado de fuentes no viables (microdatos DANE de acceso restringido, dataset sintético de Kaggle).</li>
+      <li>El caso regional corresponde a Norte de Santander y no a Bogotá, por disponibilidad real de datos con variables de comportamiento ciudadano.</li>
+      <li>Los niveles global, nacional y regional no son directamente comparables entre sí sin normalizar, al tener distinta unidad de análisis y granularidad temporal.</li>
+      <li>El benchmark de Eurostat cubre solo la Unión Europea y usa categorías de AEE del marco europeo, por lo que no es directamente equiparable a la tasa de OWID ni al caso colombiano; se usa como referencia de contexto, no como comparación uno a uno.</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

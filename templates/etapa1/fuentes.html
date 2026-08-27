@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">04</div>
+  <div class="card__body">
+    <h2>Fuentes y tipo de recolección</h2>
+
+    <p class="hint">
+      Siete fuentes distribuidas en los tres niveles de análisis (global, nacional y
+      regional), documentadas con los campos exigidos: institución responsable, URL,
+      tipo, cobertura, periodo, formato, método de adquisición, volumen aproximado,
+      variables, fecha de consulta y restricciones de uso.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Nombre de la fuente</th>
+            <th>Institución responsable</th>
+            <th>URL</th>
+            <th>Tipo de fuente</th>
+            <th>Cobertura geográfica</th>
+            <th>Periodo disponible</th>
+            <th>Formato</th>
+            <th>Método de adquisición</th>
+            <th>N° aprox. de registros</th>
+            <th>Variables disponibles</th>
+            <th>Fecha de consulta</th>
+            <th>Restricciones de uso</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Global</td>
+            <td>Electronic waste recycling rate</td>
+            <td>Our World in Data (basado en ONU / UNITAR / ITU)</td>
+            <td><a href="https://ourworldindata.org/grapher/electronic-waste-recycling-rate" target="_blank" rel="noopener">ourworldindata.org/grapher/electronic-waste-recycling-rate</a></td>
+            <td>Secundaria</td>
+            <td>Mundial (por país / región)</td>
+            <td>2010–2022</td>
+            <td>CSV</td>
+            <td>Descarga directa ("Download full data")</td>
+            <td>652</td>
+            <td>País, código, año, % de reciclaje</td>
+            <td><span class="fill">por registrar</span></td>
+            <td>Licencia CC BY</td>
+          </tr>
+
+          <tr>
+            <td>Global</td>
+            <td>Waste electrical and electronic equipment (WEEE) by waste management operations</td>
+            <td>Eurostat</td>
+            <td><a href="https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/env_waseleeos/1.0?compress=true&amp;format=structurespecificdata&amp;formatVersion=2.1" target="_blank" rel="noopener">ec.europa.eu/eurostat — API SDMX 3.0 · <code>env_waseleeos</code></a></td>
+            <td>Terciaria</td>
+            <td>32 países (UE + EFTA)</td>
+            <td>2011–2023</td>
+            <td>XML / SDMX</td>
+            <td>Consulta a la API oficial</td>
+            <td>39.442</td>
+            <td>País, categoría de equipo (9), operación de gestión (13), año, valor, unidad</td>
+            <td><span class="fill">por registrar</span></td>
+            <td>Uso libre citando a Eurostat</td>
+          </tr>
+
+          <tr>
+            <td>Global</td>
+            <td>World Telecommunication / ICT Indicators Database — 4 indicadores: hogares con computador, hogares con internet, individuos que usan internet, individuos con celular</td>
+            <td>ITU (agencia de la ONU)</td>
+            <td><a href="https://datahub.itu.int/data?i=8917" target="_blank" rel="noopener">datahub.itu.int/data?i=8917</a> (+ i=12047, i=11624, i=9145)</td>
+            <td>Secundaria / Terciaria</td>
+            <td>~200 países</td>
+            <td>Variable según indicador (desde 2005)</td>
+            <td>CSV</td>
+            <td>Descarga directa desde Data Explorer</td>
+            <td>~38.816</td>
+            <td>País, año, valor, desagregación (género / edad / zona / ocupación)</td>
+            <td><span class="fill">por registrar</span></td>
+            <td>Acceso público, exige atribución</td>
+          </tr>
+
+          <tr>
+            <td>Nacional</td>
+            <td>Encuesta de Tecnologías de la Información y las Comunicaciones en Hogares (ENTIC Hogares)</td>
+            <td>DANE</td>
+            <td><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/tecnologia-e-innovacion/tecnologias-de-la-informacion-y-las-comunicaciones-tic/encuesta-de-tecnologias-de-la-informacion-y-las-comunicaciones-en-hogares-entic-hogares" target="_blank" rel="noopener">dane.gov.co — ENTIC Hogares</a></td>
+            <td>Secundaria</td>
+            <td>Nacional, por departamento y área</td>
+            <td>2020, 2021, 2024</td>
+            <td>XLSX</td>
+            <td>Descarga directa de anexos</td>
+            <td>~33 departamentos × 3 años (agregado)</td>
+            <td>% de tenencia de computador / tablet / internet, por departamento y área</td>
+            <td><span class="fill">por registrar</span></td>
+            <td>Datos abiertos, atribución al DANE</td>
+          </tr>
+
+          <tr>
+            <td>Nacional</td>
+            <td>Encuesta Nacional de Calidad de Vida (ECV), serie 2018–2024</td>
+            <td>DANE</td>
+            <td><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/salud/calidad-de-vida-ecv/encuesta-nacional-de-calidad-de-vida-ecv-2024" target="_blank" rel="noopener">dane.gov.co — ECV 2024</a></td>
+            <td>Secundaria</td>
+            <td>Nacional, por departamento y área</td>
+            <td>2018–2024</td>
+            <td>XLSX</td>
+            <td>Descarga directa de anexos</td>
+            <td>~36 dominios × 7 años × 2 indicadores</td>
+            <td>% de uso de computador / internet / celular, % de hogares con internet fijo / móvil, por departamento</td>
+            <td><span class="fill">por registrar</span></td>
+            <td>Datos abiertos, atribución al DANE</td>
+          </tr>
+
+          <tr>
+            <td>Nacional</td>
+            <td>Gestores RESPEL y RAEE</td>
+            <td>IDEAM</td>
+            <td><a href="https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Gestores-RESPEL-y-RAEE/cxrv-qad2/about_data" target="_blank" rel="noopener">datos.gov.co/…/cxrv-qad2</a></td>
+            <td>Secundaria</td>
+            <td>Nacional, por departamento y municipio</td>
+            <td>Vigente al 29/07/2026 (corte administrativo)</td>
+            <td>XLSX</td>
+            <td>Descarga directa desde datos.gov.co</td>
+            <td>385</td>
+            <td>Departamento, municipio, autoridad ambiental, NIT, empresa, coordenadas, autorizaciones RESPEL / RAEE, fechas</td>
+            <td>29/07/2026</td>
+            <td>Datos Abiertos Colombia, Ley 1712 de 2014</td>
+          </tr>
+
+          <tr>
+            <td>Regional</td>
+            <td>Estudio de percepción ciudadana sobre el conocimiento y cumplimiento de la política pública de manejo de RAEE — Norte de Santander</td>
+            <td>Gobernación de Norte de Santander</td>
+            <td><a href="https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/Estudio-de-percepci-n-ciudadana-sobre-el-conocimie/rfqz-psdm/about_data" target="_blank" rel="noopener">datos.gov.co/…/rfqz-psdm</a></td>
+            <td>Secundaria (primaria para quien realizó la encuesta original)</td>
+            <td>Municipios de Norte de Santander (principalmente Cúcuta)</td>
+            <td>Sin fecha explícita en el dataset (pendiente verificar metadatos)</td>
+            <td>CSV</td>
+            <td>Descarga directa desde datos.gov.co</td>
+            <td>2.033</td>
+            <td>Municipio, tipo de empresa, entidad, conocimiento de RAEE, dónde entrega residuos, participación en jornadas, uso de apps</td>
+            <td><span class="fill">por registrar</span></td>
+            <td>Datos Abiertos Colombia</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p class="hint">
+      Suma aproximada de registros crudos antes de integrar y filtrar: <strong>~81.700</strong>
+      (OWID 652 · Eurostat 39.442 · ITU ~38.816 · IDEAM 385 · Norte de Santander 2.033;
+      ENTIC y ECV se publican en tablas agregadas).
+    </p>
+
+    <p class="hint">
+      <span class="pending-badge">PENDIENTE</span>
+      Falta registrar la fecha exacta de descarga de cada fuente y redactar la
+      justificación de pertinencia, confiabilidad, actualidad y cobertura por fuente.
+      A nivel regional aún hay una sola fuente (la guía pide mínimo dos por nivel) y no
+      hay una fuente primaria recolectada por el grupo.
+    </p>
+  </div>
+</section>
+{% endblock %}
