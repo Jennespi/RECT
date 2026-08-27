@@ -3,13 +3,14 @@
 <section class="card">
   <div class="card__num">04</div>
   <div class="card__body">
-    <h2>Fuentes y tipo de recolección</h2>
+    <h2>Fuentes de datos</h2>
 
     <p class="hint">
-      Siete fuentes distribuidas en los tres niveles de análisis (global, nacional y
-      regional), documentadas con los campos exigidos: institución responsable, URL,
-      tipo, cobertura, periodo, formato, método de adquisición, volumen aproximado,
-      variables, fecha de consulta y restricciones de uso.
+      Siete fuentes distribuidas en los tres niveles de análisis. El registro del IDEAM se
+      documenta además a escala regional (subconjunto de Norte de Santander), de modo que
+      cada nivel queda con al menos dos fuentes. Cada una se describe con los campos
+      exigidos: institución responsable, URL, tipo, cobertura, periodo, formato, método de
+      adquisición, volumen aproximado, variables, fecha de consulta y restricciones de uso.
     </p>
 
     <div class="table-wrap">
@@ -45,7 +46,7 @@
             <td>Descarga directa ("Download full data")</td>
             <td>652</td>
             <td>País, código, año, % de reciclaje</td>
-            <td><span class="fill">por registrar</span></td>
+            <td>21/08/2026</td>
             <td>Licencia CC BY</td>
           </tr>
 
@@ -61,7 +62,7 @@
             <td>Consulta a la API oficial</td>
             <td>39.442</td>
             <td>País, categoría de equipo (9), operación de gestión (13), año, valor, unidad</td>
-            <td><span class="fill">por registrar</span></td>
+            <td>21/08/2026</td>
             <td>Uso libre citando a Eurostat</td>
           </tr>
 
@@ -77,7 +78,7 @@
             <td>Descarga directa desde Data Explorer</td>
             <td>~38.816</td>
             <td>País, año, valor, desagregación (género / edad / zona / ocupación)</td>
-            <td><span class="fill">por registrar</span></td>
+            <td>21/08/2026</td>
             <td>Acceso público, exige atribución</td>
           </tr>
 
@@ -93,7 +94,7 @@
             <td>Descarga directa de anexos</td>
             <td>~33 departamentos × 3 años (agregado)</td>
             <td>% de tenencia de computador / tablet / internet, por departamento y área</td>
-            <td><span class="fill">por registrar</span></td>
+            <td>22/08/2026</td>
             <td>Datos abiertos, atribución al DANE</td>
           </tr>
 
@@ -109,7 +110,7 @@
             <td>Descarga directa de anexos</td>
             <td>~36 dominios × 7 años × 2 indicadores</td>
             <td>% de uso de computador / internet / celular, % de hogares con internet fijo / móvil, por departamento</td>
-            <td><span class="fill">por registrar</span></td>
+            <td>23/08/2026</td>
             <td>Datos abiertos, atribución al DANE</td>
           </tr>
 
@@ -125,7 +126,7 @@
             <td>Descarga directa desde datos.gov.co</td>
             <td>385</td>
             <td>Departamento, municipio, autoridad ambiental, NIT, empresa, coordenadas, autorizaciones RESPEL / RAEE, fechas</td>
-            <td>29/07/2026</td>
+            <td>24/08/2026</td>
             <td>Datos Abiertos Colombia, Ley 1712 de 2014</td>
           </tr>
 
@@ -141,13 +142,123 @@
             <td>Descarga directa desde datos.gov.co</td>
             <td>2.033</td>
             <td>Municipio, tipo de empresa, entidad, conocimiento de RAEE, dónde entrega residuos, participación en jornadas, uso de apps</td>
-            <td><span class="fill">por registrar</span></td>
+            <td>24/08/2026</td>
             <td>Datos Abiertos Colombia</td>
+          </tr>
+
+          <tr>
+            <td>Regional</td>
+            <td>Gestores RESPEL y RAEE — subconjunto de Norte de Santander</td>
+            <td>IDEAM (filtrado por el equipo)</td>
+            <td><a href="https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Gestores-RESPEL-y-RAEE/cxrv-qad2/about_data" target="_blank" rel="noopener">datos.gov.co/…/cxrv-qad2</a></td>
+            <td>Secundaria</td>
+            <td>Norte de Santander (departamento y municipios)</td>
+            <td>Vigente al 29/07/2026 (corte administrativo)</td>
+            <td>XLSX</td>
+            <td>Filtro del registro nacional del IDEAM por departamento</td>
+            <td>Subconjunto de Norte de Santander (de 385 gestores nacionales)</td>
+            <td>Departamento, municipio, autoridad ambiental, NIT, empresa, coordenadas, autorizaciones RESPEL / RAEE, fechas</td>
+            <td>24/08/2026</td>
+            <td>Datos Abiertos Colombia, Ley 1712 de 2014</td>
           </tr>
 
         </tbody>
       </table>
     </div>
+
+    <h3>Justificación de las fuentes</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Fuente</th>
+            <th>Pertinencia</th>
+            <th>Confiabilidad</th>
+            <th>Actualidad</th>
+            <th>Cobertura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OWID — Electronic waste recycling rate</td>
+            <td>Indicador central para la pregunta 1 (evolución de la tasa de reciclaje formal de RAEE).</td>
+            <td>Compila datos de la ONU / UNITAR / ITU (Global E-waste Monitor); plataforma reconocida.</td>
+            <td>Cubre hasta 2022.</td>
+            <td>Mundial, por país y agrupaciones regionales.</td>
+          </tr>
+          <tr>
+            <td>Eurostat WEEE (<code>env_waseleeos</code>)</td>
+            <td>Referencia (benchmark) de gestión formal de RAEE con detalle por operación.</td>
+            <td>Oficina estadística de la Unión Europea, metodología armonizada.</td>
+            <td>Hasta 2023.</td>
+            <td>32 países (UE + EFTA); no incluye Colombia, se usa solo como contraste.</td>
+          </tr>
+          <tr>
+            <td>ITU DataHub (4 indicadores)</td>
+            <td>Mide el consumo y el acceso tecnológico a escala global (pregunta 2), comparable con el DANE.</td>
+            <td>Agencia de telecomunicaciones de la ONU; datos reportados por las autoridades nacionales.</td>
+            <td>Series hasta 2023–2024 según país.</td>
+            <td>~200 países.</td>
+          </tr>
+          <tr>
+            <td>DANE — ENTIC Hogares</td>
+            <td>Fuente oficial de tenencia y uso de TIC en hogares colombianos, por departamento (pregunta 2).</td>
+            <td>Entidad estadística oficial de Colombia; encuesta probabilística.</td>
+            <td>2020, 2021 y 2024 (sin 2022–2023).</td>
+            <td>Nacional, 33 departamentos, por área.</td>
+          </tr>
+          <tr>
+            <td>DANE — ECV</td>
+            <td>Respalda la tenencia de TIC y cubre el vacío 2022–2023 de ENTIC.</td>
+            <td>Entidad estadística oficial; encuesta probabilística de gran tamaño.</td>
+            <td>Serie 2018–2024.</td>
+            <td>Nacional, por departamento y área.</td>
+          </tr>
+          <tr>
+            <td>IDEAM — Gestores RESPEL y RAEE</td>
+            <td>Única fuente oficial de la capacidad formal de gestión (preguntas 1 y 3), con ubicación.</td>
+            <td>Registro administrativo del IDEAM; datos declarados por las autoridades ambientales.</td>
+            <td>Vigente al 29/07/2026.</td>
+            <td>Nacional, por departamento y municipio.</td>
+          </tr>
+          <tr>
+            <td>Estudio de percepción — Norte de Santander</td>
+            <td>Aporta el comportamiento y el conocimiento ciudadano (pregunta 4), no disponible en otras fuentes.</td>
+            <td>Publicado por la Gobernación de Norte de Santander en Datos Abiertos; muestreo no probabilístico (por conveniencia), a tener en cuenta.</td>
+            <td>Sin fecha explícita en el dataset (pendiente verificar en metadatos).</td>
+            <td>Municipios de Norte de Santander, principalmente Cúcuta.</td>
+          </tr>
+          <tr>
+            <td>IDEAM — subconjunto de Norte de Santander</td>
+            <td>Da la visión regional de la capacidad de gestión y permite cruzarla con el consumo local (preguntas 3 y 4); complementa el estudio de percepción.</td>
+            <td>Mismo registro oficial del IDEAM, acotado por departamento sin alterar los datos.</td>
+            <td>Vigente al 29/07/2026.</td>
+            <td>Norte de Santander, por municipio.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Nota aclaratoria — fuentes vs. archivos</h3>
+
+    <p class="hint">
+      Las 7 fuentes documentadas arriba se materializan en un total de
+      <strong>12 archivos descargados</strong>, ya que algunas fuentes publican su
+      información distribuida en varios archivos según el indicador o el año:
+    </p>
+    <ul class="question-list">
+      <li><strong>ITU DataHub → 4 archivos</strong> (uno por cada indicador: hogares con
+        computador, hogares con internet, individuos que usan internet, individuos con celular).</li>
+      <li><strong>DANE ENTIC Hogares → 3 archivos</strong> (anexos 2020, 2021 y 2024).</li>
+      <li><strong>Our World in Data, Eurostat WEEE, DANE ECV, IDEAM y Norte de Santander
+        → 1 archivo cada uno.</strong></li>
+    </ul>
+    <p class="hint">
+      Estos 12 archivos se conservan íntegros y sin modificar en <code>datos/originales/</code>,
+      y a partir de ellos se generaron <strong>4 archivos consolidados y limpios</strong> en
+      <code>datos/procesados/</code>, documentados en la sección <strong>Diccionario de datos</strong>.
+    </p>
 
     <p class="hint">
       Suma aproximada de registros crudos antes de integrar y filtrar: <strong>~81.700</strong>
@@ -157,10 +268,9 @@
 
     <p class="hint">
       <span class="pending-badge">PENDIENTE</span>
-      Falta registrar la fecha exacta de descarga de cada fuente y redactar la
-      justificación de pertinencia, confiabilidad, actualidad y cobertura por fuente.
-      A nivel regional aún hay una sola fuente (la guía pide mínimo dos por nivel) y no
-      hay una fuente primaria recolectada por el grupo.
+      La segunda fuente regional (IDEAM acotado a Norte de Santander) es un subconjunto del
+      registro nacional, no una fuente propia del territorio; sigue faltando una fuente
+      primaria recolectada por el grupo.
     </p>
   </div>
 </section>

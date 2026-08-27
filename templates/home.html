@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Entregas · Proyecto RECT{% endblock %}
+
+{% block body %}
+
+  <header class="hero">
+    <div class="hero__eyebrow">Minería de Datos · Proyecto RECT</div>
+    <h1>Residuos electrónicos <span>&amp;</span> consumo tecnológico</h1>
+    <p class="hero__lead">
+      Bitácora técnica del proyecto. Cada entrega documenta una fase del proceso de
+      minería de datos; elegí una para ver el trabajo realizado.
+    </p>
+  </header>
+
+  <main class="entregas">
+    {% for e in entregas %}
+      {% if e.disponible %}
+      <a class="entrega" href="{{ url_for(e.endpoint, slug=e.primer_slug) }}">
+        <span class="entrega__code">{{ e.codigo }}</span>
+        <span class="entrega__title">{{ e.titulo }}</span>
+        <span class="entrega__desc">{{ e.descripcion }}</span>
+        <span class="entrega__go">Abrir la entrega →</span>
+      </a>
+      {% else %}
+      <div class="entrega entrega--soon" aria-disabled="true">
+        <span class="entrega__code">{{ e.codigo }}</span>
+        <span class="entrega__title">{{ e.titulo }}</span>
+        <span class="entrega__desc">{{ e.descripcion }}</span>
+        <span class="entrega__go">Próximamente</span>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </main>
+
+{% endblock %}

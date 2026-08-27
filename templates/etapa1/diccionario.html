@@ -7,815 +7,379 @@
     <h2>Diccionario de datos</h2>
 
     <p class="hint">
-      <span class="pending-badge">COMPLETO</span>
-      El diccionario de datos describe las principales variables utilizadas en el
-      proyecto, indicando su tipo de dato, dominio, fuente y un ejemplo de valor.
-      La información proviene de siete fuentes: Our World in Data, Eurostat,
-      ITU DataHub, DANE (ENTIC y ECV 2024), IDEAM y el estudio de percepción
-      ciudadana de Norte de Santander.
+      Describe los cuatro archivos consolidados en <code>datos/procesados/</code>,
+      resultado de integrar las siete fuentes originales. Para cada campo se indica su
+      significado, tipo, dominio, procedencia, un ejemplo y las restricciones de uso.
+      Las descargas sin modificar quedan en <code>datos/originales/</code> (trazabilidad).
     </p>
 
     <!-- ===================================================== -->
-    <!-- 1. OUR WORLD IN DATA -->
+    <!-- Archivo 1 -->
     <!-- ===================================================== -->
 
-    <h3>01 · Our World in Data — Tasa de reciclaje de RAEE</h3>
+    <h3>Archivo 1 · <code>master_indicadores_globales.csv</code></h3>
 
-    <p class="hint">
-      Indicador utilizado para analizar la proporción de residuos electrónicos
-      que son reciclados a nivel mundial.
-    </p>
+    <p class="hint">Nivel global. OWID + Eurostat WEEE + ITU en formato largo país–año–indicador. 78 689 filas.</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Campo</th>
+            <th>Nombre del campo</th>
+            <th>Descripción y significado</th>
             <th>Tipo de dato</th>
-            <th>Dominio</th>
-            <th>Descripción</th>
-            <th>Fuente</th>
-            <th>Ejemplo</th>
+            <th>Unidad / dominio</th>
+            <th>Fuente / procedencia</th>
+            <th>Ejemplo de valor</th>
+            <th>Observaciones / restricciones</th>
           </tr>
         </thead>
         <tbody>
-
           <tr>
-            <td>Entity</td>
-            <td>Texto</td>
-            <td>País / región</td>
-            <td>Nombre del país, región o agrupación geográfica.</td>
-            <td>OWID</td>
-            <td>World</td>
+            <td><code>nivel</code></td>
+            <td>Nivel de análisis del registro.</td>
+            <td>Categórica nominal</td>
+            <td>{global}</td>
+            <td>Asignado por el equipo al consolidar</td>
+            <td>global</td>
+            <td>Fijo para este archivo.</td>
           </tr>
-
           <tr>
-            <td>Code</td>
-            <td>Texto</td>
-            <td>Código geográfico</td>
-            <td>Código asociado a la entidad geográfica.</td>
-            <td>OWID</td>
-            <td>COL</td>
+            <td><code>fuente</code></td>
+            <td>Fuente original del dato.</td>
+            <td>Categórica nominal</td>
+            <td>{OWID, Eurostat_WEEE, ITU_DataHub}</td>
+            <td>Asignado por el equipo</td>
+            <td>ITU_DataHub</td>
+            <td>Permite filtrar por origen antes de comparar.</td>
           </tr>
-
           <tr>
-            <td>Year</td>
-            <td>Entero</td>
-            <td>Año calendario</td>
-            <td>Año al que corresponde la medición.</td>
-            <td>OWID</td>
+            <td><code>pais_region</code></td>
+            <td>País, región o código geográfico.</td>
+            <td>Categórica nominal / geográfica</td>
+            <td>Texto (nombre o código ISO)</td>
+            <td>Tal como lo reporta cada fuente</td>
+            <td>Africa (UN) / AT</td>
+            <td>Formato distinto según fuente (nombre completo en OWID, código ISO-2 en Eurostat) — no está homologado aún, ver diagnóstico de calidad.</td>
+          </tr>
+          <tr>
+            <td><code>anio</code></td>
+            <td>Año de referencia del dato.</td>
+            <td>Temporal</td>
+            <td>Entero, 2005–2024</td>
+            <td>Tal como lo reporta cada fuente</td>
             <td>2022</td>
+            <td>Cobertura de años distinta por fuente.</td>
           </tr>
-
           <tr>
-            <td>Electronic waste recycling rate</td>
-            <td>Decimal</td>
-            <td>0 – 100 %</td>
-            <td>Porcentaje de residuos electrónicos que son reciclados.</td>
-            <td>OWID</td>
-            <td>22.3</td>
+            <td><code>variable</code></td>
+            <td>Indicador medido.</td>
+            <td>Categórica nominal</td>
+            <td>Texto libre (ej. <code>pct_raee_reciclado</code>, <code>EE6_COL</code>)</td>
+            <td>Asignado / heredado del código original de cada fuente</td>
+            <td>EE6_COL</td>
+            <td>Los códigos de Eurostat combinan categoría de equipo + operación; requieren el diccionario técnico de Eurostat para descifrarse por completo.</td>
           </tr>
-
+          <tr>
+            <td><code>valor</code></td>
+            <td>Valor numérico del indicador.</td>
+            <td>Numérica continua</td>
+            <td>Depende de <code>unidad</code></td>
+            <td>Tal como lo reporta cada fuente</td>
+            <td>9784.0</td>
+            <td>Nunca comparar valores con <code>unidad</code> distinta sin normalizar.</td>
+          </tr>
+          <tr>
+            <td><code>unidad</code></td>
+            <td>Unidad de medida del valor.</td>
+            <td>Categórica nominal</td>
+            <td>&#123;%, T, AVG_3Y, KG_HAB, % of households, % of individuals&#125;</td>
+            <td>Tal como lo reporta cada fuente</td>
+            <td>% of households</td>
+            <td>Clave para no comparar magnitudes de distinta naturaleza entre fuentes.</td>
+          </tr>
         </tbody>
       </table>
     </div>
 
-
     <!-- ===================================================== -->
-    <!-- 2. EUROSTAT -->
+    <!-- Archivo 2 -->
     <!-- ===================================================== -->
 
-    <h3>02 · Eurostat — RAEE por operaciones de gestión de residuos</h3>
+    <h3>Archivo 2 · <code>dane_clean.csv</code></h3>
 
-    <p class="hint">
-      Dataset <code>env_waseleeos</code> descargado vía API SDMX 3.0. Se usa como
-      referencia (benchmark) de la capacidad de gestión formal de RAEE en la Unión
-      Europea, para contrastar con la tasa mundial de OWID. Endpoint:
-      <a href="https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/env_waseleeos/1.0?compress=true&amp;format=structurespecificdata&amp;formatVersion=2.1" target="_blank" rel="noopener">API dissemination SDMX</a>.
-    </p>
+    <p class="hint">Nivel nacional. ENTIC Hogares (204 filas) + ECV (756 filas) en formato <code>departamento, año, indicador, valor</code>. 960 filas.</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Campo</th>
+            <th>Nombre del campo</th>
+            <th>Descripción y significado</th>
             <th>Tipo de dato</th>
-            <th>Dominio</th>
-            <th>Descripción</th>
-            <th>Fuente</th>
-            <th>Ejemplo</th>
+            <th>Unidad / dominio</th>
+            <th>Fuente / procedencia</th>
+            <th>Ejemplo de valor</th>
+            <th>Observaciones / restricciones</th>
           </tr>
         </thead>
         <tbody>
-
           <tr>
-            <td>geo</td>
-            <td>Categórico</td>
-            <td>Países UE / agregados (p. ej. EU27_2020)</td>
-            <td>País o agregado geográfico de la observación.</td>
-            <td>Eurostat</td>
-            <td>DE</td>
+            <td><code>departamento</code></td>
+            <td>Dominio geográfico del dato.</td>
+            <td>Categórica nominal / geográfica</td>
+            <td>Texto (33 departamentos + Total nacional / Cabecera / Centros poblados)</td>
+            <td>DANE</td>
+            <td>Cundinamarca</td>
+            <td>Incluye agregados nacionales (no son departamentos reales); filtrar según necesidad.</td>
           </tr>
-
           <tr>
-            <td>time</td>
-            <td>Entero</td>
-            <td>Año calendario</td>
-            <td>Año de referencia de la observación.</td>
-            <td>Eurostat</td>
+            <td><code>anio</code></td>
+            <td>Año de la encuesta.</td>
+            <td>Temporal</td>
+            <td>Entero, 2018–2024</td>
+            <td>DANE</td>
             <td>2021</td>
+            <td>ENTIC solo cubre 2020 / 2021 / 2024 (huecos en 2022–2023); ECV cubre 2018–2024 completo.</td>
           </tr>
-
           <tr>
-            <td>waste</td>
-            <td>Categórico</td>
-            <td>Categorías de AEE / RAEE</td>
-            <td>Categoría de aparato eléctrico y electrónico considerada.</td>
-            <td>Eurostat</td>
-            <td>Total</td>
+            <td><code>indicador</code></td>
+            <td>Qué mide la fila.</td>
+            <td>Categórica nominal</td>
+            <td>5 valores posibles</td>
+            <td>Asignado por el equipo</td>
+            <td>pct_personas_usan_internet</td>
+            <td><code>pct_hogares_internet</code> (ENTIC) y <code>pct_hogares_internet_v2</code> (ECV) miden algo similar pero de encuestas distintas — no promediar entre sí sin documentarlo.</td>
           </tr>
-
           <tr>
-            <td>wst_oper</td>
-            <td>Categórico</td>
-            <td>Operaciones de gestión (recogida, tratamiento, reciclaje, preparación para reutilización, valorización)</td>
-            <td>Operación de gestión de residuos a la que se refiere el valor.</td>
-            <td>Eurostat</td>
-            <td>RCV_R</td>
+            <td><code>valor</code></td>
+            <td>Porcentaje del indicador.</td>
+            <td>Numérica continua</td>
+            <td>% (0–100)</td>
+            <td>DANE</td>
+            <td>35.7</td>
+            <td>—</td>
           </tr>
-
           <tr>
-            <td>unit</td>
-            <td>Categórico</td>
-            <td>T (toneladas) / KG_HAB (kg por habitante)</td>
-            <td>Unidad de medida del valor observado.</td>
-            <td>Eurostat</td>
-            <td>T</td>
+            <td><code>fuente</code></td>
+            <td>Encuesta de origen.</td>
+            <td>Categórica nominal</td>
+            <td>{DANE_ENTIC_Hogares, DANE_ECV}</td>
+            <td>Asignado por el equipo</td>
+            <td>DANE_ECV</td>
+            <td>—</td>
           </tr>
-
-          <tr>
-            <td>OBS_VALUE</td>
-            <td>Decimal</td>
-            <td>&ge; 0</td>
-            <td>Cantidad de RAEE asociada a la operación de gestión.</td>
-            <td>Eurostat</td>
-            <td>720000</td>
-          </tr>
-
         </tbody>
       </table>
     </div>
 
-
     <!-- ===================================================== -->
-    <!-- 3. ITU DATAHUB -->
+    <!-- Archivo 3 -->
     <!-- ===================================================== -->
 
-    <h3>03 · ITU DataHub — Acceso y uso de TIC</h3>
+    <h3>Archivo 3 · <code>ideam_gestores_clean.csv</code></h3>
 
-    <p class="hint">
-      Cuatro indicadores del portal ITU DataHub que describen el consumo tecnológico
-      a nivel mundial:
-      <a href="https://datahub.itu.int/data/?i=8917" target="_blank" rel="noopener">hogares con computador</a>,
-      <a href="https://datahub.itu.int/data/?i=12047" target="_blank" rel="noopener">hogares con acceso a internet</a>,
-      <a href="https://datahub.itu.int/data/?i=11624" target="_blank" rel="noopener">individuos que usan internet</a> e
-      <a href="https://datahub.itu.int/data/?i=9145" target="_blank" rel="noopener">individuos que usan telefonía móvil celular</a>.
-      Los cuatro comparten la misma estructura de columnas.
-    </p>
+    <p class="hint">Nivel nacional. Directorio de gestores RESPEL / RAEE por empresa. 377 filas.</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Campo</th>
+            <th>Nombre del campo</th>
+            <th>Descripción y significado</th>
             <th>Tipo de dato</th>
-            <th>Dominio</th>
-            <th>Descripción</th>
-            <th>Fuente</th>
-            <th>Ejemplo</th>
+            <th>Unidad / dominio</th>
+            <th>Fuente / procedencia</th>
+            <th>Ejemplo de valor</th>
+            <th>Observaciones / restricciones</th>
           </tr>
         </thead>
         <tbody>
-
           <tr>
-            <td>Economy / Country</td>
+            <td><code>Departamento</code></td>
+            <td>Ubicación de la instalación gestora.</td>
+            <td>Categórica nominal / geográfica</td>
+            <td>Texto (33 departamentos)</td>
+            <td>IDEAM</td>
+            <td>SANTANDER</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><code>Municipio</code></td>
+            <td>Municipio de la instalación.</td>
+            <td>Categórica nominal / geográfica</td>
             <td>Texto</td>
-            <td>País o economía</td>
-            <td>Nombre del país o economía reportante.</td>
-            <td>ITU DataHub</td>
-            <td>Colombia</td>
+            <td>IDEAM</td>
+            <td>Florencia</td>
+            <td>—</td>
           </tr>
-
           <tr>
-            <td>ISO3</td>
+            <td><code>Autoridad</code></td>
+            <td>Autoridad ambiental que otorgó el permiso.</td>
+            <td>Categórica nominal</td>
+            <td>Texto (ej. AMVA, CAR)</td>
+            <td>IDEAM</td>
+            <td>AMVA</td>
+            <td>Útil para saber quién audita cada instalación.</td>
+          </tr>
+          <tr>
+            <td><code>Empresa</code></td>
+            <td>Razón social de la empresa gestora.</td>
+            <td>Categórica nominal</td>
             <td>Texto</td>
-            <td>Código ISO 3166-1 alfa-3</td>
-            <td>Código de país de tres letras.</td>
-            <td>ITU DataHub</td>
-            <td>COL</td>
+            <td>IDEAM</td>
+            <td>APROVECHAMIENTOS QUIMICOS S.A.S</td>
+            <td>Puede repetirse si una empresa tiene varias sedes — posible duplicidad a revisar en calidad.</td>
           </tr>
-
           <tr>
-            <td>Indicator</td>
-            <td>Texto</td>
-            <td>Nombre del indicador ITU</td>
-            <td>Indicador de acceso o uso de TIC medido.</td>
-            <td>ITU DataHub</td>
-            <td>Individuals using the Internet</td>
+            <td><code>Estado</code></td>
+            <td>Vigencia actual de la autorización.</td>
+            <td>Categórica nominal</td>
+            <td>{ACTIVO, INACTIVO, ...}</td>
+            <td>IDEAM</td>
+            <td>ACTIVO</td>
+            <td>Filtrar por ACTIVO si solo interesa la capacidad instalada vigente.</td>
           </tr>
-
           <tr>
-            <td>Year</td>
-            <td>Entero</td>
-            <td>Año calendario</td>
-            <td>Año al que corresponde la medición.</td>
-            <td>ITU DataHub</td>
-            <td>2023</td>
+            <td><code>Latitud</code> / <code>Longitud</code></td>
+            <td>Coordenadas de la instalación.</td>
+            <td>Numérica continua / geográfica</td>
+            <td>Grados decimales</td>
+            <td>IDEAM</td>
+            <td>6.244203 / -75.581212</td>
+            <td>Permite geolocalizar en mapa.</td>
           </tr>
-
           <tr>
-            <td>Value</td>
-            <td>Decimal</td>
-            <td>0 – 100 %</td>
-            <td>Porcentaje de hogares o de individuos según el indicador.</td>
-            <td>ITU DataHub</td>
-            <td>73.5</td>
+            <td><code>Fecha Otorgamiento</code></td>
+            <td>Fecha en que se otorgó el permiso.</td>
+            <td>Temporal</td>
+            <td>Fecha (dd/mm/aaaa)</td>
+            <td>IDEAM</td>
+            <td>10/04/2013</td>
+            <td>Formato texto, no fecha nativa — requiere conversión antes de análisis temporal.</td>
           </tr>
-
-          <tr>
-            <td>Data source</td>
-            <td>Texto</td>
-            <td>Texto libre</td>
-            <td>Origen del dato reportado a la ITU (encuesta nacional, estimación).</td>
-            <td>ITU DataHub</td>
-            <td>National household survey</td>
-          </tr>
-
         </tbody>
       </table>
     </div>
 
-
     <!-- ===================================================== -->
-    <!-- 4. DANE ENTIC -->
+    <!-- Archivo 4 -->
     <!-- ===================================================== -->
 
-    <h3>04 · DANE — ENTIC Hogares</h3>
+    <h3>Archivo 4 · <code>norte_santander_encuesta_clean.csv</code></h3>
 
-    <p class="hint">
-      Variables relacionadas con la tenencia, acceso y utilización de
-      tecnologías de información y comunicación en los hogares colombianos.
-    </p>
+    <p class="hint">Nivel regional. Encuesta de percepción ciudadana (datos.gov.co). 2 033 filas. Se documentan los campos clave para el análisis.</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Campo</th>
+            <th>Nombre del campo</th>
+            <th>Descripción y significado</th>
             <th>Tipo de dato</th>
-            <th>Dominio</th>
-            <th>Descripción</th>
-            <th>Fuente</th>
-            <th>Ejemplo</th>
+            <th>Unidad / dominio</th>
+            <th>Fuente / procedencia</th>
+            <th>Ejemplo de valor</th>
+            <th>Observaciones / restricciones</th>
           </tr>
         </thead>
         <tbody>
-
           <tr>
-            <td>departamento</td>
-            <td>Categórico</td>
-            <td>Departamentos de Colombia</td>
-            <td>Departamento al que pertenece el hogar.</td>
-            <td>DANE - ENTIC</td>
-            <td>Norte de Santander</td>
-          </tr>
-
-          <tr>
-            <td>area_geografica</td>
-            <td>Categórico</td>
-            <td>Cabecera / Rural</td>
-            <td>Área geográfica donde se encuentra el hogar.</td>
-            <td>DANE - ENTIC</td>
-            <td>Cabecera</td>
-          </tr>
-
-          <tr>
-            <td>tenencia_computador</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar dispone de computador.</td>
-            <td>DANE - ENTIC</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>computador_escritorio</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar posee computador de escritorio.</td>
-            <td>DANE - ENTIC</td>
-            <td>NO</td>
-          </tr>
-
-          <tr>
-            <td>computador_portatil</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar posee computador portátil.</td>
-            <td>DANE - ENTIC</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>tenencia_tableta</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar posee una tableta.</td>
-            <td>DANE - ENTIC</td>
-            <td>NO</td>
-          </tr>
-
-          <tr>
-            <td>tenencia_televisor</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar posee televisor.</td>
-            <td>DANE - ENTIC</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>tenencia_celular</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar dispone de teléfono celular.</td>
-            <td>DANE - ENTIC</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>acceso_internet</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar cuenta con acceso a Internet.</td>
-            <td>DANE - ENTIC</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>tipo_internet</td>
-            <td>Categórico</td>
-            <td>Categorías DANE</td>
-            <td>Tipo de conexión a Internet utilizada por el hogar.</td>
-            <td>DANE - ENTIC</td>
-            <td>Internet fijo</td>
-          </tr>
-
-          <tr>
-            <td>uso_computador</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si las personas utilizan computador.</td>
-            <td>DANE - ENTIC</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>uso_internet</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si las personas utilizan Internet.</td>
-            <td>DANE - ENTIC</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>frecuencia_internet</td>
-            <td>Categórico</td>
-            <td>Categorías DANE</td>
-            <td>Frecuencia con la que se utiliza Internet.</td>
-            <td>DANE - ENTIC</td>
-            <td>Todos los días</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-    <!-- ===================================================== -->
-    <!-- 5. DANE ECV 2024 -->
-    <!-- ===================================================== -->
-
-    <h3>05 · DANE — Encuesta Nacional de Calidad de Vida (ECV) 2024</h3>
-
-    <p class="hint">
-      Fuente de respaldo para la tenencia de TIC en los hogares, usada para cubrir
-      el vacío de la serie ENTIC en 2022–2023. Variables de los módulos de tenencia
-      de bienes y de tecnologías de la información.
-    </p>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Campo</th>
-            <th>Tipo de dato</th>
-            <th>Dominio</th>
-            <th>Descripción</th>
-            <th>Fuente</th>
-            <th>Ejemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <td>departamento</td>
-            <td>Categórico</td>
-            <td>Departamentos de Colombia</td>
-            <td>Departamento al que pertenece el hogar.</td>
-            <td>DANE - ECV 2024</td>
-            <td>Norte de Santander</td>
-          </tr>
-
-          <tr>
-            <td>clase</td>
-            <td>Categórico</td>
-            <td>Cabecera / Centro poblado y rural disperso</td>
-            <td>Área geográfica del hogar.</td>
-            <td>DANE - ECV 2024</td>
-            <td>Cabecera</td>
-          </tr>
-
-          <tr>
-            <td>tenencia_computador</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar posee computador (escritorio, portátil o tableta).</td>
-            <td>DANE - ECV 2024</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>acceso_internet</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el hogar tiene conexión a internet.</td>
-            <td>DANE - ECV 2024</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>tenencia_celular</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si algún miembro del hogar posee teléfono celular.</td>
-            <td>DANE - ECV 2024</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>fex_c</td>
-            <td>Decimal</td>
-            <td>&gt; 0</td>
-            <td>Factor de expansión del hogar para estimaciones poblacionales.</td>
-            <td>DANE - ECV 2024</td>
-            <td>245.7</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-    <!-- ===================================================== -->
-    <!-- 6. IDEAM -->
-    <!-- ===================================================== -->
-
-    <h3>06 · IDEAM — Gestores RESPEL y RAEE</h3>
-
-    <p class="hint">
-      Información utilizada para identificar y analizar las instalaciones
-      autorizadas para la gestión de residuos peligrosos y residuos de
-      aparatos eléctricos y electrónicos.
-    </p>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Campo</th>
-            <th>Tipo de dato</th>
-            <th>Dominio</th>
-            <th>Descripción</th>
-            <th>Fuente</th>
-            <th>Ejemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <td>nit</td>
+            <td><code>MUNICIPIO</code></td>
+            <td>Municipio del encuestado.</td>
+            <td>Categórica nominal / geográfica</td>
             <td>Texto</td>
-            <td>Identificador</td>
-            <td>Número de identificación tributaria del gestor.</td>
-            <td>IDEAM</td>
-            <td>900123456</td>
+            <td>Encuesta Norte de Santander (datos.gov.co)</td>
+            <td>LOS PATIOS</td>
+            <td>Cúcuta es el municipio predominante.</td>
           </tr>
-
           <tr>
-            <td>razon_social</td>
-            <td>Texto</td>
-            <td>Texto libre</td>
-            <td>Nombre o razón social del gestor o empresa.</td>
-            <td>IDEAM</td>
-            <td>Empresa XYZ S.A.S.</td>
-          </tr>
-
-          <tr>
-            <td>estado</td>
-            <td>Categórico</td>
-            <td>Estados registrados</td>
-            <td>Estado de la instalación o gestor.</td>
-            <td>IDEAM</td>
-            <td>Activo</td>
-          </tr>
-
-          <tr>
-            <td>departamento</td>
-            <td>Texto</td>
-            <td>Departamentos de Colombia</td>
-            <td>Departamento donde se encuentra la instalación.</td>
-            <td>IDEAM</td>
-            <td>Norte de Santander</td>
-          </tr>
-
-          <tr>
-            <td>municipio</td>
-            <td>Texto</td>
-            <td>Municipios de Colombia</td>
-            <td>Municipio donde se encuentra la instalación.</td>
-            <td>IDEAM</td>
-            <td>Cúcuta</td>
-          </tr>
-
-          <tr>
-            <td>direccion</td>
-            <td>Texto</td>
-            <td>Texto libre</td>
-            <td>Dirección registrada de la instalación.</td>
-            <td>IDEAM</td>
-            <td>Dirección registrada</td>
-          </tr>
-
-          <tr>
-            <td>autoridad_ambiental</td>
-            <td>Texto</td>
-            <td>Autoridades ambientales</td>
-            <td>Autoridad ambiental competente.</td>
-            <td>IDEAM</td>
-            <td>CORPONOR</td>
-          </tr>
-
-          <tr>
-            <td>raee_almacenamiento</td>
-            <td>Booleano</td>
-            <td>SI / NO</td>
-            <td>Indica si existe autorización para almacenamiento de RAEE.</td>
-            <td>IDEAM</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>raee_tratamiento</td>
-            <td>Booleano</td>
-            <td>SI / NO</td>
-            <td>Indica si existe autorización para tratamiento de RAEE.</td>
-            <td>IDEAM</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>raee_aprovechamiento</td>
-            <td>Booleano</td>
-            <td>SI / NO</td>
-            <td>Indica si existe autorización para aprovechamiento o valorización de RAEE.</td>
-            <td>IDEAM</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>raee_disposicion_final</td>
-            <td>Booleano</td>
-            <td>SI / NO</td>
-            <td>Indica si existe autorización para disposición final de RAEE.</td>
-            <td>IDEAM</td>
-            <td>NO</td>
-          </tr>
-
-          <tr>
-            <td>tipo_raee_autorizado</td>
-            <td>Categórico</td>
-            <td>Categorías de RAEE</td>
-            <td>Tipo de residuo electrónico para el cual está autorizado el gestor.</td>
-            <td>IDEAM</td>
-            <td>Equipos informáticos</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-    <!-- ===================================================== -->
-    <!-- 7. ESTUDIO DE PERCEPCIÓN -->
-    <!-- ===================================================== -->
-
-    <h3>07 · Estudio de percepción ciudadana — Norte de Santander</h3>
-
-    <p class="hint">
-      Dataset utilizado para analizar el conocimiento, comportamiento y
-      disposición de ciudadanos y entidades frente a los residuos
-      posconsumo y RAEE.
-    </p>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Campo</th>
-            <th>Tipo de dato</th>
-            <th>Dominio</th>
-            <th>Descripción</th>
-            <th>Fuente</th>
-            <th>Ejemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <td>MUNICIPIO</td>
-            <td>Texto</td>
-            <td>Municipios de Norte de Santander</td>
-            <td>Municipio donde se registra la respuesta.</td>
-            <td>Estudio de percepción</td>
-            <td>CÚCUTA</td>
-          </tr>
-
-          <tr>
-            <td>TIPO DE EMPRESA</td>
-            <td>Categórico</td>
-            <td>Categorías registradas</td>
-            <td>Tipo de empresa, entidad o condición reportada.</td>
-            <td>Estudio de percepción</td>
+            <td><code>TIPO DE EMPRESA</code></td>
+            <td>Naturaleza de la entidad.</td>
+            <td>Categórica nominal</td>
+            <td>{PÚBLICA, PRIVADA}</td>
+            <td>Ídem</td>
             <td>PÚBLICA</td>
+            <td>—</td>
           </tr>
-
           <tr>
-            <td>ENTIDAD</td>
-            <td>Texto</td>
-            <td>Texto libre</td>
-            <td>Nombre de la entidad, empresa u organización registrada.</td>
-            <td>Estudio de percepción</td>
-            <td>GOBERNACIÓN DE NORTE DE SANTANDER</td>
-          </tr>
-
-          <tr>
-            <td>TIENE RESIDUOS POSTCONSUMO EN SU CASA?</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si el encuestado tiene residuos posconsumo en su vivienda.</td>
-            <td>Estudio de percepción</td>
+            <td><code>SABE QUE SIGNIFICA LA SIGLA RAEE</code></td>
+            <td>Conocimiento del término.</td>
+            <td>Categórica nominal</td>
+            <td>{SI, NO}</td>
+            <td>Ídem</td>
             <td>SI</td>
+            <td>—</td>
           </tr>
-
           <tr>
-            <td>DONDE ENTREGA LOS RESIDUOS</td>
-            <td>Categórico / Texto</td>
-            <td>Respuestas registradas</td>
-            <td>Indica dónde o cómo dispone el encuestado sus residuos.</td>
-            <td>Estudio de percepción</td>
-            <td>LOS DEJO EN CASA</td>
-          </tr>
-
-          <tr>
-            <td>SABE QUE SIGNIFICA LA SIGLA RAEE</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si la persona conoce el significado de la sigla RAEE.</td>
-            <td>Estudio de percepción</td>
+            <td><code>HA PARTICIPADO EN LAS JORNADAS ...</code></td>
+            <td>Participación en jornadas de recolección.</td>
+            <td>Categórica nominal</td>
+            <td>{SI, NO}</td>
+            <td>Ídem</td>
             <td>SI</td>
+            <td>14 valores faltantes detectados.</td>
           </tr>
-
           <tr>
-            <td>HA PARTICIPADO EN LAS JORNADAS DE RECOLECCION DE RESIDUOS POSTCONSUMO RAEE</td>
-            <td>Categórico</td>
-            <td>SI / NO / vacío</td>
-            <td>Indica si el encuestado ha participado en jornadas de recolección de RAEE.</td>
-            <td>Estudio de percepción</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>COMO SE ENTERARON DE ESTA JORNADA</td>
-            <td>Categórico / Texto</td>
-            <td>Medios registrados</td>
-            <td>Medio por el cual la persona conoció la jornada de recolección.</td>
-            <td>Estudio de percepción</td>
-            <td>REDES SOCIALES</td>
-          </tr>
-
-          <tr>
-            <td>HA USADO APLICACIONES</td>
-            <td>Categórico</td>
-            <td>SI / NO</td>
-            <td>Indica si la persona ha utilizado aplicaciones.</td>
-            <td>Estudio de percepción</td>
-            <td>SI</td>
-          </tr>
-
-          <tr>
-            <td>UTILIZARIA UNA APP PARA RAEE?</td>
-            <td>Categórico / Texto</td>
-            <td>Respuestas registradas</td>
-            <td>Indica la disposición del encuestado para utilizar una aplicación relacionada con RAEE.</td>
-            <td>Estudio de percepción</td>
+            <td><code>UTILIZARIA UNA APP PARA RAEE?</code></td>
+            <td>Disposición a usar una app.</td>
+            <td>Categórica nominal</td>
+            <td>{Sí, No}</td>
+            <td>Ídem</td>
             <td>Sí</td>
+            <td>Formato "Sí / No" con tilde y minúscula, distinto al "SI / NO" de las demás columnas — inconsistencia de formato a corregir en limpieza posterior; 2 valores faltantes.</td>
           </tr>
-
         </tbody>
       </table>
     </div>
 
-
     <!-- ===================================================== -->
-    <!-- RESUMEN -->
+    <!-- Resumen -->
     <!-- ===================================================== -->
 
-    <h3>Resumen de las fuentes</h3>
+    <h3>Resumen de los archivos</h3>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Fuente</th>
+            <th>Archivo</th>
             <th>Nivel</th>
             <th>Unidad de análisis</th>
-            <th>Objetivo dentro del proyecto</th>
+            <th>Filas</th>
           </tr>
         </thead>
-
         <tbody>
-
           <tr>
-            <td>Our World in Data</td>
+            <td><code>master_indicadores_globales.csv</code></td>
             <td>Global</td>
-            <td>País / año</td>
-            <td>Analizar la tasa de reciclaje de residuos electrónicos.</td>
+            <td>país – año – indicador</td>
+            <td>78 689</td>
           </tr>
-
           <tr>
-            <td>Eurostat (env_waseleeos)</td>
-            <td>Global</td>
-            <td>País / año</td>
-            <td>Benchmark de gestión formal de RAEE en la Unión Europea.</td>
-          </tr>
-
-          <tr>
-            <td>ITU DataHub</td>
-            <td>Global</td>
-            <td>País / año</td>
-            <td>Medir el consumo y el acceso tecnológico a nivel mundial.</td>
-          </tr>
-
-          <tr>
-            <td>DANE - ENTIC Hogares</td>
+            <td><code>dane_clean.csv</code></td>
             <td>Nacional</td>
-            <td>Hogar / departamento / año</td>
-            <td>Analizar la tenencia y utilización de tecnologías en Colombia.</td>
+            <td>departamento – año – indicador</td>
+            <td>960</td>
           </tr>
-
           <tr>
-            <td>DANE - ECV 2024</td>
+            <td><code>ideam_gestores_clean.csv</code></td>
             <td>Nacional</td>
-            <td>Hogar / departamento</td>
-            <td>Respaldar la tenencia de TIC y cubrir el vacío 2022–2023 de ENTIC.</td>
+            <td>gestor / instalación</td>
+            <td>377</td>
           </tr>
-
           <tr>
-            <td>IDEAM - Gestores RESPEL y RAEE</td>
-            <td>Nacional</td>
-            <td>Gestor / instalación</td>
-            <td>Identificar la capacidad formal de gestión de residuos.</td>
-          </tr>
-
-          <tr>
-            <td>Estudio de percepción ciudadana</td>
+            <td><code>norte_santander_encuesta_clean.csv</code></td>
             <td>Regional</td>
-            <td>Encuestado / entidad</td>
-            <td>Analizar conocimiento y comportamiento frente a los RAEE.</td>
+            <td>encuestado / entidad</td>
+            <td>2 033</td>
           </tr>
-
+          <tr>
+            <td><strong>Total</strong></td>
+            <td>—</td>
+            <td>—</td>
+            <td><strong>82 059</strong></td>
+          </tr>
         </tbody>
       </table>
     </div>

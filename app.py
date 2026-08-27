@@ -1,8 +1,31 @@
-from flask import Flask, render_template, redirect, url_for, abort
+from flask import Flask, render_template, abort
 
 app = Flask(__name__)
 
-# Menú principal "Etapa 1" 
+# Entregas del proyecto. Se agregan aquí a medida que avanza (R2, R3, ...).
+ENTREGAS = [
+    {
+        "codigo": "R1",
+        "titulo": "Del problema a los datos",
+        "descripcion": (
+            "Definición del problema, preguntas de investigación, necesidades de "
+            "información, fuentes, dataset inicial, diccionario y diagnóstico de calidad."
+        ),
+        "endpoint": "etapa1",
+        "primer_slug": "problema",
+        "disponible": True,
+    },
+    {
+        "codigo": "R2",
+        "titulo": "Por definir",
+        "descripcion": "Próxima entrega del proyecto.",
+        "endpoint": None,
+        "primer_slug": None,
+        "disponible": False,
+    },
+]
+
+# Menú principal "Etapa 1"
 ETAPA_1 = [
     {"slug": "problema", "num": 1, "label": "Problema y contexto"},
     {"slug": "pregunta", "num": 2, "label": "Pregunta principal y preguntas secundarias"},
@@ -24,7 +47,7 @@ def inject_nav():
 
 @app.route("/")
 def index():
-    return redirect(url_for("etapa1", slug=ETAPA_1[0]["slug"]))
+    return render_template("home.html", entregas=ENTREGAS)
 
 
 @app.route("/etapa-1/<slug>")

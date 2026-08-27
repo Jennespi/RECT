@@ -4,12 +4,34 @@
   <div class="card__num">03</div>
   <div class="card__body">
     <h2>Necesidades de información</h2>
-    <p class="hint">Qué se necesita para responder cada pregunta secundaria:</p>
+    <p class="hint">Qué información se necesita para responder las preguntas de investigación.</p>
     <ul class="question-list">
-      <li>Tasa de reciclaje formal de RAEE por país y año, para comparar a Colombia/Latinoamérica con otras regiones.</li>
-      <li>Tenencia de computador, tablet y conexión a internet por hogar, departamento y año, en los hogares colombianos.</li>
-      <li>Número y ubicación geográfica (departamento/municipio) de empresas gestoras de RESPEL/RAEE autorizadas a nivel nacional.</li>
-      <li>Nivel de conocimiento y canales de disposición de RAEE usados por ciudadanos y entidades de Norte de Santander.</li>
+      <li><strong>Entidades involucradas:</strong> países / regiones (nivel global),
+        departamentos y municipios de Colombia (nacional), empresas gestoras de
+        RESPEL / RAEE (nacional), hogares y entidades encuestadas en Norte de Santander (regional).</li>
+      <li><strong>Variables relevantes:</strong> % de reciclaje / gestión de RAEE, toneladas
+        gestionadas por operación, % de tenencia de computador / tablet / internet en hogares,
+        % de uso individual de internet / celular, ubicación y estado de gestores autorizados,
+        conocimiento y comportamiento ciudadano frente a RAEE.</li>
+      <li><strong>Periodo de análisis:</strong> 2005–2024 según fuente (OWID 2010–2022,
+        Eurostat 2011–2023, ITU variable por país, DANE ENTIC 2020 / 2021 / 2024,
+        DANE ECV 2018–2024, IDEAM vigente a 2026, Norte de Santander sin fecha explícita).</li>
+      <li><strong>Cobertura geográfica:</strong> mundial (~200 países vía ITU), Unión Europea
+        (32 países vía Eurostat), Colombia (33 departamentos vía DANE / IDEAM),
+        Norte de Santander (municipal).</li>
+      <li><strong>Población / unidad de análisis:</strong> varía por fuente — país-año,
+        departamento-año, empresa gestora, persona / entidad encuestada.</li>
+      <li><strong>Nivel de granularidad:</strong> alta en Eurostat, ITU, IDEAM y Norte de
+        Santander (registro individual); media-agregada en DANE (departamento-año, no microdato).</li>
+      <li><strong>Variables comparables entre escalas:</strong> <code>año</code> (presente en las
+        7 fuentes, permite comparar evolución temporal); <code>país</code> /
+        <code>departamento</code> / <code>municipio</code> (permite anidar global → nacional →
+        regional); indicadores de tenencia / uso TIC (comparables entre ITU y DANE, mismo
+        concepto a distinta escala).</li>
+      <li><strong>Razón de cada variable incluida:</strong> cada variable se seleccionó porque
+        responde directamente a una de las 4 preguntas secundarias — las de tenencia TIC
+        alimentan la pregunta 2 (consumo tecnológico), las de reciclaje / gestión alimentan las
+        preguntas 1 y 3 (gestión formal), y las de percepción ciudadana alimentan la pregunta 4.</li>
     </ul>
   </div>
 </section>
