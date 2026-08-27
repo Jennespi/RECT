@@ -186,39 +186,546 @@
       </div>
     </section>
 
-    <section id="diccionario" class="card">
-      <div class="card__num">06</div>
-      <div class="card__body">
-        <h2>Diccionario de datos</h2>
-        <p class="hint">
-          <span class="pending-badge">haciendose</span>
-          Se define al descargar y confirmar los archivos completos de cada fuente, con campo,
-          tipo de dato, dominio, fuente y ejemplo.
-        </p>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Campo</th>
-                <th>Tipo de dato</th>
-                <th>Dominio</th>
-                <th>Fuente</th>
-                <th>Ejemplo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+<section id="diccionario" class="card">
+  <div class="card__num">06</div>
+  <div class="card__body">
+
+    <h2>Diccionario de datos</h2>
+
+    <p class="hint">
+      <span class="pending-badge">COMPLETO</span>
+      El diccionario de datos describe las principales variables utilizadas en el
+      proyecto, indicando su tipo de dato, dominio, fuente y un ejemplo de valor.
+      La información proviene de cuatro fuentes: Our World in Data, DANE,
+      IDEAM y el estudio de percepción ciudadana de Norte de Santander.
+    </p>
+
+    <!-- ===================================================== -->
+    <!-- 1. OUR WORLD IN DATA -->
+    <!-- ===================================================== -->
+
+    <h3>01 · Our World in Data — Tasa de reciclaje de RAEE</h3>
+
+    <p class="hint">
+      Indicador utilizado para analizar la proporción de residuos electrónicos
+      que son reciclados a nivel mundial.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Tipo de dato</th>
+            <th>Dominio</th>
+            <th>Descripción</th>
+            <th>Fuente</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Entity</td>
+            <td>Texto</td>
+            <td>País / región</td>
+            <td>Nombre del país, región o agrupación geográfica.</td>
+            <td>OWID</td>
+            <td>World</td>
+          </tr>
+
+          <tr>
+            <td>Code</td>
+            <td>Texto</td>
+            <td>Código geográfico</td>
+            <td>Código asociado a la entidad geográfica.</td>
+            <td>OWID</td>
+            <td>COL</td>
+          </tr>
+
+          <tr>
+            <td>Year</td>
+            <td>Entero</td>
+            <td>Año calendario</td>
+            <td>Año al que corresponde la medición.</td>
+            <td>OWID</td>
+            <td>2022</td>
+          </tr>
+
+          <tr>
+            <td>Electronic waste recycling rate</td>
+            <td>Decimal</td>
+            <td>0 – 100 %</td>
+            <td>Porcentaje de residuos electrónicos que son reciclados.</td>
+            <td>OWID</td>
+            <td>22.3</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- 2. DANE ENTIC -->
+    <!-- ===================================================== -->
+
+    <h3>02 · DANE — ENTIC Hogares</h3>
+
+    <p class="hint">
+      Variables relacionadas con la tenencia, acceso y utilización de
+      tecnologías de información y comunicación en los hogares colombianos.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Tipo de dato</th>
+            <th>Dominio</th>
+            <th>Descripción</th>
+            <th>Fuente</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>departamento</td>
+            <td>Categórico</td>
+            <td>Departamentos de Colombia</td>
+            <td>Departamento al que pertenece el hogar.</td>
+            <td>DANE - ENTIC</td>
+            <td>Norte de Santander</td>
+          </tr>
+
+          <tr>
+            <td>area_geografica</td>
+            <td>Categórico</td>
+            <td>Cabecera / Rural</td>
+            <td>Área geográfica donde se encuentra el hogar.</td>
+            <td>DANE - ENTIC</td>
+            <td>Cabecera</td>
+          </tr>
+
+          <tr>
+            <td>tenencia_computador</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el hogar dispone de computador.</td>
+            <td>DANE - ENTIC</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>computador_escritorio</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el hogar posee computador de escritorio.</td>
+            <td>DANE - ENTIC</td>
+            <td>NO</td>
+          </tr>
+
+          <tr>
+            <td>computador_portatil</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el hogar posee computador portátil.</td>
+            <td>DANE - ENTIC</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>tenencia_tableta</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el hogar posee una tableta.</td>
+            <td>DANE - ENTIC</td>
+            <td>NO</td>
+          </tr>
+
+          <tr>
+            <td>tenencia_televisor</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el hogar posee televisor.</td>
+            <td>DANE - ENTIC</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>tenencia_celular</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el hogar dispone de teléfono celular.</td>
+            <td>DANE - ENTIC</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>acceso_internet</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el hogar cuenta con acceso a Internet.</td>
+            <td>DANE - ENTIC</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>tipo_internet</td>
+            <td>Categórico</td>
+            <td>Categorías DANE</td>
+            <td>Tipo de conexión a Internet utilizada por el hogar.</td>
+            <td>DANE - ENTIC</td>
+            <td>Internet fijo</td>
+          </tr>
+
+          <tr>
+            <td>uso_computador</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si las personas utilizan computador.</td>
+            <td>DANE - ENTIC</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>uso_internet</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si las personas utilizan Internet.</td>
+            <td>DANE - ENTIC</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>frecuencia_internet</td>
+            <td>Categórico</td>
+            <td>Categorías DANE</td>
+            <td>Frecuencia con la que se utiliza Internet.</td>
+            <td>DANE - ENTIC</td>
+            <td>Todos los días</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- 3. IDEAM -->
+    <!-- ===================================================== -->
+
+    <h3>03 · IDEAM — Gestores RESPEL y RAEE</h3>
+
+    <p class="hint">
+      Información utilizada para identificar y analizar las instalaciones
+      autorizadas para la gestión de residuos peligrosos y residuos de
+      aparatos eléctricos y electrónicos.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Tipo de dato</th>
+            <th>Dominio</th>
+            <th>Descripción</th>
+            <th>Fuente</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>nit</td>
+            <td>Texto</td>
+            <td>Identificador</td>
+            <td>Número de identificación tributaria del gestor.</td>
+            <td>IDEAM</td>
+            <td>900123456</td>
+          </tr>
+
+          <tr>
+            <td>razon_social</td>
+            <td>Texto</td>
+            <td>Texto libre</td>
+            <td>Nombre o razón social del gestor o empresa.</td>
+            <td>IDEAM</td>
+            <td>Empresa XYZ S.A.S.</td>
+          </tr>
+
+          <tr>
+            <td>estado</td>
+            <td>Categórico</td>
+            <td>Estados registrados</td>
+            <td>Estado de la instalación o gestor.</td>
+            <td>IDEAM</td>
+            <td>Activo</td>
+          </tr>
+
+          <tr>
+            <td>departamento</td>
+            <td>Texto</td>
+            <td>Departamentos de Colombia</td>
+            <td>Departamento donde se encuentra la instalación.</td>
+            <td>IDEAM</td>
+            <td>Norte de Santander</td>
+          </tr>
+
+          <tr>
+            <td>municipio</td>
+            <td>Texto</td>
+            <td>Municipios de Colombia</td>
+            <td>Municipio donde se encuentra la instalación.</td>
+            <td>IDEAM</td>
+            <td>Cúcuta</td>
+          </tr>
+
+          <tr>
+            <td>direccion</td>
+            <td>Texto</td>
+            <td>Texto libre</td>
+            <td>Dirección registrada de la instalación.</td>
+            <td>IDEAM</td>
+            <td>Dirección registrada</td>
+          </tr>
+
+          <tr>
+            <td>autoridad_ambiental</td>
+            <td>Texto</td>
+            <td>Autoridades ambientales</td>
+            <td>Autoridad ambiental competente.</td>
+            <td>IDEAM</td>
+            <td>CORPONOR</td>
+          </tr>
+
+          <tr>
+            <td>raee_almacenamiento</td>
+            <td>Booleano</td>
+            <td>SI / NO</td>
+            <td>Indica si existe autorización para almacenamiento de RAEE.</td>
+            <td>IDEAM</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>raee_tratamiento</td>
+            <td>Booleano</td>
+            <td>SI / NO</td>
+            <td>Indica si existe autorización para tratamiento de RAEE.</td>
+            <td>IDEAM</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>raee_aprovechamiento</td>
+            <td>Booleano</td>
+            <td>SI / NO</td>
+            <td>Indica si existe autorización para aprovechamiento o valorización de RAEE.</td>
+            <td>IDEAM</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>raee_disposicion_final</td>
+            <td>Booleano</td>
+            <td>SI / NO</td>
+            <td>Indica si existe autorización para disposición final de RAEE.</td>
+            <td>IDEAM</td>
+            <td>NO</td>
+          </tr>
+
+          <tr>
+            <td>tipo_raee_autorizado</td>
+            <td>Categórico</td>
+            <td>Categorías de RAEE</td>
+            <td>Tipo de residuo electrónico para el cual está autorizado el gestor.</td>
+            <td>IDEAM</td>
+            <td>Equipos informáticos</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- 4. ESTUDIO DE PERCEPCIÓN -->
+    <!-- ===================================================== -->
+
+    <h3>04 · Estudio de percepción ciudadana — Norte de Santander</h3>
+
+    <p class="hint">
+      Dataset utilizado para analizar el conocimiento, comportamiento y
+      disposición de ciudadanos y entidades frente a los residuos
+      posconsumo y RAEE.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Tipo de dato</th>
+            <th>Dominio</th>
+            <th>Descripción</th>
+            <th>Fuente</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>MUNICIPIO</td>
+            <td>Texto</td>
+            <td>Municipios de Norte de Santander</td>
+            <td>Municipio donde se registra la respuesta.</td>
+            <td>Estudio de percepción</td>
+            <td>CÚCUTA</td>
+          </tr>
+
+          <tr>
+            <td>TIPO DE EMPRESA</td>
+            <td>Categórico</td>
+            <td>Categorías registradas</td>
+            <td>Tipo de empresa, entidad o condición reportada.</td>
+            <td>Estudio de percepción</td>
+            <td>PÚBLICA</td>
+          </tr>
+
+          <tr>
+            <td>ENTIDAD</td>
+            <td>Texto</td>
+            <td>Texto libre</td>
+            <td>Nombre de la entidad, empresa u organización registrada.</td>
+            <td>Estudio de percepción</td>
+            <td>GOBERNACIÓN DE NORTE DE SANTANDER</td>
+          </tr>
+
+          <tr>
+            <td>TIENE RESIDUOS POSTCONSUMO EN SU CASA?</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si el encuestado tiene residuos posconsumo en su vivienda.</td>
+            <td>Estudio de percepción</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>DONDE ENTREGA LOS RESIDUOS</td>
+            <td>Categórico / Texto</td>
+            <td>Respuestas registradas</td>
+            <td>Indica dónde o cómo dispone el encuestado sus residuos.</td>
+            <td>Estudio de percepción</td>
+            <td>LOS DEJO EN CASA</td>
+          </tr>
+
+          <tr>
+            <td>SABE QUE SIGNIFICA LA SIGLA RAEE</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si la persona conoce el significado de la sigla RAEE.</td>
+            <td>Estudio de percepción</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>HA PARTICIPADO EN LAS JORNADAS DE RECOLECCION DE RESIDUOS POSTCONSUMO RAEE</td>
+            <td>Categórico</td>
+            <td>SI / NO / vacío</td>
+            <td>Indica si el encuestado ha participado en jornadas de recolección de RAEE.</td>
+            <td>Estudio de percepción</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>COMO SE ENTERARON DE ESTA JORNADA</td>
+            <td>Categórico / Texto</td>
+            <td>Medios registrados</td>
+            <td>Medio por el cual la persona conoció la jornada de recolección.</td>
+            <td>Estudio de percepción</td>
+            <td>REDES SOCIALES</td>
+          </tr>
+
+          <tr>
+            <td>HA USADO APLICACIONES</td>
+            <td>Categórico</td>
+            <td>SI / NO</td>
+            <td>Indica si la persona ha utilizado aplicaciones.</td>
+            <td>Estudio de percepción</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>UTILIZARIA UNA APP PARA RAEE?</td>
+            <td>Categórico / Texto</td>
+            <td>Respuestas registradas</td>
+            <td>Indica la disposición del encuestado para utilizar una aplicación relacionada con RAEE.</td>
+            <td>Estudio de percepción</td>
+            <td>Sí</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- RESUMEN -->
+    <!-- ===================================================== -->
+
+    <h3>Resumen de las fuentes</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Fuente</th>
+            <th>Nivel</th>
+            <th>Unidad de análisis</th>
+            <th>Objetivo dentro del proyecto</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Our World in Data</td>
+            <td>Global</td>
+            <td>País / año</td>
+            <td>Analizar la tasa de reciclaje de residuos electrónicos.</td>
+          </tr>
+
+          <tr>
+            <td>DANE - ENTIC Hogares</td>
+            <td>Nacional</td>
+            <td>Hogar / departamento / año</td>
+            <td>Analizar la tenencia y utilización de tecnologías en Colombia.</td>
+          </tr>
+
+          <tr>
+            <td>IDEAM - Gestores RESPEL y RAEE</td>
+            <td>Nacional</td>
+            <td>Gestor / instalación</td>
+            <td>Identificar la capacidad formal de gestión de residuos.</td>
+          </tr>
+
+          <tr>
+            <td>Estudio de percepción ciudadana</td>
+            <td>Regional</td>
+            <td>Encuestado / entidad</td>
+            <td>Analizar conocimiento y comportamiento frente a los RAEE.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
 
     <section id="calidad" class="card">
       <div class="card__num">07</div>
