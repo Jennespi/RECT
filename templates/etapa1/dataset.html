@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">05</div>
+  <div class="card__body">
+    <h2>Descripción del dataset</h2>
+    <div class="stat-row">
+      <div class="stat"><span class="stat__value">7</span><span class="stat__label">fuentes de datos</span></div>
+      <div class="stat"><span class="stat__value">—</span><span class="stat__label">registros (pendiente)</span></div>
+      <div class="stat"><span class="stat__value">—</span><span class="stat__label">variables (pendiente)</span></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Fuente</th>
+            <th>Unidad de análisis</th>
+            <th>Variables clave</th>
+            <th>Cobertura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OWID</td>
+            <td>país-año</td>
+            <td>tasa de reciclaje RAEE</td>
+            <td>Mundial</td>
+          </tr>
+          <tr>
+            <td>Eurostat (env_waseleeos)</td>
+            <td>país-año</td>
+            <td>RAEE recogido, tratado, reciclado y preparado para reutilización por operación de gestión (toneladas y kg/hab)</td>
+            <td>Unión Europea</td>
+          </tr>
+          <tr>
+            <td>ITU DataHub</td>
+            <td>país-año</td>
+            <td>% hogares con computador, % hogares con internet, % individuos que usan internet, % individuos con telefonía móvil</td>
+            <td>Mundial</td>
+          </tr>
+          <tr>
+            <td>DANE ENTIC Hogares</td>
+            <td>departamento-año</td>
+            <td>tenencia de computador, tablet, internet, total hogares</td>
+            <td>Nacional, por departamento y área</td>
+          </tr>
+          <tr>
+            <td>DANE ECV 2024</td>
+            <td>hogar / departamento</td>
+            <td>tenencia de bienes TIC del hogar, acceso a internet</td>
+            <td>Nacional (2024)</td>
+          </tr>
+          <tr>
+            <td>IDEAM Gestores RESPEL y RAEE</td>
+            <td>empresa/instalación</td>
+            <td>empresa, departamento, municipio, autoridad ambiental, actividad autorizada</td>
+            <td>Nacional</td>
+          </tr>
+          <tr>
+            <td>Norte de Santander (percepción)</td>
+            <td>encuestado/entidad</td>
+            <td>municipio, tipo de empresa, entidad, conocimiento de RAEE, dónde entrega, participación en jornadas</td>
+            <td>Departamental</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,20 +1,11 @@
-const sections = document.querySelectorAll("main .card[id]");
-const links = document.querySelectorAll(".toc a");
+// Marca en el submenú de "Etapa 1" el enlace de la sección abierta.
+// La navegación real la resuelve Flask (una ruta por sección); este script
+// solo refuerza el estado activo si la clase no viene ya del servidor.
+const path = window.location.pathname;
 
-const linkFor = (id) => document.querySelector(`.toc a[href="#${id}"]`);
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const link = linkFor(entry.target.id);
-      if (!link) return;
-      if (entry.isIntersecting) {
-        links.forEach((l) => l.classList.remove("is-active"));
-        link.classList.add("is-active");
-      }
-    });
-  },
-  { rootMargin: "-40% 0px -50% 0px" }
-);
-
-sections.forEach((section) => observer.observe(section));
+document.querySelectorAll(".toc a").forEach((link) => {
+  if (link.getAttribute("href") === path) {
+    link.classList.add("is-active");
+    link.setAttribute("aria-current", "page");
+  }
+});

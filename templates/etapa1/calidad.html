@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">07</div>
+  <div class="card__body">
+    <h2>Diagnóstico inicial de calidad</h2>
+    <ul class="question-list">
+      <li><strong>Completitud:</strong> el DANE no publicó ENTIC Hogares en 2022 ni 2023 — hay un vacío en la serie nacional de consumo que se intenta cubrir con la ECV 2024.</li>
+      <li><strong>Comparabilidad ENTIC / ECV:</strong> la ECV mide la tenencia de TIC con preguntas y estructura distintas a ENTIC; se usa solo como respaldo, no como continuación directa de la serie.</li>
+      <li><strong>Cobertura temporal (ITU):</strong> varios países reportan los indicadores de forma intermitente; habrá años faltantes por país que deberán interpolarse o marcarse explícitamente.</li>
+      <li><strong>Unicidad:</strong> por confirmar duplicados una vez descargado el archivo completo de IDEAM.</li>
+      <li><strong>Consistencia:</strong> el cuadro de tenencia TIC del DANE cambió de estructura entre 2021 y 2024 (se eliminó "teléfono fijo" y se dividió "internet" en fijo/móvil/ambos) — es un cambio metodológico a documentar, no un error.</li>
+      <li><strong>Validez:</strong> por confirmar fechas exactas de aplicación en el dataset de Norte de Santander al revisar el archivo completo.</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
