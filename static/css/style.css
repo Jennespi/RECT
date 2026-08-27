@@ -420,6 +420,18 @@ tbody tr:last-child td {
   font-size: 0.85rem;
 }
 
+/* ---------- Tabla de archivos del dataset ---------- */
+
+.dataset-files th:first-child,
+.dataset-files td:first-child {
+  width: 24%;
+}
+
+.dataset-files td:first-child code {
+  overflow-wrap: anywhere;
+  font-size: 0.82rem;
+}
+
 /* ---------- Descargas de datasets ---------- */
 
 .downloads {
