@@ -1,32 +1,27 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ section.label }} · Etapa 1 · Proyecto RECT</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+{% extends "layout.html" %}
 
-  <div class="bg-grid" aria-hidden="true"></div>
+{% block title %}{{ section.label }} · Etapa 1 · Proyecto RECT{% endblock %}
+
+{% block body %}
 
   <header class="hero">
-    <div class="hero__eyebrow">Minería de Datos · Proyecto RECT</div>
+    <a class="hero__eyebrow" href="{{ url_for('index') }}">Minería de Datos · Proyecto RECT</a>
     <h1>Residuos electrónicos <span>&amp;</span> consumo tecnológico</h1>
     <p class="hero__lead">
       Bitácora técnica del proyecto: cada entregable amplía esta misma aplicación Flask,
       documentando el problema, los datos y los hallazgos a medida que avanza el análisis.
     </p>
     <div class="hero__meta">
-      <span class="chip">Etapa 1 · {{ "%02d"|format(section.num) }} · {{ section.label }}</span>
+      <span class="chip">R1 · Etapa 1</span>
+      <span class="chip">{{ "%02d"|format(section.num) }} · {{ section.label }}</span>
     </div>
   </header>
 
   <nav class="toc" aria-label="Etapa 1 — secciones">
-    <p class="toc__heading">Etapa 1 <span>· Definición del problema y de los datos</span></p>
+    <p class="toc__heading">
+      <a href="{{ url_for('index') }}">R1 · Etapa 1</a>
+      <span>· Del problema a los datos</span>
+    </p>
     <ol>
       {% for s in etapa1_sections %}
       <li>
@@ -59,11 +54,4 @@
     </nav>
   </main>
 
-  <footer class="footer">
-    <p>Proyecto de Minería de Datos · Residuos electrónicos y consumo tecnológico</p>
-    <p class="footer__team">Richard Barajas · Jennifer Espitia · Leonardo Moscoso</p>
-  </footer>
-
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
-</html>
+{% endblock %}

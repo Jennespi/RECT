@@ -420,6 +420,102 @@ tbody tr:last-child td {
   font-size: 0.85rem;
 }
 
+/* ---------- Inicio: tarjetas de entregas ---------- */
+
+.entregas {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.entrega {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.entrega:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.entrega__code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.entrega__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.entrega__desc {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.entrega__go {
+  margin-top: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.entrega--soon {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.entrega--soon:hover {
+  border-color: var(--border);
+  transform: none;
+}
+
+.entrega--soon .entrega__code,
+.entrega--soon .entrega__go {
+  color: var(--text-faint);
+}
+
+/* Eyebrow y encabezado del menú como enlace de vuelta al inicio */
+
+a.hero__eyebrow {
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+a.hero__eyebrow:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.toc__heading a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.toc__heading a:hover {
+  text-decoration: underline;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 560px) {

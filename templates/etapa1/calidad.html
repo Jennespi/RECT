@@ -3,15 +3,112 @@
 <section class="card">
   <div class="card__num">07</div>
   <div class="card__body">
-    <h2>Diagnóstico inicial de calidad</h2>
+    <h2>Calidad inicial de los datos</h2>
+    <p class="hint">
+      Diagnóstico por archivo consolidado. En R1 solo se identifican los problemas;
+      la limpieza completa corresponde a la etapa siguiente.
+    </p>
+
+    <h3><code>master_indicadores_globales.csv</code></h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Aspecto</th><th>Hallazgo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Valores faltantes</td><td>3 de 78.689 registros.</td></tr>
+          <tr><td>Duplicados</td><td><strong>2.505 registros exactamente duplicados</strong>, principalmente de Eurostat (por la dimensión <code>AVG_3Y</code>, que repite el mismo valor en años consecutivos).</td></tr>
+          <tr><td>Consistencia</td><td>La columna <code>pais_region</code> mezcla nombres completos, agrupaciones regionales y códigos ISO de 2 letras según la fuente — sin homologar.</td></tr>
+          <tr><td>Integración</td><td>No hay garantía de que "Colombia" tenga la misma definición metodológica entre OWID, Eurostat e ITU.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><code>dane_clean.csv</code></h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Aspecto</th><th>Hallazgo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Valores faltantes</td><td>0.</td></tr>
+          <tr><td>Duplicados</td><td>0.</td></tr>
+          <tr><td>Consistencia</td><td>El archivo ENTIC 2021 usaba coma decimal ("37,9") vs. punto en 2020 / 2024 ("37.9") — afectaba 68 registros, <strong>ya corregido y verificado</strong>.</td></tr>
+          <tr><td>Completitud temporal</td><td>ENTIC Hogares no se publicó en 2022 ni 2023 — serie no continua.</td></tr>
+          <tr><td>Posible confusión de fuente</td><td><code>pct_hogares_internet</code> (ENTIC) y <code>pct_hogares_internet_v2</code> (ECV) miden algo similar pero de encuestas metodológicamente distintas — no deben promediarse.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><code>ideam_gestores_clean.csv</code></h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Aspecto</th><th>Hallazgo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Valores faltantes</td><td>704 de 13.195 celdas (~5,3 %).</td></tr>
+          <tr><td>Duplicados</td><td>4 registros con la misma combinación Empresa + Municipio — posible sede repetida.</td></tr>
+          <tr><td>Validez</td><td><code>Estado</code> solo tiene ACTIVO / INACTIVO, sin anomalías.</td></tr>
+          <tr><td>Formato</td><td>Fechas en texto libre (dd/mm/aaaa), no como tipo fecha nativo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><code>norte_santander_encuesta_clean.csv</code></h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Aspecto</th><th>Hallazgo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Valores faltantes</td><td><code>ENTIDAD</code> (2), participación en jornadas (14), uso de app (2).</td></tr>
+          <tr><td>Duplicados</td><td><strong>116 registros exactamente duplicados</strong> — por confirmar si son legítimos o error de carga.</td></tr>
+          <tr><td>Consistencia</td><td>La columna de uso de app usa "Sí / No" (con tilde) mientras el resto usa "SI / NO" — sin homologar.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Posibles sesgos</h3>
     <ul class="question-list">
-      <li><strong>Completitud:</strong> el DANE no publicó ENTIC Hogares en 2022 ni 2023 — hay un vacío en la serie nacional de consumo que se intenta cubrir con la ECV 2024.</li>
-      <li><strong>Comparabilidad ENTIC / ECV:</strong> la ECV mide la tenencia de TIC con preguntas y estructura distintas a ENTIC; se usa solo como respaldo, no como continuación directa de la serie.</li>
-      <li><strong>Cobertura temporal (ITU):</strong> varios países reportan los indicadores de forma intermitente; habrá años faltantes por país que deberán interpolarse o marcarse explícitamente.</li>
-      <li><strong>Unicidad:</strong> por confirmar duplicados una vez descargado el archivo completo de IDEAM.</li>
-      <li><strong>Consistencia:</strong> el cuadro de tenencia TIC del DANE cambió de estructura entre 2021 y 2024 (se eliminó "teléfono fijo" y se dividió "internet" en fijo/móvil/ambos) — es un cambio metodológico a documentar, no un error.</li>
-      <li><strong>Validez:</strong> por confirmar fechas exactas de aplicación en el dataset de Norte de Santander al revisar el archivo completo.</li>
+      <li><strong>Estudio de percepción (Norte de Santander):</strong> muestreo no
+        probabilístico / por conveniencia (respondieron quienes quisieron), con predominio de
+        Cúcuta — no representa a toda la población del departamento; posible sesgo de
+        deseabilidad social en las preguntas de conocimiento y participación.</li>
+      <li><strong>ITU:</strong> los valores los reportan las propias autoridades nacionales,
+        con métodos y años distintos por país — sesgo de autorreporte y de disponibilidad
+        (los países con mejor infraestructura estadística reportan más y mejor).</li>
+      <li><strong>OWID / Global E-waste Monitor:</strong> cobertura más débil y con más
+        estimaciones en países de ingreso bajo y medio — posible subestimación fuera de los
+        países de altos ingresos.</li>
+      <li><strong>IDEAM:</strong> solo aparecen los gestores formalmente autorizados; la
+        gestión informal de RAEE (recicladores, chatarreros) queda invisible — sesgo hacia
+        la capacidad formal.</li>
+      <li><strong>Eurostat:</strong> cubre solo la UE + EFTA; usarlo como referencia puede
+        sesgar la comparación hacia estándares europeos, no representativos del Sur global.</li>
+      <li><strong>DANE (tablas agregadas por departamento):</strong> al no usar microdato no
+        se ve la variación interna (urbano / rural, estrato) — sesgo de agregación.</li>
     </ul>
+
+    <h3>Resumen general</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Fuente</th>
+            <th>Faltantes</th>
+            <th>Duplicados</th>
+            <th>Inconsistencia principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Global</td><td>3</td><td>2.505</td><td>Nomenclatura geográfica mixta</td></tr>
+          <tr><td>Nacional (DANE)</td><td>0</td><td>0</td><td>Separador decimal (corregido)</td></tr>
+          <tr><td>Nacional (IDEAM)</td><td>704</td><td>4 (posibles)</td><td>Fechas en texto libre</td></tr>
+          <tr><td>Regional</td><td>18</td><td>116</td><td>"Sí / No" vs "SI / NO"</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 {% endblock %}
