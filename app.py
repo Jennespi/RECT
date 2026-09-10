@@ -30,7 +30,7 @@ ETAPA_2 = {
     "codigo": "R2",
     "numero": 2,
     "titulo": "Entender datos — Diagnóstico y Calidad de los Datos",
-    "subtitulo": "Diagnóstico y calidad de los datos",
+    "subtitulo": "Calidad de datos",
     "endpoint": "etapa2",
     "objetivo": (
         "Aplicar los conceptos fundamentales de calidad de datos mediante el "
@@ -39,10 +39,13 @@ ETAPA_2 = {
     ),
     "sections": [
         {"slug": "objetivo", "num": 1, "label": "Objetivo y alcance"},
-        {"slug": "perfilamiento", "num": 2, "label": "Perfilamiento de datos"},
-        {"slug": "diagnostico", "num": 3, "label": "Diagnóstico de calidad"},
-        {"slug": "medicion", "num": 4, "label": "Medición de la calidad"},
-        {"slug": "tratamiento", "num": 5, "label": "Tratamiento de los datos"},
+        {"slug": "descripcion", "num": 2, "label": "Descripción del conjunto de datos"},
+        {"slug": "perfilamiento", "num": 3, "label": "Resultados del perfilamiento"},
+        {"slug": "dimensiones", "num": 4, "label": "Dimensiones y métricas evaluadas"},
+        {"slug": "problemas", "num": 5, "label": "Problemas identificados"},
+        {"slug": "tratamiento", "num": 6, "label": "Acciones de tratamiento aplicadas"},
+        {"slug": "comparacion", "num": 7, "label": "Comparación antes y después"},
+        {"slug": "indicadores", "num": 8, "label": "Gráficas, tablas e indicadores"},
     ],
 }
 
