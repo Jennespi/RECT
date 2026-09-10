@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">02</div>
+  <div class="card__body">
+    <h2>Descripción del conjunto de datos</h2>
+
+    <p>
+      El conjunto de datos de trabajo es el consolidado de la Etapa 1: cuatro archivos en
+      <code>datos/procesados/</code>, derivados de siete fuentes originales e integrables
+      entre sí por llaves geográficas (país / departamento / municipio) y temporal (año).
+      Total: <strong>82 059 registros</strong>.
+    </p>
+
+    <div class="table-wrap">
+      <table class="dataset-files">
+        <thead>
+          <tr>
+            <th>Archivo</th>
+            <th>Nivel</th>
+            <th>Unidad de análisis</th>
+            <th>Filas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>master_indicadores_globales.csv</code></td>
+            <td>Global</td>
+            <td>país – año – indicador</td>
+            <td>78 689</td>
+          </tr>
+          <tr>
+            <td><code>dane_clean.csv</code></td>
+            <td>Nacional</td>
+            <td>departamento – año – indicador</td>
+            <td>960</td>
+          </tr>
+          <tr>
+            <td><code>ideam_gestores_clean.csv</code></td>
+            <td>Nacional</td>
+            <td>gestor / instalación</td>
+            <td>377</td>
+          </tr>
+          <tr>
+            <td><code>norte_santander_encuesta_clean.csv</code></td>
+            <td>Regional</td>
+            <td>encuestado / entidad</td>
+            <td>2 033</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Descargar los archivos</h3>
+    <div class="downloads">
+      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='master_indicadores_globales.csv') }}">
+        <span class="download-link__name">master_indicadores_globales.csv</span>
+        <span class="download-link__meta">Global · 78 689 filas · descargar CSV</span>
+      </a>
+      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='dane_clean.csv') }}">
+        <span class="download-link__name">dane_clean.csv</span>
+        <span class="download-link__meta">Nacional · 960 filas · descargar CSV</span>
+      </a>
+      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='ideam_gestores_clean.csv') }}">
+        <span class="download-link__name">ideam_gestores_clean.csv</span>
+        <span class="download-link__meta">Nacional · 377 filas · descargar CSV</span>
+      </a>
+      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='norte_santander_encuesta_clean.csv') }}">
+        <span class="download-link__name">norte_santander_encuesta_clean.csv</span>
+        <span class="download-link__meta">Regional · 2 033 filas · descargar CSV</span>
+      </a>
+    </div>
+
+    <p class="hint">
+      El diccionario campo por campo está en la vista <strong>Diccionario de datos</strong>
+      de R1; el diagnóstico inicial de calidad, en <strong>Calidad inicial de los datos</strong>.
+    </p>
+  </div>
+</section>
+{% endblock %}

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}{{ section.label }} · Etapa 1 · Proyecto RECT{% endblock %}
+{% block title %}{{ section.label }} · {{ etapa.codigo }} · Proyecto RECT{% endblock %}
 
 {% block body %}
 
@@ -12,20 +12,20 @@
       documentando el problema, los datos y los hallazgos a medida que avanza el análisis.
     </p>
     <div class="hero__meta">
-      <span class="chip">R1 · Etapa 1</span>
+      <span class="chip">{{ etapa.codigo }} · Etapa {{ etapa.numero }}</span>
       <span class="chip">{{ "%02d"|format(section.num) }} · {{ section.label }}</span>
     </div>
   </header>
 
-  <nav class="toc" aria-label="Etapa 1 — secciones">
+  <nav class="toc" aria-label="Etapa {{ etapa.numero }} — secciones">
     <p class="toc__heading">
-      <a href="{{ url_for('index') }}">R1 · Etapa 1</a>
-      <span>· Del problema a los datos</span>
+      <a href="{{ url_for('index') }}">{{ etapa.codigo }} · Etapa {{ etapa.numero }}</a>
+      <span>· {{ etapa.subtitulo }}</span>
     </p>
     <ol>
-      {% for s in etapa1_sections %}
+      {% for s in etapa.sections %}
       <li>
-        <a href="{{ url_for('etapa1', slug=s.slug) }}"
+        <a href="{{ url_for(etapa.endpoint, slug=s.slug) }}"
            class="{% if s.slug == current %}is-active{% endif %}"
            {% if s.slug == current %}aria-current="page"{% endif %}>
           <span class="toc__num">{{ "%02d"|format(s.num) }}</span>{{ s.label }}
@@ -40,13 +40,13 @@
 
     <nav class="pager" aria-label="Navegación entre secciones">
       {% if prev_s %}
-      <a class="pager__link" href="{{ url_for('etapa1', slug=prev_s.slug) }}">
+      <a class="pager__link" href="{{ url_for(etapa.endpoint, slug=prev_s.slug) }}">
         <span class="pager__dir">← Anterior</span>
         <span class="pager__label">{{ "%02d"|format(prev_s.num) }} · {{ prev_s.label }}</span>
       </a>
       {% else %}<span></span>{% endif %}
       {% if next_s %}
-      <a class="pager__link pager__link--next" href="{{ url_for('etapa1', slug=next_s.slug) }}">
+      <a class="pager__link pager__link--next" href="{{ url_for(etapa.endpoint, slug=next_s.slug) }}">
         <span class="pager__dir">Siguiente →</span>
         <span class="pager__label">{{ "%02d"|format(next_s.num) }} · {{ next_s.label }}</span>
       </a>
