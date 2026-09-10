@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">01</div>
+  <div class="card__body">
+    <h2>Objetivo y alcance</h2>
+
+    <p class="hint">Objetivo de la Etapa 2:</p>
+    <blockquote class="main-question">{{ etapa.objetivo }}</blockquote>
+
+    <p class="hint">
+      El trabajo parte del dataset consolidado en la Etapa 1: cuatro archivos en
+      <code>datos/procesados/</code> (82 059 registros), descargables desde la vista
+      <strong>Dataset</strong> de R1.
+    </p>
+
+    <p class="hint">
+      <span class="pending-badge">EN CURSO</span>
+      Las secciones de perfilamiento, diagnóstico, medición y tratamiento se completan
+      durante esta etapa.
+    </p>
+  </div>
+</section>
+{% endblock %}
