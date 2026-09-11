@@ -1,14 +1,58 @@
 {% extends "base.html" %}
+{% block title %}R2 · Etapa 2 · Comparación antes y después{% endblock %}
+
 {% block content %}
-<section class="card">
-  <div class="card__num">07</div>
-  <div class="card__body">
-    <h2>Comparación antes y después</h2>
-    <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Valor de cada métrica de calidad antes y después del tratamiento, por dimensión y
-      por archivo, para evidenciar la mejora y el efecto de cada acción.
-    </p>
+<style>
+  .cd-wrap{max-width:1080px;margin:0 auto;padding:1.5rem 1rem 3rem;color:#e6edf3;font-family:"Segoe UI",Arial,sans-serif;}
+  .cd-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+  .cd-pill{border:1px solid #2d333b;border-radius:8px;padding:.4rem .9rem;font-family:"Cascadia Code","Courier New",monospace;font-size:.85rem;color:#8b949e;background:#0d1117;}
+  .cd-title-box{background:#0f2a1f;border:1px solid #1f4d38;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:.6rem;}
+  .cd-title-box h1{margin:0;font-size:1.3rem;font-family:"Cascadia Code","Courier New",monospace;}
+  .cd-subtitle{color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-size:.9rem;margin-bottom:1.5rem;}
+  .cd-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-bottom:1.2rem;}
+  @media (max-width:760px){.cd-kpis{grid-template-columns:repeat(2,1fr);}}
+  .cd-kpi{background:#11161c;border:1px solid #21262d;border-radius:12px;padding:.9rem 1rem;text-align:center;}
+  .cd-kpi .n{font-size:1.35rem;font-weight:700;color:#3fb950;font-family:"Cascadia Code","Courier New",monospace;}
+  .cd-kpi .l{font-size:.7rem;color:#8b949e;margin-top:.2rem;text-transform:uppercase;letter-spacing:.03em;}
+  .cd-card{background:#11161c;border:1px solid #21262d;border-radius:14px;padding:1.1rem 1.3rem;overflow-x:auto;}
+  table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:600px;}
+  th{background:#0d1117;color:#3fb950;text-align:left;padding:.6rem .7rem;font-family:"Cascadia Code","Courier New",monospace;font-weight:600;border-bottom:1px solid #21262d;}
+  td{padding:.6rem .7rem;border-bottom:1px solid #1c2128;color:#c9d1d9;}
+  tr.total td{font-weight:700;color:#e6edf3;background:#0f2a1f;}
+  .arrow{color:#3fb950;font-weight:700;}
+  code{background:#0d1117;padding:.1rem .35rem;border-radius:5px;color:#79c0ff;font-size:.82rem;}
+</style>
+
+<div class="cd-wrap">
+  <div class="cd-pills">
+    <span class="cd-pill">R2 · Etapa 2</span>
+    <span class="cd-pill">07 · Comparación antes y después</span>
   </div>
-</section>
+
+  <div class="cd-title-box"><h1>Comparación antes y después</h1></div>
+  <div class="cd-subtitle">· Calidad de datos</div>
+
+  <div class="cd-kpis">
+    <div class="cd-kpi"><div class="n">82,059 <span class="arrow">→</span> 79,368</div><div class="l">Registros totales</div></div>
+    <div class="cd-kpi"><div class="n">2,621 <span class="arrow">→</span> 0</div><div class="l">Duplicados exactos</div></div>
+    <div class="cd-kpi"><div class="n">77,037</div><div class="l">Dataset maestro consolidado</div></div>
+    <div class="cd-kpi"><div class="n">14 <span class="arrow">→</span> 0</div><div class="l">Problemas sin tratar</div></div>
+  </div>
+
+  <div class="cd-card">
+    <table>
+      <thead>
+        <tr><th>Dataset</th><th>Registros antes</th><th>Registros después</th><th>Duplicados antes</th><th>Duplicados después</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ideam</code></td><td>377</td><td>327</td><td>0 exactos / 50 NIT</td><td>0</td></tr>
+        <tr><td><code>global</code></td><td>78,689</td><td>76,181</td><td>2,505</td><td>0</td></tr>
+        <tr><td><code>ns_encuesta</code></td><td>2,033</td><td>1,900</td><td>116</td><td>0</td></tr>
+        <tr><td><code>dane</code></td><td>960</td><td>960</td><td>0</td><td>0</td></tr>
+        <tr class="total"><td>Total</td><td>82,059</td><td>79,368</td><td>2,621</td><td>0</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 {% endblock %}
+
