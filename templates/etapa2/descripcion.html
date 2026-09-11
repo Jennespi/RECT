@@ -1,63 +1,39 @@
 {% extends "base.html" %}
-{% block title %}R2 · Etapa 2 · Descripción del conjunto de datos{% endblock %}
-
 {% block content %}
-<style>
-  .cd-wrap{max-width:1080px;margin:0 auto;padding:1.5rem 1rem 3rem;color:#e6edf3;font-family:"Segoe UI",Arial,sans-serif;}
-  .cd-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
-  .cd-pill{border:1px solid #2d333b;border-radius:8px;padding:.4rem .9rem;font-family:"Cascadia Code","Courier New",monospace;font-size:.85rem;color:#8b949e;background:#0d1117;}
-  .cd-title-box{background:#0f2a1f;border:1px solid #1f4d38;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:.6rem;}
-  .cd-title-box h1{margin:0;font-size:1.3rem;font-family:"Cascadia Code","Courier New",monospace;}
-  .cd-subtitle{color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-size:.9rem;margin-bottom:1.5rem;}
-  .cd-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-  @media (max-width:760px){.cd-grid{grid-template-columns:1fr;}}
-  .cd-card{background:#11161c;border:1px solid #21262d;border-radius:14px;padding:1.3rem 1.4rem;}
-  .cd-card h3{margin:0 0 .4rem;font-size:1.02rem;color:#3fb950;font-family:"Cascadia Code","Courier New",monospace;}
-  .cd-tag{display:inline-block;font-size:.72rem;padding:.15rem .55rem;border-radius:999px;margin-bottom:.6rem;font-family:"Cascadia Code","Courier New",monospace;}
-  .tag-global{background:#12314f;color:#79c0ff;}
-  .tag-nacional{background:#3b2a12;color:#e3b341;}
-  .tag-regional{background:#33122b;color:#f778ba;}
-  .cd-card p{color:#c9d1d9;line-height:1.6;font-size:.92rem;margin:.3rem 0;}
-  .cd-meta{color:#8b949e;font-size:.82rem;margin-top:.6rem;}
-</style>
+<section class="card">
+  <div class="card__num">02</div>
+  <div class="card__body">
+    <h2>Descripción del conjunto de datos</h2>
 
-<div class="cd-wrap">
-  <div class="cd-pills">
-    <span class="cd-pill">R2 · Etapa 2</span>
-    <span class="cd-pill">02 · Descripción del conjunto de datos</span>
-  </div>
+    <div class="mini-grid">
+      <div class="mini-card">
+        <span class="chip">Global</span>
+        <h3><code>master_indicadores_globales.csv</code></h3>
+        <p>122 indicadores de acceso tecnológico y reciclaje de RAEE por país / región, entre 2005 y 2025.</p>
+        <p class="hint">Fuentes: OWID · Eurostat WEEE · ITU DataHub</p>
+      </div>
 
-  <div class="cd-title-box"><h1>Descripción del conjunto de datos</h1></div>
-  <div class="cd-subtitle">· Calidad de datos</div>
+      <div class="mini-card">
+        <span class="chip">Nacional</span>
+        <h3><code>dane_clean.csv</code></h3>
+        <p>Indicadores de hogares con computador / internet y uso de TIC por departamento, entre 2018 y 2024.</p>
+        <p class="hint">Fuentes: DANE — ENTIC Hogares, ECV</p>
+      </div>
 
-  <div class="cd-grid">
-    <div class="cd-card">
-      <span class="cd-tag tag-global">GLOBAL</span>
-      <h3>master_indicadores_globales.csv</h3>
-      <p>122 indicadores de acceso tecnológico y reciclaje de RAEE por país/región, entre 2005 y 2025.</p>
-      <p class="cd-meta">Fuentes: OWID · Eurostat WEEE · ITU DataHub</p>
-    </div>
+      <div class="mini-card">
+        <span class="chip">Nacional / Regional</span>
+        <h3><code>ideam_gestores_clean.csv</code></h3>
+        <p>Registro de gestores autorizados para el tratamiento y aprovechamiento de RAEE en Colombia (empresa, ubicación, licencia).</p>
+        <p class="hint">Fuente: IDEAM</p>
+      </div>
 
-    <div class="cd-card">
-      <span class="cd-tag tag-nacional">NACIONAL</span>
-      <h3>dane_clean.csv</h3>
-      <p>Indicadores de hogares con computador/internet y uso de TIC por departamento, entre 2018 y 2024.</p>
-      <p class="cd-meta">Fuentes: DANE — ENTIC Hogares, ECV</p>
-    </div>
-
-    <div class="cd-card">
-      <span class="cd-tag tag-nacional">NACIONAL / REGIONAL</span>
-      <h3>ideam_gestores_clean.csv</h3>
-      <p>Registro de gestores autorizados para el tratamiento y aprovechamiento de RAEE en Colombia (empresa, ubicación, licencia).</p>
-      <p class="cd-meta">Fuente: IDEAM</p>
-    </div>
-
-    <div class="cd-card">
-      <span class="cd-tag tag-regional">REGIONAL</span>
-      <h3>norte_santander_encuesta_clean.csv</h3>
-      <p>Encuesta de percepción y comportamiento ciudadano frente a los residuos electrónicos en Norte de Santander.</p>
-      <p class="cd-meta">Fuente: encuesta propia del proyecto</p>
+      <div class="mini-card">
+        <span class="chip">Regional</span>
+        <h3><code>norte_santander_encuesta_clean.csv</code></h3>
+        <p>Encuesta de percepción y comportamiento ciudadano frente a los residuos electrónicos en Norte de Santander.</p>
+        <p class="hint">Fuente: encuesta propia del proyecto</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 {% endblock %}

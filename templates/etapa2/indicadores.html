@@ -1,112 +1,97 @@
 {% extends "base.html" %}
-{% block title %}R2 · Etapa 2 · Gráficas, tablas e indicadores{% endblock %}
-
 {% block content %}
-<style>
-  .cd-wrap{max-width:1080px;margin:0 auto;padding:1.5rem 1rem 3rem;color:#e6edf3;font-family:"Segoe UI",Arial,sans-serif;}
-  .cd-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
-  .cd-pill{border:1px solid #2d333b;border-radius:8px;padding:.4rem .9rem;font-family:"Cascadia Code","Courier New",monospace;font-size:.85rem;color:#8b949e;background:#0d1117;}
-  .cd-title-box{background:#0f2a1f;border:1px solid #1f4d38;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:.6rem;}
-  .cd-title-box h1{margin:0;font-size:1.3rem;font-family:"Cascadia Code","Courier New",monospace;}
-  .cd-subtitle{color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-size:.9rem;margin-bottom:1.5rem;}
-  .cd-grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
-  @media (max-width:760px){.cd-grid2{grid-template-columns:1fr;}}
-  .cd-card{background:#11161c;border:1px solid #21262d;border-radius:14px;padding:1rem;}
-  .cd-card h3{margin:0 0 .7rem;font-size:.92rem;color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-weight:600;}
-  canvas{max-height:280px;}
-  .cd-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:1.2rem;}
-  @media (max-width:760px){.cd-kpis{grid-template-columns:1fr;}}
-  .cd-kpi{background:#11161c;border:1px solid #21262d;border-radius:12px;padding:.9rem 1rem;text-align:center;}
-  .cd-kpi .n{font-size:1.35rem;font-weight:700;color:#3fb950;font-family:"Cascadia Code","Courier New",monospace;}
-  .cd-kpi .l{font-size:.72rem;color:#8b949e;margin-top:.2rem;text-transform:uppercase;letter-spacing:.03em;}
-</style>
+<section class="card">
+  <div class="card__num">08</div>
+  <div class="card__body">
+    <h2>Gráficas, tablas e indicadores</h2>
 
-<div class="cd-wrap">
-  <div class="cd-pills">
-    <span class="cd-pill">R2 · Etapa 2</span>
-    <span class="cd-pill">08 · Gráficas, tablas e indicadores</span>
-  </div>
+    <div class="stat-row">
+      <div class="stat"><span class="stat__value">79 368</span><span class="stat__label">Registros tratados</span></div>
+      <div class="stat"><span class="stat__value">2 621</span><span class="stat__label">Duplicados depurados</span></div>
+      <div class="stat"><span class="stat__value">77 037</span><span class="stat__label">Dataset maestro consolidado</span></div>
+    </div>
 
-  <div class="cd-title-box"><h1>Gráficas, tablas e indicadores</h1></div>
-  <div class="cd-subtitle">· Calidad de datos</div>
-
-  <div class="cd-kpis">
-    <div class="cd-kpi"><div class="n">79,368</div><div class="l">Registros tratados</div></div>
-    <div class="cd-kpi"><div class="n">2,621</div><div class="l">Duplicados depurados</div></div>
-    <div class="cd-kpi"><div class="n">77,037</div><div class="l">Dataset maestro consolidado</div></div>
-  </div>
-
-  <div class="cd-grid2">
-    <div class="cd-card">
-      <h3>Registros antes / después</h3>
-      <canvas id="chartRegistros"></canvas>
-    </div>
-    <div class="cd-card">
-      <h3>Duplicados antes / después</h3>
-      <canvas id="chartDuplicados"></canvas>
-    </div>
-    <div class="cd-card">
-      <h3>Completitud inicial por dataset (%)</h3>
-      <canvas id="chartCompletitud"></canvas>
-    </div>
-    <div class="cd-card">
-      <h3>Problemas por nivel de impacto</h3>
-      <canvas id="chartImpacto"></canvas>
-    </div>
-    <div class="cd-card">
-      <h3>Problemas por dimensión de calidad</h3>
-      <canvas id="chartDimension"></canvas>
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h3>Registros antes / después</h3>
+        <canvas id="chartRegistros"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Duplicados antes / después</h3>
+        <canvas id="chartDuplicados"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Completitud inicial por dataset (%)</h3>
+        <canvas id="chartCompletitud"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Problemas por nivel de impacto</h3>
+        <canvas id="chartImpacto"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Problemas por dimensión de calidad</h3>
+        <canvas id="chartDimension"></canvas>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script>
-Chart.defaults.color = '#8b949e';
-Chart.defaults.borderColor = '#21262d';
+  // Paleta alineada con las variables de static/css/style.css
+  const accent = '#34d399';
+  const danger = '#f0654f';
+  const warn = '#f5a524';
+  const muted = '#9db3ab';
+  const faint = '#64796f';
+  const teal = '#5eead4';
 
-const labels = ['ideam','global','ns_encuesta','dane'];
+  Chart.defaults.color = muted;
+  Chart.defaults.borderColor = '#1f3229';
+  Chart.defaults.font.family = "'IBM Plex Mono', ui-monospace, monospace";
 
-new Chart(document.getElementById('chartRegistros'), {
-  type: 'bar',
-  data: { labels, datasets: [
-    {label:'Antes', data:[377,78689,2033,960], backgroundColor:'#ff7b72'},
-    {label:'Después', data:[327,76181,1900,960], backgroundColor:'#3fb950'}
-  ]},
-  options:{responsive:true, scales:{y:{type:'logarithmic'}}}
-});
+  const labels = ['ideam', 'global', 'ns_encuesta', 'dane'];
 
-new Chart(document.getElementById('chartDuplicados'), {
-  type: 'bar',
-  data: { labels, datasets: [
-    {label:'Antes', data:[50,2505,116,0], backgroundColor:'#e3b341'},
-    {label:'Después', data:[0,0,0,0], backgroundColor:'#3fb950'}
-  ]},
-  options:{responsive:true}
-});
+  new Chart(document.getElementById('chartRegistros'), {
+    type: 'bar',
+    data: { labels, datasets: [
+      { label: 'Antes', data: [377, 78689, 2033, 960], backgroundColor: danger },
+      { label: 'Después', data: [327, 76181, 1900, 960], backgroundColor: accent }
+    ]},
+    options: { responsive: true, scales: { y: { type: 'logarithmic' } } }
+  });
 
-new Chart(document.getElementById('chartCompletitud'), {
-  type: 'bar',
-  data: { labels, datasets: [
-    {label:'Completitud %', data:[94.66,100,99.91,100], backgroundColor:'#79c0ff'}
-  ]},
-  options:{responsive:true, scales:{y:{min:85,max:100}}}
-});
+  new Chart(document.getElementById('chartDuplicados'), {
+    type: 'bar',
+    data: { labels, datasets: [
+      { label: 'Antes', data: [50, 2505, 116, 0], backgroundColor: warn },
+      { label: 'Después', data: [0, 0, 0, 0], backgroundColor: accent }
+    ]},
+    options: { responsive: true }
+  });
 
-new Chart(document.getElementById('chartImpacto'), {
-  type: 'doughnut',
-  data: { labels:['Alto','Medio','Bajo'], datasets:[{
-    data:[5,6,3], backgroundColor:['#ff7b72','#e3b341','#3fb950']
-  }]},
-  options:{responsive:true}
-});
+  new Chart(document.getElementById('chartCompletitud'), {
+    type: 'bar',
+    data: { labels, datasets: [
+      { label: 'Completitud %', data: [94.66, 100, 99.91, 100], backgroundColor: teal }
+    ]},
+    options: { responsive: true, scales: { y: { min: 85, max: 100 } } }
+  });
 
-new Chart(document.getElementById('chartDimension'), {
-  type: 'doughnut',
-  data: { labels:['Completitud','Unicidad','Consistencia','Validez','Exactitud','Actualidad'], datasets:[{
-    data:[4,3,3,2,1,1], backgroundColor:['#79c0ff','#ff7b72','#e3b341','#f778ba','#3fb950','#8b949e']
-  }]},
-  options:{responsive:true}
-});
+  new Chart(document.getElementById('chartImpacto'), {
+    type: 'doughnut',
+    data: { labels: ['Alto', 'Medio', 'Bajo'], datasets: [{
+      data: [5, 6, 3], backgroundColor: [danger, warn, accent]
+    }]},
+    options: { responsive: true }
+  });
+
+  new Chart(document.getElementById('chartDimension'), {
+    type: 'doughnut',
+    data: { labels: ['Completitud', 'Unicidad', 'Consistencia', 'Validez', 'Exactitud', 'Actualidad'], datasets: [{
+      data: [4, 3, 3, 2, 1, 1], backgroundColor: [teal, danger, warn, muted, accent, faint]
+    }]},
+    options: { responsive: true }
+  });
 </script>
 {% endblock %}

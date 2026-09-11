@@ -1,99 +1,93 @@
 {% extends "base.html" %}
-{% block title %}R2 · Etapa 2 · Dimensiones y métricas evaluadas{% endblock %}
-
 {% block content %}
-<style>
-  .cd-wrap{max-width:1080px;margin:0 auto;padding:1.5rem 1rem 3rem;color:#e6edf3;font-family:"Segoe UI",Arial,sans-serif;}
-  .cd-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
-  .cd-pill{border:1px solid #2d333b;border-radius:8px;padding:.4rem .9rem;font-family:"Cascadia Code","Courier New",monospace;font-size:.85rem;color:#8b949e;background:#0d1117;}
-  .cd-title-box{background:#0f2a1f;border:1px solid #1f4d38;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:.6rem;}
-  .cd-title-box h1{margin:0;font-size:1.3rem;font-family:"Cascadia Code","Courier New",monospace;}
-  .cd-subtitle{color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-size:.9rem;margin-bottom:1.5rem;}
-  .cd-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-  @media (max-width:760px){.cd-grid{grid-template-columns:1fr;}}
-  .cd-card{background:#11161c;border:1px solid #21262d;border-radius:14px;overflow:hidden;}
-  .cd-card .hd{background:#173a2b;color:#3fb950;font-family:"Cascadia Code","Courier New",monospace;font-weight:700;padding:.7rem 1.1rem;font-size:.98rem;}
-  .cd-card .bd{padding:1rem 1.1rem;}
-  .cd-card .bd p{margin:.3rem 0;font-size:.87rem;line-height:1.55;color:#c9d1d9;}
-  .cd-card .bd .lbl{color:#8b949e;font-size:.75rem;text-transform:uppercase;letter-spacing:.03em;margin-top:.6rem;}
-  .cd-def{font-style:italic;color:#8b949e;font-size:.85rem;}
-</style>
+<section class="card">
+  <div class="card__num">04</div>
+  <div class="card__body">
+    <h2>Dimensiones y métricas evaluadas</h2>
 
-<div class="cd-wrap">
-  <div class="cd-pills">
-    <span class="cd-pill">R2 · Etapa 2</span>
-    <span class="cd-pill">04 · Dimensiones y métricas evaluadas</span>
-  </div>
-
-  <div class="cd-title-box"><h1>Dimensiones y métricas evaluadas</h1></div>
-  <div class="cd-subtitle">· Calidad de datos</div>
-
-  <div class="cd-grid">
-    <div class="cd-card">
-      <div class="hd">Completitud</div>
-      <div class="bd">
-        <p class="cd-def">Proporción de celdas con dato presente (no nulo) sobre el total de celdas.</p>
-        <p><strong>Métrica:</strong> % de valores no nulos</p>
-        <p class="lbl">Antes</p><p>IDEAM 94.66% · Global 100% · Encuesta NS 99.91% · DANE 100%</p>
-        <p class="lbl">Después</p><p>≥99.9% en las 4 fuentes tras imputar/marcar explícitamente los vacíos</p>
-        <p class="lbl">Meta</p><p>≥ 95% por dataset</p>
-      </div>
+    <h3>Completitud</h3>
+    <p class="hint">Proporción de celdas con dato presente (no nulo) sobre el total de celdas.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Detalle</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Métrica</strong></td><td>% de valores no nulos</td></tr>
+          <tr><td><strong>Antes</strong></td><td>IDEAM 94.66 % · Global 100 % · Encuesta NS 99.91 % · DANE 100 %</td></tr>
+          <tr><td><strong>Después</strong></td><td>≥ 99.9 % en las 4 fuentes tras imputar / marcar explícitamente los vacíos</td></tr>
+          <tr><td><strong>Meta</strong></td><td>≥ 95 % por dataset</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="cd-card">
-      <div class="hd">Exactitud</div>
-      <div class="bd">
-        <p class="cd-def">Proporción de valores que corresponden a la realidad medida, sin errores de magnitud o unidad.</p>
-        <p><strong>Métrica:</strong> % de valores porcentuales dentro del rango lógico 0-100%</p>
-        <p class="lbl">Antes</p><p>109 de 78,689 valores (0.14%) fuera de rango en indicadores globales</p>
-        <p class="lbl">Después</p><p>0% fuera de rango (109 registros marcados y excluidos del análisis)</p>
-        <p class="lbl">Meta</p><p>≥ 99.5% de valores dentro de rango lógico</p>
-      </div>
+    <h3>Exactitud</h3>
+    <p class="hint">Proporción de valores que corresponden a la realidad medida, sin errores de magnitud o unidad.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Detalle</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Métrica</strong></td><td>% de valores porcentuales dentro del rango lógico 0–100 %</td></tr>
+          <tr><td><strong>Antes</strong></td><td>109 de 78 689 valores (0.14 %) fuera de rango en indicadores globales</td></tr>
+          <tr><td><strong>Después</strong></td><td>0 % fuera de rango (109 registros marcados y excluidos del análisis)</td></tr>
+          <tr><td><strong>Meta</strong></td><td>≥ 99.5 % de valores dentro de rango lógico</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="cd-card">
-      <div class="hd">Consistencia</div>
-      <div class="bd">
-        <p class="cd-def">Uniformidad en la representación de un mismo valor o categoría a través de registros y fuentes.</p>
-        <p><strong>Métrica:</strong> % de categorías homologadas contra catálogo estándar</p>
-        <p class="lbl">Antes</p><p>70 variantes de "departamento" para 35 entidades reales; 122 variantes de tildes/mayúsculas en la encuesta</p>
-        <p class="lbl">Después</p><p>35 departamentos homologados (reducción del 50%); texto unificado</p>
-        <p class="lbl">Meta</p><p>100% de categorías homologadas a catálogo único</p>
-      </div>
+    <h3>Consistencia</h3>
+    <p class="hint">Uniformidad en la representación de un mismo valor o categoría a través de registros y fuentes.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Detalle</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Métrica</strong></td><td>% de categorías homologadas contra catálogo estándar</td></tr>
+          <tr><td><strong>Antes</strong></td><td>70 variantes de "departamento" para 35 entidades reales; 122 variantes de tildes / mayúsculas en la encuesta</td></tr>
+          <tr><td><strong>Después</strong></td><td>35 departamentos homologados (reducción del 50 %); texto unificado</td></tr>
+          <tr><td><strong>Meta</strong></td><td>100 % de categorías homologadas a catálogo único</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="cd-card">
-      <div class="hd">Unicidad</div>
-      <div class="bd">
-        <p class="cd-def">Ausencia de registros duplicados que representen la misma entidad u observación.</p>
-        <p><strong>Métrica:</strong> % de registros no duplicados</p>
-        <p class="lbl">Antes</p><p>2,621 registros duplicados de 82,059 (3.19%)</p>
-        <p class="lbl">Después</p><p>0 duplicados exactos tras depuración (los de IDEAM por NIT se resolvieron por consolidación)</p>
-        <p class="lbl">Meta</p><p>0% de duplicados exactos</p>
-      </div>
+    <h3>Unicidad</h3>
+    <p class="hint">Ausencia de registros duplicados que representen la misma entidad u observación.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Detalle</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Métrica</strong></td><td>% de registros no duplicados</td></tr>
+          <tr><td><strong>Antes</strong></td><td>2 621 registros duplicados de 82 059 (3.19 %)</td></tr>
+          <tr><td><strong>Después</strong></td><td>0 duplicados exactos tras depuración (los de IDEAM por NIT se resolvieron por consolidación)</td></tr>
+          <tr><td><strong>Meta</strong></td><td>0 % de duplicados exactos</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="cd-card">
-      <div class="hd">Validez</div>
-      <div class="bd">
-        <p class="cd-def">Cumplimiento de reglas de formato, tipo de dato y dominio permitido por variable.</p>
-        <p><strong>Métrica:</strong> % de registros que cumplen las reglas de dominio (fechas, coordenadas, respuestas categóricas únicas)</p>
-        <p class="lbl">Antes</p><p>1 coordenada en el límite territorial; 25 respuestas multivaloradas en un campo de opción única</p>
-        <p class="lbl">Después</p><p>Coordenadas validadas con bandera "coord_valida"; respuestas de opción única separadas de justificaciones</p>
-        <p class="lbl">Meta</p><p>≥ 98% de registros válidos por regla de dominio</p>
-      </div>
+    <h3>Validez</h3>
+    <p class="hint">Cumplimiento de reglas de formato, tipo de dato y dominio permitido por variable.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Detalle</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Métrica</strong></td><td>% de registros que cumplen las reglas de dominio (fechas, coordenadas, respuestas categóricas únicas)</td></tr>
+          <tr><td><strong>Antes</strong></td><td>1 coordenada en el límite territorial; 25 respuestas multivaloradas en un campo de opción única</td></tr>
+          <tr><td><strong>Después</strong></td><td>Coordenadas validadas con bandera "coord_valida"; respuestas de opción única separadas de justificaciones</td></tr>
+          <tr><td><strong>Meta</strong></td><td>≥ 98 % de registros válidos por regla de dominio</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="cd-card">
-      <div class="hd">Actualidad</div>
-      <div class="bd">
-        <p class="cd-def">Vigencia temporal del dato respecto a la fecha de referencia del proyecto (2026).</p>
-        <p><strong>Métrica:</strong> % de registros con año de referencia visible</p>
-        <p class="lbl">Antes</p><p>Indicadores globales entre 2005-2025 (21 años de rango); DANE entre 2018-2024</p>
-        <p class="lbl">Después</p><p>Se conserva el histórico completo, pero se etiqueta el año de cada observación para poder filtrar por vigencia</p>
-        <p class="lbl">Meta</p><p>Disponibilidad de al menos un año ≤ 2024 por indicador</p>
-      </div>
+    <h3>Actualidad</h3>
+    <p class="hint">Vigencia temporal del dato respecto a la fecha de referencia del proyecto (2026).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Detalle</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Métrica</strong></td><td>% de registros con año de referencia visible</td></tr>
+          <tr><td><strong>Antes</strong></td><td>Indicadores globales entre 2005-2025 (21 años de rango); DANE entre 2018-2024</td></tr>
+          <tr><td><strong>Después</strong></td><td>Se conserva el histórico completo, pero se etiqueta el año de cada observación para poder filtrar por vigencia</td></tr>
+          <tr><td><strong>Meta</strong></td><td>Disponibilidad de al menos un año ≤ 2024 por indicador</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
-</div>
+</section>
 {% endblock %}
