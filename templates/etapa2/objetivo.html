@@ -1,24 +1,58 @@
 {% extends "base.html" %}
+{% block title %}R2 · Etapa 2 · Objetivo y alcance{% endblock %}
+
 {% block content %}
-<section class="card">
-  <div class="card__num">01</div>
-  <div class="card__body">
-    <h2>Objetivo y alcance</h2>
+<style>
+  .cd-wrap{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem;color:#e6edf3;font-family:"Segoe UI",Arial,sans-serif;}
+  .cd-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+  .cd-pill{border:1px solid #2d333b;border-radius:8px;padding:.4rem .9rem;font-family:"Cascadia Code","Courier New",monospace;font-size:.85rem;color:#8b949e;background:#0d1117;}
+  .cd-title-box{background:#0f2a1f;border:1px solid #1f4d38;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:.6rem;}
+  .cd-title-box h1{margin:0;font-size:1.3rem;font-family:"Cascadia Code","Courier New",monospace;}
+  .cd-title-box h1 span{text-decoration:underline;}
+  .cd-subtitle{color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-size:.9rem;margin-bottom:1.5rem;}
+  .cd-card{background:#11161c;border:1px solid #21262d;border-radius:14px;padding:1.5rem;}
+  .cd-card p{line-height:1.7;color:#c9d1d9;font-size:1rem;}
+  .cd-list{margin:1rem 0 0;padding-left:1.2rem;color:#c9d1d9;}
+  .cd-list li{margin-bottom:.5rem;line-height:1.6;}
+  .cd-accent{color:#3fb950;font-weight:600;}
+</style>
 
-    <p class="hint">Objetivo de la Etapa 2:</p>
-    <blockquote class="main-question">{{ etapa.objetivo }}</blockquote>
+<div class="cd-wrap">
+  <div class="cd-pills">
+    <span class="cd-pill">R2 · Etapa 2</span>
+    <span class="cd-pill">01 · Objetivo y alcance</span>
+  </div>
 
-    <p class="hint">
-      El trabajo parte del dataset consolidado en la Etapa 1: cuatro archivos en
-      <code>datos/procesados/</code> (82 059 registros), descargables desde la vista
-      <strong>Dataset</strong> de R1.
+  <div class="cd-title-box">
+    <h1><span>R2 · Etapa 2</span></h1>
+  </div>
+  <div class="cd-subtitle">· Calidad de datos</div>
+
+  <div class="cd-card">
+    <p>
+      El objetivo de esta etapa es <span class="cd-accent">evaluar la calidad</span> de los cuatro
+      conjuntos de datos procesados del proyecto RECT — indicadores globales, indicadores
+      nacionales del DANE, registro de gestores de RAEE del IDEAM y la encuesta de percepción
+      ciudadana en Norte de Santander — con el fin de garantizar que la información publicada en
+      la aplicación sea completa, exacta, consistente, única, válida y vigente antes de usarse
+      como sustento del análisis del problema de residuos electrónicos y consumo tecnológico.
     </p>
 
-    <p class="hint">
-      <span class="pending-badge">EN CURSO</span>
-      Las secciones de perfilamiento, diagnóstico, medición y tratamiento se completan
-      durante esta etapa.
+    <p><strong>Alcance de la etapa:</strong></p>
+    <ul class="cd-list">
+      <li>Perfilamiento de <span class="cd-accent">82,059 registros</span> originales distribuidos en 4 fuentes.</li>
+      <li>Evaluación de <span class="cd-accent">6 dimensiones de calidad</span>: completitud, exactitud, consistencia, unicidad, validez y actualidad.</li>
+      <li>Identificación y documentación de <span class="cd-accent">14 problemas</span> con evidencia cuantitativa.</li>
+      <li>Análisis de causas raíz de los principales problemas detectados.</li>
+      <li>Integración y homologación de las fuentes en un <span class="cd-accent">dataset maestro consolidado</span> (77,037 registros).</li>
+      <li>Aplicación de un plan de tratamiento y comparación medible antes/después.</li>
+    </ul>
+
+    <p>
+      Los usuarios de este resultado son el equipo docente evaluador del curso, la propia
+      aplicación RECT (que consume los datos tratados para sus indicadores y mapas) y cualquier
+      interesado en política pública de manejo de RAEE en Norte de Santander.
     </p>
   </div>
-</section>
+</div>
 {% endblock %}
