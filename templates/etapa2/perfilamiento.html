@@ -1,15 +1,75 @@
 {% extends "base.html" %}
+{% block title %}R2 · Etapa 2 · Resultados del perfilamiento{% endblock %}
+
 {% block content %}
-<section class="card">
-  <div class="card__num">03</div>
-  <div class="card__body">
-    <h2>Resultados del perfilamiento</h2>
-    <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Por cada archivo y variable: tipo de dato, número de valores únicos, nulos,
-      mínimo / máximo, media y forma de la distribución. Aquí irá la salida del
-      perfilamiento (ydata-profiling / pandas) resumida en tablas.
-    </p>
+<style>
+  .cd-wrap{max-width:1080px;margin:0 auto;padding:1.5rem 1rem 3rem;color:#e6edf3;font-family:"Segoe UI",Arial,sans-serif;}
+  .cd-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+  .cd-pill{border:1px solid #2d333b;border-radius:8px;padding:.4rem .9rem;font-family:"Cascadia Code","Courier New",monospace;font-size:.85rem;color:#8b949e;background:#0d1117;}
+  .cd-title-box{background:#0f2a1f;border:1px solid #1f4d38;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:.6rem;}
+  .cd-title-box h1{margin:0;font-size:1.3rem;font-family:"Cascadia Code","Courier New",monospace;}
+  .cd-subtitle{color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-size:.9rem;margin-bottom:1.5rem;}
+  .cd-card{background:#11161c;border:1px solid #21262d;border-radius:14px;padding:1.3rem 1.4rem;margin-bottom:1.2rem;}
+  table{width:100%;border-collapse:collapse;font-size:.9rem;}
+  th{background:#0d1117;color:#3fb950;text-align:left;padding:.6rem .7rem;font-family:"Cascadia Code","Courier New",monospace;font-weight:600;border-bottom:1px solid #21262d;}
+  td{padding:.55rem .7rem;border-bottom:1px solid #1c2128;color:#c9d1d9;}
+  tr:last-child td{border-bottom:none;}
+  code{background:#0d1117;padding:.1rem .4rem;border-radius:5px;color:#79c0ff;font-size:.85rem;}
+  .cd-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-bottom:1.2rem;}
+  @media (max-width:760px){.cd-kpis{grid-template-columns:repeat(2,1fr);}}
+  .cd-kpi{background:#11161c;border:1px solid #21262d;border-radius:12px;padding:.9rem 1rem;text-align:center;}
+  .cd-kpi .n{font-size:1.4rem;font-weight:700;color:#3fb950;font-family:"Cascadia Code","Courier New",monospace;}
+  .cd-kpi .l{font-size:.72rem;color:#8b949e;margin-top:.2rem;text-transform:uppercase;letter-spacing:.03em;}
+  .cd-note{color:#8b949e;font-size:.85rem;line-height:1.6;margin-top:.8rem;}
+</style>
+
+<div class="cd-wrap">
+  <div class="cd-pills">
+    <span class="cd-pill">R2 · Etapa 2</span>
+    <span class="cd-pill">03 · Resultados del perfilamiento</span>
   </div>
-</section>
+
+  <div class="cd-title-box"><h1>Resultados del perfilamiento</h1></div>
+  <div class="cd-subtitle">· Calidad de datos</div>
+
+  <div class="cd-kpis">
+    <div class="cd-kpi"><div class="n">82,059</div><div class="l">Registros totales</div></div>
+    <div class="cd-kpi"><div class="n">4</div><div class="l">Datasets perfilados</div></div>
+    <div class="cd-kpi"><div class="n">59</div><div class="l">Variables en total</div></div>
+    <div class="cd-kpi"><div class="n">2,621</div><div class="l">Duplicados detectados</div></div>
+  </div>
+
+  <div class="cd-card">
+    <table>
+      <thead>
+        <tr><th>Dataset</th><th>Registros</th><th>Variables</th><th>Completitud</th><th>Duplicados</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ideam_gestores</code></td><td>377</td><td>35</td><td>94.66%</td><td>0 exactos / 50 por NIT</td></tr>
+        <tr><td><code>master_global</code></td><td>78,689</td><td>7</td><td>100%</td><td>2,505</td></tr>
+        <tr><td><code>ns_encuesta</code></td><td>2,033</td><td>10</td><td>99.91%</td><td>116</td></tr>
+        <tr><td><code>dane</code></td><td>960</td><td>7</td><td>100%</td><td>0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cd-card">
+    <table>
+      <thead><tr><th>Hallazgo del perfilamiento</th><th>Dataset</th></tr></thead>
+      <tbody>
+        <tr><td>Columna <code>col</code> 100% vacía</td><td>IDEAM</td></tr>
+        <tr><td>Campo <code>Vigencia</code> vacío en el 86.7% de los registros</td><td>IDEAM</td></tr>
+        <tr><td>70 variantes de texto para "departamento" (debieran ser ~35)</td><td>DANE</td></tr>
+        <tr><td>Valores porcentuales de hasta 1,147% (fuera del rango lógico 0-100%)</td><td>Global</td></tr>
+        <tr><td>25 respuestas con más de un valor en una sola celda</td><td>Encuesta NS</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="cd-note">
+    Tipos de dato identificados: mayoritariamente texto categórico, numérico entero (año, NIT, conteos)
+    y numérico decimal (valor, latitud, longitud). No se encontraron columnas con formato de fecha nativo:
+    las fechas del IDEAM se almacenaban como texto en formato <code>dd/mm/aaaa</code>.
+  </p>
+</div>
 {% endblock %}
