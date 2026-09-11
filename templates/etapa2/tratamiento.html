@@ -1,15 +1,100 @@
 {% extends "base.html" %}
+{% block title %}R2 · Etapa 2 · Acciones de tratamiento aplicadas{% endblock %}
+
 {% block content %}
-<section class="card">
-  <div class="card__num">06</div>
-  <div class="card__body">
-    <h2>Acciones de tratamiento aplicadas</h2>
-    <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Acción aplicada a cada problema (imputación, deduplicación, normalización de
-      formato, estandarización de categorías, conversión de tipos…), con su justificación
-      y el registro de la transformación para mantener la trazabilidad.
-    </p>
+<style>
+  .cd-wrap{max-width:1080px;margin:0 auto;padding:1.5rem 1rem 3rem;color:#e6edf3;font-family:"Segoe UI",Arial,sans-serif;}
+  .cd-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+  .cd-pill{border:1px solid #2d333b;border-radius:8px;padding:.4rem .9rem;font-family:"Cascadia Code","Courier New",monospace;font-size:.85rem;color:#8b949e;background:#0d1117;}
+  .cd-title-box{background:#0f2a1f;border:1px solid #1f4d38;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:.6rem;}
+  .cd-title-box h1{margin:0;font-size:1.3rem;font-family:"Cascadia Code","Courier New",monospace;}
+  .cd-subtitle{color:#8b949e;font-family:"Cascadia Code","Courier New",monospace;font-size:.9rem;margin-bottom:1.5rem;}
+  .cd-card{background:#11161c;border:1px solid #21262d;border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:.9rem;display:flex;gap:1rem;align-items:flex-start;}
+  .cd-num{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:#173a2b;color:#3fb950;display:flex;align-items:center;justify-content:center;font-family:"Cascadia Code","Courier New",monospace;font-weight:700;}
+  .cd-card h3{margin:0 0 .3rem;font-size:.98rem;color:#e6edf3;}
+  .cd-card p{margin:0;color:#c9d1d9;font-size:.87rem;line-height:1.55;}
+  .cd-card .ds{color:#8b949e;font-size:.75rem;font-family:"Cascadia Code","Courier New",monospace;margin-top:.35rem;}
+</style>
+
+<div class="cd-wrap">
+  <div class="cd-pills">
+    <span class="cd-pill">R2 · Etapa 2</span>
+    <span class="cd-pill">06 · Acciones de tratamiento aplicadas</span>
   </div>
-</section>
+
+  <div class="cd-title-box"><h1>Acciones de tratamiento aplicadas</h1></div>
+  <div class="cd-subtitle">· Calidad de datos</div>
+
+  <div class="cd-card">
+    <div class="cd-num">1</div>
+    <div>
+      <h3>Eliminación de duplicados</h3>
+      <p>Se eliminaron filas completamente duplicadas por comparación exacta. En IDEAM, la deduplicación se hizo por NIT, conservando el registro con la fecha de otorgamiento más reciente.</p>
+      <div class="ds">Global · Encuesta Norte de Santander · IDEAM</div>
+    </div>
+  </div>
+
+  <div class="cd-card">
+    <div class="cd-num">2</div>
+    <div>
+      <h3>Tratamiento de valores nulos</h3>
+      <p>La columna 100% vacía ("col") se eliminó. Los nulos en campos categóricos se marcaron explícitamente como "NO RESPONDE" para conservar trazabilidad en vez de imputarlos silenciosamente.</p>
+      <div class="ds">IDEAM · Encuesta Norte de Santander</div>
+    </div>
+  </div>
+
+  <div class="cd-card">
+    <div class="cd-num">3</div>
+    <div>
+      <h3>Corrección de tipos de dato</h3>
+      <p>Las fechas almacenadas como texto en formato dd/mm/aaaa se convirtieron a formato ISO (aaaa-mm-dd) para permitir ordenamiento y cálculos temporales correctos.</p>
+      <div class="ds">IDEAM</div>
+    </div>
+  </div>
+
+  <div class="cd-card">
+    <div class="cd-num">4</div>
+    <div>
+      <h3>Estandarización de texto</h3>
+      <p>Se unificaron tildes y mayúsculas ("PUBLICA" → "PÚBLICA", "INFORMACION DIRECTA" → "INFORMACIÓN DIRECTA") y se homologaron nombres de entidad (ej. "HUEM" → nombre completo del hospital).</p>
+      <div class="ds">Encuesta Norte de Santander · DANE</div>
+    </div>
+  </div>
+
+  <div class="cd-card">
+    <div class="cd-num">5</div>
+    <div>
+      <h3>Homologación de categorías</h3>
+      <p>70 variantes de "departamento" se redujeron a 35 mediante normalización de mayúsculas. Las categorías de zona ("Cabecera", "Centros poblados y rural disperso") se separaron a una columna independiente "tipo_area" para no mezclar niveles de agregación.</p>
+      <div class="ds">DANE</div>
+    </div>
+  </div>
+
+  <div class="cd-card">
+    <div class="cd-num">6</div>
+    <div>
+      <h3>Validación de rangos</h3>
+      <p>Los valores porcentuales fuera de 0-100% se marcaron con la bandera "valor_atipico" y se excluyeron del análisis, sin eliminarse del archivo original, para mantener trazabilidad completa.</p>
+      <div class="ds">Global</div>
+    </div>
+  </div>
+
+  <div class="cd-card">
+    <div class="cd-num">7</div>
+    <div>
+      <h3>Tratamiento de valores atípicos</h3>
+      <p>Las coordenadas geográficas fuera del rango territorial de Colombia se marcaron con la bandera "coord_valida" en vez de eliminarse, para revisión manual posterior.</p>
+      <div class="ds">IDEAM</div>
+    </div>
+  </div>
+
+  <div class="cd-card">
+    <div class="cd-num">8</div>
+    <div>
+      <h3>Separación de respuestas multivaloradas</h3>
+      <p>El campo de intención de uso de la app se dividió en la respuesta principal (Sí/No) y una bandera "UTILIZARIA_APP_MULTIVALOR" que conserva la justificación adicional.</p>
+      <div class="ds">Encuesta Norte de Santander</div>
+    </div>
+  </div>
+</div>
 {% endblock %}
