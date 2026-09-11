@@ -4,12 +4,39 @@
   <div class="card__num">05</div>
   <div class="card__body">
     <h2>Problemas identificados</h2>
-    <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Lista de problemas detectados por archivo y dimensión (faltantes, duplicados,
-      inconsistencias de formato, valores fuera de dominio, problemas de integración),
-      con su severidad y la variable o registro afectado.
-    </p>
+    <p class="hint">14 problemas documentados a partir del perfilamiento.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Dataset</th>
+            <th>Campo</th>
+            <th>Descripción</th>
+            <th>Dimensión</th>
+            <th>Impacto</th>
+            <th>Registros</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P01</td><td><code>ideam</code></td><td>Vigencia</td><td>Valor vacío en el 86.7 % de los registros (licencias sin fecha de vigencia)</td><td>Completitud</td><td><span class="badge badge--warn">Medio</span></td><td>327</td></tr>
+          <tr><td>P02</td><td><code>ideam</code></td><td>col</td><td>Columna completamente vacía, sin utilidad analítica</td><td>Completitud</td><td><span class="badge badge--accent">Bajo</span></td><td>377</td></tr>
+          <tr><td>P03</td><td><code>ideam</code></td><td>NIT</td><td>Registros duplicados por gestor (renovaciones de licencia)</td><td>Unicidad</td><td><span class="badge badge--danger">Alto</span></td><td>50</td></tr>
+          <tr><td>P04</td><td><code>ideam</code></td><td>Latitud</td><td>Coordenada en el límite / fuera del territorio colombiano</td><td>Validez</td><td><span class="badge badge--accent">Bajo</span></td><td>1</td></tr>
+          <tr><td>P05</td><td><code>global</code></td><td>todas</td><td>Filas duplicadas al consolidar OWID / Eurostat / ITU</td><td>Unicidad</td><td><span class="badge badge--danger">Alto</span></td><td>2 505</td></tr>
+          <tr><td>P06</td><td><code>global</code></td><td>valor (pct_*)</td><td>Porcentajes fuera de 0–100 % (hasta 1 147.5 %), error de unidad / fuente</td><td>Exactitud</td><td><span class="badge badge--danger">Alto</span></td><td>109</td></tr>
+          <tr><td>P07</td><td><code>global</code></td><td>valor</td><td>Valores nulos sin dato reportado por la fuente</td><td>Completitud</td><td><span class="badge badge--accent">Bajo</span></td><td>3</td></tr>
+          <tr><td>P08</td><td><code>ns_encuesta</code></td><td>Tipo empresa / Cómo se enteró / Entidad</td><td>Categorías equivalentes escritas de forma distinta (tildes / mayúsculas)</td><td>Consistencia</td><td><span class="badge badge--warn">Medio</span></td><td>122</td></tr>
+          <tr><td>P09</td><td><code>ns_encuesta</code></td><td>Utilizaría app RAEE</td><td>Respuestas multivaloradas en una sola celda ("Sí, No conozco de tecnología")</td><td>Validez</td><td><span class="badge badge--warn">Medio</span></td><td>25</td></tr>
+          <tr><td>P10</td><td><code>ns_encuesta</code></td><td>todas</td><td>Registros completamente duplicados (posibles reenvíos del formulario)</td><td>Unicidad</td><td><span class="badge badge--danger">Alto</span></td><td>116</td></tr>
+          <tr><td>P11</td><td><code>ns_encuesta</code></td><td>Entidad / Participación / Utilizaría app</td><td>Valores nulos dispersos en campos de texto libre</td><td>Completitud</td><td><span class="badge badge--accent">Bajo</span></td><td>18</td></tr>
+          <tr><td>P12</td><td><code>dane</code></td><td>departamento</td><td>Mismo departamento en mayúsculas y formato título, duplicando la geografía</td><td>Consistencia</td><td><span class="badge badge--danger">Alto</span></td><td>33</td></tr>
+          <tr><td>P13</td><td><code>dane</code></td><td>departamento</td><td>Categorías de zona ("Cabecera", "Centros poblados...") mezcladas con departamentos</td><td>Consistencia</td><td><span class="badge badge--warn">Medio</span></td><td>42</td></tr>
+          <tr><td>P14</td><td><code>global</code></td><td>anio</td><td>21 años de antigüedad mezclados sin bandera de vigencia</td><td>Actualidad</td><td><span class="badge badge--warn">Medio</span></td><td>78 689</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 {% endblock %}

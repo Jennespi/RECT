@@ -5,76 +5,35 @@
   <div class="card__body">
     <h2>Descripción del conjunto de datos</h2>
 
-    <p>
-      El conjunto de datos de trabajo es el consolidado de la Etapa 1: cuatro archivos en
-      <code>datos/procesados/</code>, derivados de siete fuentes originales e integrables
-      entre sí por llaves geográficas (país / departamento / municipio) y temporal (año).
-      Total: <strong>82 059 registros</strong>.
-    </p>
+    <div class="mini-grid">
+      <div class="mini-card">
+        <span class="chip">Global</span>
+        <h3><code>master_indicadores_globales.csv</code></h3>
+        <p>122 indicadores de acceso tecnológico y reciclaje de RAEE por país / región, entre 2005 y 2025.</p>
+        <p class="hint">Fuentes: OWID · Eurostat WEEE · ITU DataHub</p>
+      </div>
 
-    <div class="table-wrap">
-      <table class="dataset-files">
-        <thead>
-          <tr>
-            <th>Archivo</th>
-            <th>Nivel</th>
-            <th>Unidad de análisis</th>
-            <th>Filas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>master_indicadores_globales.csv</code></td>
-            <td>Global</td>
-            <td>país – año – indicador</td>
-            <td>78 689</td>
-          </tr>
-          <tr>
-            <td><code>dane_clean.csv</code></td>
-            <td>Nacional</td>
-            <td>departamento – año – indicador</td>
-            <td>960</td>
-          </tr>
-          <tr>
-            <td><code>ideam_gestores_clean.csv</code></td>
-            <td>Nacional</td>
-            <td>gestor / instalación</td>
-            <td>377</td>
-          </tr>
-          <tr>
-            <td><code>norte_santander_encuesta_clean.csv</code></td>
-            <td>Regional</td>
-            <td>encuestado / entidad</td>
-            <td>2 033</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="mini-card">
+        <span class="chip">Nacional</span>
+        <h3><code>dane_clean.csv</code></h3>
+        <p>Indicadores de hogares con computador / internet y uso de TIC por departamento, entre 2018 y 2024.</p>
+        <p class="hint">Fuentes: DANE — ENTIC Hogares, ECV</p>
+      </div>
+
+      <div class="mini-card">
+        <span class="chip">Nacional / Regional</span>
+        <h3><code>ideam_gestores_clean.csv</code></h3>
+        <p>Registro de gestores autorizados para el tratamiento y aprovechamiento de RAEE en Colombia (empresa, ubicación, licencia).</p>
+        <p class="hint">Fuente: IDEAM</p>
+      </div>
+
+      <div class="mini-card">
+        <span class="chip">Regional</span>
+        <h3><code>norte_santander_encuesta_clean.csv</code></h3>
+        <p>Encuesta de percepción y comportamiento ciudadano frente a los residuos electrónicos en Norte de Santander.</p>
+        <p class="hint">Fuente: encuesta propia del proyecto</p>
+      </div>
     </div>
-
-    <h3>Descargar los archivos</h3>
-    <div class="downloads">
-      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='master_indicadores_globales.csv') }}">
-        <span class="download-link__name">master_indicadores_globales.csv</span>
-        <span class="download-link__meta">Global · 78 689 filas · descargar CSV</span>
-      </a>
-      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='dane_clean.csv') }}">
-        <span class="download-link__name">dane_clean.csv</span>
-        <span class="download-link__meta">Nacional · 960 filas · descargar CSV</span>
-      </a>
-      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='ideam_gestores_clean.csv') }}">
-        <span class="download-link__name">ideam_gestores_clean.csv</span>
-        <span class="download-link__meta">Nacional · 377 filas · descargar CSV</span>
-      </a>
-      <a class="download-link" href="{{ url_for('descargar_dataset', nombre='norte_santander_encuesta_clean.csv') }}">
-        <span class="download-link__name">norte_santander_encuesta_clean.csv</span>
-        <span class="download-link__meta">Regional · 2 033 filas · descargar CSV</span>
-      </a>
-    </div>
-
-    <p class="hint">
-      El diccionario campo por campo está en la vista <strong>Diccionario de datos</strong>
-      de R1; el diagnóstico inicial de calidad, en <strong>Calidad inicial de los datos</strong>.
-    </p>
   </div>
 </section>
 {% endblock %}

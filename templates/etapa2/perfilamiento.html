@@ -4,11 +4,54 @@
   <div class="card__num">03</div>
   <div class="card__body">
     <h2>Resultados del perfilamiento</h2>
+
+    <div class="stat-row">
+      <div class="stat"><span class="stat__value">82 059</span><span class="stat__label">Registros totales</span></div>
+      <div class="stat"><span class="stat__value">4</span><span class="stat__label">Datasets perfilados</span></div>
+      <div class="stat"><span class="stat__value">59</span><span class="stat__label">Variables en total</span></div>
+      <div class="stat"><span class="stat__value">2 621</span><span class="stat__label">Duplicados detectados</span></div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Dataset</th>
+            <th>Registros</th>
+            <th>Variables</th>
+            <th>Completitud</th>
+            <th>Duplicados</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>ideam_gestores</code></td><td>377</td><td>35</td><td>94.66 %</td><td>0 exactos / 50 por NIT</td></tr>
+          <tr><td><code>master_global</code></td><td>78 689</td><td>7</td><td>100 %</td><td>2 505</td></tr>
+          <tr><td><code>ns_encuesta</code></td><td>2 033</td><td>10</td><td>99.91 %</td><td>116</td></tr>
+          <tr><td><code>dane</code></td><td>960</td><td>7</td><td>100 %</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Hallazgo del perfilamiento</th><th>Dataset</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Columna <code>col</code> 100 % vacía</td><td>IDEAM</td></tr>
+          <tr><td>Campo <code>Vigencia</code> vacío en el 86.7 % de los registros</td><td>IDEAM</td></tr>
+          <tr><td>70 variantes de texto para "departamento" (debieran ser ~35)</td><td>DANE</td></tr>
+          <tr><td>Valores porcentuales de hasta 1 147 % (fuera del rango lógico 0–100 %)</td><td>Global</td></tr>
+          <tr><td>25 respuestas con más de un valor en una sola celda</td><td>Encuesta NS</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Por cada archivo y variable: tipo de dato, número de valores únicos, nulos,
-      mínimo / máximo, media y forma de la distribución. Aquí irá la salida del
-      perfilamiento (ydata-profiling / pandas) resumida en tablas.
+      Tipos de dato identificados: mayoritariamente texto categórico, numérico entero
+      (año, NIT, conteos) y numérico decimal (valor, latitud, longitud). No se encontraron
+      columnas con formato de fecha nativo: las fechas del IDEAM se almacenaban como texto
+      en formato <code>dd/mm/aaaa</code>.
     </p>
   </div>
 </section>

@@ -4,12 +4,94 @@
   <div class="card__num">08</div>
   <div class="card__body">
     <h2>Gráficas, tablas e indicadores</h2>
-    <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Gráficas y tablas resumen que apoyan el análisis: nulos por variable, duplicados
-      por archivo, distribución de valores, evolución de las métricas de calidad y los
-      indicadores clave de la entrega.
-    </p>
+
+    <div class="stat-row">
+      <div class="stat"><span class="stat__value">79 368</span><span class="stat__label">Registros tratados</span></div>
+      <div class="stat"><span class="stat__value">2 621</span><span class="stat__label">Duplicados depurados</span></div>
+      <div class="stat"><span class="stat__value">77 037</span><span class="stat__label">Dataset maestro consolidado</span></div>
+    </div>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h3>Registros antes / después</h3>
+        <canvas id="chartRegistros"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Duplicados antes / después</h3>
+        <canvas id="chartDuplicados"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Completitud inicial por dataset (%)</h3>
+        <canvas id="chartCompletitud"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Problemas por nivel de impacto</h3>
+        <canvas id="chartImpacto"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Problemas por dimensión de calidad</h3>
+        <canvas id="chartDimension"></canvas>
+      </div>
+    </div>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script>
+  // Paleta alineada con las variables de static/css/style.css
+  const accent = '#34d399';
+  const danger = '#f0654f';
+  const warn = '#f5a524';
+  const muted = '#9db3ab';
+  const faint = '#64796f';
+  const teal = '#5eead4';
+
+  Chart.defaults.color = muted;
+  Chart.defaults.borderColor = '#1f3229';
+  Chart.defaults.font.family = "'IBM Plex Mono', ui-monospace, monospace";
+
+  const labels = ['ideam', 'global', 'ns_encuesta', 'dane'];
+
+  new Chart(document.getElementById('chartRegistros'), {
+    type: 'bar',
+    data: { labels, datasets: [
+      { label: 'Antes', data: [377, 78689, 2033, 960], backgroundColor: danger },
+      { label: 'Después', data: [327, 76181, 1900, 960], backgroundColor: accent }
+    ]},
+    options: { responsive: true, scales: { y: { type: 'logarithmic' } } }
+  });
+
+  new Chart(document.getElementById('chartDuplicados'), {
+    type: 'bar',
+    data: { labels, datasets: [
+      { label: 'Antes', data: [50, 2505, 116, 0], backgroundColor: warn },
+      { label: 'Después', data: [0, 0, 0, 0], backgroundColor: accent }
+    ]},
+    options: { responsive: true }
+  });
+
+  new Chart(document.getElementById('chartCompletitud'), {
+    type: 'bar',
+    data: { labels, datasets: [
+      { label: 'Completitud %', data: [94.66, 100, 99.91, 100], backgroundColor: teal }
+    ]},
+    options: { responsive: true, scales: { y: { min: 85, max: 100 } } }
+  });
+
+  new Chart(document.getElementById('chartImpacto'), {
+    type: 'doughnut',
+    data: { labels: ['Alto', 'Medio', 'Bajo'], datasets: [{
+      data: [5, 6, 3], backgroundColor: [danger, warn, accent]
+    }]},
+    options: { responsive: true }
+  });
+
+  new Chart(document.getElementById('chartDimension'), {
+    type: 'doughnut',
+    data: { labels: ['Completitud', 'Unicidad', 'Consistencia', 'Validez', 'Exactitud', 'Actualidad'], datasets: [{
+      data: [4, 3, 3, 2, 1, 1], backgroundColor: [teal, danger, warn, muted, accent, faint]
+    }]},
+    options: { responsive: true }
+  });
+</script>
 {% endblock %}

@@ -4,12 +4,68 @@
   <div class="card__num">06</div>
   <div class="card__body">
     <h2>Acciones de tratamiento aplicadas</h2>
-    <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Acción aplicada a cada problema (imputación, deduplicación, normalización de
-      formato, estandarización de categorías, conversión de tipos…), con su justificación
-      y el registro de la transformación para mantener la trazabilidad.
+
+    <h3>1 · Eliminación de duplicados</h3>
+    <p>
+      Se eliminaron filas completamente duplicadas por comparación exacta. En IDEAM, la
+      deduplicación se hizo por NIT, conservando el registro con la fecha de otorgamiento
+      más reciente.
     </p>
+    <p class="hint">Datasets: Global · Encuesta Norte de Santander · IDEAM</p>
+
+    <h3>2 · Tratamiento de valores nulos</h3>
+    <p>
+      La columna 100 % vacía (<code>col</code>) se eliminó. Los nulos en campos categóricos
+      se marcaron explícitamente como "NO RESPONDE" para conservar trazabilidad en vez de
+      imputarlos silenciosamente.
+    </p>
+    <p class="hint">Datasets: IDEAM · Encuesta Norte de Santander</p>
+
+    <h3>3 · Corrección de tipos de dato</h3>
+    <p>
+      Las fechas almacenadas como texto en formato dd/mm/aaaa se convirtieron a formato
+      ISO (aaaa-mm-dd) para permitir ordenamiento y cálculos temporales correctos.
+    </p>
+    <p class="hint">Dataset: IDEAM</p>
+
+    <h3>4 · Estandarización de texto</h3>
+    <p>
+      Se unificaron tildes y mayúsculas ("PUBLICA" → "PÚBLICA", "INFORMACION DIRECTA" →
+      "INFORMACIÓN DIRECTA") y se homologaron nombres de entidad (ej. "HUEM" → nombre
+      completo del hospital).
+    </p>
+    <p class="hint">Datasets: Encuesta Norte de Santander · DANE</p>
+
+    <h3>5 · Homologación de categorías</h3>
+    <p>
+      70 variantes de "departamento" se redujeron a 35 mediante normalización de
+      mayúsculas. Las categorías de zona ("Cabecera", "Centros poblados y rural disperso")
+      se separaron a una columna independiente "tipo_area" para no mezclar niveles de
+      agregación.
+    </p>
+    <p class="hint">Dataset: DANE</p>
+
+    <h3>6 · Validación de rangos</h3>
+    <p>
+      Los valores porcentuales fuera de 0–100 % se marcaron con la bandera
+      "valor_atipico" y se excluyeron del análisis, sin eliminarse del archivo original,
+      para mantener trazabilidad completa.
+    </p>
+    <p class="hint">Dataset: Global</p>
+
+    <h3>7 · Tratamiento de valores atípicos</h3>
+    <p>
+      Las coordenadas geográficas fuera del rango territorial de Colombia se marcaron con
+      la bandera "coord_valida" en vez de eliminarse, para revisión manual posterior.
+    </p>
+    <p class="hint">Dataset: IDEAM</p>
+
+    <h3>8 · Separación de respuestas multivaloradas</h3>
+    <p>
+      El campo de intención de uso de la app se dividió en la respuesta principal (Sí/No)
+      y una bandera "UTILIZARIA_APP_MULTIVALOR" que conserva la justificación adicional.
+    </p>
+    <p class="hint">Dataset: Encuesta Norte de Santander</p>
   </div>
 </section>
 {% endblock %}
