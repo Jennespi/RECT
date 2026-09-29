@@ -5,6 +5,9 @@ from flask import Flask, render_template, abort, send_from_directory
 app = Flask(__name__)
 
 DATOS_PROCESADOS = Path(__file__).resolve().parent / "datos" / "procesados"
+ETAPA_3_ASSETS = Path(__file__).resolve().parent / "static" / "etapa3"
+INFORME_PDF = ETAPA_3_ASSETS / "informe_tecnico.pdf"
+VIDEO_DEMOSTRACION = ETAPA_3_ASSETS / "video_demostracion.mp4"
 
 # Etapa 1 — Del problema a los datos
 ETAPA_1 = {
@@ -49,6 +52,30 @@ ETAPA_2 = {
     ],
 }
 
+# Etapa 3 — Tratamiento de datos con SSIS
+ETAPA_3 = {
+    "codigo": "R3",
+    "numero": 3,
+    "titulo": "Tratamiento de datos — ETL con SSIS",
+    "subtitulo": "Tratamiento de datos con SSIS",
+    "endpoint": "etapa3",
+    "objetivo": (
+        "Implementar y verificar un proceso ETL mediante SQL Server Integration "
+        "Services (SSIS) para tratar los problemas de calidad identificados en la "
+        "Etapa 2, mediante tres iteraciones documentadas, y publicar el informe "
+        "técnico y el video de demostración en la aplicación."
+    ),
+    "sections": [
+        {"slug": "objetivo", "num": 1, "label": "Objetivo y alcance"},
+        {"slug": "reglas", "num": 2, "label": "Reglas de tratamiento"},
+        {"slug": "diseno", "num": 3, "label": "Diseño del proceso ETL"},
+        {"slug": "iteraciones", "num": 4, "label": "Iteraciones del tratamiento"},
+        {"slug": "comparacion", "num": 5, "label": "Comparación de resultados"},
+        {"slug": "informe", "num": 6, "label": "Informe técnico"},
+        {"slug": "video", "num": 7, "label": "Video de demostración"},
+    ],
+}
+
 # Tarjetas de la página de inicio
 ENTREGAS = [
     {
@@ -70,10 +97,18 @@ ENTREGAS = [
         "primer_slug": ETAPA_2["sections"][0]["slug"],
         "disponible": True,
     },
+    {
+        "codigo": "R3",
+        "titulo": ETAPA_3["titulo"],
+        "descripcion": ETAPA_3["objetivo"],
+        "endpoint": ETAPA_3["endpoint"],
+        "primer_slug": ETAPA_3["sections"][0]["slug"],
+        "disponible": True,
+    },
 ]
 
 
-def _render_etapa(etapa, slug):
+def _render_etapa(etapa, slug, **extra):
     secs = etapa["sections"]
     section = next((s for s in secs if s["slug"] == slug), None)
     if section is None:
@@ -86,6 +121,7 @@ def _render_etapa(etapa, slug):
         current=slug,
         prev_s=secs[i - 1] if i > 0 else None,
         next_s=secs[i + 1] if i < len(secs) - 1 else None,
+        **extra,
     )
 
 
@@ -107,6 +143,16 @@ def etapa1(slug):
 @app.route("/etapa-2/<slug>")
 def etapa2(slug):
     return _render_etapa(ETAPA_2, slug)
+
+
+@app.route("/etapa-3/<slug>")
+def etapa3(slug):
+    return _render_etapa(
+        ETAPA_3,
+        slug,
+        informe_pdf_existe=INFORME_PDF.exists(),
+        video_existe=VIDEO_DEMOSTRACION.exists(),
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">01</div>
+  <div class="card__body">
+    <h2>Objetivo y alcance</h2>
+
+    <p class="hint">Objetivo de la Etapa 3:</p>
+    <blockquote class="main-question">{{ etapa.objetivo }}</blockquote>
+
+    <p class="hint">Alcance de la etapa:</p>
+    <ul class="question-list">
+      <li>Definición de reglas de tratamiento a partir del diagnóstico de calidad de la Etapa 2 (campo, acción y justificación por problema).</li>
+      <li>Construcción de un paquete SSIS con extracción, transformación y carga, conservando los datos originales en una zona de staging para trazabilidad.</li>
+      <li>Uso de componentes como Derived Column, Data Conversion, Lookup, Conditional Split y Sort según el problema a tratar.</li>
+      <li>Tres iteraciones documentadas del tratamiento, con conteos de registros recibidos, aceptados, duplicados y enviados a revisión.</li>
+      <li>Comparación de la calidad antes y después de cada iteración, y verificación de que reejecutar el mismo lote no genere duplicados.</li>
+      <li>Publicación en esta aplicación del informe técnico en PDF y el video de demostración.</li>
+    </ul>
+
+    <p class="hint">
+      <span class="pending-badge">EN CURSO</span>
+      Por ahora esta sección es solo el front end de la Etapa 3; el paquete SSIS, las
+      iteraciones y los documentos se completan durante el desarrollo de la etapa.
+    </p>
+  </div>
+</section>
+{% endblock %}
