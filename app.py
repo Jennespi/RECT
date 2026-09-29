@@ -67,12 +67,9 @@ ETAPA_3 = {
     ),
     "sections": [
         {"slug": "objetivo", "num": 1, "label": "Objetivo y alcance"},
-        {"slug": "reglas", "num": 2, "label": "Reglas de tratamiento"},
-        {"slug": "diseno", "num": 3, "label": "Diseño del proceso ETL"},
-        {"slug": "iteraciones", "num": 4, "label": "Iteraciones del tratamiento"},
-        {"slug": "comparacion", "num": 5, "label": "Comparación de resultados"},
-        {"slug": "informe", "num": 6, "label": "Informe técnico"},
-        {"slug": "video", "num": 7, "label": "Video de demostración"},
+        {"slug": "resultados", "num": 2, "label": "Resultados y comparación de las iteraciones"},
+        {"slug": "informe", "num": 3, "label": "Informe técnico"},
+        {"slug": "video", "num": 4, "label": "Video de demostración"},
     ],
 }
 
