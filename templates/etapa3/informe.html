@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">03</div>
+  <div class="card__body">
+    <h2>Informe técnico</h2>
+
+    {% if informe_pdf_existe %}
+    <p class="hint">Informe técnico de la Etapa 3, en PDF.</p>
+    <div class="pdf-viewer">
+      <iframe src="{{ url_for('static', filename='etapa3/informe_tecnico.pdf') }}" title="Informe técnico — Etapa 3"></iframe>
+    </div>
+    <p class="hint">
+      <a href="{{ url_for('static', filename='etapa3/informe_tecnico.pdf') }}" target="_blank" rel="noopener">Abrir en una pestaña nueva ↗</a>
+    </p>
+    {% else %}
+    <p class="hint">
+      <span class="pending-badge">PENDIENTE</span>
+      El informe técnico en PDF (portada con el equipo, diagnóstico y reglas, diseño
+      del Control Flow / Data Flow, configuración de componentes, evidencias de las
+      tres iteraciones, manejo de errores y comparación de resultados) se publicará
+      acá. Cuando esté listo, se guarda como
+      <code>static/etapa3/informe_tecnico.pdf</code> y aparece embebido
+      automáticamente en esta página.
+    </p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
