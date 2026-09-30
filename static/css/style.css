@@ -634,6 +634,29 @@ a.hero__eyebrow:hover {
   background: var(--accent-soft);
 }
 
+/* ---------- Botón de enlace externo ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
 /* ---------- Visor de PDF embebido (Etapa 3) ---------- */
 
 .pdf-viewer {
@@ -654,16 +677,22 @@ a.hero__eyebrow:hover {
 /* ---------- Video embebido (Etapa 3) ---------- */
 
 .video-embed {
-  margin-top: 1rem;
-}
-
-.video-embed video {
-  display: block;
+  position: relative;
   width: 100%;
-  max-height: 480px;
+  aspect-ratio: 16 / 9;
+  margin-top: 1rem;
   border-radius: 10px;
   border: 1px solid var(--border);
+  overflow: hidden;
   background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* ---------- Responsive ---------- */

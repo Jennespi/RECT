@@ -10,9 +10,7 @@
     <div class="pdf-viewer">
       <iframe src="{{ url_for('static', filename='etapa3/informe_tecnico.pdf') }}" title="Informe técnico — Etapa 3"></iframe>
     </div>
-    <p class="hint">
-      <a href="{{ url_for('static', filename='etapa3/informe_tecnico.pdf') }}" target="_blank" rel="noopener">Abrir en una pestaña nueva ↗</a>
-    </p>
+    <a class="btn" href="{{ url_for('static', filename='etapa3/informe_tecnico.pdf') }}" target="_blank" rel="noopener">Abrir en una pestaña nueva ↗</a>
     {% else %}
     <p class="hint">
       <span class="pending-badge">PENDIENTE</span>
