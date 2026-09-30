@@ -4,14 +4,90 @@
   <div class="card__num">02</div>
   <div class="card__body">
     <h2>Resultados y comparación de las iteraciones</h2>
+
+    <p>
+      Se documentaron tres iteraciones sucesivas de la condición del componente
+      <strong>Conditional Split</strong> del paquete SSIS, cada una ejecutada sobre el
+      Data Flow del paquete <code>Package.dtsx</code> (proyecto
+      <code>ETL_RECT_Filtrado0</code>).
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Iteración</th>
+            <th>Regla añadida respecto a la anterior</th>
+            <th>Filas recibidas</th>
+            <th>Filas aceptadas</th>
+            <th>Filas rechazadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Excluir F1 nulo y F1 = "Dominio"</td><td>56</td><td>39</td><td>17</td></tr>
+          <tr><td>2</td><td>+ validación de formato / token sobre F1</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>3</td><td>+ TRIM(F1) != "" y F2, F3 no nulos</td><td>128</td><td>1</td><td>127</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Resultado de las tres iteraciones del proceso en SSIS —reglas aplicadas, ajustes
-      entre una iteración y la siguiente, y conteos de registros recibidos, aceptados,
-      duplicados y enviados a revisión— junto con la comparación de la calidad de los
-      datos originales frente a cada iteración: indicadores, ejemplos concretos de
-      antes / después, mejoras obtenidas, problemas pendientes y verificación de que
-      reejecutar el mismo lote no genera duplicados.
+      La iteración 1 acepta el 69.6 % de los registros de su archivo de origen (39/56),
+      descartando principalmente la fila de encabezado y registros con F1 vacío. La
+      iteración 3, sobre una fuente distinta y de mayor tamaño (128 filas), acepta
+      apenas el 0.8 % (1/128) al exigir además que F2 y F3 no sean nulos — una caída
+      que refleja que esas dos columnas vienen vacías en casi todo ese archivo, no un
+      error de la regla sobre F1.
+    </p>
+
+    <h3>Regla de cada iteración</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Iteración</th><th>Condición del Conditional Split</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><code>!ISNULL(F1) &amp;&amp; F1 != "Dominio"</code></td></tr>
+          <tr><td>2</td><td><code>!ISNULL(F1) &amp;&amp; F1 != "Dominio" &amp;&amp; !TOKENABAND...</code> (validación de formato sobre F1)</td></tr>
+          <tr><td>3</td><td><code>!ISNULL(F1) &amp;&amp; TRIM(F1) != "" &amp;&amp; F1 != "Dominio" &amp;&amp; !ISNULL(F2) &amp;&amp; !ISNULL(F3)</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Problemas encontrados durante la construcción</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Dataset / componente</th><th>Problema reportado</th><th>Causa señalada</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IDEAM (gestores)</td>
+            <td>El filtro de calidad dejaba pasar muy pocos registros</td>
+            <td>Coincide con el diagnóstico de la Etapa 2: "Vigencia" (86.7 % nulos) y "col" (100 % nulos)</td>
+            <td>Identificado a partir del diagnóstico de la Etapa 2</td>
+          </tr>
+          <tr>
+            <td>IDEAM (gestores)</td>
+            <td>El paquete no permitía guardar los datos en la base de datos</td>
+            <td>Configuración del OLE DB Destination</td>
+            <td>Reportado por el equipo durante la construcción</td>
+          </tr>
+          <tr>
+            <td>ENTIC / DANE</td>
+            <td>Error al guardar en la base de datos</td>
+            <td>El administrador de conexiones apuntaba a "localhost" en general, no a la instancia / base específica</td>
+            <td>Resuelto con la conexión dedicada "localhost.ENTIC_DB"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="hint">
+      El manejo de errores dirige los registros que no cumplen la condición del
+      Conditional Split a la salida "Conditional Split Default Output"; en las pruebas
+      documentadas esta salida se conectó al OLE DB Destination para inspeccionar qué
+      filas rechazaba el filtro. El diseño completo del paquete, las capturas de
+      configuración y la evidencia de ejecución de cada iteración están en el
+      <strong>informe técnico</strong>.
     </p>
   </div>
 </section>

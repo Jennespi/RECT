@@ -5,23 +5,18 @@
   <div class="card__body">
     <h2>Video de demostración</h2>
 
-    {% if video_existe %}
-    <p class="hint">Video de demostración de la Etapa 3 (máx. 4 minutos).</p>
+    <p class="hint">Video de demostración de la Etapa 3 (máx. 4 minutos), alojado en YouTube.</p>
     <div class="video-embed">
-      <video controls preload="metadata" src="{{ url_for('static', filename='etapa3/video_demostracion.mp4') }}"></video>
+      <iframe
+        src="https://www.youtube.com/embed/{{ etapa.video_youtube_id }}"
+        title="Video de demostración — Etapa 3"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
     </div>
-    {% else %}
     <p class="hint">
-      <span class="pending-badge">PENDIENTE</span>
-      Video de máximo 4 minutos con los cuatro integrantes (cámara encendida),
-      presentando el paquete SSIS, la ejecución del tratamiento, los resultados de las
-      tres iteraciones y al menos un dato corregido y un registro enviado a revisión.
-      Guardarlo como <code>static/etapa3/video_demostracion.mp4</code> para que se
-      reproduzca directamente acá; si se aloja en una plataforma externa (YouTube,
-      Drive), este bloque se reemplaza por el enlace o el iframe de inserción
-      correspondiente.
+      <a href="https://www.youtube.com/watch?v={{ etapa.video_youtube_id }}" target="_blank" rel="noopener">Ver en YouTube ↗</a>
     </p>
-    {% endif %}
   </div>
 </section>
 {% endblock %}

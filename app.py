@@ -7,7 +7,6 @@ app = Flask(__name__)
 DATOS_PROCESADOS = Path(__file__).resolve().parent / "datos" / "procesados"
 ETAPA_3_ASSETS = Path(__file__).resolve().parent / "static" / "etapa3"
 INFORME_PDF = ETAPA_3_ASSETS / "informe_tecnico.pdf"
-VIDEO_DEMOSTRACION = ETAPA_3_ASSETS / "video_demostracion.mp4"
 
 # Etapa 1 — Del problema a los datos
 ETAPA_1 = {
@@ -59,6 +58,7 @@ ETAPA_3 = {
     "titulo": "Tratamiento de datos — ETL con SSIS",
     "subtitulo": "Tratamiento de datos con SSIS",
     "endpoint": "etapa3",
+    "video_youtube_id": "SM41JHEF8cE",
     "objetivo": (
         "Implementar y verificar un proceso ETL mediante SQL Server Integration "
         "Services (SSIS) para tratar los problemas de calidad identificados en la "
@@ -148,7 +148,6 @@ def etapa3(slug):
         ETAPA_3,
         slug,
         informe_pdf_existe=INFORME_PDF.exists(),
-        video_existe=VIDEO_DEMOSTRACION.exists(),
     )
 
 
