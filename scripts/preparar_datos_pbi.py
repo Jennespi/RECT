@@ -19,7 +19,7 @@ from pathlib import Path
 import pandas as pd
 
 ENT = Path(sys.argv[1] if len(sys.argv) > 1 else "datos/procesados")
-SAL = Path(sys.argv[2] if len(sys.argv) > 2 else "powerbi/datos")
+SAL = Path(sys.argv[2] if len(sys.argv) > 2 else "datos/powerbi")
 SAL.mkdir(parents=True, exist_ok=True)
 
 

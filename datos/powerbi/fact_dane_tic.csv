@@ -1,0 +1,961 @@
+﻿dominio,departamento,anio,fuente,indicador,indicador_nombre,valor,unidad
+Total nacional,,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),39.30685562393709,%
+Total nacional,,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),56.526239890461774,%
+Departamento,AMAZONAS,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),10.872063076984032,%
+Departamento,AMAZONAS,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),15.594912635207416,%
+Departamento,ANTIOQUIA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),42.08527261591538,%
+Departamento,ANTIOQUIA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),57.96647726881725,%
+Departamento,ARAUCA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),16.45332616533966,%
+Departamento,ARAUCA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),36.01267993363427,%
+Departamento,ATLÁNTICO,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),42.94198962190098,%
+Departamento,ATLÁNTICO,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),58.62806254645484,%
+Departamento,BOGOTÁ D.C.,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),63.750708173201055,%
+Departamento,BOGOTÁ D.C.,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),77.98717208097972,%
+Departamento,BOLÍVAR,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),23.990836595090904,%
+Departamento,BOLÍVAR,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),30.670123520015608,%
+Departamento,BOYACÁ,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),33.20429304977538,%
+Departamento,BOYACÁ,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),59.543391074726834,%
+Departamento,CALDAS,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),41.09863005475961,%
+Departamento,CALDAS,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),57.57589813129756,%
+Departamento,CAQUETÁ,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),24.430567718844003,%
+Departamento,CAQUETÁ,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),42.465064920229985,%
+Departamento,CASANARE,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),34.59215113921998,%
+Departamento,CASANARE,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),54.83121165436904,%
+Departamento,CAUCA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),22.42681450646799,%
+Departamento,CAUCA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),33.75585181851706,%
+Departamento,CESAR,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),25.003727171077152,%
+Departamento,CESAR,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),46.45759011767211,%
+Departamento,CHOCÓ,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),12.942286178077083,%
+Departamento,CHOCÓ,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),13.224713185776645,%
+Departamento,CÓRDOBA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),17.34543029688278,%
+Departamento,CÓRDOBA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),30.24748058193157,%
+Departamento,CUNDINAMARCA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),40.159286483832695,%
+Departamento,CUNDINAMARCA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),57.12011491901573,%
+Departamento,GUAINÍA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),13.829923273657288,%
+Departamento,GUAINÍA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),18.938618925831204,%
+Departamento,GUAVIARE,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),24.44326792627643,%
+Departamento,GUAVIARE,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),30.194235796300582,%
+Departamento,HUILA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),30.518543809483162,%
+Departamento,HUILA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),44.24025151864339,%
+Departamento,LA GUAJIRA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),11.015338924419096,%
+Departamento,LA GUAJIRA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),21.455594741904456,%
+Departamento,MAGDALENA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),24.07794273989101,%
+Departamento,MAGDALENA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),38.30202192170537,%
+Departamento,META,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),35.93630121353283,%
+Departamento,META,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),55.52112064105772,%
+Departamento,NARIÑO,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),26.298007502532993,%
+Departamento,NARIÑO,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),40.615934361264,%
+Departamento,NORTE DE SANTANDER,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),32.11018211333423,%
+Departamento,NORTE DE SANTANDER,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),57.31546347882962,%
+Departamento,PUTUMAYO,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),20.18995515838955,%
+Departamento,PUTUMAYO,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),30.62304971081573,%
+Departamento,QUINDÍO,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),39.758180587725064,%
+Departamento,QUINDÍO,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),57.43997407375635,%
+Departamento,RISARALDA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),45.14422085214641,%
+Departamento,RISARALDA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),63.49355962503724,%
+Departamento,SAN ANDRÉS,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),36.91330061658488,%
+Departamento,SAN ANDRÉS,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),32.47137284509878,%
+Departamento,SANTANDER,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),39.95774161219986,%
+Departamento,SANTANDER,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),62.9316359371049,%
+Departamento,SUCRE,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),19.657860403243784,%
+Departamento,SUCRE,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),26.119847531895147,%
+Departamento,TOLIMA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),32.645757390138485,%
+Departamento,TOLIMA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),62.13649000012851,%
+Departamento,VALLE DEL CAUCA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),47.33976258162023,%
+Departamento,VALLE DEL CAUCA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),76.09310008878526,%
+Departamento,VAUPÉS,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),11.852054295344812,%
+Departamento,VAUPÉS,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),3.1247153138380246,%
+Departamento,VICHADA,2020,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),6.701754385964913,%
+Departamento,VICHADA,2020,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),7.020242914979757,%
+Total nacional,,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),37.9,%
+Total nacional,,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.5,%
+Departamento,AMAZONAS,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),13.3,%
+Departamento,AMAZONAS,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),16.7,%
+Departamento,ANTIOQUIA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),39.7,%
+Departamento,ANTIOQUIA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.8,%
+Departamento,ARAUCA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),16.0,%
+Departamento,ARAUCA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),43.2,%
+Departamento,ATLÁNTICO,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),39.1,%
+Departamento,ATLÁNTICO,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.7,%
+Departamento,BOGOTÁ D.C.,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),66.1,%
+Departamento,BOGOTÁ D.C.,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),81.5,%
+Departamento,BOLÍVAR,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),23.1,%
+Departamento,BOLÍVAR,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),46.1,%
+Departamento,BOYACÁ,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),34.1,%
+Departamento,BOYACÁ,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),64.3,%
+Departamento,CALDAS,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),40.6,%
+Departamento,CALDAS,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),66.8,%
+Departamento,CAQUETÁ,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),20.2,%
+Departamento,CAQUETÁ,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.5,%
+Departamento,CASANARE,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),29.7,%
+Departamento,CASANARE,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),53.1,%
+Departamento,CAUCA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),18.7,%
+Departamento,CAUCA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),31.7,%
+Departamento,CESAR,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),24.2,%
+Departamento,CESAR,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),44.8,%
+Departamento,CHOCÓ,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),13.5,%
+Departamento,CHOCÓ,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),14.6,%
+Departamento,CÓRDOBA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),17.8,%
+Departamento,CÓRDOBA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),30.3,%
+Departamento,CUNDINAMARCA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),40.8,%
+Departamento,CUNDINAMARCA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.8,%
+Departamento,GUAINÍA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),11.9,%
+Departamento,GUAINÍA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),24.1,%
+Departamento,GUAVIARE,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),18.2,%
+Departamento,GUAVIARE,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),35.7,%
+Departamento,HUILA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),30.5,%
+Departamento,HUILA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),51.5,%
+Departamento,LA GUAJIRA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),11.6,%
+Departamento,LA GUAJIRA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),28.6,%
+Departamento,MAGDALENA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),18.9,%
+Departamento,MAGDALENA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),48.8,%
+Departamento,META,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),30.9,%
+Departamento,META,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),63.2,%
+Departamento,NARIÑO,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),22.8,%
+Departamento,NARIÑO,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),41.9,%
+Departamento,NORTE DE SANTANDER,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),28.8,%
+Departamento,NORTE DE SANTANDER,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),63.4,%
+Departamento,PUTUMAYO,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),17.4,%
+Departamento,PUTUMAYO,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),29.1,%
+Departamento,QUINDÍO,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),42.7,%
+Departamento,QUINDÍO,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),63.0,%
+Departamento,RISARALDA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),42.3,%
+Departamento,RISARALDA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),72.8,%
+Departamento,SAN ANDRÉS,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),37.9,%
+Departamento,SAN ANDRÉS,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),41.3,%
+Departamento,SANTANDER,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),35.7,%
+Departamento,SANTANDER,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),64.1,%
+Departamento,SUCRE,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),17.7,%
+Departamento,SUCRE,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),37.5,%
+Departamento,TOLIMA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),34.1,%
+Departamento,TOLIMA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),67.0,%
+Departamento,VALLE DEL CAUCA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),41.7,%
+Departamento,VALLE DEL CAUCA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),79.0,%
+Departamento,VAUPÉS,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),9.9,%
+Departamento,VAUPÉS,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),10.6,%
+Departamento,VICHADA,2021,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),5.0,%
+Departamento,VICHADA,2021,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),4.6,%
+Total nacional,,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),35.7,%
+Total nacional,,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),65.6,%
+Departamento,AMAZONAS,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),18.4,%
+Departamento,AMAZONAS,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),41.3,%
+Departamento,ANTIOQUIA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),40.3,%
+Departamento,ANTIOQUIA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),66.9,%
+Departamento,ARAUCA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),12.9,%
+Departamento,ARAUCA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),34.3,%
+Departamento,ATLÁNTICO,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),36.9,%
+Departamento,ATLÁNTICO,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),58.9,%
+Departamento,BOGOTÁ D.C.,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),60.9,%
+Departamento,BOGOTÁ D.C.,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),82.7,%
+Departamento,BOLÍVAR,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),19.8,%
+Departamento,BOLÍVAR,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.2,%
+Departamento,BOYACÁ,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),31.6,%
+Departamento,BOYACÁ,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.6,%
+Departamento,CALDAS,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),40.5,%
+Departamento,CALDAS,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),66.9,%
+Departamento,CAQUETÁ,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),20.4,%
+Departamento,CAQUETÁ,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),62.0,%
+Departamento,CASANARE,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),23.7,%
+Departamento,CASANARE,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),71.0,%
+Departamento,CAUCA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),22.7,%
+Departamento,CAUCA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),49.0,%
+Departamento,CESAR,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),22.1,%
+Departamento,CESAR,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),64.5,%
+Departamento,CHOCÓ,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),13.5,%
+Departamento,CHOCÓ,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),28.7,%
+Departamento,CÓRDOBA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),17.0,%
+Departamento,CÓRDOBA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),47.2,%
+Departamento,CUNDINAMARCA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),38.7,%
+Departamento,CUNDINAMARCA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),66.9,%
+Departamento,GUAINÍA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),11.7,%
+Departamento,GUAINÍA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),31.5,%
+Departamento,GUAVIARE,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),24.5,%
+Departamento,GUAVIARE,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),57.6,%
+Departamento,HUILA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),25.4,%
+Departamento,HUILA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),70.8,%
+Departamento,LA GUAJIRA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),11.5,%
+Departamento,LA GUAJIRA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),30.1,%
+Departamento,MAGDALENA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),15.8,%
+Departamento,MAGDALENA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),55.1,%
+Departamento,META,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),34.2,%
+Departamento,META,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),77.0,%
+Departamento,NARIÑO,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),19.3,%
+Departamento,NARIÑO,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),54.6,%
+Departamento,NORTE DE SANTANDER,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),30.0,%
+Departamento,NORTE DE SANTANDER,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),60.5,%
+Departamento,PUTUMAYO,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),16.8,%
+Departamento,PUTUMAYO,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),38.6,%
+Departamento,QUINDÍO,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),36.8,%
+Departamento,QUINDÍO,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),63.4,%
+Departamento,RISARALDA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),32.6,%
+Departamento,RISARALDA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),73.0,%
+Departamento,SAN ANDRÉS,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),37.5,%
+Departamento,SAN ANDRÉS,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),57.6,%
+Departamento,SANTANDER,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),37.3,%
+Departamento,SANTANDER,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),65.2,%
+Departamento,SUCRE,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),15.1,%
+Departamento,SUCRE,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),46.4,%
+Departamento,TOLIMA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),30.2,%
+Departamento,TOLIMA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),76.5,%
+Departamento,VALLE DEL CAUCA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),36.7,%
+Departamento,VALLE DEL CAUCA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),73.4,%
+Departamento,VAUPÉS,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),10.7,%
+Departamento,VAUPÉS,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),26.5,%
+Departamento,VICHADA,2024,DANE ENTIC,pct_hogares_computador_tablet,Hogares con computador o tablet (ENTIC),4.6,%
+Departamento,VICHADA,2024,DANE ENTIC,pct_hogares_internet,Hogares con internet (ENTIC),15.4,%
+Total nacional,,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),44.61658122,%
+Cabecera,,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),50.95849774,%
+Centros poblados y rural disperso,,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.54547865,%
+Departamento,AMAZONAS,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.42342632,%
+Departamento,ANTIOQUIA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),43.36796202,%
+Departamento,ARAUCA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.20843426,%
+Departamento,ATLÁNTICO,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),42.5998395,%
+Departamento,BOGOTÁ D.C.,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),64.42998122,%
+Departamento,BOLÍVAR,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.84476538,%
+Departamento,BOYACÁ,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.98657697,%
+Departamento,CALDAS,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.2208849,%
+Departamento,CAQUETÁ,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.67849634,%
+Departamento,CASANARE,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.60887784,%
+Departamento,CAUCA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),37.34074488,%
+Departamento,CESAR,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),37.43831563,%
+Departamento,CÓRDOBA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.91273715,%
+Departamento,CUNDINAMARCA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.82230862,%
+Departamento,CHOCÓ,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.74533351,%
+Departamento,GUAINÍA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.93533552,%
+Departamento,GUAVIARE,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),29.73829189,%
+Departamento,HUILA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),43.03652385,%
+Departamento,LA GUAJIRA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.93302388,%
+Departamento,MAGDALENA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),40.48113109,%
+Departamento,META,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.46840439,%
+Departamento,NARIÑO,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.81935518,%
+Departamento,NORTE DE SANTANDER,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.62189678,%
+Departamento,PUTUMAYO,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.66196659,%
+Departamento,QUINDÍO,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),42.3961006,%
+Departamento,RISARALDA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),44.86903562,%
+Departamento,SAN ANDRÉS,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),50.15966207,%
+Departamento,SANTANDER,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),45.03275789,%
+Departamento,SUCRE,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.49961059,%
+Departamento,TOLIMA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.8809098,%
+Departamento,VALLE DEL CAUCA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),48.23677599,%
+Departamento,VAUPÉS,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),17.56718217,%
+Departamento,VICHADA,2018,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),19.05223034,%
+Total nacional,,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.9928741,%
+Cabecera,,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),40.753544,%
+Centros poblados y rural disperso,,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),11.9243265,%
+Departamento,AMAZONAS,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),16.4264514,%
+Departamento,ANTIOQUIA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.8757314,%
+Departamento,ARAUCA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),17.3202524,%
+Departamento,ATLÁNTICO,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.0594024,%
+Departamento,BOGOTÁ D.C.,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),54.9730148,%
+Departamento,BOLÍVAR,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.0897884,%
+Departamento,BOYACÁ,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.211925,%
+Departamento,CALDAS,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.8333724,%
+Departamento,CAQUETÁ,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),26.986021,%
+Departamento,CASANARE,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),29.8379073,%
+Departamento,CAUCA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.2581797,%
+Departamento,CESAR,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.9640917,%
+Departamento,CÓRDOBA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),18.3558553,%
+Departamento,CUNDINAMARCA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.3062743,%
+Departamento,CHOCÓ,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),13.1951481,%
+Departamento,GUAINÍA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),17.3112066,%
+Departamento,GUAVIARE,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.0542386,%
+Departamento,HUILA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.0130916,%
+Departamento,LA GUAJIRA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),16.8934417,%
+Departamento,MAGDALENA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.9204983,%
+Departamento,META,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.0494082,%
+Departamento,NARIÑO,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.8247616,%
+Departamento,NORTE DE SANTANDER,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.3411962,%
+Departamento,PUTUMAYO,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.7442367,%
+Departamento,QUINDÍO,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.1779768,%
+Departamento,RISARALDA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.3759509,%
+Departamento,SAN ANDRÉS,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),48.9095076,%
+Departamento,SANTANDER,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.1365988,%
+Departamento,SUCRE,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),19.5041497,%
+Departamento,TOLIMA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),29.899181,%
+Departamento,VALLE DEL CAUCA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),39.5323089,%
+Departamento,VAUPÉS,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),16.5539979,%
+Departamento,VICHADA,2020,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),8.26379716,%
+Total nacional,,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.04850958,%
+Cabecera,,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),40.55832256,%
+Centros poblados y rural disperso,,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),16.50573883,%
+Departamento,AMAZONAS,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.43320665,%
+Departamento,ANTIOQUIA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.56474521,%
+Departamento,ARAUCA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.57420219,%
+Departamento,ATLÁNTICO,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.50797059,%
+Departamento,BOGOTÁ D.C.,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),56.66703336,%
+Departamento,BOLÍVAR,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.79746999,%
+Departamento,BOYACÁ,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.51620161,%
+Departamento,CALDAS,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.00268274,%
+Departamento,CAQUETÁ,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),26.27443166,%
+Departamento,CASANARE,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.80687529,%
+Departamento,CAUCA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),26.47772461,%
+Departamento,CESAR,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.35427433,%
+Departamento,CÓRDOBA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.20054942,%
+Departamento,CUNDINAMARCA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),40.05676722,%
+Departamento,CHOCÓ,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),17.72656907,%
+Departamento,GUAINÍA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.33772274,%
+Departamento,GUAVIARE,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.71490983,%
+Departamento,HUILA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.9389064,%
+Departamento,LA GUAJIRA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.18677748,%
+Departamento,MAGDALENA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.46165005,%
+Departamento,META,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.41621391,%
+Departamento,NARIÑO,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.07480172,%
+Departamento,NORTE DE SANTANDER,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.81017381,%
+Departamento,PUTUMAYO,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),26.11099056,%
+Departamento,QUINDÍO,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.96575074,%
+Departamento,RISARALDA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.99989692,%
+Departamento,SAN ANDRÉS,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),39.97285335,%
+Departamento,SANTANDER,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.51648122,%
+Departamento,SUCRE,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.86135011,%
+Departamento,TOLIMA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.36920792,%
+Departamento,VALLE DEL CAUCA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.76562365,%
+Departamento,VAUPÉS,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.32740271,%
+Departamento,VICHADA,2024,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),8.13291533,%
+Total nacional,,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.0993692033,%
+Cabecera,,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),39.3444020921,%
+Centros poblados y rural disperso,,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),16.4843033158,%
+Departamento,AMAZONAS,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.2315929114,%
+Departamento,ANTIOQUIA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.738342781,%
+Departamento,ARAUCA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.6690260639,%
+Departamento,ATLÁNTICO,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.3748416321,%
+Departamento,BOGOTÁ D.C.,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),53.4496303346,%
+Departamento,BOLÍVAR,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.0576463086,%
+Departamento,BOYACÁ,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.4634367817,%
+Departamento,CALDAS,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.5030145984,%
+Departamento,CAQUETÁ,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.2103550608,%
+Departamento,CASANARE,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.4493391767,%
+Departamento,CAUCA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.2397795443,%
+Departamento,CESAR,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.3856559259,%
+Departamento,CÓRDOBA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.7494058151,%
+Departamento,CUNDINAMARCA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.1271556707,%
+Departamento,CHOCÓ,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),14.1422503058,%
+Departamento,GUAINÍA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.7512579887,%
+Departamento,GUAVIARE,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.0489503291,%
+Departamento,HUILA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.3249918841,%
+Departamento,LA GUAJIRA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.7892743092,%
+Departamento,MAGDALENA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.7307423217,%
+Departamento,META,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.1823770715,%
+Departamento,NARIÑO,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.4498154123,%
+Departamento,NORTE DE SANTANDER,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.8478948059,%
+Departamento,PUTUMAYO,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.78743495,%
+Departamento,QUINDÍO,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.294441636,%
+Departamento,RISARALDA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.7633473364,%
+Departamento,SAN ANDRÉS,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.0657669556,%
+Departamento,SANTANDER,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.2276718086,%
+Departamento,SUCRE,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.828627863,%
+Departamento,TOLIMA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),29.6012899682,%
+Departamento,VALLE DEL CAUCA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.6376446926,%
+Departamento,VAUPÉS,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.4569582429,%
+Departamento,VICHADA,2023,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),5.8337048262,%
+Total nacional,,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),39.60753472,%
+Cabecera,,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),45.4035764,%
+Centros poblados y rural disperso,,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.97982082,%
+Departamento,AMAZONAS,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),15.53633593,%
+Departamento,ANTIOQUIA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.70389581,%
+Departamento,ARAUCA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.58663315,%
+Departamento,ATLÁNTICO,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.25430231,%
+Departamento,BOGOTÁ D.C.,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),54.80315806,%
+Departamento,BOLÍVAR,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.51473691,%
+Departamento,BOYACÁ,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.18524612,%
+Departamento,CALDAS,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.90952433,%
+Departamento,CAQUETÁ,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.93780205,%
+Departamento,CASANARE,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.98521556,%
+Departamento,CAUCA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.24853568,%
+Departamento,CESAR,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.40214181,%
+Departamento,CÓRDOBA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.61239009,%
+Departamento,CUNDINAMARCA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.53747849,%
+Departamento,CHOCÓ,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.65638218,%
+Departamento,GUAINÍA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.41661111,%
+Departamento,GUAVIARE,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.90216438,%
+Departamento,HUILA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.27518969,%
+Departamento,LA GUAJIRA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.62577782,%
+Departamento,MAGDALENA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.65898324,%
+Departamento,META,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),37.31125744,%
+Departamento,NARIÑO,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.97130282,%
+Departamento,NORTE DE SANTANDER,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.14794228,%
+Departamento,PUTUMAYO,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.06407467,%
+Departamento,QUINDÍO,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.77247018,%
+Departamento,RISARALDA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),39.51921814,%
+Departamento,SAN ANDRÉS,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),43.22776898,%
+Departamento,SANTANDER,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),39.93213072,%
+Departamento,SUCRE,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.0150058,%
+Departamento,TOLIMA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),38.4755097,%
+Departamento,VALLE DEL CAUCA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),41.51083896,%
+Departamento,VAUPÉS,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),18.24702779,%
+Departamento,VICHADA,2019,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),10.81997185,%
+Total nacional,,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.9346402,%
+Cabecera,,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),39.5090013,%
+Centros poblados y rural disperso,,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),15.3524424,%
+Departamento,AMAZONAS,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.2159195,%
+Departamento,ANTIOQUIA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.776678,%
+Departamento,ARAUCA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),19.0988864,%
+Departamento,ATLÁNTICO,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),34.8631186,%
+Departamento,BOGOTÁ D.C.,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),52.5033423,%
+Departamento,BOLÍVAR,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),29.9349278,%
+Departamento,BOYACÁ,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.4938524,%
+Departamento,CALDAS,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.1849811,%
+Departamento,CAQUETÁ,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.5223489,%
+Departamento,CASANARE,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.0391866,%
+Departamento,CAUCA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.9935225,%
+Departamento,CESAR,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.144141,%
+Departamento,CÓRDOBA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.9664465,%
+Departamento,CUNDINAMARCA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),37.558199,%
+Departamento,CHOCÓ,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),19.6544411,%
+Departamento,GUAINÍA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.1792554,%
+Departamento,GUAVIARE,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.4342925,%
+Departamento,HUILA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.2140848,%
+Departamento,LA GUAJIRA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.2993836,%
+Departamento,MAGDALENA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.5967582,%
+Departamento,META,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),30.0323928,%
+Departamento,NARIÑO,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),26.5050268,%
+Departamento,NORTE DE SANTANDER,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.1528924,%
+Departamento,PUTUMAYO,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.9140103,%
+Departamento,QUINDÍO,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.0862056,%
+Departamento,RISARALDA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.8473481,%
+Departamento,SAN ANDRÉS,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.6895143,%
+Departamento,SANTANDER,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.8420648,%
+Departamento,SUCRE,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),23.2626857,%
+Departamento,TOLIMA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.2194585,%
+Departamento,VALLE DEL CAUCA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.2284648,%
+Departamento,VAUPÉS,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),15.673453,%
+Departamento,VICHADA,2022,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),5.00968239,%
+Total nacional,,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.7908982,%
+Cabecera,,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),37.9181078,%
+Centros poblados y rural disperso,,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),11.5266926,%
+Departamento,AMAZONAS,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),17.4402028,%
+Departamento,ANTIOQUIA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.3701432,%
+Departamento,ARAUCA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),18.2759653,%
+Departamento,ATLÁNTICO,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.5352605,%
+Departamento,BOGOTÁ D.C.,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),56.7768191,%
+Departamento,BOLÍVAR,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.0729773,%
+Departamento,BOYACÁ,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),31.4459433,%
+Departamento,CALDAS,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.2274864,%
+Departamento,CAQUETÁ,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),18.8052099,%
+Departamento,CASANARE,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),28.3277376,%
+Departamento,CAUCA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.5130854,%
+Departamento,CESAR,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),20.1183632,%
+Departamento,CÓRDOBA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),19.7381891,%
+Departamento,CUNDINAMARCA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),35.5140324,%
+Departamento,CHOCÓ,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.3829279,%
+Departamento,GUAINÍA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),17.0694853,%
+Departamento,GUAVIARE,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),19.1858952,%
+Departamento,HUILA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),24.4111384,%
+Departamento,LA GUAJIRA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),14.7689752,%
+Departamento,MAGDALENA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),13.9463952,%
+Departamento,META,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),25.9683425,%
+Departamento,NARIÑO,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.388318,%
+Departamento,NORTE DE SANTANDER,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),22.5951766,%
+Departamento,PUTUMAYO,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),21.5513343,%
+Departamento,QUINDÍO,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),32.7255491,%
+Departamento,RISARALDA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),36.6991293,%
+Departamento,SAN ANDRÉS,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),49.2407568,%
+Departamento,SANTANDER,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.6025671,%
+Departamento,SUCRE,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),15.8275718,%
+Departamento,TOLIMA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),27.558208,%
+Departamento,VALLE DEL CAUCA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),33.5216576,%
+Departamento,VAUPÉS,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),17.1369897,%
+Departamento,VICHADA,2021,DANE ECV,pct_personas_usan_computador,Personas que usan computador (ECV),7.00471488,%
+Total nacional,,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),64.01084142,%
+Cabecera,,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),72.63078541,%
+Centros poblados y rural disperso,,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),36.73016383,%
+Departamento,AMAZONAS,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),22.97923947,%
+Departamento,ANTIOQUIA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),66.37964675,%
+Departamento,ARAUCA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),49.15761148,%
+Departamento,ATLÁNTICO,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),66.65356964,%
+Departamento,BOGOTÁ D.C.,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),80.86184402,%
+Departamento,BOLÍVAR,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),57.02216418,%
+Departamento,BOYACÁ,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),58.14638338,%
+Departamento,CALDAS,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),60.97636308,%
+Departamento,CAQUETÁ,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),44.1280859,%
+Departamento,CASANARE,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),64.58132698,%
+Departamento,CAUCA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),49.54979764,%
+Departamento,CESAR,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),60.65606393,%
+Departamento,CÓRDOBA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),50.46842474,%
+Departamento,CUNDINAMARCA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.75700292,%
+Departamento,CHOCÓ,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),40.8632145,%
+Departamento,GUAINÍA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),27.58257976,%
+Departamento,GUAVIARE,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),40.90975823,%
+Departamento,HUILA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),53.45921824,%
+Departamento,LA GUAJIRA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),35.97511732,%
+Departamento,MAGDALENA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),56.12384738,%
+Departamento,META,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.71224954,%
+Departamento,NARIÑO,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),47.64733224,%
+Departamento,NORTE DE SANTANDER,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),55.59229462,%
+Departamento,PUTUMAYO,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),41.85129454,%
+Departamento,QUINDÍO,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),68.73553911,%
+Departamento,RISARALDA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.14116412,%
+Departamento,SAN ANDRÉS,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.05978747,%
+Departamento,SANTANDER,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.59296781,%
+Departamento,SUCRE,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),48.24894507,%
+Departamento,TOLIMA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),62.14827296,%
+Departamento,VALLE DEL CAUCA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.58854819,%
+Departamento,VAUPÉS,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),16.15733135,%
+Departamento,VICHADA,2018,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),22.00419509,%
+Total nacional,,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.0283755,%
+Cabecera,,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),79.8304108,%
+Centros poblados y rural disperso,,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),50.532354,%
+Departamento,AMAZONAS,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),34.8089926,%
+Departamento,ANTIOQUIA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),74.9863829,%
+Departamento,ARAUCA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),66.2720233,%
+Departamento,ATLÁNTICO,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),76.1430024,%
+Departamento,BOGOTÁ D.C.,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),85.8762377,%
+Departamento,BOLÍVAR,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.4141162,%
+Departamento,BOYACÁ,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),68.3200412,%
+Departamento,CALDAS,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.2185815,%
+Departamento,CAQUETÁ,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),64.2493928,%
+Departamento,CASANARE,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),68.7497152,%
+Departamento,CAUCA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),61.1613336,%
+Departamento,CESAR,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),64.3415339,%
+Departamento,CÓRDOBA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),57.697994,%
+Departamento,CUNDINAMARCA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),79.7694432,%
+Departamento,CHOCÓ,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),45.1679061,%
+Departamento,GUAINÍA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),33.1987501,%
+Departamento,GUAVIARE,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),58.921851,%
+Departamento,HUILA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.4165745,%
+Departamento,LA GUAJIRA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),44.0377867,%
+Departamento,MAGDALENA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),62.9691927,%
+Departamento,META,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),79.2852261,%
+Departamento,NARIÑO,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),60.8128514,%
+Departamento,NORTE DE SANTANDER,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),70.2180955,%
+Departamento,PUTUMAYO,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),52.9133755,%
+Departamento,QUINDÍO,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),75.6384045,%
+Departamento,RISARALDA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),79.7517193,%
+Departamento,SAN ANDRÉS,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),86.6646508,%
+Departamento,SANTANDER,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),74.7736594,%
+Departamento,SUCRE,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),55.0869663,%
+Departamento,TOLIMA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),70.2005529,%
+Departamento,VALLE DEL CAUCA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),82.8515314,%
+Departamento,VAUPÉS,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),21.3744151,%
+Departamento,VICHADA,2021,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),17.2612123,%
+Total nacional,,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),72.7963768,%
+Cabecera,,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),78.8644645,%
+Centros poblados y rural disperso,,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),52.5683358,%
+Departamento,AMAZONAS,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),42.7149972,%
+Departamento,ANTIOQUIA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.6493578,%
+Departamento,ARAUCA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),62.0100212,%
+Departamento,ATLÁNTICO,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),75.1654165,%
+Departamento,BOGOTÁ D.C.,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),84.3137489,%
+Departamento,BOLÍVAR,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.7604504,%
+Departamento,BOYACÁ,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),66.2223564,%
+Departamento,CALDAS,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),75.039188,%
+Departamento,CAQUETÁ,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),63.4008772,%
+Departamento,CASANARE,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.6863583,%
+Departamento,CAUCA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),61.5490721,%
+Departamento,CESAR,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),68.9189216,%
+Departamento,CÓRDOBA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),54.7984506,%
+Departamento,CUNDINAMARCA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.691097,%
+Departamento,CHOCÓ,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),49.816456,%
+Departamento,GUAINÍA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),38.2844724,%
+Departamento,GUAVIARE,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),54.7085051,%
+Departamento,HUILA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.2328294,%
+Departamento,LA GUAJIRA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),48.8247787,%
+Departamento,MAGDALENA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),63.2874458,%
+Departamento,META,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),82.5559561,%
+Departamento,NARIÑO,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),61.7273642,%
+Departamento,NORTE DE SANTANDER,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),72.5890058,%
+Departamento,PUTUMAYO,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),51.4937312,%
+Departamento,QUINDÍO,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),76.7704313,%
+Departamento,RISARALDA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),72.9564744,%
+Departamento,SAN ANDRÉS,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),70.7280472,%
+Departamento,SANTANDER,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),76.3456556,%
+Departamento,SUCRE,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),58.6966603,%
+Departamento,TOLIMA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.9826498,%
+Departamento,VALLE DEL CAUCA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),81.2864048,%
+Departamento,VAUPÉS,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),21.3714511,%
+Departamento,VICHADA,2022,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),12.7486424,%
+Total nacional,,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),79.34543299,%
+Cabecera,,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),84.58875131,%
+Centros poblados y rural disperso,,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),61.6995256,%
+Departamento,AMAZONAS,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),56.95818361,%
+Departamento,ANTIOQUIA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),81.6263591,%
+Departamento,ARAUCA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.41975927,%
+Departamento,ATLÁNTICO,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),85.06233246,%
+Departamento,BOGOTÁ D.C.,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),88.41843305,%
+Departamento,BOLÍVAR,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.76810276,%
+Departamento,BOYACÁ,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.72319443,%
+Departamento,CALDAS,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),78.35089615,%
+Departamento,CAQUETÁ,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),78.63541827,%
+Departamento,CASANARE,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),79.19402821,%
+Departamento,CAUCA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),72.22756959,%
+Departamento,CESAR,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),79.88952328,%
+Departamento,CÓRDOBA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.93271466,%
+Departamento,CUNDINAMARCA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),83.50675745,%
+Departamento,CHOCÓ,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),50.39205306,%
+Departamento,GUAINÍA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),48.40860594,%
+Departamento,GUAVIARE,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),75.63506269,%
+Departamento,HUILA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),83.03456282,%
+Departamento,LA GUAJIRA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),53.44035161,%
+Departamento,MAGDALENA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),70.77288179,%
+Departamento,META,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),83.31414662,%
+Departamento,NARIÑO,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.90813233,%
+Departamento,NORTE DE SANTANDER,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.83899925,%
+Departamento,PUTUMAYO,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),62.3080865,%
+Departamento,QUINDÍO,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.22259803,%
+Departamento,RISARALDA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.91403485,%
+Departamento,SAN ANDRÉS,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),84.58475532,%
+Departamento,SANTANDER,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),80.09426407,%
+Departamento,SUCRE,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.23410975,%
+Departamento,TOLIMA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),78.4872058,%
+Departamento,VALLE DEL CAUCA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),85.11789608,%
+Departamento,VAUPÉS,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),42.34427652,%
+Departamento,VICHADA,2024,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),18.8064793,%
+Total nacional,,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.01836011,%
+Cabecera,,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.4992063,%
+Centros poblados y rural disperso,,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),37.76203843,%
+Departamento,AMAZONAS,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),23.38460217,%
+Departamento,ANTIOQUIA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),68.705689,%
+Departamento,ARAUCA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),48.58324205,%
+Departamento,ATLÁNTICO,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.99955406,%
+Departamento,BOGOTÁ D.C.,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),83.31642969,%
+Departamento,BOLÍVAR,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),59.2518891,%
+Departamento,BOYACÁ,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),50.31063279,%
+Departamento,CALDAS,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),62.22866287,%
+Departamento,CAQUETÁ,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),45.8472538,%
+Departamento,CASANARE,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),59.66117568,%
+Departamento,CAUCA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),51.22201174,%
+Departamento,CESAR,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),54.27552002,%
+Departamento,CÓRDOBA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),48.2974824,%
+Departamento,CUNDINAMARCA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.9148164,%
+Departamento,CHOCÓ,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),38.61891958,%
+Departamento,GUAINÍA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),28.26168657,%
+Departamento,GUAVIARE,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),42.49821041,%
+Departamento,HUILA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),52.29121636,%
+Departamento,LA GUAJIRA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),41.42076028,%
+Departamento,MAGDALENA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),55.30123667,%
+Departamento,META,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),70.40144459,%
+Departamento,NARIÑO,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),50.87481467,%
+Departamento,NORTE DE SANTANDER,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),62.99411631,%
+Departamento,PUTUMAYO,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),39.01579692,%
+Departamento,QUINDÍO,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.6373518,%
+Departamento,RISARALDA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.34021493,%
+Departamento,SAN ANDRÉS,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),58.09044328,%
+Departamento,SANTANDER,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.24893936,%
+Departamento,SUCRE,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),47.71803661,%
+Departamento,TOLIMA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),62.34646311,%
+Departamento,VALLE DEL CAUCA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.93817881,%
+Departamento,VAUPÉS,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),19.51137506,%
+Departamento,VICHADA,2019,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),18.64214885,%
+Total nacional,,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),69.7950049,%
+Cabecera,,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.9715683,%
+Centros poblados y rural disperso,,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),43.1046201,%
+Departamento,AMAZONAS,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),30.8641575,%
+Departamento,ANTIOQUIA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.7213438,%
+Departamento,ARAUCA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),60.8970683,%
+Departamento,ATLÁNTICO,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),76.2091188,%
+Departamento,BOGOTÁ D.C.,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),87.1044084,%
+Departamento,BOLÍVAR,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),57.4251338,%
+Departamento,BOYACÁ,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),63.0965085,%
+Departamento,CALDAS,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),70.6543425,%
+Departamento,CAQUETÁ,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),58.3711758,%
+Departamento,CASANARE,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),68.2861838,%
+Departamento,CAUCA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),54.5432204,%
+Departamento,CESAR,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.9901077,%
+Departamento,CÓRDOBA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),47.8048669,%
+Departamento,CUNDINAMARCA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.1883961,%
+Departamento,CHOCÓ,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),41.009819,%
+Departamento,GUAINÍA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),29.4813092,%
+Departamento,GUAVIARE,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),51.6470298,%
+Departamento,HUILA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.37008,%
+Departamento,LA GUAJIRA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),40.6109381,%
+Departamento,MAGDALENA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),56.5391735,%
+Departamento,META,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),76.9094654,%
+Departamento,NARIÑO,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),53.0052049,%
+Departamento,NORTE DE SANTANDER,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.9367573,%
+Departamento,PUTUMAYO,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),44.4581638,%
+Departamento,QUINDÍO,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.0759575,%
+Departamento,RISARALDA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.8743686,%
+Departamento,SAN ANDRÉS,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.3384541,%
+Departamento,SANTANDER,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),73.6880933,%
+Departamento,SUCRE,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),48.4243013,%
+Departamento,TOLIMA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.9958558,%
+Departamento,VALLE DEL CAUCA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),80.0636969,%
+Departamento,VAUPÉS,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),19.8563412,%
+Departamento,VICHADA,2020,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),18.0192205,%
+Total nacional,,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.3370035908,%
+Cabecera,,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),82.6177517981,%
+Centros poblados y rural disperso,,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),59.6019903736,%
+Departamento,AMAZONAS,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),39.3036513414,%
+Departamento,ANTIOQUIA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),80.8782116594,%
+Departamento,ARAUCA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),66.040881405,%
+Departamento,ATLÁNTICO,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),80.6137863572,%
+Departamento,BOGOTÁ D.C.,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),85.8607403226,%
+Departamento,BOLÍVAR,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),69.1872042691,%
+Departamento,BOYACÁ,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.9022639831,%
+Departamento,CALDAS,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),76.6184738152,%
+Departamento,CAQUETÁ,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),72.3047914296,%
+Departamento,CASANARE,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),75.7796840487,%
+Departamento,CAUCA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.9206002121,%
+Departamento,CESAR,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),74.988936883,%
+Departamento,CÓRDOBA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),67.4921893443,%
+Departamento,CUNDINAMARCA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),83.5268142345,%
+Departamento,CHOCÓ,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),43.4050074911,%
+Departamento,GUAINÍA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),53.6263001668,%
+Departamento,GUAVIARE,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),71.8124124721,%
+Departamento,HUILA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),77.5387677785,%
+Departamento,LA GUAJIRA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),52.6130060031,%
+Departamento,MAGDALENA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),72.1006144082,%
+Departamento,META,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),86.7130228743,%
+Departamento,NARIÑO,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),65.9896299631,%
+Departamento,NORTE DE SANTANDER,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),74.3879857907,%
+Departamento,PUTUMAYO,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),59.3897842401,%
+Departamento,QUINDÍO,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),80.6245654624,%
+Departamento,RISARALDA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),78.5428726591,%
+Departamento,SAN ANDRÉS,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),68.8006878451,%
+Departamento,SANTANDER,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),80.8982110241,%
+Departamento,SUCRE,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),66.7555871269,%
+Departamento,TOLIMA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),76.1554632823,%
+Departamento,VALLE DEL CAUCA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),84.6739333624,%
+Departamento,VAUPÉS,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),34.1064296402,%
+Departamento,VICHADA,2023,DANE ECV,pct_personas_usan_internet,Personas que usan internet (ECV),14.4558712227,%
+Total nacional,,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),51.9496389,%
+Cabecera,,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),61.6216454,%
+Centros poblados y rural disperso,,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),20.6605055,%
+Departamento,AMAZONAS,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),10.0121389,%
+Departamento,ANTIOQUIA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),59.0424749,%
+Departamento,ARAUCA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),25.777475,%
+Departamento,ATLÁNTICO,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),50.1262014,%
+Departamento,BOGOTÁ D.C.,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),74.9199029,%
+Departamento,BOLÍVAR,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.9085163,%
+Departamento,BOYACÁ,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),35.4611373,%
+Departamento,CALDAS,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),46.3196063,%
+Departamento,CAQUETÁ,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),38.7008668,%
+Departamento,CASANARE,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),39.3288675,%
+Departamento,CAUCA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.8354636,%
+Departamento,CESAR,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),35.6727641,%
+Departamento,CÓRDOBA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),28.7404346,%
+Departamento,CUNDINAMARCA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),48.6601468,%
+Departamento,CHOCÓ,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),16.6373707,%
+Departamento,GUAINÍA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),16.0654874,%
+Departamento,GUAVIARE,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),24.6452387,%
+Departamento,HUILA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),36.1247671,%
+Departamento,LA GUAJIRA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),20.9471568,%
+Departamento,MAGDALENA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),36.8603021,%
+Departamento,META,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),55.1631406,%
+Departamento,NARIÑO,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),36.8199459,%
+Departamento,NORTE DE SANTANDER,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),45.1208166,%
+Departamento,PUTUMAYO,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),18.6992047,%
+Departamento,QUINDÍO,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.8814908,%
+Departamento,RISARALDA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.6234349,%
+Departamento,SAN ANDRÉS,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),19.0212123,%
+Departamento,SANTANDER,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),59.9646147,%
+Departamento,SUCRE,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),23.0567194,%
+Departamento,TOLIMA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),51.0227341,%
+Departamento,VALLE DEL CAUCA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),69.3966283,%
+Departamento,VAUPÉS,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),1.60491299,%
+Departamento,VICHADA,2019,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),5.16086686,%
+Total nacional,,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.5472229,%
+Cabecera,,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),69.9884172,%
+Centros poblados y rural disperso,,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),28.7541271,%
+Departamento,AMAZONAS,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),16.6741608,%
+Departamento,ANTIOQUIA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.7619206,%
+Departamento,ARAUCA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),43.167855,%
+Departamento,ATLÁNTICO,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.7064751,%
+Departamento,BOGOTÁ D.C.,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),81.5248913,%
+Departamento,BOLÍVAR,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),46.0817431,%
+Departamento,BOYACÁ,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),64.2675801,%
+Departamento,CALDAS,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.7848955,%
+Departamento,CAQUETÁ,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.5448164,%
+Departamento,CASANARE,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),53.1043242,%
+Departamento,CAUCA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),31.6641578,%
+Departamento,CESAR,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),44.7815545,%
+Departamento,CÓRDOBA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.2660297,%
+Departamento,CUNDINAMARCA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.8370468,%
+Departamento,CHOCÓ,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),14.6243329,%
+Departamento,GUAINÍA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),24.1364638,%
+Departamento,GUAVIARE,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),35.7275708,%
+Departamento,HUILA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),51.5197885,%
+Departamento,LA GUAJIRA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),28.6162482,%
+Departamento,MAGDALENA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),48.7969292,%
+Departamento,META,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.1897836,%
+Departamento,NARIÑO,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),41.8599293,%
+Departamento,NORTE DE SANTANDER,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.4386195,%
+Departamento,PUTUMAYO,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),29.1141382,%
+Departamento,QUINDÍO,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.020566,%
+Departamento,RISARALDA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),72.7596293,%
+Departamento,SAN ANDRÉS,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),41.3276199,%
+Departamento,SANTANDER,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),64.0547147,%
+Departamento,SUCRE,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),37.4688884,%
+Departamento,TOLIMA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),67.0259855,%
+Departamento,VALLE DEL CAUCA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),79.014032,%
+Departamento,VAUPÉS,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),10.5971671,%
+Departamento,VICHADA,2021,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),4.5680548,%
+Total nacional,,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),59.4655787,%
+Cabecera,,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),67.4502448,%
+Centros poblados y rural disperso,,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),32.2175427,%
+Departamento,AMAZONAS,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),37.5600341,%
+Departamento,ANTIOQUIA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.6999248,%
+Departamento,ARAUCA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),41.6839673,%
+Departamento,ATLÁNTICO,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),53.3106463,%
+Departamento,BOGOTÁ D.C.,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),79.4307868,%
+Departamento,BOLÍVAR,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),48.2566764,%
+Departamento,BOYACÁ,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),54.1038322,%
+Departamento,CALDAS,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),62.558364,%
+Departamento,CAQUETÁ,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),50.8590467,%
+Departamento,CASANARE,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.1814052,%
+Departamento,CAUCA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),32.1171243,%
+Departamento,CESAR,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),51.8524769,%
+Departamento,CÓRDOBA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),26.8649159,%
+Departamento,CUNDINAMARCA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),64.3155793,%
+Departamento,CHOCÓ,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),19.9971966,%
+Departamento,GUAINÍA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),18.8697404,%
+Departamento,GUAVIARE,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.2278029,%
+Departamento,HUILA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),56.0353633,%
+Departamento,LA GUAJIRA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),28.3040485,%
+Departamento,MAGDALENA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),49.7211823,%
+Departamento,META,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.5168842,%
+Departamento,NARIÑO,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),53.0300065,%
+Departamento,NORTE DE SANTANDER,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),56.1180823,%
+Departamento,PUTUMAYO,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),38.692546,%
+Departamento,QUINDÍO,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),69.7768368,%
+Departamento,RISARALDA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.6644654,%
+Departamento,SAN ANDRÉS,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),49.046425,%
+Departamento,SANTANDER,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),64.610438,%
+Departamento,SUCRE,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),42.4200467,%
+Departamento,TOLIMA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),56.5170466,%
+Departamento,VALLE DEL CAUCA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),73.0305545,%
+Departamento,VAUPÉS,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),4.07135148,%
+Departamento,VICHADA,2022,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),10.1642134,%
+Total nacional,,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),52.2596921,%
+Cabecera,,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.2042179,%
+Centros poblados y rural disperso,,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),17.1477603,%
+Departamento,AMAZONAS,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),5.36332665,%
+Departamento,ANTIOQUIA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),55.4470239,%
+Departamento,ARAUCA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),20.0235455,%
+Departamento,ATLÁNTICO,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),54.4074847,%
+Departamento,BOGOTÁ D.C.,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),76.2464868,%
+Departamento,BOLÍVAR,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),28.6082276,%
+Departamento,BOYACÁ,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),47.4990354,%
+Departamento,CALDAS,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),46.6920205,%
+Departamento,CAQUETÁ,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),33.9492554,%
+Departamento,CASANARE,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),45.3810284,%
+Departamento,CAUCA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),29.6636497,%
+Departamento,CESAR,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),39.8404215,%
+Departamento,CÓRDOBA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),22.5619684,%
+Departamento,CUNDINAMARCA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),51.46756,%
+Departamento,CHOCÓ,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),14.4254757,%
+Departamento,GUAINÍA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),11.8750668,%
+Departamento,GUAVIARE,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),22.8499726,%
+Departamento,HUILA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),42.1940384,%
+Departamento,LA GUAJIRA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),20.290828,%
+Departamento,MAGDALENA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),33.8106898,%
+Departamento,META,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),54.0056959,%
+Departamento,NARIÑO,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),36.5932591,%
+Departamento,NORTE DE SANTANDER,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),43.3953339,%
+Departamento,PUTUMAYO,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),16.6234882,%
+Departamento,QUINDÍO,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.9234473,%
+Departamento,RISARALDA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),61.0557581,%
+Departamento,SAN ANDRÉS,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),41.0892085,%
+Departamento,SANTANDER,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.4707977,%
+Departamento,SUCRE,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.5658448,%
+Departamento,TOLIMA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),52.9959746,%
+Departamento,VALLE DEL CAUCA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),67.7178474,%
+Departamento,VAUPÉS,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),0.9622215,%
+Departamento,VICHADA,2018,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),4.66003209,%
+Total nacional,,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),56.5262432,%
+Cabecera,,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.5827371,%
+Centros poblados y rural disperso,,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),23.8688228,%
+Departamento,AMAZONAS,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),15.5945334,%
+Departamento,ANTIOQUIA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.9664737,%
+Departamento,ARAUCA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),36.0128503,%
+Departamento,ATLÁNTICO,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),58.6280483,%
+Departamento,BOGOTÁ D.C.,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),77.987176,%
+Departamento,BOLÍVAR,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.6701272,%
+Departamento,BOYACÁ,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),59.5432511,%
+Departamento,CALDAS,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.5759269,%
+Departamento,CAQUETÁ,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),42.464858,%
+Departamento,CASANARE,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),54.8311765,%
+Departamento,CAUCA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),33.7559286,%
+Departamento,CESAR,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),46.4576064,%
+Departamento,CÓRDOBA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.2474429,%
+Departamento,CUNDINAMARCA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.1200901,%
+Departamento,CHOCÓ,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),13.2248401,%
+Departamento,GUAINÍA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),18.9403463,%
+Departamento,GUAVIARE,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.193614,%
+Departamento,HUILA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),44.2401448,%
+Departamento,LA GUAJIRA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),21.4557296,%
+Departamento,MAGDALENA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),38.3019293,%
+Departamento,META,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),55.5211385,%
+Departamento,NARIÑO,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),40.6159903,%
+Departamento,NORTE DE SANTANDER,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.3154807,%
+Departamento,PUTUMAYO,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.6232874,%
+Departamento,QUINDÍO,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.4401744,%
+Departamento,RISARALDA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.4937337,%
+Departamento,SAN ANDRÉS,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),32.4681131,%
+Departamento,SANTANDER,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),62.9316321,%
+Departamento,SUCRE,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),26.1199729,%
+Departamento,TOLIMA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),62.1364434,%
+Departamento,VALLE DEL CAUCA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),76.0931168,%
+Departamento,VAUPÉS,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),3.12432629,%
+Departamento,VICHADA,2020,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),7.01897573,%
+Total nacional,,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.935914244,%
+Cabecera,,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),70.4757331902,%
+Centros poblados y rural disperso,,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),41.445253665,%
+Departamento,AMAZONAS,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),29.079445257,%
+Departamento,ANTIOQUIA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),70.6102561299,%
+Departamento,ARAUCA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),36.7386333713,%
+Departamento,ATLÁNTICO,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),59.0747055507,%
+Departamento,BOGOTÁ D.C.,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),77.3828002527,%
+Departamento,BOLÍVAR,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),48.7697798847,%
+Departamento,BOYACÁ,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),61.1218764278,%
+Departamento,CALDAS,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.279301009,%
+Departamento,CAQUETÁ,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),67.9298290933,%
+Departamento,CASANARE,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),48.5918709,%
+Departamento,CAUCA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),44.9163731829,%
+Departamento,CESAR,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),58.363057608,%
+Departamento,CÓRDOBA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),44.7305699265,%
+Departamento,CUNDINAMARCA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),68.0275060243,%
+Departamento,CHOCÓ,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),18.0122097342,%
+Departamento,GUAINÍA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),46.5807597366,%
+Departamento,GUAVIARE,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),44.9973620299,%
+Departamento,HUILA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),67.747931538,%
+Departamento,LA GUAJIRA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),29.3570609408,%
+Departamento,MAGDALENA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.511121695,%
+Departamento,META,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),75.2997381464,%
+Departamento,NARIÑO,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),54.1974179338,%
+Departamento,NORTE DE SANTANDER,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),55.1120268938,%
+Departamento,PUTUMAYO,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),50.5974223429,%
+Departamento,QUINDÍO,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),70.9781698227,%
+Departamento,RISARALDA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.4084585917,%
+Departamento,SAN ANDRÉS,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),40.6064498113,%
+Departamento,SANTANDER,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.4495104555,%
+Departamento,SUCRE,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),42.2157205698,%
+Departamento,TOLIMA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),62.7936531481,%
+Departamento,VALLE DEL CAUCA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),77.7264504241,%
+Departamento,VAUPÉS,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),10.0734900192,%
+Departamento,VICHADA,2023,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),9.262845047,%
+Total nacional,,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),65.6487868262,%
+Cabecera,,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),72.503869541,%
+Centros poblados y rural disperso,,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),41.9358099996,%
+Departamento,AMAZONAS,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),41.3134555186,%
+Departamento,ANTIOQUIA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.9133307107,%
+Departamento,ARAUCA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),34.2699627905,%
+Departamento,ATLÁNTICO,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),58.8573193776,%
+Departamento,BOGOTÁ D.C.,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),82.6764556865,%
+Departamento,BOLÍVAR,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.2168583692,%
+Departamento,BOYACÁ,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.5883647143,%
+Departamento,CALDAS,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.9282879107,%
+Departamento,CAQUETÁ,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),62.046295907,%
+Departamento,CASANARE,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),70.9788412396,%
+Departamento,CAUCA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),49.0417400524,%
+Departamento,CESAR,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),64.4501801698,%
+Departamento,CÓRDOBA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),47.2141039077,%
+Departamento,CUNDINAMARCA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),66.9237362371,%
+Departamento,CHOCÓ,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),28.7342421581,%
+Departamento,GUAINÍA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),31.4535700639,%
+Departamento,GUAVIARE,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.6061757543,%
+Departamento,HUILA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),70.8447329095,%
+Departamento,LA GUAJIRA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),30.1119587631,%
+Departamento,MAGDALENA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),55.1045641622,%
+Departamento,META,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),77.0297010125,%
+Departamento,NARIÑO,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),54.6421459447,%
+Departamento,NORTE DE SANTANDER,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),60.5425476673,%
+Departamento,PUTUMAYO,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),38.6461569002,%
+Departamento,QUINDÍO,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),63.4136006772,%
+Departamento,RISARALDA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),73.0051370042,%
+Departamento,SAN ANDRÉS,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),57.597480927,%
+Departamento,SANTANDER,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),65.2477279831,%
+Departamento,SUCRE,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),46.4422354552,%
+Departamento,TOLIMA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),76.4671530341,%
+Departamento,VALLE DEL CAUCA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),73.4188891855,%
+Departamento,VAUPÉS,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),26.5486467974,%
+Departamento,VICHADA,2024,DANE ECV,pct_hogares_internet_v2,Hogares con internet (ECV),15.4164432374,%

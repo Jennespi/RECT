@@ -1,18 +1,18 @@
 # Datos para Power BI — Etapa 4
 
 Modelo en estrella generado desde `datos/procesados/` (Etapas 1 a 3) con
-`scripts/preparar_datos_pbi.py`. Los CSV de `powerbi/datos/` se conectan
-directamente desde Power BI (Obtener datos → Texto o CSV, uno por archivo).
+`scripts/preparar_datos_pbi.py`. Los CSV de esta carpeta (`datos/powerbi/`) se
+conectan directamente desde Power BI (Obtener datos → Texto o CSV, uno por archivo).
 
 ## Regenerar los datos
 
 ```
 pip install -r scripts/requirements.txt
-python scripts/preparar_datos_pbi.py datos/procesados powerbi/datos
+python scripts/preparar_datos_pbi.py datos/procesados datos/powerbi
 ```
 
 Entrada: los 4 archivos de `datos/procesados/`. Salida: 6 CSV en UTF-8 con BOM en
-`powerbi/datos/`. El script imprime el número de filas de cada archivo al terminar.
+`datos/powerbi/`. El script imprime el número de filas de cada archivo al terminar.
 
 ## Tablas generadas
 
@@ -66,7 +66,7 @@ dimensión por `anio_otorgamiento`, pero sí quedan incluidos por `departamento`
 
 ## Siguiente paso
 
-Abrir Power BI Desktop, conectar los 6 CSV de `powerbi/datos/`, armar las
+Abrir Power BI Desktop, conectar los 6 CSV de `datos/powerbi/`, armar las
 relaciones de la tabla de arriba y construir los cuatro tableros de análisis.
 Cuando el informe esté publicado, la URL se configura en `app.py`, en
 `ETAPA_4["powerbi_embed_url"]` (o `powerbi_link_url`).
