@@ -73,6 +73,30 @@ ETAPA_3 = {
     ],
 }
 
+# Etapa 4 — Conocimiento evidente
+ETAPA_4 = {
+    "codigo": "R4",
+    "numero": 4,
+    "titulo": "Conocimiento evidente — Análisis exploratorio con Power BI",
+    "subtitulo": "Conocimiento evidente",
+    "endpoint": "etapa4",
+    "objetivo": (
+        "Realizar un análisis exploratorio del conjunto de datos que el equipo viene "
+        "trabajando en su proyecto de minería de datos, para identificar conocimientos "
+        "evidentes mediante indicadores, comparaciones y visualizaciones. Los "
+        "resultados deben presentarse en tableros de Power BI e integrarse en la "
+        "aplicación web del proyecto."
+    ),
+    # URL de "Publicar en la Web" de Power BI, cuando el informe esté listo.
+    "powerbi_embed_url": None,
+    # Enlace alternativo, si la licencia no permite insertar el informe.
+    "powerbi_link_url": None,
+    "sections": [
+        {"slug": "objetivo", "num": 1, "label": "Objetivo y alcance"},
+        {"slug": "powerbi", "num": 2, "label": "Informe de Power BI"},
+    ],
+}
+
 # Tarjetas de la página de inicio
 ENTREGAS = [
     {
@@ -100,6 +124,14 @@ ENTREGAS = [
         "descripcion": ETAPA_3["objetivo"],
         "endpoint": ETAPA_3["endpoint"],
         "primer_slug": ETAPA_3["sections"][0]["slug"],
+        "disponible": True,
+    },
+    {
+        "codigo": "R4",
+        "titulo": ETAPA_4["titulo"],
+        "descripcion": ETAPA_4["objetivo"],
+        "endpoint": ETAPA_4["endpoint"],
+        "primer_slug": ETAPA_4["sections"][0]["slug"],
         "disponible": True,
     },
 ]
@@ -149,6 +181,11 @@ def etapa3(slug):
         slug,
         informe_pdf_existe=INFORME_PDF.exists(),
     )
+
+
+@app.route("/etapa-4/<slug>")
+def etapa4(slug):
+    return _render_etapa(ETAPA_4, slug)
 
 
 if __name__ == "__main__":

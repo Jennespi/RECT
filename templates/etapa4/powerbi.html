@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">02</div>
+  <div class="card__body">
+    <h2>Informe de Power BI</h2>
+
+    {% if etapa.powerbi_embed_url %}
+    <p class="hint">Informe interactivo de Power BI con los cuatro tableros de análisis.</p>
+    <div class="powerbi-viewer">
+      <iframe src="{{ etapa.powerbi_embed_url }}" title="Informe de Power BI — Etapa 4" allowfullscreen></iframe>
+    </div>
+    {% if etapa.powerbi_link_url %}
+    <a class="btn" href="{{ etapa.powerbi_link_url }}" target="_blank" rel="noopener">Abrir en Power BI ↗</a>
+    {% endif %}
+    {% elif etapa.powerbi_link_url %}
+    <p class="hint">
+      El informe no se inserta directamente por restricciones de licencia o permisos
+      de Power BI; se accede desde el enlace.
+    </p>
+    <a class="btn" href="{{ etapa.powerbi_link_url }}" target="_blank" rel="noopener">Abrir el informe de Power BI ↗</a>
+    {% else %}
+    <p class="hint">
+      <span class="pending-badge">PENDIENTE</span>
+      Acá se va a insertar el informe de Power BI con los cuatro tableros (uno por
+      pregunta de análisis). Se publica desde Power BI con <strong>Archivo → Publicar
+      en la Web</strong> (o se comparte el enlace del informe si la licencia no permite
+      insertarlo), y se configura en <code>app.py</code>, en
+      <code>ETAPA_4["powerbi_embed_url"]</code> o
+      <code>ETAPA_4["powerbi_link_url"]</code>.
+    </p>
+    {% endif %}
+
+    <p class="hint">
+      Fuente de los datos: dataset consolidado y tratado en las Etapas 1 a 3 del
+      proyecto. Periodo analizado: por definir junto con las cuatro preguntas de
+      análisis.
+    </p>
+  </div>
+</section>
+{% endblock %}
