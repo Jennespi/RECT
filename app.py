@@ -93,7 +93,8 @@ ETAPA_4 = {
     "powerbi_link_url": None,
     "sections": [
         {"slug": "objetivo", "num": 1, "label": "Objetivo y alcance"},
-        {"slug": "powerbi", "num": 2, "label": "Informe de Power BI"},
+        {"slug": "modelo", "num": 2, "label": "Modelo de datos"},
+        {"slug": "powerbi", "num": 3, "label": "Informe de Power BI"},
     ],
 }
 

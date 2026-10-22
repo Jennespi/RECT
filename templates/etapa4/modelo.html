@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">02</div>
+  <div class="card__body">
+    <h2>Modelo de datos</h2>
+
+    <p>
+      Modelo en estrella generado con <code>scripts/preparar_datos_pbi.py</code> a
+      partir de los 4 archivos de <code>datos/procesados/</code> (Etapas 1 a 3): dos
+      dimensiones compartidas (departamento, año) y cuatro tablas de hechos, una por
+      fuente. Las tablas quedan en <code>powerbi/datos/</code>, listas para conectar
+      desde Power BI.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Tabla</th>
+            <th>Tipo</th>
+            <th>Grano</th>
+            <th>Filas</th>
+            <th>Clave</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>dim_departamento</code></td><td>Dimensión</td><td>1 fila por departamento</td><td>33</td><td><code>departamento</code></td></tr>
+          <tr><td><code>dim_anio</code></td><td>Dimensión</td><td>1 fila por año (2005–2025)</td><td>21</td><td><code>anio</code></td></tr>
+          <tr><td><code>fact_dane_tic</code></td><td>Hechos</td><td>dominio × departamento × año × indicador</td><td>960</td><td>—</td></tr>
+          <tr><td><code>fact_gestores</code></td><td>Hechos</td><td>1 fila por instalación gestora (IDEAM)</td><td>377</td><td><code>id_registro</code></td></tr>
+          <tr><td><code>fact_encuesta_ns</code></td><td>Hechos</td><td>1 fila por encuestado único (Norte de Santander)</td><td>1 917</td><td><code>id_encuestado</code></td></tr>
+          <tr><td><code>fact_reciclaje_global</code></td><td>Hechos</td><td>área × año (OWID)</td><td>637</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Relaciones</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Desde</th><th>Hacia</th></tr></thead>
+        <tbody>
+          <tr><td><code>fact_dane_tic[departamento]</code></td><td><code>dim_departamento[departamento]</code></td></tr>
+          <tr><td><code>fact_gestores[departamento]</code></td><td><code>dim_departamento[departamento]</code></td></tr>
+          <tr><td><code>fact_dane_tic[anio]</code></td><td><code>dim_anio[anio]</code></td></tr>
+          <tr><td><code>fact_reciclaje_global[anio]</code></td><td><code>dim_anio[anio]</code></td></tr>
+          <tr><td><code>fact_gestores[anio_otorgamiento]</code></td><td><code>dim_anio[anio]</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">
+      Todas las relaciones son varios-a-uno, filtro en una sola dirección.
+      <code>fact_encuesta_ns</code> no se relaciona con ninguna dimensión: es otra
+      población y otra unidad de análisis (encuestados, no departamentos ni gestores).
+    </p>
+
+    <h3>Verificación</h3>
+    <p>
+      Los 6 conteos de filas y las cifras de control se ejecutaron y coincidieron
+      exactamente: canal formal de entrega 337/1 917 (17.6 %), gestores activos 309,
+      top 5 departamentos con más gestores activos 184/309 (59.5 %), usaría una app
+      para RAEE 1 500/1 915 (78.3 %).
+    </p>
+    <p class="hint">
+      Limitación conocida: 16 de los 377 gestores tienen fecha de otorgamiento real
+      fuera de 2005–2025 (1998–2004 y uno de 2026), por lo que no cruzan con
+      <code>dim_anio</code> por esa relación puntual; sí quedan incluidos por
+      <code>departamento</code>.
+    </p>
+  </div>
+</section>
+{% endblock %}
