@@ -87,8 +87,8 @@ ETAPA_4 = {
         "resultados deben presentarse en tableros de Power BI e integrarse en la "
         "aplicación web del proyecto."
     ),
-    # URL de "Publicar en la Web" de Power BI, cuando el informe esté listo.
-    "powerbi_embed_url": None,
+    # URL de "Publicar en la Web" de Power BI.
+    "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiNjI5OWJmMDgtYTQzZS00NjE2LWIzZmYtZTUzZDhhOTJlMWZiIiwidCI6IjA3ZGE2N2EwLTFmNDMtNGU4Yy05NzdmLTVmODhiNjQ3MGVlNiIsImMiOjR9",
     # Enlace alternativo, si la licencia no permite insertar el informe.
     "powerbi_link_url": None,
     "sections": [
