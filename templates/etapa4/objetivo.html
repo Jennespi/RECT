@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">01</div>
+  <div class="card__body">
+    <h2>Objetivo y alcance</h2>
+
+    <p class="hint">Objetivo de la Etapa 4:</p>
+    <blockquote class="main-question">{{ etapa.objetivo }}</blockquote>
+
+    <p class="hint">Alcance de la etapa:</p>
+    <ul class="question-list">
+      <li>Análisis exploratorio sobre el mismo tema, población y conjunto de datos tratado en las etapas anteriores, sin seleccionar un nuevo dataset.</li>
+      <li>Cuatro preguntas de análisis, una por tablero: composición y distribución de la población, comparación entre grupos o territorios, comportamiento temporal, y análisis multivariado cruzando tres o más variables.</li>
+      <li>Cuatro tableros en Power BI —uno por pregunta— con tres indicadores, tres visualizaciones, dos segmentadores interactivos y la interpretación de cada visualización.</li>
+      <li>Mínimo doce indicadores, doce visualizaciones y doce conocimientos evidentes en total, cada uno documentado con pregunta, variables, procedimiento, evidencia, hallazgo, interpretación, utilidad y limitación.</li>
+      <li>Publicación del informe de Power BI dentro de esta aplicación, identificando la fuente de los datos y el periodo analizado.</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
