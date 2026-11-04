@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">02</div>
+  <div class="card__body">
+    <h2>Modelo estrella</h2>
+
+    <p>
+      El modelo se implementa como una <strong>constelación de hechos</strong>: cuatro
+      tablas de hechos —cada una con el grano real de su fuente, igual que en la
+      Etapa 4— que comparten tres dimensiones conformadas
+      (<code>dim_departamento</code>, <code>dim_municipio</code>, <code>dim_anio</code>).
+      Cada tabla de hechos sigue siendo, individualmente, un esquema en estrella
+      válido. No se creó una única tabla de hechos artificial: unir encuestados,
+      instalaciones, indicadores TIC y observaciones de reciclaje en un solo grano
+      habría exigido inventar una unidad de análisis que no corresponde a ninguna
+      de las cuatro preguntas.
+    </p>
+
+    <h3>Diagrama</h3>
+    <div class="table-wrap" style="padding:1rem 1.2rem; background:var(--bg);">
+      <svg viewBox="0 0 920 460" role="img" aria-label="Diagrama del modelo estrella: dimensiones conformadas en el centro, cuatro tablas de hechos alrededor" style="width:100%; height:auto; font-family: var(--font-mono);">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#64796f"/>
+          </marker>
+        </defs>
+
+        <!-- Dimensiones (centro) -->
+        <rect x="370" y="30"  width="180" height="56" rx="8" fill="#101c19" stroke="#34d399" stroke-width="1.5"/>
+        <text x="460" y="54" fill="#34d399" font-size="13" text-anchor="middle">dim_departamento</text>
+        <text x="460" y="72" fill="#9db3ab" font-size="10" text-anchor="middle">34 filas · PK id_departamento</text>
+
+        <rect x="370" y="202" width="180" height="56" rx="8" fill="#101c19" stroke="#34d399" stroke-width="1.5"/>
+        <text x="460" y="226" fill="#34d399" font-size="13" text-anchor="middle">dim_municipio</text>
+        <text x="460" y="244" fill="#9db3ab" font-size="10" text-anchor="middle">136 filas · PK id_municipio</text>
+
+        <rect x="370" y="374" width="180" height="56" rx="8" fill="#101c19" stroke="#34d399" stroke-width="1.5"/>
+        <text x="460" y="398" fill="#34d399" font-size="13" text-anchor="middle">dim_anio</text>
+        <text x="460" y="416" fill="#9db3ab" font-size="10" text-anchor="middle">21 filas · PK id_anio</text>
+
+        <!-- jerarquía región->depto->municipio -->
+        <line x1="460" y1="86" x2="460" y2="202" stroke="#64796f" stroke-width="1.3" marker-end="url(#arrow)"/>
+        <text x="472" y="150" fill="#64796f" font-size="9">region (atributo)</text>
+
+        <!-- Hechos: izquierda -->
+        <rect x="30" y="30" width="200" height="70" rx="8" fill="#101c19" stroke="#f5a524" stroke-width="1.5"/>
+        <text x="130" y="56" fill="#f5a524" font-size="13" text-anchor="middle">fact_gestores</text>
+        <text x="130" y="73" fill="#9db3ab" font-size="10" text-anchor="middle">377 filas</text>
+        <text x="130" y="88" fill="#9db3ab" font-size="9" text-anchor="middle">grano: 1 instalación</text>
+
+        <rect x="30" y="330" width="200" height="70" rx="8" fill="#101c19" stroke="#f5a524" stroke-width="1.5"/>
+        <text x="130" y="356" fill="#f5a524" font-size="13" text-anchor="middle">fact_encuesta_ns</text>
+        <text x="130" y="373" fill="#9db3ab" font-size="10" text-anchor="middle">1 917 filas</text>
+        <text x="130" y="388" fill="#9db3ab" font-size="9" text-anchor="middle">grano: 1 encuestado</text>
+
+        <!-- Hechos: derecha -->
+        <rect x="690" y="30" width="200" height="70" rx="8" fill="#101c19" stroke="#f0654f" stroke-width="1.5"/>
+        <text x="790" y="56" fill="#f0654f" font-size="13" text-anchor="middle">fact_dane_tic</text>
+        <text x="790" y="73" fill="#9db3ab" font-size="10" text-anchor="middle">960 filas</text>
+        <text x="790" y="88" fill="#9db3ab" font-size="9" text-anchor="middle">grano: indicador×dominio×año</text>
+
+        <rect x="690" y="330" width="200" height="70" rx="8" fill="#101c19" stroke="#f0654f" stroke-width="1.5"/>
+        <text x="790" y="356" fill="#f0654f" font-size="13" text-anchor="middle">fact_reciclaje_global</text>
+        <text x="790" y="373" fill="#9db3ab" font-size="10" text-anchor="middle">637 filas</text>
+        <text x="790" y="388" fill="#9db3ab" font-size="9" text-anchor="middle">grano: área×año</text>
+
+        <!-- Conexiones -->
+        <line x1="230" y1="65"  x2="370" y2="58"  stroke="#64796f" stroke-width="1.3" marker-end="url(#arrow)"/>
+        <line x1="230" y1="80"  x2="370" y2="225" stroke="#64796f" stroke-width="1.3" marker-end="url(#arrow)"/>
+        <line x1="230" y1="365" x2="370" y2="230" stroke="#64796f" stroke-width="1.3" marker-end="url(#arrow)"/>
+        <line x1="690" y1="58"  x2="550" y2="58"  stroke="#64796f" stroke-width="1.3" marker-end="url(#arrow)"/>
+        <line x1="690" y1="75"  x2="550" y2="395" stroke="#64796f" stroke-width="1.3" marker-end="url(#arrow)"/>
+        <line x1="690" y1="365" x2="550" y2="400" stroke="#64796f" stroke-width="1.3" marker-end="url(#arrow)"/>
+        <line x1="130" y1="100" x2="460" y2="374" stroke="#64796f" stroke-width="1.3" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+        <text x="460" y="450" fill="#64796f" font-size="9" text-anchor="middle">Líneas: relación muchos-a-uno hacia la dimensión (clave foránea). fact_encuesta_ns no usa dim_anio: es un estudio transversal, sin variable de año.</text>
+      </svg>
+    </div>
+
+    <h3>Dimensiones y jerarquías</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Dimensión</th><th>Jerarquía</th><th>Niveles</th><th>Perspectiva real que representa</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>dim_municipio</code> → <code>dim_departamento</code></td>
+            <td>Territorial</td>
+            <td>Región → Departamento → Municipio</td>
+            <td>Dónde ocurre el hecho: dónde se registra un gestor o dónde vive un encuestado.</td>
+          </tr>
+          <tr>
+            <td><code>dim_anio</code></td>
+            <td>Temporal</td>
+            <td>Década → Año</td>
+            <td>Cuándo ocurre el hecho: cuándo se otorgó una autorización o se midió un indicador.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">
+      No se crearon dimensiones adicionales (p. ej. "ocupación" u "estado") porque
+      esos campos son atributos descriptivos de un solo nivel dentro de su tabla de
+      hechos, no jerarquías de agrupación: se usan como ejes de la matriz y filtros
+      de slice/dice en las vistas, no como dimensiones del modelo.
+    </p>
+
+    <h3>Medidas</h3>
+    <div class="table-wrap table-wrap--wide">
+      <table>
+        <thead><tr><th>Medida</th><th>Tabla</th><th>Unidad</th><th>Fórmula</th><th>Agregación</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Instalaciones de gestores</td>
+            <td><code>fact_gestores</code></td>
+            <td>conteo</td>
+            <td><code>COUNT(*)</code></td>
+            <td>Additiva: el grano es 1 fila = 1 instalación, se puede sumar en cualquier nivel de la jerarquía territorial o temporal.</td>
+          </tr>
+          <tr>
+            <td>Empresas distintas (NIT)</td>
+            <td><code>fact_gestores</code></td>
+            <td>conteo</td>
+            <td><code>COUNT(DISTINCT nit)</code></td>
+            <td>Semiadditiva: no puede sumarse entre grupos sin recalcular (un mismo NIT puede aparecer en varios municipios), por eso se recalcula en cada consulta en vez de sumar subtotales.</td>
+          </tr>
+          <tr>
+            <td>Autorizaciones otorgadas</td>
+            <td><code>fact_gestores</code></td>
+            <td>conteo por año</td>
+            <td><code>COUNT(*) GROUP BY id_anio</code></td>
+            <td>Additiva en el tiempo: la suma de autorizaciones por año de una década es igual al total de la década (verificado: 2000s = 55 = 6+10+12+10+17).</td>
+          </tr>
+          <tr>
+            <td>% hogares con internet (ECV)</td>
+            <td><code>fact_dane_tic</code></td>
+            <td>porcentaje</td>
+            <td><code>AVG(valor)</code></td>
+            <td>No additiva: es ya un porcentaje; sumar valores de distintos años o departamentos no tiene sentido. Se agrega con promedio y se recalcula al cambiar de nivel.</td>
+          </tr>
+          <tr>
+            <td>% RAEE reciclado</td>
+            <td><code>fact_reciclaje_global</code></td>
+            <td>porcentaje</td>
+            <td><code>AVG(pct_reciclado)</code></td>
+            <td>No additiva, misma razón que la anterior: es una proporción ya calculada por área y año.</td>
+          </tr>
+          <tr>
+            <td>% que usa canal formal</td>
+            <td><code>fact_encuesta_ns</code></td>
+            <td>proporción</td>
+            <td><code>100 × COUNT(canal_formal='Usa canal formal') / COUNT(*)</code></td>
+            <td>Proporción: el denominador es el conteo de encuestados en el contexto de filtro activo (slice/dice), no additiva entre subgrupos.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Correspondencia con las variables originales</h3>
+    <p>
+      La correspondencia completa entre cada columna del modelo y su origen en
+      <code>datos/procesados/</code> (Etapa 2/3) ya está documentada en
+      <code>scripts/preparar_datos_pbi.py</code> (Etapa 4): el modelo estrella de esta
+      etapa reutiliza esas mismas tablas (<code>datos/powerbi/*.csv</code>) sin alterar
+      ningún valor de negocio. <code>scripts/construir_modelo_estrella.py</code> agrega
+      únicamente las claves subrogadas (<code>id_departamento</code>,
+      <code>id_municipio</code>, <code>id_anio</code>) y la jerarquía temporal
+      (<code>decada</code>), y dejó la fila sentinela
+      <code>id_departamento = 0</code> para los 69 registros de
+      <code>fact_dane_tic</code> que son agregados nacionales sin departamento.
+    </p>
+
+    <h3>Implementación y verificación</h3>
+    <p>
+      El modelo se implementó en SQLite (<code>datos/estrella/rect_estrella.db</code>),
+      con claves primarias y foráneas explícitas y <code>PRAGMA foreign_keys = ON</code>.
+      La carga es reproducible: <code>python scripts/construir_modelo_estrella.py</code>
+      reconstruye el archivo completo desde cero a partir de
+      <code>datos/powerbi/</code>. <code>scripts/verificar_modelo_estrella.py</code>
+      ejecuta 25 comprobaciones automáticas —unicidad de claves, ausencia de filas
+      huérfanas, ausencia de duplicados indebidos, tratamiento de valores faltantes
+      y coherencia de conteos frente a los CSV tratados— y las 25 pasaron sin falla
+      en la última ejecución.
+    </p>
+
+    <h3>Operaciones multidimensionales implementadas</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Operación</th><th>Dónde se aplica</th><th>Qué hace</th></tr></thead>
+        <tbody>
+          <tr><td>Drill-down / Roll-up</td><td>Vista 2 (Territorial) y Vista 3 (Temporal)</td><td>Cambia el nivel de la jerarquía (Región↔Departamento↔Municipio, Década↔Año) y recalcula la medida en cada nivel, no solo el tipo de gráfica.</td></tr>
+          <tr><td>Slice</td><td>Vista 1 (Composición)</td><td>Fija el valor de una dimensión (p. ej. zona = Cúcuta) y recalcula la matriz solo sobre ese subconjunto.</td></tr>
+          <tr><td>Dice</td><td>Vista 4 (Multivariado)</td><td>Fija valores simultáneos en dos o más dimensiones (conocimiento del término RAEE + participación en jornadas + zona) para aislar un subconjunto más específico.</td></tr>
+          <tr><td>Pivot</td><td>Vista 1 y Vista 4</td><td>Intercambia qué campo va en filas y cuál en columnas de la matriz, sobre la misma consulta agregada.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}

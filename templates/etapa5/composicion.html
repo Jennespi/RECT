@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">03</div>
+  <div class="card__body">
+    <h2>Vista 1 · Composición</h2>
+    <blockquote class="main-question">¿Cómo se distribuyen por ocupación y zona las personas encuestadas en Norte de Santander y a qué canal entregan sus residuos posconsumo?</blockquote>
+
+    <p class="hint">Dimensiones, medidas y jerarquías usadas:</p>
+    <ul class="question-list">
+      <li><strong>Dimensión:</strong> <code>dim_municipio</code> → <code>dim_departamento</code> (zona es un agrupamiento de municipios dentro de Norte de Santander); ocupación y canal de entrega son atributos planos de <code>fact_encuesta_ns</code>.</li>
+      <li><strong>Medidas:</strong> encuestados (<code>COUNT</code>, additiva), % que usa canal formal (proporción, no additiva).</li>
+      <li><strong>Filtros (slice):</strong> zona, si tiene residuos en casa. <strong>Pivot:</strong> qué variable va en filas y cuál en columnas.</li>
+    </ul>
+
+    <div class="stat-row">
+      {% for ind in indicadores %}
+      <div class="stat"><span class="stat__value">{{ ind.valor }}</span><span class="stat__label">{{ ind.etiqueta }}</span></div>
+      {% endfor %}
+    </div>
+
+    <h3>Controles de operación multidimensional</h3>
+    <form class="olap-form" method="get">
+      <div class="olap-field">
+        <label for="zona">Filtro: zona (slice)</label>
+        <select id="zona" name="zona" onchange="this.form.submit()">
+          <option value="">Todas</option>
+          {% for z in zonas %}<option value="{{ z }}" {% if cubo.filtros.zona == z %}selected{% endif %}>{{ z }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="tiene_raee">Filtro: ¿tiene RAEE en casa? (slice)</label>
+        <select id="tiene_raee" name="tiene_raee" onchange="this.form.submit()">
+          <option value="NO" {% if cubo.filtros.tiene_residuos == 'NO' %}selected{% endif %}>No</option>
+          <option value="SI" {% if cubo.filtros.tiene_residuos == 'SI' %}selected{% endif %}>Sí</option>
+          <option value="TODOS" {% if not cubo.filtros.tiene_residuos %}selected{% endif %}>Todos</option>
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="fila">Eje de filas (pivot)</label>
+        <select id="fila" name="fila" onchange="this.form.submit()">
+          <option value="ocupacion" {% if cubo.fila_eje == 'ocupacion' %}selected{% endif %}>Ocupación</option>
+          <option value="zona" {% if cubo.fila_eje == 'zona' %}selected{% endif %}>Zona</option>
+          <option value="canal_formal" {% if cubo.fila_eje == 'canal_formal' %}selected{% endif %}>Canal formal</option>
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="columna">Eje de columnas (pivot)</label>
+        <select id="columna" name="columna" onchange="this.form.submit()">
+          <option value="canal_formal" {% if cubo.columna_eje == 'canal_formal' %}selected{% endif %}>Canal formal</option>
+          <option value="ocupacion" {% if cubo.columna_eje == 'ocupacion' %}selected{% endif %}>Ocupación</option>
+          <option value="zona" {% if cubo.columna_eje == 'zona' %}selected{% endif %}>Zona</option>
+        </select>
+      </div>
+      <noscript><button class="btn" type="submit">Aplicar</button></noscript>
+    </form>
+    <p class="olap-tag">Filas: <strong>&nbsp;{{ cubo.fila_eje }}</strong> · Columnas: <strong>&nbsp;{{ cubo.columna_eje }}</strong> · Total en la selección: {{ cubo.total }}</p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h3>Encuestados por {{ cubo.fila_eje }}</h3>
+        <canvas id="chartBarras"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Distribución por {{ cubo.columna_eje }}</h3>
+        <canvas id="chartDona"></canvas>
+      </div>
+    </div>
+
+    <h3>Matriz — {{ cubo.fila_eje }} × {{ cubo.columna_eje }} (pivot)</h3>
+    <div class="matrix-wrap">
+      <table class="matrix-table">
+        <thead><tr><th>{{ cubo.fila_eje|capitalize }} \ {{ cubo.columna_eje|capitalize }}</th>{% for c in matriz.columnas %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for f in matriz.filas %}
+          <tr><td>{{ f }}</td>{% for c in matriz.columnas %}<td>{{ matriz.datos[f][c] if matriz.datos[f][c] is not none else '—' }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Interpretación</h3>
+    <p>
+      Con la selección por defecto (sin RAEE en casa, todas las zonas) los empleados del
+      sector público y los independientes concentran casi tres de cada cuatro
+      encuestados, y la gran mayoría —en torno al 93&nbsp;%— no usa un canal formal de
+      entrega. Al aplicar el filtro de zona = Cúcuta (slice), la matriz se recalcula
+      sobre un subconjunto más pequeño y la proporción de uso del canal formal cambia:
+      esto confirma que el canal usado no es independiente de dónde vive la persona.
+      Al hacer pivot (intercambiar ocupación y canal formal entre filas y columnas) se
+      obtiene la misma información reorganizada: ahora es fácil leer, para cada canal,
+      qué ocupaciones lo usan más, en vez de leer, para cada ocupación, qué canal prefiere.
+    </p>
+
+    <h3>Conocimientos multidimensionales</h3>
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <h4>Conocimiento 5 · El canal formal es minoritario en todas las ocupaciones</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿Hay alguna ocupación donde el canal formal de entrega sea mayoritario?</dd>
+          <dt>Dimensiones/medidas</dt><dd><code>fact_encuesta_ns</code>: ocupación × canal_formal; encuestados (COUNT).</dd>
+          <dt>Procedimiento</dt><dd>Matriz fila=ocupación, columna=canal_formal, slice tiene_residuos=NO (selección por defecto).</dd>
+          <dt>Evidencia</dt><dd>Matriz de esta vista: en cada fila de ocupación, la columna "No usa canal formal" supera ampliamente a "Usa canal formal".</dd>
+          <dt>Hallazgo</dt><dd>En ninguna categoría de ocupación el canal formal supera a la entrega informal; la proporción de uso formal global en la selección por defecto es de un dígito bajo frente al total de encuestados.</dd>
+          <dt>Interpretación</dt><dd>La baja adopción del canal formal no es un problema específico de un grupo ocupacional: es un patrón generalizado, lo que sugiere una barrera estructural (desconocimiento, falta de puntos cercanos) más que una preferencia de un grupo particular.</dd>
+          <dt>Utilidad</dt><dd>Descarta diseñar una campaña dirigida a una sola ocupación; sustenta una intervención amplia (p. ej. una app, como se explora en la Vista 4) en vez de una focalizada por perfil laboral.</dd>
+          <dt>Limitación</dt><dd>La encuesta solo cubre Norte de Santander; el patrón no puede extrapolarse a otras regiones del país sin una encuesta equivalente allí.</dd>
+        </dl>
+      </div>
+      <div class="knowledge-card">
+        <h4>Conocimiento 6 · La zona cambia la composición, no solo el tamaño de la muestra</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿La distribución por ocupación es la misma en Cúcuta que en el resto del departamento?</dd>
+          <dt>Dimensiones/medidas</dt><dd>zona (slice) × ocupación; encuestados (COUNT) y % del total (proporción).</dd>
+          <dt>Procedimiento</dt><dd>Aplicar el filtro zona = Cúcuta y comparar la distribución de ocupación resultante contra la distribución sin filtrar.</dd>
+          <dt>Evidencia</dt><dd>Gráfica de barras y matriz de esta vista con zona = Cúcuta activado, comparada contra la vista sin ese filtro.</dd>
+          <dt>Hallazgo</dt><dd>Cúcuta aporta la mayoría de los encuestados del departamento (coincide con el 66.3&nbsp;% ya reportado en la Etapa 4), y dentro de ese subconjunto el peso relativo de empleados del sector público es distinto al de la muestra completa.</dd>
+          <dt>Interpretación</dt><dd>La composición ocupacional de la encuesta está sesgada por el peso de la capital del departamento; cualquier indicador "nacional" de la encuesta en realidad refleja sobre todo a Cúcuta.</dd>
+          <dt>Utilidad</dt><dd>Advierte que, al comunicar resultados, conviene aclarar si se habla del departamento completo o de Cúcuta en particular, para no generalizar de más.</dd>
+          <dt>Limitación</dt><dd>No se puede separar si la diferencia de composición se debe a la zona en sí o al tamaño de muestra, mucho menor fuera de Cúcuta.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="limit-decision">
+      <div class="limitacion">
+        <h4>Limitación del análisis</h4>
+        <p>La encuesta tiene 991 valores distintos de entidad y casos repetidos de una misma institución (problema ya señalado en la Etapa 4), lo que puede introducir sesgo de selección: personas de la misma entidad tienden a responder de forma parecida, y el tratamiento de la Etapa 2/3 no corrige ese sesgo.</p>
+      </div>
+      <div class="decision">
+        <h4>Decisión sustentada en los datos</h4>
+        <p>Diseñar cualquier campaña de canal formal como una intervención departamental amplia (Conocimiento 5) y no solo urbana (Conocimiento 6), para no dejar fuera al 23.5&nbsp;% de encuestados del resto del departamento que ya reportaba la Etapa 4.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/vendor/chart.umd.js') }}"></script>
+<script>
+  const accent = '#34d399', danger = '#f0654f', warn = '#f5a524', muted = '#9db3ab', faint = '#64796f', teal = '#5eead4';
+  Chart.defaults.color = muted;
+  Chart.defaults.borderColor = '#1f3229';
+  Chart.defaults.font.family = "'IBM Plex Mono', ui-monospace, monospace";
+
+  const filasM = {{ matriz.filas | tojson }};
+  const columnasM = {{ matriz.columnas | tojson }};
+  const datosM = {{ matriz.datos | tojson }};
+  const paleta = [accent, warn, danger, teal, muted, '#60a5fa', '#c084fc', '#fb923c'];
+
+  const totalesFila = filasM.map(f => columnasM.reduce((s, c) => s + (datosM[f][c] || 0), 0));
+  new Chart(document.getElementById('chartBarras'), {
+    type: 'bar',
+    data: { labels: filasM, datasets: [{ label: 'Encuestados', data: totalesFila, backgroundColor: accent }] },
+    options: { responsive: true, indexAxis: filasM.length > 6 ? 'y' : 'x' }
+  });
+
+  const totalesColumna = columnasM.map(c => filasM.reduce((s, f) => s + (datosM[f][c] || 0), 0));
+  new Chart(document.getElementById('chartDona'), {
+    type: 'doughnut',
+    data: { labels: columnasM, datasets: [{ data: totalesColumna, backgroundColor: paleta }] },
+    options: { responsive: true }
+  });
+</script>
+{% endblock %}
