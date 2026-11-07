@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">01</div>
+  <div class="card__body">
+    <h2>Objetivo y alcance</h2>
+
+    <p class="hint">Objetivo de la Etapa 5:</p>
+    <blockquote class="main-question">{{ etapa.objetivo }}</blockquote>
+
+    <p class="hint">Alcance de la etapa:</p>
+    <ul class="question-list">
+      <li>Mismo tema, población y conjunto de datos de las etapas anteriores: se reutilizan las tablas ya tratadas y homologadas de la Etapa 4 (<code>datos/powerbi/</code>), sin seleccionar un nuevo dataset.</li>
+      <li>Un modelo multidimensional implementado como constelación de hechos en SQLite (<code>datos/estrella/rect_estrella.db</code>): tres dimensiones conformadas (departamento, municipio, año) y cuatro tablas de hechos, cada una con su propio grano.</li>
+      <li>Dos jerarquías de agrupación válidas: Región → Departamento → Municipio (territorial) y Década → Año (temporal).</li>
+      <li>Cinco operaciones de análisis multidimensional —drill-down, roll-up, slice, dice y pivot— implementadas como consultas SQL parametrizadas y consultables desde cuatro vistas interactivas de Flask.</li>
+      <li>Cuatro vistas, una por pregunta de análisis, cada una con tres indicadores, dos visualizaciones, una matriz, dos filtros interactivos, controles de operación multidimensional, interpretación, dos conocimientos documentados, una limitación y una decisión sustentada.</li>
+      <li>Mínimo doce indicadores, ocho visualizaciones, cuatro matrices y ocho conocimientos multidimensionales en total.</li>
+    </ul>
+
+    <p class="hint">Relación con la Etapa 4 (conocimiento evidente):</p>
+    <p>
+      La Etapa 4 identificó conocimientos evidentes —hallazgos verificables con conteos, porcentajes y comparaciones directas— sobre las mismas cuatro poblaciones (encuestados, instalaciones de gestores, indicadores TIC y reciclaje global). La Etapa 5 no cambia de pregunta ni de datos: reorganiza esas mismas tablas en un modelo multidimensional explícito (dimensiones, jerarquías y medidas con su función de agregación) y agrega la posibilidad de navegar los resultados en distintos niveles de detalle (drill-down/roll-up) y de combinar filtros sobre dos o más dimensiones a la vez (slice/dice/pivot), algo que el informe estático de Power BI de la Etapa 4 no permitía hacer de forma interactiva dentro de la propia aplicación.
+    </p>
+  </div>
+</section>
+{% endblock %}

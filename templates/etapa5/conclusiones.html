@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">07</div>
+  <div class="card__body">
+    <h2>Conocimientos y conclusiones</h2>
+
+    <p class="hint">Los 8 conocimientos multidimensionales, uno por fila, con su vista de origen:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Vista</th><th>Conocimiento</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Territorial</td><td>5 de 29 departamentos con cobertura activa concentran el 59.5&nbsp;% de las instalaciones activas de gestores.</td></tr>
+          <tr><td>2</td><td>Territorial</td><td>4 de 33 departamentos no tienen ninguna instalación de gestor activa registrada.</td></tr>
+          <tr><td>3</td><td>Temporal</td><td>Las autorizaciones a gestores crecen de 55 (2000s) a 213 (2010s) y caen a 93 en lo corrido de los 2020s.</td></tr>
+          <tr><td>4</td><td>Temporal</td><td>La conectividad de los hogares crece más rápido, década a década, que el reciclaje formal de RAEE a nivel mundial.</td></tr>
+          <tr><td>5</td><td>Composición</td><td>El canal formal de entrega es minoritario en todas las categorías de ocupación encuestadas.</td></tr>
+          <tr><td>6</td><td>Composición</td><td>La composición por ocupación cambia entre Cúcuta y el resto del departamento, no solo el tamaño de la muestra.</td></tr>
+          <tr><td>7</td><td>Multivariado</td><td>Conocer el término RAEE y haber participado antes en una jornada se asocia (no implica causalidad) a mayor uso del canal formal.</td></tr>
+          <tr><td>8</td><td>Multivariado</td><td>La disposición a usar una app para RAEE no depende de si la persona ya usa o no el canal formal actual.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Condiciones del análisis aplicadas</h3>
+    <ul class="question-list">
+      <li>Granularidad consistente: cada tabla de hechos mantiene un único grano explícito, documentado en <code>scripts/esquema_estrella.sql</code>.</li>
+      <li>Las relaciones son todas varios-a-uno hacia las dimensiones, con filtro en un solo sentido: no multiplican filas de los hechos (verificado en <code>scripts/verificar_modelo_estrella.py</code>).</li>
+      <li>Se distingue conteo de registros (instalaciones), conteo de entidades únicas (NIT distintos) y promedios de porcentajes (indicadores DANE/OWID): cada medida indica en el modelo cuál es.</li>
+      <li>Cada porcentaje indica su denominador (p. ej. "% canal formal" = encuestados del contexto de filtro activo) y se recalcula —no se suma— al cambiar de nivel o de filtro.</li>
+      <li>Las comparaciones temporales usan décadas (periodos equivalentes) para las tres fuentes, que tienen coberturas distintas (2005-2025, 2018-2024, 2010-2022).</li>
+      <li>Los valores faltantes ("Sin dato", "Sin respuesta") se conservan como categoría explícita, nunca se descartan ni se confunden con una respuesta negativa.</li>
+      <li>Las jerarquías usadas (Región→Departamento→Municipio, Década→Año) son agrupamientos reales de los datos, no inventados para la entrega.</li>
+      <li>Las asociaciones encontradas (Conocimiento 7) se presentan explícitamente como asociación, no como relación causal comprobada.</li>
+    </ul>
+
+    <h3>Conclusiones generales</h3>
+    <p>
+      El modelo multidimensional confirma, con capacidad de explorar distintos niveles
+      de detalle, el diagnóstico que venía tomando forma desde la Etapa 4: el consumo
+      tecnológico (conectividad, tenencia de dispositivos) crece de forma sostenida y
+      más rápido que la capacidad formal de gestión de los residuos que ese mismo
+      consumo genera, tanto en el tiempo (Conocimientos 3 y 4) como en el territorio
+      (Conocimientos 1 y 2). A nivel de comportamiento ciudadano, la brecha no parece
+      ser solo de infraestructura: incluso entre quienes conocen el término RAEE y ya
+      han participado en una jornada, el canal formal sigue sin ser mayoritario
+      (Conocimientos 5 y 7), mientras que la disposición a adoptar un canal digital es
+      amplia y no depende del comportamiento actual (Conocimiento 8). Esto sustenta
+      una recomendación concreta para las siguientes etapas del proyecto: explorar un
+      canal digital como puente entre la intención declarada y el comportamiento
+      formal real, dirigido a toda la población encuestada y no solo a quienes ya
+      participan en estas medidas.
+    </p>
+
+    <h3>Acceso a las vistas</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Vista</th><th>Enlace</th></tr></thead>
+        <tbody>
+          <tr><td>Vista 1 · Composición</td><td><a href="{{ url_for('etapa5', slug='composicion') }}">/etapa-5/composicion</a></td></tr>
+          <tr><td>Vista 2 · Territorial</td><td><a href="{{ url_for('etapa5', slug='territorial') }}">/etapa-5/territorial</a></td></tr>
+          <tr><td>Vista 3 · Temporal</td><td><a href="{{ url_for('etapa5', slug='temporal') }}">/etapa-5/temporal</a></td></tr>
+          <tr><td>Vista 4 · Multivariado</td><td><a href="{{ url_for('etapa5', slug='multivariado') }}">/etapa-5/multivariado</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}

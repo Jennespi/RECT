@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">06</div>
+  <div class="card__body">
+    <h2>Vista 4 · Multivariado</h2>
+    <blockquote class="main-question">¿Qué combinación de conocimiento del término RAEE, participación en jornadas de recolección y zona acompaña al uso del canal formal, y qué tan dispuestas están las personas a usar una app?</blockquote>
+
+    <p class="hint">Dimensiones, medidas y jerarquías usadas:</p>
+    <ul class="question-list">
+      <li><strong>Dimensiones:</strong> sabe_raee, participo_jornada y zona (tres atributos de <code>fact_encuesta_ns</code>, combinados a la vez).</li>
+      <li><strong>Medidas:</strong> encuestados (<code>COUNT</code>), % que usa canal formal (proporción), % que usaría una app (proporción).</li>
+      <li><strong>Operación central:</strong> dice — filtro simultáneo sobre 2 o 3 dimensiones distintas. <strong>Pivot:</strong> qué variable va en filas y cuál en columnas.</li>
+    </ul>
+
+    <div class="stat-row">
+      {% for ind in indicadores %}
+      <div class="stat"><span class="stat__value">{{ ind.valor }}</span><span class="stat__label">{{ ind.etiqueta }}</span></div>
+      {% endfor %}
+    </div>
+
+    <h3>Controles de operación multidimensional</h3>
+    <form class="olap-form" method="get">
+      <div class="olap-field">
+        <label for="sabe_raee">¿Sabe qué es RAEE? (dice)</label>
+        <select id="sabe_raee" name="sabe_raee" onchange="this.form.submit()">
+          <option value="">Todos</option>
+          <option value="SI" {% if cubo.filtros.sabe_raee == 'SI' %}selected{% endif %}>Sí</option>
+          <option value="NO" {% if cubo.filtros.sabe_raee == 'NO' %}selected{% endif %}>No</option>
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="participo_jornada">¿Participó en jornada? (dice)</label>
+        <select id="participo_jornada" name="participo_jornada" onchange="this.form.submit()">
+          <option value="">Todos</option>
+          <option value="SI" {% if cubo.filtros.participo_jornada == 'SI' %}selected{% endif %}>Sí</option>
+          <option value="NO" {% if cubo.filtros.participo_jornada == 'NO' %}selected{% endif %}>No</option>
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="zona">Zona (dice)</label>
+        <select id="zona" name="zona" onchange="this.form.submit()">
+          <option value="">Todas</option>
+          {% for z in zonas %}<option value="{{ z }}" {% if cubo.filtros.zona == z %}selected{% endif %}>{{ z }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="fila">Eje de filas (pivot)</label>
+        <select id="fila" name="fila" onchange="this.form.submit()">
+          <option value="canal_formal" {% if cubo.fila_eje == 'canal_formal' %}selected{% endif %}>Canal formal</option>
+          <option value="usaria_app_raee" {% if cubo.fila_eje == 'usaria_app_raee' %}selected{% endif %}>Usaría app</option>
+          <option value="ocupacion" {% if cubo.fila_eje == 'ocupacion' %}selected{% endif %}>Ocupación</option>
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="columna">Eje de columnas (pivot)</label>
+        <select id="columna" name="columna" onchange="this.form.submit()">
+          <option value="usaria_app_raee" {% if cubo.columna_eje == 'usaria_app_raee' %}selected{% endif %}>Usaría app</option>
+          <option value="canal_formal" {% if cubo.columna_eje == 'canal_formal' %}selected{% endif %}>Canal formal</option>
+          <option value="zona" {% if cubo.columna_eje == 'zona' %}selected{% endif %}>Zona</option>
+        </select>
+      </div>
+      <noscript><button class="btn" type="submit">Aplicar</button></noscript>
+    </form>
+    <p class="olap-tag">Filas: <strong>&nbsp;{{ cubo.fila_eje }}</strong> · Columnas: <strong>&nbsp;{{ cubo.columna_eje }}</strong> · Total en la selección (dice): {{ cubo.total }}</p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h3>Encuestados por {{ cubo.fila_eje }}</h3>
+        <canvas id="chartBarras"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Distribución por {{ cubo.columna_eje }}</h3>
+        <canvas id="chartDona"></canvas>
+      </div>
+    </div>
+
+    <h3>Matriz — {{ cubo.fila_eje }} × {{ cubo.columna_eje }} (pivot)</h3>
+    <div class="matrix-wrap">
+      <table class="matrix-table">
+        <thead><tr><th>{{ cubo.fila_eje|capitalize }} \ {{ cubo.columna_eje|capitalize }}</th>{% for c in matriz.columnas %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for f in matriz.filas %}
+          <tr><td>{{ f }}</td>{% for c in matriz.columnas %}<td>{{ matriz.datos[f][c] if matriz.datos[f][c] is not none else '—' }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Interpretación</h3>
+    <p>
+      Sin filtros, el uso del canal formal es minoritario en toda la encuesta. Al
+      aplicar el dice sabe_raee = Sí, participo_jornada = Sí y zona = Cúcuta —tres
+      filtros simultáneos sobre tres dimensiones distintas— el subconjunto se reduce
+      a quienes conocen el término, ya participaron antes y viven en la capital; en
+      ese subconjunto específico el porcentaje que usa canal formal sube de forma
+      notoria frente al de la población general, lo que no se podía ver con un único
+      filtro (slice). La disposición a usar una app, en cambio, se mantiene alta
+      incluso fuera de ese subconjunto, lo que sugiere que la intención de adoptar
+      una herramienta digital es más generalizada que el comportamiento formal actual.
+    </p>
+
+    <h3>Conocimientos multidimensionales</h3>
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <h4>Conocimiento 7 · Conocer RAEE y haber participado antes se asocia a mayor uso formal</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿Conocer el término RAEE y haber participado en una jornada previa coincide con un mayor uso del canal formal?</dd>
+          <dt>Dimensiones/medidas</dt><dd>sabe_raee × participo_jornada (dice); % que usa canal formal (proporción).</dd>
+          <dt>Procedimiento</dt><dd>Filtro simultáneo sabe_raee = Sí y participo_jornada = Sí, comparado contra la población sin ese filtro, usando la columna de % canal formal de la matriz.</dd>
+          <dt>Evidencia</dt><dd>Matriz de esta vista con sabe_raee = Sí y participo_jornada = Sí activados, columna "% canal formal" de <code>cubo_multivariado</code>.</dd>
+          <dt>Hallazgo</dt><dd>El porcentaje de uso del canal formal entre quienes conocen RAEE y ya participaron en una jornada es claramente mayor que el porcentaje general de la encuesta (minoritario en toda la muestra).</dd>
+          <dt>Interpretación</dt><dd>El conocimiento y la experiencia previa parecen asociarse a un comportamiento más formal; esto es una asociación observada en los datos, no una relación causal comprobada: puede haber otros factores (p. ej. cercanía a un punto autorizado) detrás de ambas variables.</dd>
+          <dt>Utilidad</dt><dd>Sustenta que educar sobre qué es RAEE y organizar jornadas de recolección no son dos acciones independientes: la combinación de ambas parece tener más efecto que cada una por separado.</dd>
+          <dt>Limitación</dt><dd>Es una asociación, no causalidad: no se puede concluir que participar en una jornada "causa" el uso del canal formal; personas ya más comprometidas con la gestión formal podrían ser, al mismo tiempo, más propensas a participar en jornadas y a conocer el término.</dd>
+        </dl>
+      </div>
+      <div class="knowledge-card">
+        <h4>Conocimiento 8 · La disposición a usar una app no depende del comportamiento actual</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿Solo las personas que ya usan el canal formal estarían dispuestas a usar una app para RAEE?</dd>
+          <dt>Dimensiones/medidas</dt><dd>canal_formal × usaria_app_raee (pivot); encuestados (COUNT).</dd>
+          <dt>Procedimiento</dt><dd>Matriz fila=canal_formal, columna=usaria_app_raee, sin más filtros que los de la encuesta completa (pivot por defecto de esta vista).</dd>
+          <dt>Evidencia</dt><dd>Matriz de esta vista, columna "Sí" de usaria_app_raee, comparando la fila "Usa canal formal" contra "No usa canal formal".</dd>
+          <dt>Hallazgo</dt><dd>Una proporción alta de encuestados que actualmente NO usan el canal formal respondió que sí usaría una app para RAEE, un porcentaje comparable al de quienes ya usan el canal formal.</dd>
+          <dt>Interpretación</dt><dd>La disposición a adoptar una herramienta digital no está condicionada al comportamiento formal actual: hay una intención latente de participar que el canal formal actual (puntos físicos, empresas de aseo) no está capturando.</dd>
+          <dt>Utilidad</dt><dd>Es evidencia directa a favor de que el proyecto RECT desarrolle o recomiende una app como canal adicional, no solo como refuerzo de quienes ya participan.</dd>
+          <dt>Limitación</dt><dd>"Usaría una app" es una intención declarada en una encuesta, no un uso real observado; la disposición expresada puede no traducirse en adopción efectiva si la app existiera.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="limit-decision">
+      <div class="limitacion">
+        <h4>Limitación del análisis</h4>
+        <p>Al combinar tres filtros (dice) el tamaño de la submuestra baja rápido; con los tres filtros más estrictos activados el número de encuestados en la selección puede ser pequeño, por lo que los porcentajes calculados sobre ese subconjunto tienen más variabilidad y deben leerse con cautela, no como una cifra poblacional precisa.</p>
+      </div>
+      <div class="decision">
+        <h4>Decisión sustentada en los datos</h4>
+        <p>Incluir en la hoja de ruta del proyecto RECT el desarrollo de un canal digital (app o similar), apoyado en el Conocimiento 8: la intención de uso no está limitada a quienes ya participan del canal formal actual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/vendor/chart.umd.js') }}"></script>
+<script>
+  const accent = '#34d399', danger = '#f0654f', warn = '#f5a524', muted = '#9db3ab', faint = '#64796f', teal = '#5eead4';
+  Chart.defaults.color = muted;
+  Chart.defaults.borderColor = '#1f3229';
+  Chart.defaults.font.family = "'IBM Plex Mono', ui-monospace, monospace";
+
+  const filasM = {{ matriz.filas | tojson }};
+  const columnasM = {{ matriz.columnas | tojson }};
+  const datosM = {{ matriz.datos | tojson }};
+  const paleta = [accent, warn, danger, teal, muted, '#60a5fa', '#c084fc', '#fb923c'];
+
+  const totalesFila = filasM.map(f => columnasM.reduce((s, c) => s + (datosM[f][c] || 0), 0));
+  new Chart(document.getElementById('chartBarras'), {
+    type: 'bar',
+    data: { labels: filasM, datasets: [{ label: 'Encuestados', data: totalesFila, backgroundColor: accent }] },
+    options: { responsive: true, indexAxis: filasM.length > 6 ? 'y' : 'x' }
+  });
+
+  const totalesColumna = columnasM.map(c => filasM.reduce((s, f) => s + (datosM[f][c] || 0), 0));
+  new Chart(document.getElementById('chartDona'), {
+    type: 'doughnut',
+    data: { labels: columnasM, datasets: [{ data: totalesColumna, backgroundColor: paleta }] },
+    options: { responsive: true }
+  });
+</script>
+{% endblock %}

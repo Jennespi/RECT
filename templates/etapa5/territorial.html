@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">04</div>
+  <div class="card__body">
+    <h2>Vista 2 · Territorial</h2>
+    <blockquote class="main-question">¿Cómo se distribuyen por departamento las instalaciones de gestores autorizados de RAEE en Colombia y qué territorios quedan sin cobertura activa?</blockquote>
+
+    <p class="hint">Dimensiones, medidas y jerarquías usadas:</p>
+    <ul class="question-list">
+      <li><strong>Dimensión:</strong> <code>dim_municipio</code> → <code>dim_departamento</code>, jerarquía Región → Departamento → Municipio.</li>
+      <li><strong>Medidas:</strong> instalaciones de gestores (<code>COUNT</code>, additiva) y empresas distintas (<code>COUNT DISTINCT nit</code>, semiadditiva).</li>
+      <li><strong>Filtros (slice/dice):</strong> estado de la instalación, región, departamento (para el drill-down).</li>
+    </ul>
+
+    <div class="stat-row">
+      {% for ind in indicadores %}
+      <div class="stat"><span class="stat__value">{{ ind.valor }}</span><span class="stat__label">{{ ind.etiqueta }}</span></div>
+      {% endfor %}
+    </div>
+
+    <h3>Controles de operación multidimensional</h3>
+    <form class="olap-form" method="get">
+      <div class="olap-field">
+        <label for="nivel">Nivel (drill-down / roll-up)</label>
+        <select id="nivel" name="nivel" onchange="this.form.submit()">
+          <option value="region" {% if cubo.nivel == 'region' %}selected{% endif %}>Región (roll-up)</option>
+          <option value="departamento" {% if cubo.nivel == 'departamento' %}selected{% endif %}>Departamento</option>
+          <option value="municipio" {% if cubo.nivel == 'municipio' %}selected{% endif %}>Municipio (drill-down)</option>
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="region">Filtro: región</label>
+        <select id="region" name="region" onchange="this.form.submit()">
+          <option value="">Todas</option>
+          {% for r in regiones %}<option value="{{ r }}" {% if cubo.filtros.region == r %}selected{% endif %}>{{ r }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="departamento">Filtro: departamento (para ver sus municipios)</label>
+        <select id="departamento" name="departamento" onchange="this.form.submit()">
+          <option value="">Todos</option>
+          {% for d in departamentos %}<option value="{{ d }}" {% if cubo.filtros.departamento == d %}selected{% endif %}>{{ d }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="estado">Filtro: estado</label>
+        <select id="estado" name="estado" onchange="this.form.submit()">
+          <option value="ACTIVO" {% if cubo.filtros.estado == 'ACTIVO' %}selected{% endif %}>Activo</option>
+          <option value="INACTIVO" {% if cubo.filtros.estado == 'INACTIVO' %}selected{% endif %}>Inactivo</option>
+          <option value="TODOS" {% if not cubo.filtros.estado %}selected{% endif %}>Todos</option>
+        </select>
+      </div>
+      <noscript><button class="btn" type="submit">Aplicar</button></noscript>
+    </form>
+    <p class="olap-tag">Nivel actual: <strong>&nbsp;{{ cubo.nivel }}</strong> · Medida: {{ cubo.medida }} · Total en la selección: {{ cubo.total }}</p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h3>Instalaciones por {{ cubo.nivel }}</h3>
+        <canvas id="chartBarras"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Participación por {{ cubo.nivel }}</h3>
+        <canvas id="chartDona"></canvas>
+      </div>
+    </div>
+
+    <h3>Matriz — {{ cubo.nivel }} × estado</h3>
+    <p class="hint">Siempre muestra ambos estados, sin importar el filtro de estado seleccionado arriba.</p>
+    <div class="matrix-wrap">
+      <table class="matrix-table">
+        <thead><tr><th>{{ cubo.nivel|capitalize }}</th><th>Activo</th><th>Inactivo</th><th>Total</th></tr></thead>
+        <tbody>
+          {% for f in matriz.filas %}
+          <tr><td>{{ f.etiqueta }}</td><td>{{ f.ACTIVO }}</td><td>{{ f.INACTIVO }}</td><td>{{ f.total }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Interpretación</h3>
+    <p>
+      Con el filtro por defecto (estado = Activo, nivel = departamento) las instalaciones
+      se concentran en la región Andina y en departamentos con mayor actividad industrial
+      y urbana (Valle del Cauca, Cundinamarca, Atlántico, Antioquia, Bogotá D.C.
+      concentran el 59.5&nbsp;% de las instalaciones activas, igual que lo verificado en
+      la Etapa 4). Al hacer drill-down a municipio dentro de un departamento (p. ej.
+      Antioquia) se observa que la actividad se concentra en el Área Metropolitana del
+      Valle de Aburrá (Medellín y Bello), no en el resto del departamento. Al hacer
+      roll-up a región se confirma que Amazonía y Orinoquía —las regiones con menor
+      densidad poblacional e industrial— son también las de menor cobertura.
+    </p>
+
+    <h3>Conocimientos multidimensionales</h3>
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <h4>Conocimiento 1 · Concentración territorial en el top 5</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿Qué tan concentrada está la red de gestores activos entre pocos departamentos?</dd>
+          <dt>Dimensiones/medidas</dt><dd><code>dim_departamento</code>; instalaciones (COUNT), estado = Activo.</dd>
+          <dt>Procedimiento</dt><dd>Roll-up a nivel departamento, filtro estado = Activo, orden descendente por conteo, suma de los 5 primeros.</dd>
+          <dt>Evidencia</dt><dd>Matriz y gráfica de barras de esta vista, nivel = departamento, estado = Activo.</dd>
+          <dt>Hallazgo</dt><dd>5 de 29 departamentos con cobertura activa (17&nbsp;%) concentran 184 de 309 instalaciones activas (59.5&nbsp;%).</dd>
+          <dt>Interpretación</dt><dd>La capacidad formal de gestión de RAEE no está distribuida según la población de cada departamento, sino concentrada en los polos industriales y urbanos tradicionales del país.</dd>
+          <dt>Utilidad</dt><dd>Orienta a dónde dirigir incentivos o campañas para abrir nuevos puntos de gestión formal: los departamentos fuera del top 5 con alta población y poca cobertura son el objetivo más claro.</dd>
+          <dt>Limitación</dt><dd>El registro cuenta instalaciones, no capacidad real de procesamiento (toneladas); un departamento con pocas instalaciones grandes podría procesar más volumen que uno con muchas pequeñas.</dd>
+        </dl>
+      </div>
+      <div class="knowledge-card">
+        <h4>Conocimiento 2 · Territorios sin cobertura activa</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿Qué departamentos no tienen ninguna instalación de gestor activa registrada?</dd>
+          <dt>Dimensiones/medidas</dt><dd><code>dim_departamento</code> (34 filas, incluida la sentinela); instalaciones (COUNT) con estado = Activo.</dd>
+          <dt>Procedimiento</dt><dd>Roll-up a nivel departamento con estado = Activo; se listan los departamentos cuyo conteo es 0 o no aparecen en el resultado agregado.</dd>
+          <dt>Evidencia</dt><dd>Comparación entre los 33 departamentos de <code>dim_departamento</code> y los que sí aparecen en la matriz de esta vista con estado = Activo.</dd>
+          <dt>Hallazgo</dt><dd>29 de 33 departamentos tienen al menos una instalación activa; 4 departamentos quedan sin ninguna (coincide con lo verificado en la Etapa 4 para el tablero territorial).</dd>
+          <dt>Interpretación</dt><dd>Existen vacíos reales de cobertura formal en algunos departamentos, probablemente los de menor actividad industrial o más alejados de los corredores logísticos.</dd>
+          <dt>Utilidad</dt><dd>Es evidencia directa para justificar, ante una autoridad ambiental, la necesidad de autorizar gestores en esos departamentos específicos.</dd>
+          <dt>Limitación</dt><dd>La ausencia en el registro del IDEAM no implica necesariamente ausencia total de gestión de RAEE en ese departamento: puede haber gestores que operan sin registro formal, lo que el dataset no puede capturar.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="limit-decision">
+      <div class="limitacion">
+        <h4>Limitación del análisis</h4>
+        <p>El registro del IDEAM puede no contener instalaciones que dejaron de operar antes del corte de descarga de los datos (problema ya señalado en la Etapa 2), por lo que el número de inactivas podría estar subestimado y el de activas, levemente sobreestimado si alguna instalación cerró sin actualizar su estado.</p>
+      </div>
+      <div class="decision">
+        <h4>Decisión sustentada en los datos</h4>
+        <p>Priorizar campañas de registro formal de gestores en los 4 departamentos sin cobertura activa identificados en el Conocimiento 2, antes que reforzar el top 5 que ya concentra el 59.5&nbsp;% de las instalaciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/vendor/chart.umd.js') }}"></script>
+<script>
+  const accent = '#34d399', danger = '#f0654f', warn = '#f5a524', muted = '#9db3ab', faint = '#64796f', teal = '#5eead4';
+  Chart.defaults.color = muted;
+  Chart.defaults.borderColor = '#1f3229';
+  Chart.defaults.font.family = "'IBM Plex Mono', ui-monospace, monospace";
+
+  const etiquetas = {{ cubo.filas | map(attribute='etiqueta') | list | tojson }};
+  const valores = {{ cubo.filas | map(attribute='instalaciones') | list | tojson }};
+  const paleta = [accent, warn, danger, teal, muted, '#60a5fa', '#c084fc', '#fb923c'];
+
+  new Chart(document.getElementById('chartBarras'), {
+    type: 'bar',
+    data: { labels: etiquetas, datasets: [{ label: 'Instalaciones', data: valores, backgroundColor: accent }] },
+    options: { responsive: true, indexAxis: etiquetas.length > 8 ? 'y' : 'x' }
+  });
+
+  new Chart(document.getElementById('chartDona'), {
+    type: 'doughnut',
+    data: { labels: etiquetas, datasets: [{ data: valores, backgroundColor: paleta }] },
+    options: { responsive: true }
+  });
+</script>
+{% endblock %}

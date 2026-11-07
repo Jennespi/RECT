@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">05</div>
+  <div class="card__body">
+    <h2>Vista 3 · Temporal</h2>
+    <blockquote class="main-question">¿Cómo han cambiado con el tiempo las autorizaciones otorgadas a gestores, la conectividad de los hogares y el reciclaje formal de RAEE?</blockquote>
+
+    <p class="hint">Dimensiones, medidas y jerarquías usadas:</p>
+    <ul class="question-list">
+      <li><strong>Dimensión:</strong> <code>dim_anio</code>, jerarquía Década → Año.</li>
+      <li><strong>Medidas:</strong> autorizaciones otorgadas (<code>COUNT</code>, additiva), % hogares con internet — ECV (<code>AVG</code>, no additiva), % RAEE reciclado mundial (<code>AVG</code>, no additiva).</li>
+      <li><strong>Filtro (slice):</strong> fuente del indicador a graficar.</li>
+    </ul>
+
+    <div class="stat-row">
+      {% for ind in indicadores %}
+      <div class="stat"><span class="stat__value">{{ ind.valor }}</span><span class="stat__label">{{ ind.etiqueta }}</span></div>
+      {% endfor %}
+    </div>
+
+    <h3>Controles de operación multidimensional</h3>
+    <form class="olap-form" method="get">
+      <div class="olap-field">
+        <label for="nivel">Nivel (drill-down / roll-up)</label>
+        <select id="nivel" name="nivel" onchange="this.form.submit()">
+          <option value="decada" {% if cubo.nivel == 'decada' %}selected{% endif %}>Década (roll-up)</option>
+          <option value="anio" {% if cubo.nivel == 'anio' %}selected{% endif %}>Año (drill-down)</option>
+        </select>
+      </div>
+      <div class="olap-field">
+        <label for="fuente">Indicador (slice)</label>
+        <select id="fuente" name="fuente" onchange="this.form.submit()">
+          <option value="gestores" {% if cubo.fuente == 'gestores' %}selected{% endif %}>Autorizaciones a gestores</option>
+          <option value="dane" {% if cubo.fuente == 'dane' %}selected{% endif %}>% hogares con internet (ECV)</option>
+          <option value="reciclaje" {% if cubo.fuente == 'reciclaje' %}selected{% endif %}>% RAEE reciclado mundial</option>
+        </select>
+      </div>
+      <noscript><button class="btn" type="submit">Aplicar</button></noscript>
+    </form>
+    <p class="olap-tag">Nivel actual: <strong>&nbsp;{{ cubo.nivel }}</strong> · Medida: {{ cubo.medida }}</p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h3>Serie por {{ cubo.nivel }}</h3>
+        <canvas id="chartLinea"></canvas>
+      </div>
+      <div class="mini-card">
+        <h3>Comparación por {{ cubo.nivel }}</h3>
+        <canvas id="chartBarras"></canvas>
+      </div>
+    </div>
+
+    <h3>Matriz — Década × indicador</h3>
+    <div class="matrix-wrap">
+      <table class="matrix-table">
+        <thead><tr><th>Década</th><th>Autorizaciones (COUNT)</th><th>% internet, ECV (AVG)</th><th>% reciclado mundial (AVG)</th></tr></thead>
+        <tbody>
+          {% for f in matriz.filas %}
+          <tr><td>{{ f.decada }}</td><td>{{ f.autorizaciones }}</td><td>{{ f.pct_internet if f.pct_internet is not none else '—' }}</td><td>{{ f.pct_reciclaje if f.pct_reciclaje is not none else '—' }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Interpretación</h3>
+    <p>
+      Las autorizaciones a gestores crecieron de 55 en los 2000s a 213 en los 2010s y
+      caen a 93 en lo corrido de los 2020s (década incompleta, hasta 2025). El
+      drill-down a año muestra que el crecimiento no fue uniforme: hay años puntuales
+      de mayor otorgamiento dentro de cada década. La conectividad de los hogares
+      (% con internet, ECV) sube de forma sostenida en el mismo periodo (de 52.1&nbsp;%
+      en los 2010s a 61.22&nbsp;% en los 2020s), mientras que el % de RAEE reciclado
+      a nivel mundial se mantiene prácticamente estancado (22.73&nbsp;% a
+      22.69&nbsp;%, décadas incompletas en ambos casos). Esto evidencia
+      que el crecimiento del consumo tecnológico (más hogares conectados, más
+      dispositivos) no vino acompañado de un crecimiento equivalente en la capacidad
+      formal de gestión de esos residuos, el problema central que motiva el proyecto RECT.
+    </p>
+
+    <h3>Conocimientos multidimensionales</h3>
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <h4>Conocimiento 3 · Autorizaciones crecen y luego se desaceleran</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿El ritmo de otorgamiento de autorizaciones a gestores se ha mantenido constante entre décadas?</dd>
+          <dt>Dimensiones/medidas</dt><dd><code>dim_anio</code> (jerarquía década); autorizaciones otorgadas (COUNT).</dd>
+          <dt>Procedimiento</dt><dd>Roll-up a nivel década sobre <code>fact_gestores</code>, fuente = gestores.</dd>
+          <dt>Evidencia</dt><dd>Matriz de esta vista, columna "Autorizaciones (COUNT)": 55 / 213 / 93.</dd>
+          <dt>Hallazgo</dt><dd>Las autorizaciones casi se cuadruplican de los 2000s a los 2010s (55→213) y caen a menos de la mitad en lo corrido de los 2020s (93, década aún incompleta).</dd>
+          <dt>Interpretación</dt><dd>El pico de otorgamiento ocurrió en la década pasada; la desaceleración puede reflejar tanto una saturación del mercado formal de gestores como el hecho de que la década 2020s todavía no termina (solo hasta 2025).</dd>
+          <dt>Utilidad</dt><dd>Advierte que, si el ritmo actual no se recupera, la brecha entre consumo tecnológico creciente y gestores autorizados podría ampliarse en los próximos años.</dd>
+          <dt>Limitación</dt><dd>La comparación entre 2000s y 2020s no es entre periodos equivalentes: faltan años por incluirse en la década actual, así que la caída observada puede ser parcialmente un efecto de década incompleta, no solo de desaceleración real.</dd>
+        </dl>
+      </div>
+      <div class="knowledge-card">
+        <h4>Conocimiento 4 · Conectividad crece más rápido que el reciclaje formal</h4>
+        <dl>
+          <dt>Pregunta</dt><dd>¿La conectividad de los hogares y el reciclaje formal de RAEE crecen al mismo ritmo?</dd>
+          <dt>Dimensiones/medidas</dt><dd><code>dim_anio</code> (década); % hogares con internet —ECV— (AVG) y % RAEE reciclado mundial (AVG).</dd>
+          <dt>Procedimiento</dt><dd>Roll-up a década para ambos indicadores (slice por fuente = dane y fuente = reciclaje) y comparación de la variación entre décadas en la matriz.</dd>
+          <dt>Evidencia</dt><dd>Columnas "% internet, ECV" y "% reciclado mundial" de la matriz de esta vista.</dd>
+          <dt>Hallazgo</dt><dd>El % de hogares con internet sube de 52.1&nbsp;% (2010s) a 61.22&nbsp;% (2020s), mientras que el % mundial de RAEE reciclado prácticamente no se mueve (22.73&nbsp;% a 22.69&nbsp;%) en el mismo par de décadas.</dd>
+          <dt>Interpretación</dt><dd>Confirma, con series temporales reales, el diagnóstico inicial del proyecto: la adopción tecnológica avanza más rápido que la infraestructura formal de reciclaje de esos mismos dispositivos.</dd>
+          <dt>Utilidad</dt><dd>Sustenta la necesidad de políticas de gestión de RAEE que crezcan al ritmo del consumo tecnológico, no años después de él.</dd>
+          <dt>Limitación</dt><dd>El % de reciclaje mundial no es comparable en magnitud con el % de hogares colombianos con internet: son poblaciones y unidades distintas; la comparación es de tendencia (ritmo de cambio), no de nivel absoluto.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="limit-decision">
+      <div class="limitacion">
+        <h4>Limitación del análisis</h4>
+        <p>Las tres series cubren periodos distintos (autorizaciones 2005-2025, ECV 2018-2024, reciclaje mundial 2010-2022), por lo que no son series estrictamente comparables entre sí año a año; la matriz las agrupa por década precisamente para hacerlas comparables en una unidad de tiempo común sin forzar una comparación punto a punto que los datos no permiten.</p>
+      </div>
+      <div class="decision">
+        <h4>Decisión sustentada en los datos</h4>
+        <p>Usar la década como unidad de seguimiento (no el año individual) al reportar el avance del proyecto RECT ante la universidad o una entidad ambiental, dado que amortigua el ruido año a año y permite comparar series con distinta cobertura temporal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/vendor/chart.umd.js') }}"></script>
+<script>
+  const accent = '#34d399', danger = '#f0654f', warn = '#f5a524', muted = '#9db3ab', faint = '#64796f', teal = '#5eead4';
+  Chart.defaults.color = muted;
+  Chart.defaults.borderColor = '#1f3229';
+  Chart.defaults.font.family = "'IBM Plex Mono', ui-monospace, monospace";
+
+  const etiquetas = {{ cubo.filas | map(attribute='etiqueta') | list | tojson }};
+  const valores = {{ cubo.filas | map(attribute='valor') | list | tojson }};
+
+  new Chart(document.getElementById('chartLinea'), {
+    type: 'line',
+    data: { labels: etiquetas, datasets: [{ label: '{{ cubo.medida }}', data: valores, borderColor: accent, backgroundColor: 'rgba(52,211,153,.15)', fill: true, tension: .25 }] },
+    options: { responsive: true }
+  });
+
+  new Chart(document.getElementById('chartBarras'), {
+    type: 'bar',
+    data: { labels: etiquetas, datasets: [{ label: '{{ cubo.medida }}', data: valores, backgroundColor: teal }] },
+    options: { responsive: true }
+  });
+</script>
+{% endblock %}
