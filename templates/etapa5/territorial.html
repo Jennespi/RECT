@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="card">
-  <div class="card__num">04</div>
+  <div class="card__num">05</div>
   <div class="card__body">
     <h2>Vista 2 · Territorial</h2>
     <blockquote class="main-question">¿Cómo se distribuyen por departamento las instalaciones de gestores autorizados de RAEE en Colombia y qué territorios quedan sin cobertura activa?</blockquote>
@@ -53,7 +53,11 @@
       </div>
       <noscript><button class="btn" type="submit">Aplicar</button></noscript>
     </form>
-    <p class="olap-tag">Nivel actual: <strong>&nbsp;{{ cubo.nivel }}</strong> · Medida: {{ cubo.medida }} · Total en la selección: {{ cubo.total }}</p>
+    <div class="olap-tag">
+      <span>Nivel actual: <strong>{{ cubo.nivel }}</strong></span>
+      <span>Medida: {{ cubo.medida }}</span>
+      <span>Total en la selección: <strong>{{ cubo.total }}</strong></span>
+    </div>
 
     <div class="mini-grid">
       <div class="mini-card">
@@ -80,7 +84,7 @@
     </div>
 
     <h3>Interpretación</h3>
-    <p>
+    <p class="territorial-interpretation">
       Con el filtro por defecto (estado = Activo, nivel = departamento) las instalaciones
       se concentran en la región Andina y en departamentos con mayor actividad industrial
       y urbana (Valle del Cauca, Cundinamarca, Atlántico, Antioquia, Bogotá D.C.

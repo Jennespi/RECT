@@ -5,7 +5,7 @@
   <div class="card__body">
     <h2>Modelo estrella</h2>
 
-    <p>
+    <p class="model-summary">
       El modelo se implementa como una <strong>constelación de hechos</strong>: cuatro
       tablas de hechos —cada una con el grano real de su fuente, igual que en la
       Etapa 4— que comparten tres dimensiones conformadas
@@ -184,7 +184,7 @@
             <td><code>fact_gestores</code></td>
             <td>conteo por año</td>
             <td><code>COUNT(*) GROUP BY id_anio</code></td>
-            <td>Additiva en el tiempo: la suma de autorizaciones por año de una década es igual al total de la década (verificado: 2000s = 55 = 6+10+12+10+17).</td>
+            <td>Aditiva en el tiempo: la suma de autorizaciones por año de una década es igual al total de la década (verificado: 2000s = 55 = 6+10+12+10+17).</td>
           </tr>
           <tr>
             <td>% hogares con internet (ECV)</td>
@@ -212,7 +212,7 @@
     </div>
 
     <h3>Correspondencia con las variables originales</h3>
-    <p>
+    <p class="model-summary">
       La correspondencia completa entre cada columna del modelo y su origen en
       <code>datos/procesados/</code> (Etapa 2/3) ya está documentada en
       <code>scripts/preparar_datos_pbi.py</code> (Etapa 4): el modelo estrella de esta
@@ -226,7 +226,7 @@
     </p>
 
     <h3>Implementación y verificación</h3>
-    <p>
+    <p class="model-summary">
       El modelo se implementó en SQLite (<code>datos/estrella/rect_estrella.db</code>),
       con claves primarias y foráneas explícitas y <code>PRAGMA foreign_keys = ON</code>.
       La carga es reproducible: <code>python scripts/construir_modelo_estrella.py</code>
@@ -237,6 +237,7 @@
       y coherencia de conteos frente a los CSV tratados— y las 25 pasaron sin falla
       en la última ejecución.
     </p>
+    <a class="btn" href="{{ url_for('descargar_estrella', nombre='rect_estrella.db') }}">Descargar la base de datos (.db) ↓</a>
 
     <h3>Operaciones multidimensionales implementadas</h3>
     <div class="table-wrap">
