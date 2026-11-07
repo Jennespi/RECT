@@ -197,6 +197,12 @@ main {
   font-size: 0.92rem;
 }
 
+.hint--relation {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
 .card__body > p:not(.hint) {
   margin: 0 0 0.6rem;
   color: var(--text);
