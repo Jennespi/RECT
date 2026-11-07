@@ -209,6 +209,10 @@ main {
   font-size: 0.95rem;
 }
 
+.card__body > p.conclusion-summary {
+  color: var(--text-muted);
+}
+
 .card__body > p.interpretation--muted {
   margin-bottom: 1rem;
   padding: 1rem 1.15rem;
