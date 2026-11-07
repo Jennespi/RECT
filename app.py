@@ -7,6 +7,7 @@ import rect_olap as olap
 app = Flask(__name__)
 
 DATOS_PROCESADOS = Path(__file__).resolve().parent / "datos" / "procesados"
+DATOS_ESTRELLA = Path(__file__).resolve().parent / "datos" / "estrella"
 ETAPA_3_ASSETS = Path(__file__).resolve().parent / "static" / "etapa3"
 INFORME_PDF = ETAPA_3_ASSETS / "informe_tecnico.pdf"
 ETAPA_5_ASSETS = Path(__file__).resolve().parent / "static" / "etapa5"
@@ -202,6 +203,11 @@ def index():
 @app.route("/datos/procesados/<path:nombre>")
 def descargar_dataset(nombre):
     return send_from_directory(DATOS_PROCESADOS, nombre, as_attachment=True)
+
+
+@app.route("/datos/estrella/<path:nombre>")
+def descargar_estrella(nombre):
+    return send_from_directory(DATOS_ESTRELLA, nombre, as_attachment=True)
 
 
 @app.route("/etapa-1/<slug>")
