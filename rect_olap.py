@@ -311,6 +311,35 @@ def pivotear(filas, campo_valor="encuestados"):
     return {"filas": filas_unicas, "columnas": columnas_unicas, "datos": datos}
 
 
+# --------------------------------------------- explorador de tablas ---
+def listar_tablas():
+    """Nombre y número de filas de cada tabla real del modelo (dimensiones
+    y hechos), para poblar el selector del explorador de datos."""
+    con = conectar()
+    nombres = [r[0] for r in con.execute(
+        "SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' ORDER BY name"
+    )]
+    tablas = [{"nombre": n, "filas": con.execute(f"SELECT COUNT(*) FROM {n}").fetchone()[0]} for n in nombres]
+    con.close()
+    return tablas
+
+
+def previsualizar_tabla(nombre, limite=25):
+    """Columnas y primeras `limite` filas de una tabla del modelo, para
+    verla desde la aplicación sin abrir un cliente SQLite aparte. `nombre`
+    se valida contra las tablas reales antes de interpolarlo en el SQL
+    (SQLite no permite parametrizar nombres de tabla)."""
+    tablas_validas = {t["nombre"] for t in listar_tablas()}
+    if nombre not in tablas_validas:
+        return None
+    con = conectar()
+    columnas = [r[1] for r in con.execute(f"PRAGMA table_info({nombre})")]
+    total = con.execute(f"SELECT COUNT(*) FROM {nombre}").fetchone()[0]
+    filas = [dict(r) for r in con.execute(f"SELECT * FROM {nombre} LIMIT ?", (limite,))]
+    con.close()
+    return {"nombre": nombre, "columnas": columnas, "filas": filas, "total": total, "limite": limite}
+
+
 # ----------------------------------------------------------- utilidades ---
 def valores_distintos(tabla, columna):
     """Lista de valores distintos de una columna, para poblar los <select>

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="card__num">03</div>
+  <div class="card__body">
+    <h2>Explorar las tablas</h2>
+    <p>
+      Vista de solo lectura sobre las tablas reales de
+      <code>datos/estrella/rect_estrella.db</code>, para verificar el modelo descrito
+      en la sección anterior directamente contra los datos, sin necesidad de abrir un
+      cliente SQLite.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat"><span class="stat__value">{{ tablas|length }}</span><span class="stat__label">Tablas en el modelo</span></div>
+      {% if preview %}
+      <div class="stat"><span class="stat__value">{{ preview.columnas|length }}</span><span class="stat__label">Columnas de {{ preview.nombre }}</span></div>
+      <div class="stat"><span class="stat__value">{{ preview.total }}</span><span class="stat__label">Filas totales</span></div>
+      {% endif %}
+    </div>
+
+    <h3>Tabla a consultar</h3>
+    <form class="olap-form" method="get">
+      <div class="olap-field">
+        <label for="tabla">Tabla</label>
+        <select id="tabla" name="tabla" onchange="this.form.submit()">
+          {% for t in tablas %}
+          <option value="{{ t.nombre }}" {% if t.nombre == tabla_actual %}selected{% endif %}>{{ t.nombre }} ({{ t.filas }} filas)</option>
+          {% endfor %}
+        </select>
+      </div>
+      <noscript><button class="btn" type="submit">Ver tabla</button></noscript>
+    </form>
+
+    {% if preview %}
+    <h3>Primeras {{ preview.limite }} filas de {{ preview.nombre }}</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>{% for c in preview.columnas %}<th>{{ c }}</th>{% endfor %}</tr>
+        </thead>
+        <tbody>
+          {% for fila in preview.filas %}
+          <tr>{% for c in preview.columnas %}<td>{{ fila[c] }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="olap-tag">Mostrando {{ preview.filas|length }} de {{ preview.total }} filas de <strong>&nbsp;{{ preview.nombre }}</strong></p>
+    {% else %}
+    <p class="hint">No se encontró la tabla solicitada.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

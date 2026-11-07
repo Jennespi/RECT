@@ -120,11 +120,12 @@ ETAPA_5 = {
     "sections": [
         {"slug": "objetivo", "num": 1, "label": "Objetivo y alcance"},
         {"slug": "modelo", "num": 2, "label": "Modelo estrella"},
-        {"slug": "composicion", "num": 3, "label": "Vista 1 · Composición"},
-        {"slug": "territorial", "num": 4, "label": "Vista 2 · Territorial"},
-        {"slug": "temporal", "num": 5, "label": "Vista 3 · Temporal"},
-        {"slug": "multivariado", "num": 6, "label": "Vista 4 · Multivariado"},
-        {"slug": "conclusiones", "num": 7, "label": "Conocimientos y conclusiones"},
+        {"slug": "tablas", "num": 3, "label": "Explorar las tablas"},
+        {"slug": "composicion", "num": 4, "label": "Vista 1 · Composición"},
+        {"slug": "territorial", "num": 5, "label": "Vista 2 · Territorial"},
+        {"slug": "temporal", "num": 6, "label": "Vista 3 · Temporal"},
+        {"slug": "multivariado", "num": 7, "label": "Vista 4 · Multivariado"},
+        {"slug": "conclusiones", "num": 8, "label": "Conocimientos y conclusiones"},
     ],
 }
 
@@ -231,7 +232,14 @@ def etapa4(slug):
 def etapa5(slug):
     extra = {"informe_pdf_existe": INFORME_PDF_5.exists()}
 
-    if slug == "territorial":
+    if slug == "tablas":
+        tablas = olap.listar_tablas()
+        nombre = request.args.get("tabla") or (tablas[0]["nombre"] if tablas else None)
+        extra["tablas"] = tablas
+        extra["tabla_actual"] = nombre
+        extra["preview"] = olap.previsualizar_tabla(nombre) if nombre else None
+
+    elif slug == "territorial":
         nivel = request.args.get("nivel", "departamento")
         region = request.args.get("region") or None
         departamento = request.args.get("departamento") or None
