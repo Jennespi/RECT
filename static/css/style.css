@@ -209,6 +209,15 @@ main {
   font-size: 0.95rem;
 }
 
+.card__body > p.interpretation--muted {
+  margin-bottom: 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+}
+
 .card__body > p:not(.hint):last-child {
   margin-bottom: 0;
 }
