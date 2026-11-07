@@ -213,12 +213,20 @@ main {
   color: var(--text-muted);
 }
 
+.card__body > p.model-summary {
+  color: var(--text-muted);
+}
+
 .card__body > p.interpretation--muted {
   margin-bottom: 1rem;
   padding: 1rem 1.15rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--bg-elevated);
+  color: var(--text-muted);
+}
+
+.card__body > p.territorial-interpretation {
   color: var(--text-muted);
 }
 
@@ -791,12 +799,24 @@ a.hero__eyebrow:hover {
 }
 
 .olap-tag {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 0.4rem 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--text-faint);
-  padding: 0.35rem 0;
+  margin: 0.75rem 0 1.1rem;
+  line-height: 1.5;
+}
+
+.olap-tag span {
+  min-width: 0;
+}
+
+.olap-tag strong {
+  color: var(--text);
+  white-space: nowrap;
 }
 
 .matrix-wrap {

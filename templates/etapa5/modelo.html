@@ -5,7 +5,7 @@
   <div class="card__body">
     <h2>Modelo estrella</h2>
 
-    <p>
+    <p class="model-summary">
       El modelo se implementa como una <strong>constelación de hechos</strong>: cuatro
       tablas de hechos —cada una con el grano real de su fuente, igual que en la
       Etapa 4— que comparten tres dimensiones conformadas
@@ -157,7 +157,7 @@
     </div>
 
     <h3>Correspondencia con las variables originales</h3>
-    <p>
+    <p class="model-summary">
       La correspondencia completa entre cada columna del modelo y su origen en
       <code>datos/procesados/</code> (Etapa 2/3) ya está documentada en
       <code>scripts/preparar_datos_pbi.py</code> (Etapa 4): el modelo estrella de esta
@@ -171,7 +171,7 @@
     </p>
 
     <h3>Implementación y verificación</h3>
-    <p>
+    <p class="model-summary">
       El modelo se implementó en SQLite (<code>datos/estrella/rect_estrella.db</code>),
       con claves primarias y foráneas explícitas y <code>PRAGMA foreign_keys = ON</code>.
       La carga es reproducible: <code>python scripts/construir_modelo_estrella.py</code>
